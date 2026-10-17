@@ -906,7 +906,31 @@ function pjRender(){
     b.className = 'ab' + (A.id === AID ? ' on' : '');
     b.setAttribute('aria-pressed', A.id === AID ? 'true' : 'false');
     b.textContent = A.nome;
-    b.addEventListener('click', function(){ AID = A.id; pjRender();
+    b.addEventListener('click', function(){ AID = A.id; pjRender(); });
+    top.appendChild(b);
+  });
+  var A = aAtual();
+  var foto = document.getElementById('pjFoto');
+  var cap = document.getElementById('pjCap');
+  foto.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
+  var d = document.createElement('div');
+  d.className = 'ph';
+  d.innerHTML = '<img src="' + A.foto + '" alt="' + A.alt + '" loading="lazy">';
+  foto.insertBefore(d, cap);
+  cap.textContent = A.cap;
+  document.getElementById('pNm').textContent = A.nome;
+  document.getElementById('pLc').textContent = A.local;
+  document.getElementById('pP').textContent = A.p;
+  var sp = document.getElementById('pSp');
+  sp.innerHTML = '';
+  A.sp.forEach(function(par){
+    var e = document.createElement('div');
+    e.innerHTML = '<span>' + par[0] + '</span><b class="fr">' + par[1] + '</b>';
+    sp.appendChild(e);
+  });
+  document.getElementById('pAl').textContent = A.al;
+}
+pjRender();
 var MATS = [
   {id:'per', nome:'Personalizado', sub:'tapete ou capacho com a sua arte',
    foto:'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=700',
@@ -936,7 +960,20 @@ function matRender(){
     b.setAttribute('aria-pressed', M.id === MID ? 'true' : 'false');
     b.innerHTML = '<div class="ph"><img src="' + M.foto + '" alt="' + M.alt + '" loading="lazy"></div>' +
       '<div class="bd"><b class="fr">' + M.nome + '</b><span>' + M.sub + '</span><div class="v">' + M.rel + '</div></div>';
-    b.addEventListener('click', function(){ MID = M.id; matRender();
+    b.addEventListener('click', function(){ MID = M.id; matRender(); });
+    host.appendChild(b);
+  });
+  var M = null;
+  for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
+  document.getElementById('mT').textContent = M.nome;
+  document.getElementById('mS').textContent = M.sub;
+  document.getElementById('mPr').textContent = M.pr;
+  document.getElementById('mUm').textContent = M.um;
+  document.getElementById('mRp').textContent = M.rp;
+  document.getElementById('mPz').textContent = M.pz;
+  document.getElementById('mN').textContent = M.n;
+}
+matRender();
 /* marquee */
 var MQ = ['Capachos personalizados','Tapetes com logotipo','Tapetes infantis','Creches e escolas','Grama sintética','Condomínios','Comércios','Proteção para pisos','Sob medida'];
 var mqT = document.getElementById('mqT');
