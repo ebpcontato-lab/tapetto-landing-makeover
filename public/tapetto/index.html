@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tapetto — Tapetes e capachos personalizados e grama sintética no Rio de Janeiro</title>
+<meta name="description" content="Tapetes e capachos personalizados com a sua marca, tapetes infantis para creches e escolas e grama sintética no Rio de Janeiro. Produzidos na maior fábrica da América Latina, há mais de 48 anos no mercado.">
+<meta property="og:title" content="Tapetto — Tapetes e capachos personalizados no Rio de Janeiro">
+<meta property="og:description" content="As melhores soluções em tapetes e capachos personalizados e proteção para pisos. Peça seu orçamento.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo-tapetto.png" type="image/png">
+
+<link href="assets/fonts/webfont-7dcbcfff.css" rel="stylesheet">
+<link href="assets/fonts/aHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1GcmF1bmNlczppdGFsLG9wc3osd2dodEAwLDkuLjE0NCwzMDA7MSw5Li4xNDQsMzAwJmZhbWlseT1JbnRlcjp3Z2h0QDMwMDs0MDA7NTAwJmRpc3BsYXk9c3dhcA.css" rel="stylesheet">
+<!-- COR DA MARCA: edite --lar (cor principal), --lar2 (tom escuro da marca) e --madeira em :root logo abaixo -->
+<style>
+/* ============ base ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F2EEE7;
+  --bg2:#F7F4EE;
+  --lin:#DED6C9;
+  --lin2:#CDC2B0;
+  --tinta:#1F1813;
+  --tx:#6B5F52;
+  --tx2:#756b5f;
+  --lar:#8A2A10;
+  --lar2:#6F1B00;
+  --madeira:#B0644A;
+}
+html{
+  font-family:'Inter',system-ui,sans-serif;
+  scroll-behavior:smooth;
+  scroll-padding-top:82px;
+  background:var(--bg);
+  color:var(--tinta);
+  -webkit-font-smoothing:antialiased;
+}
+body{background:var(--bg);min-height:100vh;position:relative;overflow-x:hidden;font-weight:300;line-height:1.7}
+::selection{background:rgba(138,42,16,.24)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.fr{font-family:'Fraunces',Georgia,serif;font-weight:300}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;position:relative;z-index:5}
+
+/* ============ foto com fallback ============ */
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#d8c9b4,#a89076 55%,#c6b298);isolation:isolate}
+.ph:before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:repeating-linear-gradient(92deg,transparent,transparent 9px,rgba(138,42,16,.16) 9px,rgba(138,42,16,.16) 10px)}
+.ph>img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:60;background:rgba(245,244,240,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--lin)}
+.nav-in{max-width:1240px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo b{font-family:'Fraunces',Georgia,serif;font-size:1.42rem;font-weight:300;letter-spacing:-.01em;display:block;line-height:1.1}
+.logo i{display:block;font-style:normal;font-size:.66rem;letter-spacing:.24em;color:var(--tx2);margin-top:1px}
+.nav-l{display:flex;align-items:center;gap:28px;font-size:.84rem;color:var(--tx)}
+.nav-l a{transition:color .25s}
+.nav-l a:hover{color:var(--tinta)}
+.nav-tog{display:none;background:none;border:1px solid var(--lin2);border-radius:7px;padding:8px 12px;font-size:.72rem;color:var(--tx)}
+.b-lar{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--lar);color:#fff;border-radius:6px;
+  padding:13px 26px;font-size:.85rem;font-weight:500;transition:background .25s,transform .25s}
+.b-lar:hover{background:var(--lar2);transform:translateY(-1px)}
+.b-lar.sm{padding:9px 19px;font-size:.78rem}
+.b-lin{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--lin2);color:var(--tinta);
+  border-radius:6px;padding:13px 26px;font-size:.85rem;transition:border-color .25s,background .25s}
+.b-lin:hover{border-color:var(--tinta);background:rgba(26,26,26,.03)}
+.b-lin.sm{padding:9px 19px;font-size:.78rem}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lar2);
+  border:1px solid rgba(138,42,16,.3);background:rgba(138,42,16,.06);border-radius:999px;padding:7px 15px}
+.pill i{width:6px;height:6px;border-radius:50%;background:var(--lar);display:block;animation:bl 2s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.32}}
+.arw{width:16px;height:16px;transition:transform .3s}
+.b-lar:hover .arw,.b-lin:hover .arw{transform:translateX(4px)}
+
+/* ============ hero ============ */
+main,section,footer{position:relative;z-index:5}
+.hero{padding:76px 0 0}
+.hero-g{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.025em;
+  max-width:14ch;margin:26px 0 24px}
+.hero h1 em{font-style:italic;color:var(--lar2)}
+.hero p.sub{font-size:clamp(.95rem,1.45vw,1.06rem);color:var(--tx);max-width:48ch;line-height:1.85;margin-bottom:32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-risk{margin-top:20px;font-size:.75rem;color:var(--tx2)}
+.hero-f{position:relative}
+.hero-f .ph{border-radius:4px}
+.hero-f .p1{height:430px}
+.hero-f .p2{position:absolute;right:-16px;bottom:-42px;width:44%;height:190px;border:8px solid var(--bg);border-radius:4px}
+.rise{opacity:0;transform:translateY(24px);animation:rs 1.05s cubic-bezier(.16,1,.3,1) forwards}
+.rise.d1{animation-delay:.1s}.rise.d2{animation-delay:.24s}.rise.d3{animation-delay:.38s}.rise.d4{animation-delay:.52s}
+@keyframes rs{to{opacity:1;transform:none}}
+
+.faixa{margin-top:96px;border-top:1px solid var(--lin);border-bottom:1px solid var(--lin)}
+.faixa-in{max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
+.faixa-in>div{padding:26px 22px;border-left:1px solid var(--lin)}
+.faixa-in>div:first-child{border-left:0;padding-left:0}
+.faixa-in b{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.85rem;color:var(--tinta);line-height:1}
+.faixa-in span{display:block;font-size:.73rem;color:var(--tx2);margin-top:8px;line-height:1.55}
+
+/* ============ blocos ============ */
+section{padding:94px 0}
+.kick{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lar2);display:flex;align-items:center;gap:11px}
+.kick:before{content:"";width:26px;height:1px;background:var(--lar);display:block}
+.head{max-width:60ch;margin-bottom:46px}
+.head h2{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.9rem,3.7vw,2.9rem);line-height:1.14;letter-spacing:-.02em;margin-top:16px}
+.head h2 em{font-style:italic;color:var(--lar2)}
+.head p{color:var(--tx);font-size:.94rem;line-height:1.9;margin-top:16px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.tag{display:inline-block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lar2);
+  border:1px solid rgba(138,42,16,.3);background:rgba(138,42,16,.06);border-radius:5px;padding:4px 10px}
+
+/* ============ 02 KILLER: projetos por ambiente ============ */
+.pj{border:1px solid var(--lin);border-radius:8px;overflow:hidden;background:var(--bg2)}
+.pj-top{padding:20px 26px;border-bottom:1px solid var(--lin);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ab{border:1px solid var(--lin2);background:transparent;border-radius:6px;padding:9px 18px;cursor:pointer;font-size:.84rem;color:var(--tx);
+  transition:border-color .3s,color .3s,background .3s}
+.ab:hover{border-color:var(--tinta);color:var(--tinta)}
+.ab.on{border-color:var(--lar);background:var(--lar);color:#fff}
+.pj-g{display:grid;grid-template-columns:1.35fr .65fr}
+.pj-foto{position:relative;min-height:480px}
+.pj-foto .ph{position:absolute;inset:0}
+.pj-foto .cap{position:absolute;left:22px;bottom:20px;z-index:6;font-size:.74rem;color:var(--tinta);
+  background:rgba(248,247,244,.92);border:1px solid var(--lin);border-radius:5px;padding:8px 14px;backdrop-filter:blur(4px)}
+.pj-info{padding:28px;border-left:1px solid var(--lin);min-width:0}
+.pj-info .nm{font-family:'Fraunces',Georgia,serif;font-size:1.75rem;font-weight:300;line-height:1.15;letter-spacing:-.01em}
+.pj-info .lc{font-size:.78rem;color:var(--lar2);margin-top:6px}
+.pj-info p{font-size:.88rem;color:var(--tx);line-height:1.85;margin-top:16px}
+.pj-sp{display:grid;gap:1px;background:var(--lin);border:1px solid var(--lin);border-radius:6px;overflow:hidden;margin-top:20px}
+.pj-sp>div{background:var(--bg2);padding:13px 16px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.pj-sp span{font-size:.79rem;color:var(--tx)}
+.pj-sp b{font-family:'Fraunces',Georgia,serif;font-size:.95rem;font-weight:400;color:var(--tinta);white-space:nowrap}
+.pj-al{margin-top:18px;border-left:2px solid var(--lar);background:rgba(138,42,16,.06);padding:13px 16px;font-size:.82rem;
+  color:var(--tinta);line-height:1.75}
+.pj-ft{padding:16px 26px;border-top:1px solid var(--lin);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.pj-ft small{font-size:.73rem;color:var(--tx2);max-width:62ch;line-height:1.6}
+
+/* ============ 03 editorial ============ */
+.ed{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.ed p{color:var(--tx);font-size:.96rem;line-height:1.95;margin-bottom:18px}
+.ed p strong{color:var(--tinta);font-weight:400}
+.pull{border-left:2px solid var(--lar);padding:4px 0 4px 22px;margin:32px 0}
+.pull b{display:block;font-family:'Fraunces',Georgia,serif;font-size:3rem;color:var(--lar2);line-height:1}
+.pull span{display:block;color:var(--tx);font-size:.86rem;margin-top:11px;line-height:1.7}
+.ed-fotos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 152px;gap:12px}
+.ed-fotos .ph{border-radius:4px}
+.ed-fotos .ph:nth-child(1){grid-column:1/-1}
+
+/* ============ 04 materiais ============ */
+.mat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mc{border:1px solid var(--lin);border-radius:8px;overflow:hidden;background:var(--bg2);cursor:pointer;padding:0;text-align:left;
+  width:100%;display:block;transition:transform .3s,box-shadow .3s,border-color .3s}
+.mc:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(26,26,26,.09)}
+.mc.on{border-color:var(--lar);box-shadow:0 0 0 1px var(--lar)}
+.mc .ph{height:150px}
+.mc .bd{padding:16px 18px 18px}
+.mc .bd b{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.08rem;font-weight:400;color:var(--tinta)}
+.mc .bd span{display:block;font-size:.76rem;color:var(--tx2);margin-top:5px;line-height:1.5;min-height:2.3em}
+.mc .bd .v{margin-top:12px;font-size:.85rem;color:var(--lar2);font-weight:500}
+.mdet{margin-top:24px;border:1px solid var(--lin);border-radius:8px;background:var(--bg2);overflow:hidden}
+.mdet-h{padding:18px 24px;border-bottom:1px solid var(--lin);display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
+.mdet-h b{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:400}
+.mdet-h span{font-size:.79rem;color:var(--tx2)}
+.mdet-g{display:grid;grid-template-columns:repeat(4,1fr)}
+.mdet-g>div{padding:18px 24px;border-left:1px solid var(--lin)}
+.mdet-g>div:first-child{border-left:0}
+.mdet-g small{display:block;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);margin-bottom:7px}
+.mdet-g b{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:400;color:var(--tinta)}
+.mdet-n{padding:16px 24px;border-top:1px solid var(--lin);background:rgba(138,42,16,.05);font-size:.84rem;color:var(--tinta);line-height:1.8}
+
+/* ============ 05 zigue-zague ============ */
+.zz{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:78px}
+.zz:last-child{margin-bottom:0}
+.zz.inv .zz-tx{order:2}
+.zz .ph{height:410px;border-radius:4px}
+.zz h3{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:1.85rem;line-height:1.2;letter-spacing:-.02em;margin:14px 0 16px}
+.zz h3 em{font-style:italic;color:var(--lar2)}
+.zz p{color:var(--tx);font-size:.94rem;line-height:1.95;margin-bottom:14px}
+.zz ul{list-style:none;display:grid;gap:11px;margin-top:20px}
+.zz li{display:grid;grid-template-columns:auto 1fr;gap:11px;font-size:.87rem;color:var(--tx);line-height:1.65}
+.zz li i{font-style:normal;color:var(--lar);font-size:.76rem;line-height:1.9}
+
+/* ============ 06 marquee ============ */
+.mq{overflow:hidden;border-top:1px solid var(--lin);border-bottom:1px solid var(--lin);padding:20px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq-t{display:flex;gap:46px;width:max-content;animation:mqR 40s linear infinite}
+.mq-t span{display:inline-flex;align-items:center;gap:14px;font-family:'Fraunces',Georgia,serif;font-size:1.24rem;
+  color:var(--tx2);white-space:nowrap;font-style:italic}
+.mq-t span:after{content:"◦";font-size:.9rem;color:var(--lar);font-style:normal}
+@keyframes mqR{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ 07 processo ============ */
+.pr-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px;align-items:start}
+.pr-s{position:sticky;top:104px}
+.pr-l{position:relative;padding-left:32px}
+.pr-l:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--lar),var(--lin2),transparent)}
+.pi{position:relative;padding-bottom:32px}
+.pi:last-child{padding-bottom:0}
+.pi:before{content:"";position:absolute;left:-32px;top:7px;width:11px;height:11px;border-radius:50%;border:1px solid var(--lar);background:var(--bg)}
+.pi .w{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lar2)}
+.pi h5{font-family:'Fraunces',Georgia,serif;font-size:1.24rem;font-weight:400;margin:8px 0 8px}
+.pi p{font-size:.87rem;color:var(--tx);line-height:1.85}
+
+/* ============ 08 depoimento ============ */
+.dep{border:1px solid var(--lin);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:.72fr 1.28fr;background:var(--bg2)}
+.dep .ph{min-height:320px}
+.dep-tx{padding:46px 44px;display:flex;flex-direction:column;justify-content:center}
+.dep .str{color:var(--lar);letter-spacing:.26em;font-size:.9rem;margin-bottom:22px}
+.dep blockquote{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.24rem,2.4vw,1.85rem);line-height:1.45;
+  letter-spacing:-.015em;margin-bottom:26px}
+.dep blockquote em{font-style:italic;color:var(--lar2)}
+.dep .who b{display:block;font-size:.9rem;font-weight:500}
+.dep .who span{display:block;font-size:.77rem;color:var(--tx2);margin-top:3px}
+
+/* ============ 09 split ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--lin);border-radius:8px;overflow:hidden}
+.split>div{padding:40px 36px}
+.split .yy{background:var(--bg2)}
+.split .nn{background:var(--tinta);color:#EDE7DD}
+.split h4{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.3rem;margin-bottom:8px}
+.split .yy h4{color:var(--lar2)}
+.split .nn h4{color:#fca5a5}
+.split .lead{font-size:.83rem;margin-bottom:22px;line-height:1.7}
+.split .yy .lead{color:var(--tx2)}
+.split .nn .lead{color:rgba(239,237,232,.55)}
+.split ul{list-style:none;display:grid;gap:13px}
+.split li{display:grid;grid-template-columns:auto 1fr;gap:11px;font-size:.87rem;line-height:1.75}
+.split .yy li{color:var(--tx)}
+.split .nn li{color:rgba(239,237,232,.8)}
+.split li i{font-style:normal;font-size:.74rem;line-height:2;flex:none}
+.split .yy li i{color:var(--lar)}
+.split .nn li i{color:#fca5a5}
+
+/* ============ 10 objeções ============ */
+.obj{display:grid;grid-template-columns:1fr 1fr;gap:0 54px}
+.oi{padding:26px 0;border-top:1px solid var(--lin)}
+.oi h5{font-size:.96rem;font-weight:500;margin-bottom:11px;display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;line-height:1.5}
+.oi h5 i{font-style:normal;font-size:.68rem;color:var(--lar2);border:1px solid rgba(138,42,16,.28);background:rgba(138,42,16,.06);
+  border-radius:5px;padding:3px 8px;line-height:1.35;margin-top:2px}
+.oi p{font-size:.86rem;color:var(--tx);line-height:1.85;padding-left:42px}
+
+/* ============ 11 valores ============ */
+.of{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.of-c{border:1px solid var(--lin);border-radius:8px;padding:34px 32px;display:flex;flex-direction:column;position:relative;background:var(--bg2)}
+.of-c.mk{border-color:var(--lar);background:#fff}
+.of-c .bg{position:absolute;top:-11px;left:32px;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:var(--lar);padding:4px 12px;border-radius:999px;font-weight:500}
+.of-c h4{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.32rem;margin-bottom:9px}
+.of-c .ds{font-size:.85rem;color:var(--tx);line-height:1.75;margin-bottom:24px;min-height:54px}
+.of-c .pr2{border-top:1px solid var(--lin);border-bottom:1px solid var(--lin);padding:20px 0;margin-bottom:24px}
+.of-c .pr2 b{display:block;font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:400;line-height:1.1}
+.of-c.mk .pr2 b{color:var(--lar2)}
+.of-c .pr2 small{display:block;font-size:.75rem;color:var(--tx2);margin-top:8px;line-height:1.6}
+.of-c ul{list-style:none;display:grid;gap:12px;margin-bottom:28px;flex:1;align-content:start}
+.of-c li{display:grid;grid-template-columns:auto 1fr;gap:11px;font-size:.85rem;color:var(--tx);line-height:1.65}
+.of-c li i{font-style:normal;color:var(--lar);font-size:.74rem;line-height:2}
+.of-note{margin-top:22px;font-size:.78rem;color:var(--tx2);text-align:center;line-height:1.75}
+
+/* ============ 12 form ============ */
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+.cta-l h2{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.95rem,3.8vw,2.9rem);line-height:1.14;letter-spacing:-.02em;margin:16px 0 20px}
+.cta-l h2 em{font-style:italic;color:var(--lar2)}
+.cta-l p{color:var(--tx);font-size:.94rem;line-height:1.9}
+.cta-l ul{list-style:none;display:grid;gap:13px;margin-top:26px}
+.cta-l li{display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:.87rem;color:var(--tx);line-height:1.65}
+.cta-l li i{font-style:normal;color:var(--lar);font-size:.74rem;line-height:2}
+.frm{border:1px solid var(--lin);border-radius:8px;padding:32px;background:#fff}
+.frm .row{margin-bottom:16px}
+.frm label{display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);margin-bottom:9px}
+.frm input,.frm select,.frm textarea{width:100%;background:var(--bg);border:1px solid var(--lin2);border-radius:6px;padding:12px 14px;
+  font-size:.88rem;color:var(--tinta);transition:border-color .25s;font-weight:300}
+.frm input:focus,.frm select:focus,.frm textarea:focus{outline:none;border-color:var(--lar);box-shadow:0 0 0 3px rgba(138,42,16,.1)}
+.frm textarea{resize:vertical;min-height:76px}
+.frm .r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.frm .sb{margin-top:8px}
+.frm .sb .b-lar{width:100%}
+.frm .lg{font-size:.73rem;color:var(--tx2);margin-top:16px;line-height:1.7;text-align:center}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--lin);padding:52px 0 34px}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;padding-bottom:34px;border-bottom:1px solid var(--lin)}
+.ft p{font-size:.84rem;color:var(--tx);line-height:1.85;margin-top:16px;max-width:42ch}
+.ft h6{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tx2);margin-bottom:16px}
+.ft ul{list-style:none;display:grid;gap:10px}
+.ft a,.ft li{font-size:.85rem;color:var(--tx);transition:color .25s}
+.ft a:hover{color:var(--lar2)}
+.ft-b{padding-top:26px;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;font-size:.73rem;color:var(--tx2);line-height:1.7}
+
+/* ============ whatsapp ============ */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:57px;height:57px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 26px rgba(37,211,102,.3)}
+.wa-float svg{width:31px;height:31px;fill:#ffffff}
+.wa-pulse:before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:waP 2.4s infinite;z-index:-1}
+@keyframes waP{0%{transform:scale(1);opacity:.6}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
+
+/* ============ responsivo ============ */
+@media(max-width:1060px){
+  .hero-g,.ed,.zz,.pr-g,.cta,.dep{grid-template-columns:1fr;gap:36px}
+  .zz.inv .zz-tx{order:0}
+  .pr-s{position:static}
+  .pj-g{grid-template-columns:1fr}
+  .pj-info{border-left:0;border-top:1px solid var(--lin)}
+  .pj-foto{min-height:360px}
+  .mat{grid-template-columns:1fr 1fr}
+  .mdet-g{grid-template-columns:1fr 1fr}
+  .mdet-g>div:nth-child(3){border-left:0}
+  .mdet-g>div:nth-child(n+3){border-top:1px solid var(--lin)}
+  .faixa-in{grid-template-columns:1fr 1fr}
+  .faixa-in>div:nth-child(3){border-left:0;padding-left:0}
+  .faixa-in>div:nth-child(n+3){border-top:1px solid var(--lin)}
+  .hero-f .p2{position:static;width:100%;height:150px;margin-top:12px;border:0}
+  .dep .ph{min-height:240px}
+}
+@media(max-width:860px){
+  .ft{grid-template-columns:1fr 1fr;gap:32px}
+  .ft p{max-width:none}
+  .nav-l{display:none}
+  .nav-tog{display:block}
+  .nav-l.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(245,244,240,.99);
+    border-bottom:1px solid var(--lin);padding:6px 24px 16px}
+  .nav-l.open a{padding:12px 0;border-top:1px solid var(--lin);width:100%}
+  .split,.of,.obj,.mat{grid-template-columns:1fr}
+  .oi:nth-child(1){border-top:1px solid var(--lin)}
+  section{padding:68px 0}
+  .faixa{margin-top:64px}
+}
+@media(max-width:560px){
+  .ft{grid-template-columns:1fr;gap:28px}
+  .faixa-in,.mdet-g{grid-template-columns:1fr}
+  .faixa-in>div,.mdet-g>div{border-left:0;border-top:1px solid var(--lin);padding-left:0}
+  .mdet-g>div{padding-left:24px}
+  .pj-info,.pj-top,.pj-ft{padding-left:20px;padding-right:20px}
+  .dep-tx{padding-left:24px;padding-right:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  .rise{opacity:1;transform:none}
+}
+/* logotipo em imagem (Tapetto) */
+.logo{display:flex;align-items:center}
+.logo img{height:46px;width:46px;border-radius:50%;object-fit:cover}
+footer .logo img{height:64px;width:64px}
+.hero h1,.head h2,.cta-l h2{overflow-wrap:break-word;hyphens:manual}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="#topo" class="logo" aria-label="Tapetto — início"><img src="assets/img/logo-tapetto.png" alt="Logotipo da Tapetto" width="46" height="46"></a>
+    <nav class="nav-l" id="navl">
+      <a href="#projetos">Soluções</a>
+      <a href="#materiais">Materiais</a>
+      <a href="#oficina">A fábrica</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#valores">Linhas</a>
+    </nav>
+    <button class="nav-tog" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
+    <a href="#orcamento" class="b-lar sm" style="flex:none">Pedir orçamento</a>
+  </div>
+</header>
+
+<!-- ===== 01 HERO ===== -->
+<main class="hero" id="topo">
+  <div class="wrap hero-g">
+    <div>
+      <div class="rise"><span class="pill"><i></i>Rio de Janeiro · há mais de 48 anos no mercado</span></div>
+      <h1 class="fr rise d1">Tapetes e capachos <em>com a sua cara</em>, feitos para durar.</h1>
+      <p class="sub rise d2">As melhores soluções em tapetes e capachos personalizados e proteção para pisos. Seu tapete é produzido na maior fábrica da América Latina — e a gente cuida de tudo com você, do desenho à entrega.</p>
+      <div class="hero-cta rise d3">
+        <a href="#orcamento" class="b-lar">Pedir orçamento
+          <svg class="arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+        </a>
+        <a href="#projetos" class="b-lin">Ver soluções</a>
+      </div>
+      <p class="hero-risk rise d4">Atendimento próximo no Rio de Janeiro · orçamento sem compromisso</p>
+    </div>
+
+    <div class="hero-f rise d2">
+      <div class="ph p1"><img src="assets/img/tapete-creche-escola.jpg" alt="Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose" loading="eager"></div>
+      <div class="ph p2"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=700" alt="Detalhe de acabamento em ambiente decorado" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="faixa">
+    <div class="faixa-in">
+      <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de tapetes e capachos</span></div>
+      <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
+      <div><b class="fr">Sob medida</b><span>com o seu logotipo, cores, frase ou desenho</span></div>
+      <div><b class="fr">Dezenas</b><span>de clientes satisfeitos atendidos pelo nosso distribuidor</span></div>
+    </div>
+  </div>
+</main>
+
+<!-- ===== 02 KILLER: SOLUÇÕES POR USO ===== -->
+<section id="projetos">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">01 / Soluções</div>
+      <h2 class="fr">Escolha onde vai usar. <em>Veja a solução ideal.</em></h2>
+      <p>Cada espaço pede um tipo de tapete: uma entrada de loja não é igual a uma sala de creche. Aqui você vê o que indicamos para cada uso, o que ele resolve e os cuidados para escolher bem.</p>
+    </div>
+
+    <div class="pj rv">
+      <div class="pj-top" id="pjTop"></div>
+
+      <div class="pj-g">
+        <div class="pj-foto" id="pjFoto">
+          <span class="cap" id="pjCap">—</span>
+        </div>
+        <div class="pj-info">
+          <div class="nm fr" id="pNm">—</div>
+          <div class="lc" id="pLc">—</div>
+          <p id="pP">—</p>
+          <div class="pj-sp" id="pSp"></div>
+          <div class="pj-al" id="pAl">—</div>
+        </div>
+      </div>
+
+      <div class="pj-ft">
+        <small>Medidas, cores e acabamento são definidos com você no orçamento. O valor depende do tamanho, do material e da complexidade da arte — por isso conversamos antes de passar qualquer número.</small>
+        <a href="#orcamento" class="b-lin sm">Quero uma solução assim</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 EDITORIAL ===== -->
+<section id="verdade">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">02 / Antes de comparar preço</div>
+      <h2 class="fr">Dois tapetes parecidos na foto <em>podem durar coisas muito diferentes.</em></h2>
+    </div>
+
+    <div class="ed">
+      <div class="rv">
+        <p>Na hora de escolher, é comum olhar só o desenho e o preço. Mas o que decide se o tapete continua bonito depois de muito uso é o que não aparece na foto: <strong>o tipo de fio, a base antiderrapante e a forma como a arte é aplicada</strong>.</p>
+        <p>Um capacho de entrada, por exemplo, recebe pisada, chuva e areia todos os dias. Se a base não segura bem no piso ou se as cores desbotam com o sol, ele perde a função rapidinho. <strong>Material certo para o lugar certo faz toda a diferença</strong> — e é isso que a gente te ajuda a escolher.</p>
+        <p>Por isso, no orçamento a gente explica com calma o material indicado, o acabamento e os cuidados de limpeza. <strong>Você entende o que está levando</strong>, e não compara só o valor final.</p>
+
+        <div class="pull">
+          <b class="fr">48 anos</b>
+          <span>é o tempo de estrada da fábrica onde o seu tapete é produzido — a maior da América Latina. Experiência que aparece no acabamento e na durabilidade.</span>
+        </div>
+
+        <p>Não vendemos só um tapete. <strong>A gente entrega a solução certa para o seu piso.</strong></p>
+      </div>
+
+      <div class="ed-fotos rv">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80&w=1100" alt="Ambiente interno com piso protegido e decoração" loading="lazy"></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=700" alt="Detalhe de acabamento em ambiente residencial" loading="lazy"></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?auto=format&fit=crop&q=80&w=700" alt="Materiais empilhados prontos para produção" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 MATERIAIS ===== -->
+<section id="materiais">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">03 / Materiais</div>
+      <h2 class="fr">Quatro opções, <em>quatro usos diferentes.</em></h2>
+      <p>Clique para comparar. O que muda não é só o visual: é a resistência a umidade, a facilidade de limpeza e onde cada material funciona melhor.</p>
+    </div>
+
+    <div class="mat rv" id="mat"></div>
+
+    <div class="mdet rv">
+      <div class="mdet-h">
+        <b class="fr" id="mT">—</b>
+        <span id="mS">—</span>
+      </div>
+      <div class="mdet-g">
+        <div><small>Ideal para</small><b class="fr" id="mPr">—</b></div>
+        <div><small>Resistência a umidade</small><b class="fr" id="mUm">—</b></div>
+        <div><small>Fácil de limpar?</small><b class="fr" id="mRp">—</b></div>
+        <div><small>Personalização</small><b class="fr" id="mPz">—</b></div>
+      </div>
+      <div class="mdet-n" id="mN">—</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 FÁBRICA ===== -->
+<section id="oficina">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">04 / A fábrica</div>
+      <h2 class="fr">O que muda por ser feito <em>na maior fábrica da América Latina.</em></h2>
+    </div>
+
+    <div class="zz rv">
+      <div class="zz-tx">
+        <span class="tag">Produção</span>
+        <h3 class="fr">Indústria grande, <em>atendimento de perto</em></h3>
+        <p>Seu tapete e capacho é produzido na maior fábrica da América Latina, com mais de 48 anos atuando no mercado nacional. Isso garante padrão de qualidade, cores firmes e acabamento caprichado em cada peça.</p>
+        <p>E aqui no Rio você conta com o nosso atendimento próximo: a gente entende o seu espaço, ajuda na arte e acompanha o pedido até ele chegar.</p>
+        <ul>
+          <li><i>◦</i><span>Produção industrial com padrão de qualidade consolidado</span></li>
+          <li><i>◦</i><span>Sua marca, cores e desenho reproduzidos com fidelidade</span></li>
+          <li><i>◦</i><span>Acompanhamento do pedido do início ao fim</span></li>
+        </ul>
+      </div>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1100" alt="Ambiente de produção industrial com máquinas" loading="lazy"></div>
+    </div>
+
+    <div class="zz inv rv">
+      <div class="zz-tx">
+        <span class="tag">Medida</span>
+        <h3 class="fr">Tapete no tamanho do seu espaço, <em>não o contrário</em></h3>
+        <p>Entrada estreita, sala de aula redonda, recepção com formato diferente: tapete pronto quase nunca encaixa direito. Quando sobra ou falta, ele embola, escorrega e perde a graça.</p>
+        <p>Por isso trabalhamos sob medida. Você informa as medidas e o uso, e a gente indica o formato, o material e o acabamento que vão funcionar no seu piso.</p>
+        <ul>
+          <li><i>◦</i><span>Formatos e tamanhos sob medida</span></li>
+          <li><i>◦</i><span>Indicação do material certo para cada ambiente</span></li>
+          <li><i>◦</i><span>Opções para áreas internas e externas</span></li>
+        </ul>
+      </div>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=1100" alt="Profissional medindo um ambiente" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 MARQUEE ===== -->
+<div class="mq" aria-hidden="true"><div class="mq-t" id="mqT"></div></div>
+
+<!-- ===== 07 PROCESSO ===== -->
+<section id="processo">
+  <div class="wrap">
+    <div class="pr-g">
+      <div class="pr-s">
+        <div class="head rv" style="margin-bottom:26px">
+          <div class="kick">05 / Como funciona</div>
+          <h2 class="fr" style="font-size:clamp(1.75rem,2.8vw,2.3rem)">Do primeiro contato <em>ao tapete no&nbsp;piso</em></h2>
+          <p>Cinco etapas simples, com a sua aprovação antes da produção. Você vê a arte e só depois o tapete vai para a fábrica.</p>
+        </div>
+        <a href="#orcamento" class="b-lin">Pedir orçamento</a>
+      </div>
+
+      <div class="pr-l rv">
+        <div class="pi">
+          <div class="w">Etapa 01 · conversa</div>
+          <h5 class="fr">Entendemos o que você precisa</h5>
+          <p>Você conta onde o tapete vai ficar, quem usa o espaço e o que quer transmitir. Pode mandar foto do local e o seu logotipo. Sem compromisso.</p>
+        </div>
+        <div class="pi">
+          <div class="w">Etapa 02 · proposta</div>
+          <h5 class="fr">Indicação de material e orçamento</h5>
+          <p>Indicamos o material ideal para o seu uso e enviamos o orçamento com medidas, acabamento e cuidados explicados de forma clara.</p>
+        </div>
+        <div class="pi">
+          <div class="w">Etapa 03 · arte</div>
+          <h5 class="fr">Aprovação da arte</h5>
+          <p>Você vê como o tapete vai ficar, com cores e posição do logotipo ou desenho. Ajustamos até ficar do seu jeito antes de produzir.</p>
+        </div>
+        <div class="pi">
+          <div class="w">Etapa 04 · produção</div>
+          <h5 class="fr">Fabricação na maior fábrica da América Latina</h5>
+          <p>Com a arte aprovada, o pedido segue para produção com o padrão de qualidade de quem está há mais de 48 anos no mercado.</p>
+        </div>
+        <div class="pi">
+          <div class="w">Etapa 05 · entrega</div>
+          <h5 class="fr">Entrega e orientação de uso</h5>
+          <p>Seu tapete chega pronto para usar, e a gente explica como limpar e conservar para ele durar muito mais.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 DEPOIMENTO ===== -->
+<!-- AVALIAÇÕES DO GOOGLE: substitua o texto, o nome e a nota abaixo pelos dados reais do perfil -->
+<section id="prova">
+  <div class="wrap">
+    <div class="dep rv">
+      <div class="ph"><img src="assets/img/tapete-creche-escola.jpg" alt="Tapete infantil personalizado com letras coloridas instalado em sala de escola" loading="lazy"></div>
+      <div class="dep-tx">
+        <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
+        <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
+        <div class="who">
+          <b>Clientes Tapetto</b>
+          <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener" style="text-decoration:underline">nosso perfil no Google</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 SPLIT ===== -->
+<section id="perfil">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">06 / Para quem é</div>
+      <h2 class="fr">A Tapetto é para quem <em>quer fazer a escolha certa.</em></h2>
+      <p>Falamos com sinceridade logo na primeira conversa, para você não perder tempo nem dinheiro.</p>
+    </div>
+
+    <div class="split rv">
+      <div class="yy">
+        <h4 class="fr">Somos boa escolha se</h4>
+        <p class="lead">Perfis que costumam sair felizes com o resultado.</p>
+        <ul>
+          <li><i>◦</i><span>Você quer um capacho ou tapete com a sua marca, nome ou desenho, do jeito que imaginou.</span></li>
+          <li><i>◦</i><span>Tem um espaço com medida ou formato diferente, onde tapete pronto não encaixa.</span></li>
+          <li><i>◦</i><span>Valoriza durabilidade e acabamento, não só o menor preço.</span></li>
+          <li><i>◦</i><span>Quer atendimento próximo, de gente que explica e acompanha o pedido.</span></li>
+        </ul>
+      </div>
+      <div class="nn">
+        <h4 class="fr">Talvez não seja para você se</h4>
+        <p class="lead">Casos em que um tapete pronto de loja pode atender melhor — e a gente fala.</p>
+        <ul>
+          <li><i>◦</i><span>Você precisa do tapete para hoje. Peça personalizada leva um tempo de produção.</span></li>
+          <li><i>◦</i><span>Busca apenas um tapete simples, sem arte e em medida padrão.</span></li>
+          <li><i>◦</i><span>A decisão será somente pelo menor preço, sem olhar material e durabilidade.</span></li>
+          <li><i>◦</i><span>Não quer participar da aprovação da arte antes da produção.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 OBJEÇÕES ===== -->
+<section id="objecoes">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">07 / Perguntas frequentes</div>
+      <h2 class="fr">O que mais perguntam <em>antes de pedir.</em></h2>
+    </div>
+
+    <div class="obj rv">
+      <div>
+        <div class="oi">
+          <h5><i>01</i><span>Dá para colocar o logotipo da minha empresa?</span></h5>
+          <p>Dá, sim. Você nos envia o logotipo e as cores, e a gente prepara a arte para você aprovar antes da produção. Também fazemos frases, nomes e desenhos, como os tapetes infantis com alfabeto para creches e escolas.</p>
+        </div>
+        <div class="oi">
+          <h5><i>02</i><span>O capacho escorrega no piso?</span></h5>
+          <p>Indicamos sempre uma base adequada ao seu piso e ao local de uso, justamente para o tapete ficar firme. Na conversa, conte se o piso é liso, cerâmico, de madeira ou externo, que a gente indica a melhor opção.</p>
+        </div>
+        <div class="oi">
+          <h5><i>03</i><span>Serve para área externa e molhada?</span></h5>
+          <p>Serve, desde que seja o material certo. Para entradas expostas à chuva e áreas externas, existem opções próprias, e a grama sintética é ótima para varandas, playgrounds e áreas de lazer. Explicamos as diferenças no orçamento.</p>
+        </div>
+      </div>
+      <div>
+        <div class="oi">
+          <h5><i>04</i><span>Como faço a limpeza?</span></h5>
+          <p>Depende do material, mas em geral basta aspirar ou sacudir no dia a dia e lavar quando necessário. Junto com o pedido, você recebe as orientações certinhas para o seu tapete durar bastante.</p>
+        </div>
+        <div class="oi">
+          <h5><i>05</i><span>Quanto custa um tapete personalizado?</span></h5>
+          <p>O valor depende do tamanho, do material e da complexidade da arte. Por isso preferimos entender o seu caso antes de passar um número — assim o orçamento sai justo e sem surpresa. Preencha o formulário que a gente responde.</p>
+        </div>
+        <div class="oi">
+          <h5><i>06</i><span>Vocês atendem onde?</span></h5>
+          <p>Atendemos no Rio de Janeiro. Se você está em outra cidade, mande uma mensagem mesmo assim que a gente verifica a melhor forma de te atender.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11 LINHAS ===== -->
+<section id="valores">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kick">08 / Linhas</div>
+      <h2 class="fr">Duas linhas, <em>uma para cada necessidade.</em></h2>
+      <p>O valor final sai do seu projeto: medida, material e arte. Peça o orçamento e receba a proposta certa.</p>
+    </div>
+
+    <div class="of rv">
+      <div class="of-c">
+        <h4 class="fr">Proteção para pisos</h4>
+        <p class="ds">Capachos de entrada e grama sintética para proteger o piso, reter sujeira e deixar o espaço mais bonito e seguro.</p>
+        <div class="pr2">
+          <b class="fr">Sob consulta</b>
+          <small>conforme medida e material · orçamento sem compromisso</small>
+        </div>
+        <ul>
+          <li><i>◦</i><span>Capachos para residências, condomínios e comércios</span></li>
+          <li><i>◦</i><span>Grama sintética para áreas de lazer e varandas</span></li>
+          <li><i>◦</i><span>Indicação do material ideal para cada piso</span></li>
+          <li><i>◦</i><span>Opções para áreas internas e externas</span></li>
+          <li><i>◦</i><span>Orientação de limpeza e conservação</span></li>
+        </ul>
+        <a href="#orcamento" class="b-lin" style="width:100%">Pedir orçamento</a>
+      </div>
+
+      <div class="of-c mk">
+        <span class="bg">Mais pedido</span>
+        <h4 class="fr">Personalizados</h4>
+        <p class="ds">Tapetes e capachos com o seu logotipo, nome, frase ou desenho. Para quando o tapete também é cartão de visita.</p>
+        <div class="pr2">
+          <b class="fr">Sob consulta</b>
+          <small>conforme medida, material e complexidade da arte</small>
+        </div>
+        <ul>
+          <li><i>◦</i><span>Tudo da linha de proteção para pisos</span></li>
+          <li><i>◦</i><span>Arte com a sua marca, cores e desenho</span></li>
+          <li><i>◦</i><span>Aprovação da arte antes da produção</span></li>
+          <li><i>◦</i><span>Tapetes infantis para creches e escolas</span></li>
+          <li><i>◦</i><span>Formatos e tamanhos sob medida</span></li>
+          <li><i>◦</i><span>Produção na maior fábrica da América Latina</span></li>
+        </ul>
+        <a href="#orcamento" class="b-lar" style="width:100%">Pedir orçamento</a>
+      </div>
+    </div>
+
+    <p class="of-note">Cada tapete é pensado para o seu espaço. Sem saber a medida, o material e a arte, qualquer número seria chute — por isso o orçamento é sempre personalizado.</p>
+  </div>
+</section>
+
+<!-- ===== 12 CTA ===== -->
+<section id="orcamento">
+  <div class="wrap">
+    <div class="cta">
+      <div class="cta-l rv">
+        <div class="kick">09 / Próximo passo</div>
+        <h2 class="fr">Conte onde vai usar. <em>A gente indica o tapete certo.</em></h2>
+        <p>Preencha e o resumo vai direto para o nosso WhatsApp, com a solução e o material que você escolheu. Respondemos o mais rápido possível para montar o seu orçamento.</p>
+        <ul>
+          <li><i>◦</i><span>Orçamento sem custo e sem compromisso</span></li>
+          <li><i>◦</i><span>Indicação do material ideal para o seu piso</span></li>
+          <li><i>◦</i><span>Aprovação da arte antes da produção</span></li>
+          <li><i>◦</i><span>Seus dados são usados só para esse contato, conforme a LGPD</span></li>
+        </ul>
+      </div>
+
+      <form class="frm rv" id="fm" novalidate>
+        <div class="row">
+          <label for="fNome">Nome completo</label>
+          <input id="fNome" type="text" placeholder="Como podemos te chamar" required>
+        </div>
+        <div class="row r2">
+          <div>
+            <label for="fFone">WhatsApp</label>
+            <input id="fFone" type="tel" placeholder="(21) 90000-0000" required>
+          </div>
+          <div>
+            <label for="fBairro">Bairro / cidade</label>
+            <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" required>
+          </div>
+        </div>
+        <div class="row r2">
+          <div>
+            <label for="fFase">Para onde é</label>
+            <select id="fFase">
+              <option selected>Minha casa ou apartamento</option>
+              <option>Empresa ou comércio</option>
+              <option>Condomínio</option>
+              <option>Creche ou escola</option>
+            </select>
+          </div>
+          <div>
+            <label for="fPrazo">Quando precisa</label>
+            <select id="fPrazo">
+              <option>O quanto antes</option>
+              <option selected>Nas próximas semanas</option>
+              <option>Daqui a alguns meses</option>
+              <option>Sem data definida</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <label for="fObs">Conte um pouco do que precisa</label>
+          <textarea id="fObs" placeholder="Ex.: capacho para a entrada da loja com o nosso logotipo, mais ou menos 1 m de largura"></textarea>
+        </div>
+        <div class="sb"><button type="submit" class="b-lar">Pedir orçamento</button></div>
+        <p class="lg">Ao enviar, abre-se uma conversa no WhatsApp com o resumo preenchido. Não fazemos disparos em massa.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="logo"><img src="assets/img/logo-tapetto.png" alt="Logotipo da Tapetto" width="64" height="64" loading="lazy"></div>
+        <p>Tapetes e capachos personalizados, tapetes infantis e grama sintética no Rio de Janeiro. Produzidos na maior fábrica da América Latina, há mais de 48 anos no mercado nacional.</p>
+      </div>
+      <div>
+        <h6>Navegação</h6>
+        <ul>
+          <li><a href="#projetos">Soluções por uso</a></li>
+          <li><a href="#materiais">Comparativo de materiais</a></li>
+          <li><a href="#oficina">A fábrica</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#valores">Linhas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Contato</h6>
+        <ul>
+          <li><a href="https://wa.me/5521998146495" target="_blank" rel="noopener">WhatsApp (21) 99814-6495</a></li>
+          <li><a href="mailto:ebpcontato@gmail.com">ebpcontato@gmail.com</a></li>
+          <li>Rio de Janeiro · RJ</li>
+          <li><a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Nosso perfil no Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-b">
+      <span>© 2026 Tapetto. Todos os direitos reservados.</span>
+      <span>Valores sob consulta, conforme medida, material e arte. Algumas imagens são ilustrativas.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float wa-pulse" href="https://wa.me/5521998146495?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20tapete%20ou%20capacho%20personalizado." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3C9.383 3 4 8.383 4 15.004c0 2.117.555 4.184 1.61 6.004L4 29l8.152-1.57a11.94 11.94 0 0 0 3.852.633h.004C22.625 28.063 28 22.68 28 16.06 28 9.437 22.625 4.055 16.004 4.055zm0 21.938h-.004a9.93 9.93 0 0 1-5.062-1.387l-.363-.215-4.84.93.93-4.715-.235-.383a9.92 9.92 0 0 1-1.523-5.309c0-5.492 4.469-9.96 9.965-9.96 2.66 0 5.16 1.039 7.039 2.921a9.9 9.9 0 0 1 2.918 7.047c-.004 5.492-4.472 9.96-9.965 9.96zm5.465-7.457c-.3-.152-1.77-.875-2.043-.973-.273-.098-.473-.148-.672.153-.199.297-.77.968-.945 1.168-.172.199-.348.222-.648.074-.301-.148-1.266-.465-2.41-1.489-.891-.793-1.492-1.773-1.668-2.074-.172-.297-.02-.457.133-.605.137-.133.301-.348.45-.523.152-.176.199-.301.3-.5.098-.203.05-.375-.023-.524-.078-.148-.672-1.621-.922-2.219-.242-.582-.488-.504-.672-.512l-.57-.011a1.1 1.1 0 0 0-.797.371c-.273.301-1.047 1.024-1.047 2.496s1.074 2.895 1.223 3.094c.148.199 2.113 3.226 5.121 4.523.715.309 1.273.492 1.707.633.719.227 1.371.195 1.887.117.575-.086 1.77-.723 2.02-1.422.246-.699.246-1.297.171-1.422-.07-.125-.269-.199-.57-.348z"/></svg>
+</a>
+
+<script>
+(function(){
+'use strict';
+var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function trataImg(im){
+  var falhou = function(){ im.style.display = 'none'; };
+  im.addEventListener('error', falhou);
+  if(im.complete && im.naturalWidth === 0) falhou();
+}
+document.querySelectorAll('.ph > img').forEach(trataImg);
+var moImg = new MutationObserver(function(ms){
+  ms.forEach(function(m){
+    m.addedNodes.forEach(function(n){
+      if(n.nodeType !== 1) return;
+      if(n.matches && n.matches('.ph > img')) trataImg(n);
+      if(n.querySelectorAll) n.querySelectorAll('.ph > img').forEach(trataImg);
+    });
+  });
+});
+moImg.observe(document.body, {childList:true, subtree:true});
+
+if(RM){ document.querySelectorAll('.rv').forEach(function(e){ e.classList.add('in'); }); }
+else{
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(e){ io.observe(e); });
+}
+
+var tog = document.getElementById('navtog'), navl = document.getElementById('navl');
+tog.addEventListener('click', function(){
+  var o = navl.classList.toggle('open');
+  tog.setAttribute('aria-expanded', o ? 'true' : 'false');
+});
+navl.addEventListener('click', function(e){
+  if(e.target.tagName === 'A'){ navl.classList.remove('open'); tog.setAttribute('aria-expanded','false'); }
+});
+
+/* =========================================================
+   KILLER — projetos por ambiente
+   ========================================================= */
+var AMB = [
+  {id:'emp', nome:'Empresa e comércio', local:'Capacho de entrada com logotipo',
+   p:'A entrada é a primeira impressão de quem chega. Um capacho com o seu logotipo recebe o cliente, retém a sujeira dos sapatos e protege o piso — tudo de uma vez. Funciona em lojas, escritórios, clínicas e restaurantes.',
+   sp:[['Personalização','Logotipo e cores da marca'],['Uso indicado','Entradas e recepções'],['Formato','Sob medida']],
+   al:'Para entradas com muito movimento, escolha um material de alta resistência e base firme. Capacho fino demais desgasta rápido e pode escorregar.',
+   foto:'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&q=80&w=1400',
+   alt:'Ambiente comercial com entrada organizada',
+   cap:'Capacho personalizado para recepção'},
+  {id:'esc', nome:'Creche e escola', local:'Tapete infantil personalizado',
+   p:'Tapete para as crianças brincarem, sentarem em roda e aprenderem. Pode levar alfabeto, números, cores e o nome da escola, deixando a sala mais acolhedora e protegendo os pequenos do piso frio.',
+   sp:[['Personalização','Nome, letras e desenhos'],['Uso indicado','Salas de aula e brinquedotecas'],['Formato','Redondo, retangular ou sob medida']],
+   al:'Em espaços infantis, priorize um material fácil de limpar e uma base que não deslize. Conte quantas crianças usam o espaço para indicarmos o tamanho ideal.',
+   foto:'https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&q=80&w=1400',
+   alt:'Espaço interno preparado para receber um tapete infantil',
+   cap:'Tapete infantil com alfabeto e nome da escola'},
+  {id:'cas', nome:'Casa e condomínio', local:'Capachos e tapetes personalizados',
+   p:'Capacho com o nome da família, uma frase de boas-vindas ou o nome do condomínio. Um detalhe que deixa a entrada com a sua cara e ainda ajuda a manter a casa limpa.',
+   sp:[['Personalização','Nome, frase ou desenho'],['Uso indicado','Portas, halls e portarias'],['Formato','Sob medida']],
+   al:'Se a entrada pega chuva ou sol direto, avise na hora do pedido: existem materiais próprios para áreas externas que não desbotam nem encharcam.',
+   foto:'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&q=80&w=1400',
+   alt:'Ambiente residencial aconchegante',
+   cap:'Capacho com nome da família para a entrada'},
+  {id:'gra', nome:'Grama sintética', local:'Áreas de lazer, varandas e playgrounds',
+   p:'Verde o ano inteiro, sem rega e sem poda. A grama sintética deixa varandas, quintais, playgrounds e áreas de lazer mais bonitos e confortáveis, com pouca manutenção.',
+   sp:[['Personalização','Recorte sob medida'],['Uso indicado','Áreas internas e externas'],['Manutenção','Baixa']],
+   al:'Para áreas externas, a base do local precisa permitir o escoamento da água. Mande uma foto do espaço que a gente orienta antes de você comprar.',
+   foto:'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=1400',
+   alt:'Área de lazer decorada pronta para receber grama sintética',
+   cap:'Grama sintética para área de lazer'}
+];
+var AID = 'emp';
+function aAtual(){ for(var i=0;i<AMB.length;i++){ if(AMB[i].id===AID) return AMB[i]; } return AMB[0]; }
+
+function pjRender(){
+  var top = document.getElementById('pjTop');
+  top.innerHTML = '';
+  AMB.forEach(function(A){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ab' + (A.id === AID ? ' on' : '');
+    b.setAttribute('aria-pressed', A.id === AID ? 'true' : 'false');
+    b.textContent = A.nome;
+    b.addEventListener('click', function(){ AID = A.id; pjRender(); });
+    top.appendChild(b);
+  });
+  var A = aAtual();
+  var foto = document.getElementById('pjFoto');
+  var cap = document.getElementById('pjCap');
+  foto.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
+  var d = document.createElement('div');
+  d.className = 'ph';
+  d.innerHTML = '<img src="' + A.foto + '" alt="' + A.alt + '" loading="lazy">';
+  foto.insertBefore(d, cap);
+  cap.textContent = A.cap;
+  document.getElementById('pNm').textContent = A.nome;
+  document.getElementById('pLc').textContent = A.local;
+  document.getElementById('pP').textContent = A.p;
+  var sp = document.getElementById('pSp');
+  sp.innerHTML = '';
+  A.sp.forEach(function(par){
+    var e = document.createElement('div');
+    e.innerHTML = '<span>' + par[0] + '</span><b class="fr">' + par[1] + '</b>';
+    sp.appendChild(e);
+  });
+  document.getElementById('pAl').textContent = A.al;
+}
+pjRender();
+var MATS = [
+  {id:'per', nome:'Personalizado', sub:'tapete ou capacho com a sua arte',
+   foto:'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=700',
+   alt:'Textura de tapete em detalhe', rel:'Sua marca', pr:'Marcas e recepções', um:'Conforme a base', rp:'Sim', pz:'Total',
+   n:'É a opção para quem quer o logotipo, o nome ou um desenho no tapete. Indicamos o material de acordo com o lugar onde ele vai ficar, para a arte continuar bonita por muito tempo.'},
+  {id:'cap', nome:'Capacho de entrada', sub:'retém sujeira e protege o piso',
+   foto:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=700',
+   alt:'Entrada de ambiente com piso claro', rel:'Proteção', pr:'Portas e halls', um:'Alta', rp:'Sim', pz:'Nome ou logotipo',
+   n:'Feito para aguentar pisada todos os dias. Segura a sujeira e a umidade dos sapatos antes que elas entrem, o que ajuda a conservar o piso e reduz a limpeza.'},
+  {id:'inf', nome:'Tapete infantil', sub:'para creches, escolas e quartos',
+   foto:'https://images.unsplash.com/photo-1594940055026-b5e4d2c3f76b?auto=format&fit=crop&q=80&w=700',
+   alt:'Ambiente interno com cores suaves', rel:'Acolhimento', pr:'Salas e brinquedotecas', um:'Média', rp:'Sim', pz:'Letras, cores e nome',
+   n:'Colorido, confortável e educativo. Pode levar alfabeto, números e o nome da escola. Ideal para atividades no chão, deixando o ambiente mais seguro e acolhedor para as crianças.'},
+  {id:'gra', nome:'Grama sintética', sub:'verde sem rega e sem poda',
+   foto:'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=700',
+   alt:'Área externa com paisagismo', rel:'Lazer', pr:'Varandas e playgrounds', um:'Alta', rp:'Sim', pz:'Recorte sob medida',
+   n:'Mantém a área sempre verde e bonita, com pouca manutenção. Funciona bem em varandas, quintais, playgrounds e áreas de lazer de condomínios.'}
+];
+var MID = 'per';
+function matRender(){
+  var host = document.getElementById('mat');
+  host.innerHTML = '';
+  MATS.forEach(function(M){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'mc' + (M.id === MID ? ' on' : '');
+    b.setAttribute('aria-pressed', M.id === MID ? 'true' : 'false');
+    b.innerHTML = '<div class="ph"><img src="' + M.foto + '" alt="' + M.alt + '" loading="lazy"></div>' +
+      '<div class="bd"><b class="fr">' + M.nome + '</b><span>' + M.sub + '</span><div class="v">' + M.rel + '</div></div>';
+    b.addEventListener('click', function(){ MID = M.id; matRender(); });
+    host.appendChild(b);
+  });
+  var M = null;
+  for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
+  document.getElementById('mT').textContent = M.nome;
+  document.getElementById('mS').textContent = M.sub;
+  document.getElementById('mPr').textContent = M.pr;
+  document.getElementById('mUm').textContent = M.um;
+  document.getElementById('mRp').textContent = M.rp;
+  document.getElementById('mPz').textContent = M.pz;
+  document.getElementById('mN').textContent = M.n;
+}
+matRender();
+/* marquee */
+var MQ = ['Capachos personalizados','Tapetes com logotipo','Tapetes infantis','Creches e escolas','Grama sintética','Condomínios','Comércios','Proteção para pisos','Sob medida'];
+var mqT = document.getElementById('mqT');
+var h = MQ.map(function(x){ return '<span>'+x+'</span>'; }).join('');
+mqT.innerHTML = h + h;
+
+/* formulário → whatsapp */
+document.getElementById('fm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var g = function(id){ return (document.getElementById(id).value || '').trim(); };
+  var nome = g('fNome'), fone = g('fFone'), bairro = g('fBairro');
+  if(!nome || !fone || !bairro){
+    alert('Preencha nome, WhatsApp e bairro para a gente conseguir montar o seu orçamento.');
+    return;
+  }
+  var A = aAtual(), M = null;
+  for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
+  var msg =
+    'Olá! Quero um orçamento de tapete/capacho personalizado.\n\n' +
+    'Nome: ' + nome + '\n' +
+    'WhatsApp: ' + fone + '\n' +
+    'Bairro/cidade: ' + bairro + '\n' +
+    'Para onde é: ' + g('fFase') + '\n' +
+    'Quando precisa: ' + g('fPrazo') + '\n' +
+    'Detalhes: ' + (g('fObs') || 'ainda estou definindo') + '\n\n' +
+    '--- O que eu estava vendo no site ---\n' +
+    'Solução: ' + A.nome + ' (' + A.local + ')\n' +
+    'Material de interesse: ' + M.nome + ' (' + M.sub + ')';
+  window.open('https://wa.me/5521998146495?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+});
+
+})();
+</script>
+</body>
+</html>
