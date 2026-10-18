@@ -13,3 +13,4 @@
 - [x] Corrigir o e-mail de contato e destinatário para tapetto.cooperkap@gmail.com.
 - [x] Manter o formulário útil em hospedagem estática: sem backend, o envio abre o WhatsApp com a mensagem pronta.
 - [x] Gerar o pacote estático final com os textos atualizados (v5).
+- [x] Atualizar o parágrafo do topo e gerar o pacote estático final (v6).
