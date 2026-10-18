@@ -1006,13 +1006,21 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   status.textContent = ''; continuation.style.display = 'none';
   try{
     var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    var isJson = (response.headers.get('content-type') || '').indexOf('application/json') !== -1;
+    if(!isJson) throw new Error('registro-indisponivel');
     var result = await response.json();
     if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
     status.textContent = 'Pedido registrado com sucesso! Você pode continuar pelo WhatsApp.';
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
     continuation.style.display = 'inline-flex';
   }catch(error){
-    status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
+    if(error.message === 'registro-indisponivel' || error instanceof TypeError){
+      status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
+      continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+      continuation.style.display = 'inline-flex';
+    } else {
+      status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
+    }
   }finally{
     submitting = false; submit.disabled = false; submit.textContent = 'Pedir orçamento';
   }
