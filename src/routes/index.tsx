@@ -9,10 +9,10 @@ export const Route = createFileRoute("/")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Tapetto — Tapetes e capachos personalizados no Rio de Janeiro" },
-      { name: "description", content: "Tapetes e capachos personalizados e grama sintética no Rio de Janeiro." },
-      { property: "og:title", content: "Tapetto — Tapetes e capachos personalizados" },
-      { property: "og:description", content: "Tapetes e capachos personalizados e grama sintética no Rio de Janeiro." },
+      { title: "Tapetto — Tapetes personalizados no Rio de Janeiro" },
+      { name: "description", content: "Tapetes personalizados com logotipo, nome, cores ou desenho no Rio de Janeiro." },
+      { property: "og:title", content: "Tapetto — Tapetes personalizados" },
+      { property: "og:description", content: "Tapetes personalizados sob medida para empresas, condomínios, casas e escolas no Rio de Janeiro." },
     ],
   }),
 });
