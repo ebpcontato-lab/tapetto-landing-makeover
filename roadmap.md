@@ -1,4 +1,4 @@
 - [x] Substituir imagens de capachos pelas imagens Vinil e Waterkap recebidas e verificar os seletores.
 - [x] Substituir as imagens geradas de materiais e medição pelas duas imagens Cleankap recebidas.
-- [ ] Preparar e verificar pacote estático atualizado com as quatro imagens recebidas.
+- [x] Preparar e verificar pacote estático atualizado com as quatro imagens recebidas.
 - [ ] Substituir a foto gerada de grama sintética — aguardando os anexos do usuário.
