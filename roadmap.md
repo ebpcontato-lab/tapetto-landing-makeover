@@ -7,6 +7,7 @@
 - [x] Focar a página em tapetes personalizados e remover todas as referências e opções de grama sintética.
 - [x] Verificar seletores, fotos e envio de orçamento após a remoção.
 - [x] Salvar cada pedido de orçamento com segurança no Lovable Cloud.
-- [ ] Enviar os dados de cada pedido para tapetto.cooperkap@gmail.com — aguardando domínio próprio de envio.
+- [x] Preparar notificações dos novos pedidos para tapetto.cooperkap@gmail.com via notify.tapetto.com.
+- [ ] Confirmar envio real de e-mail — aguardando verificação DNS de notify.tapetto.com em Cloud → Emails.
 - [x] Verificar o envio do formulário e a gravação do pedido.
 - [x] Corrigir o e-mail de contato e destinatário para tapetto.cooperkap@gmail.com.

@@ -3,6 +3,9 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from '@/integrations/supabase/types';
 import { quoteSchema } from '@/lib/quote-schema';
 
+// Best-effort per-instance abuse protection; no customer data is retained here.
+const submissionWindows = new Map<string, { count: number; expires: number }>();
+
 export const Route = createFileRoute('/api/public/quotes')({
   server: {
     handlers: {
@@ -22,6 +25,16 @@ export const Route = createFileRoute('/api/public/quotes')({
         catch { return Response.json({ error: 'Pedido inválido.' }, { status: 400, headers }); }
         const parsed = quoteSchema.safeParse(input);
         if (!parsed.success) return Response.json({ error: 'Confira nome, WhatsApp, cidade e os detalhes do pedido.' }, { status: 400, headers });
+
+        const now = Date.now();
+        for (const [key, value] of submissionWindows) if (value.expires <= now) submissionWindows.delete(key);
+        const caller = request.headers.get('cf-connecting-ip') || 'local';
+        const window = submissionWindows.get(caller) || { count: 0, expires: now + 60000 };
+        if (window.count >= 5 || submissionWindows.size >= 10000) {
+          return Response.json({ error: 'Aguarde um minuto antes de enviar outro pedido.' }, { status: 429, headers: { ...headers, 'Retry-After': '60' } });
+        }
+        window.count += 1;
+        submissionWindows.set(caller, window);
 
         const url = process.env['SUPABASE_URL'];
         const key = process.env['SUPABASE_PUBLISHABLE_KEY'];
@@ -43,8 +56,11 @@ export const Route = createFileRoute('/api/public/quotes')({
           console.error('Quote request insert failed:', error.code);
           return Response.json({ error: 'Não foi possível registrar seu pedido. Tente novamente.' }, { status: 503, headers });
         }
-        // Email delivery is not claimed until the owner configures a sender domain.
-        return Response.json({ saved: true, emailSent: false }, { status: 201, headers });
+        // A duplicate ID cannot be used to resend notifications with altered data.
+        if (error?.code === '23505') return Response.json({ saved: true, emailSent: false }, { status: 201, headers });
+        const { notifyQuote } = await import('@/lib/quote-notification.server');
+        const notification = await notifyQuote(parsed.data);
+        return Response.json({ saved: true, ...notification }, { status: 201, headers });
       },
     },
   },
