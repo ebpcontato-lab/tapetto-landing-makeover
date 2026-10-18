@@ -20,7 +20,7 @@ describe('Tapetto personalized-only catalog', () => {
 
   it('offers personalization for every remaining solution and material', () => {
     for (const product of catalog('AMB')) {
-      expect(product.sp?.some(([key, value]) => key === 'Personalização' && value.length > 0)).toBe(true);
+      expect(product.sp?.some(([key, value]) => key === 'Personalização' && (value?.length ?? 0) > 0)).toBe(true);
     }
     for (const product of catalog('MATS')) {
       expect(product.pz?.length).toBeGreaterThan(0);
