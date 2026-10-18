@@ -8,6 +8,13 @@
       "when": 1792328023380,
       "tag": "0000_create_tapetto_quote_requests",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792328141821,
+      "tag": "0001_restrict_quote_request_grants",
+      "breakpoints": true
     }
   ]
 }
