@@ -729,7 +729,7 @@ footer .logo img{height:64px;width:64px}
       <div class="cta-l rv">
         <div class="kick">09 / Próximo passo</div>
         <h2 class="fr">Conte onde vai usar. <em>A gente indica o tapete certo.</em></h2>
-        <p>Preencha e o resumo vai direto para o nosso WhatsApp, com a solução e o material que você escolheu. Respondemos o mais rápido possível para montar o seu orçamento.</p>
+        <p>Preencha para registrar seu pedido, com a solução e o material que você escolheu. Depois, você também pode continuar a conversa pelo WhatsApp para montar o seu orçamento.</p>
         <ul>
           <li><i>◦</i><span>Orçamento sem custo e sem compromisso</span></li>
           <li><i>◦</i><span>Indicação do material ideal para o seu piso</span></li>
@@ -741,16 +741,16 @@ footer .logo img{height:64px;width:64px}
       <form class="frm rv" id="fm" novalidate>
         <div class="row">
           <label for="fNome">Nome completo</label>
-          <input id="fNome" type="text" placeholder="Como podemos te chamar" required>
+          <input id="fNome" type="text" placeholder="Como podemos te chamar" minlength="2" maxlength="100" required>
         </div>
         <div class="row r2">
           <div>
             <label for="fFone">WhatsApp</label>
-            <input id="fFone" type="tel" placeholder="(21) 90000-0000" required>
+            <input id="fFone" type="tel" placeholder="(21) 90000-0000" maxlength="25" required>
           </div>
           <div>
             <label for="fBairro">Bairro / cidade</label>
-            <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" required>
+            <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" minlength="2" maxlength="120" required>
           </div>
         </div>
         <div class="row r2">
@@ -775,10 +775,12 @@ footer .logo img{height:64px;width:64px}
         </div>
         <div class="row">
           <label for="fObs">Conte um pouco do que precisa</label>
-          <textarea id="fObs" placeholder="Ex.: capacho para a entrada da loja com o nosso logotipo, mais ou menos 1 m de largura"></textarea>
+          <textarea id="fObs" maxlength="2000" placeholder="Ex.: tapete para a entrada da loja com o nosso logotipo, mais ou menos 1 m de largura"></textarea>
         </div>
         <div class="sb"><button type="submit" class="b-lar">Pedir orçamento</button></div>
-        <p class="lg">Ao enviar, abre-se uma conversa no WhatsApp com o resumo preenchido. Não fazemos disparos em massa.</p>
+        <p class="lg">Seu pedido fica registrado para atendimento. Não fazemos disparos em massa.</p>
+        <p class="lg" id="fStatus" role="status" aria-live="polite"></p>
+        <a class="b-lin" id="fContinue" target="_blank" rel="noopener" hidden>Continuar pelo WhatsApp</a>
       </form>
     </div>
   </div>
@@ -806,7 +808,7 @@ footer .logo img{height:64px;width:64px}
         <h6>Contato</h6>
         <ul>
           <li><a href="https://wa.me/5521998146495" target="_blank" rel="noopener">WhatsApp (21) 99814-6495</a></li>
-          <li><a href="mailto:ebpcontato@gmail.com">ebpcontato@gmail.com</a></li>
+          <li><a href="mailto:tapetto.coperkap@gmail.com">tapetto.coperkap@gmail.com</a></li>
           <li>Rio de Janeiro · RJ</li>
           <li><a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Nosso perfil no Google</a></li>
         </ul>
@@ -970,13 +972,16 @@ var mqT = document.getElementById('mqT');
 var h = MQ.map(function(x){ return '<span>'+x+'</span>'; }).join('');
 mqT.innerHTML = h + h;
 
-/* formulário → whatsapp */
-document.getElementById('fm').addEventListener('submit', function(e){
+/* formulário → registro seguro; WhatsApp opcional */
+var submissionId = null, submissionPayload = null, submitting = false;
+document.getElementById('fm').addEventListener('submit', async function(e){
   e.preventDefault();
+  if(submitting) return;
+  var status = document.getElementById('fStatus'), continuation = document.getElementById('fContinue');
   var g = function(id){ return (document.getElementById(id).value || '').trim(); };
   var nome = g('fNome'), fone = g('fFone'), bairro = g('fBairro');
-  if(!nome || !fone || !bairro){
-    alert('Preencha nome, WhatsApp e bairro para a gente conseguir montar o seu orçamento.');
+  if(nome.length < 2 || nome.length > 100 || bairro.length < 2 || bairro.length > 120 || !/^[+\d\s().-]+$/.test(fone) || fone.replace(/\D/g,'').length < 10 || fone.length > 25 || g('fObs').length > 2000){
+    status.textContent = 'Confira nome, WhatsApp, bairro e os detalhes do pedido.';
     return;
   }
   var A = aAtual(), M = null;
@@ -992,7 +997,25 @@ document.getElementById('fm').addEventListener('submit', function(e){
     '--- O que eu estava vendo no site ---\n' +
     'Solução: ' + A.nome + ' (' + A.local + ')\n' +
     'Material de interesse: ' + M.nome + ' (' + M.sub + ')';
-  window.open('https://wa.me/5521998146495?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  var payload = {name:nome, phone:fone, city:bairro, place:g('fFase'), timeframe:g('fPrazo'), details:g('fObs'), solution:AID, material:MID};
+  var fingerprint = JSON.stringify(payload);
+  if(fingerprint !== submissionPayload){ submissionId = crypto.randomUUID(); submissionPayload = fingerprint; }
+  payload.id = submissionId;
+  var submit = e.currentTarget.querySelector('[type="submit"]');
+  submitting = true; submit.disabled = true; submit.textContent = 'Registrando…';
+  status.textContent = ''; continuation.hidden = true;
+  try{
+    var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    var result = await response.json();
+    if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
+    status.textContent = 'Pedido registrado com sucesso! Você pode continuar pelo WhatsApp.';
+    continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+    continuation.hidden = false;
+  }catch(error){
+    status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
+  }finally{
+    submitting = false; submit.disabled = false; submit.textContent = 'Pedir orçamento';
+  }
 });
 
 })();

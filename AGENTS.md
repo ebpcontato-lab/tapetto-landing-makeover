@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep the Tapetto page static; uploaded media uses CDN asset pointers, and standalone exports resolve these to local assets so they work on any static host.
+- Keep the static landing template; quote submissions call a dedicated same-origin TanStack server route backed by an INSERT-only Cloud table so visitors cannot read customer data. Saving requests requires the hosted service, not a standalone static host.
+- Send quote notifications only to the fixed business recipient through managed app emails once a sender domain is configured; never create an email queue or claim delivery before sending is enabled.
