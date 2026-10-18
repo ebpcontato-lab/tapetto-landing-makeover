@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const QUOTE_RECIPIENT = 'tapetto.coperkap@gmail.com';
+export const QUOTE_RECIPIENT = 'tapetto.cooperkap@gmail.com';
 
 export const quoteSchema = z.object({
   id: z.string().uuid(),

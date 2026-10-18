@@ -780,7 +780,7 @@ footer .logo img{height:64px;width:64px}
         <div class="sb"><button type="submit" class="b-lar">Pedir orçamento</button></div>
         <p class="lg">Seu pedido fica registrado para atendimento. Não fazemos disparos em massa.</p>
         <p class="lg" id="fStatus" role="status" aria-live="polite"></p>
-        <a class="b-lin" id="fContinue" target="_blank" rel="noopener" hidden>Continuar pelo WhatsApp</a>
+        <a class="b-lin" id="fContinue" target="_blank" rel="noopener" style="display:none">Continuar pelo WhatsApp</a>
       </form>
     </div>
   </div>
@@ -808,7 +808,7 @@ footer .logo img{height:64px;width:64px}
         <h6>Contato</h6>
         <ul>
           <li><a href="https://wa.me/5521998146495" target="_blank" rel="noopener">WhatsApp (21) 99814-6495</a></li>
-          <li><a href="mailto:tapetto.coperkap@gmail.com">tapetto.coperkap@gmail.com</a></li>
+          <li><a href="mailto:tapetto.cooperkap@gmail.com">tapetto.cooperkap@gmail.com</a></li>
           <li>Rio de Janeiro · RJ</li>
           <li><a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Nosso perfil no Google</a></li>
         </ul>
@@ -1003,14 +1003,14 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   payload.id = submissionId;
   var submit = e.currentTarget.querySelector('[type="submit"]');
   submitting = true; submit.disabled = true; submit.textContent = 'Registrando…';
-  status.textContent = ''; continuation.hidden = true;
+  status.textContent = ''; continuation.style.display = 'none';
   try{
     var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
     var result = await response.json();
     if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
     status.textContent = 'Pedido registrado com sucesso! Você pode continuar pelo WhatsApp.';
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
-    continuation.hidden = false;
+    continuation.style.display = 'inline-flex';
   }catch(error){
     status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
   }finally{

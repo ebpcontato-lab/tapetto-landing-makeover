@@ -7,6 +7,6 @@
 - [x] Focar a página em tapetes personalizados e remover todas as referências e opções de grama sintética.
 - [x] Verificar seletores, fotos e envio de orçamento após a remoção.
 - [ ] Salvar cada pedido de orçamento com segurança no Lovable Cloud.
-- [ ] Enviar os dados de cada pedido para tapetto.coperkap@gmail.com após configurar o domínio de e-mail.
+- [ ] Enviar os dados de cada pedido para tapetto.cooperkap@gmail.com — aguardando domínio próprio de envio.
 - [ ] Verificar o envio do formulário e a gravação do pedido.
-- [ ] Alterar o e-mail de contato da página para tapetto.coperkap@gmail.com.
+- [ ] Corrigir o e-mail de contato e destinatário para tapetto.cooperkap@gmail.com.
