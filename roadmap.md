@@ -4,3 +4,5 @@
 - [x] Incluir a terceira foto de grama sintética (verde × seca), mantendo as outras duas.
 - [x] Conferir fotos, seletores, formulário e visualização no celular pelo navegador.
 - [x] Gerar e verificar o pacote estático final com imagens locais para publicação.
+- [ ] Focar a página em tapetes personalizados e remover todas as referências e opções de grama sintética.
+- [ ] Verificar seletores, fotos e envio de orçamento após a remoção.
