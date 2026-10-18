@@ -1,0 +1,3 @@
+- [x] Substituir imagens de capachos pelas imagens Vinil e Waterkap recebidas e verificar os seletores.
+- [x] Preparar pacote estático atualizado com as duas imagens recebidas.
+- [ ] Substituir as demais fotos geradas de tapetes e grama sintética — aguardando os anexos do usuário.
