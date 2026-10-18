@@ -11,3 +11,5 @@
 - [ ] Confirmar envio real de e-mail — aguardando verificação DNS de notify.tapetto.com em Cloud → Emails.
 - [x] Verificar o envio do formulário e a gravação do pedido.
 - [x] Corrigir o e-mail de contato e destinatário para tapetto.cooperkap@gmail.com.
+- [x] Manter o formulário útil em hospedagem estática: sem backend, o envio abre o WhatsApp com a mensagem pronta.
+- [x] Gerar o pacote estático final com os textos atualizados (v5).
