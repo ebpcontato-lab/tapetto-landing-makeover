@@ -14,3 +14,6 @@
 - [x] Manter o formulário útil em hospedagem estática: sem backend, o envio abre o WhatsApp com a mensagem pronta.
 - [x] Gerar o pacote estático final com os textos atualizados (v5).
 - [x] Atualizar o parágrafo do topo e gerar o pacote estático final (v6).
+- [x] Instalar a tag do Google Ads (AW-17662893947) com banner de consentimento regional e conversões no formulário e no WhatsApp.
+- [ ] Colar os rótulos das conversões (AW-17662893947/...) criadas no Google Ads em window.__TAPETTO_ADS — aguardando o usuário.
+- [ ] Regenerar o pacote estático com a tag do Google Ads inclusa — a pedido do usuário.
