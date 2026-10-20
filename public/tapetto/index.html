@@ -348,7 +348,41 @@ footer{border-top:1px solid var(--lin);padding:52px 0 34px}
 .logo img{height:46px;width:46px;border-radius:50%;object-fit:cover}
 footer .logo img{height:64px;width:64px}
 .hero h1,.head h2,.cta-l h2{overflow-wrap:break-word;hyphens:manual}
+
+/* ============ banner de cookies (Google Ads) ============ */
+.ck-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:640px;margin:0 auto;background:var(--bg2);border:1px solid var(--lin);border-radius:14px;padding:18px 20px;box-shadow:0 12px 40px rgba(31,24,19,.18);font-size:.85rem;color:var(--tinta);line-height:1.55}
+.ck-banner p{margin:0 0 12px}
+.ck-banner a{text-decoration:underline}
+.ck-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.ck-actions .b-lar{padding:9px 20px;font-size:.85rem}
+.ck-no{background:transparent;border:1px solid var(--lin2);color:var(--tinta);border-radius:6px;padding:9px 20px;font-size:.85rem;cursor:pointer}
+@media(max-width:640px){.ck-banner{left:12px;right:12px;bottom:90px}}
 </style>
+<!-- Google Ads — tag básica + consentimento regional. Não remova. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+/* Consentimento negado por padrão nas regiões que exigem; liberado pelo banner. */
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['EEA','UK','CH']});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17662893947"></script>
+<script>
+/* Google Ads AW-17662893947 — medição de anúncios.
+   Para acompanhar conversões, crie as conversões no Google Ads ("Enviar formulário"
+   e "Clique em WhatsApp") e cole aqui o RÓTULO de cada uma no formato
+   AW-17662893947/XXXX, no lugar de COLE_AQUI_... */
+window.__TAPETTO_ADS = {
+  form: 'AW-17662893947/COLE_AQUI_ROTULO_DO_FORMULARIO',
+  whatsapp: 'AW-17662893947/COLE_AQUI_ROTULO_DO_WHATSAPP'
+};
+gtag('config','AW-17662893947');
+function tapettoAds(label, extra){
+  if(typeof label !== 'string' || label.indexOf('COLE_AQUI') !== -1) return;
+  var ev = {send_to: label};
+  if(extra) for(var k in extra) ev[k] = extra[k];
+  gtag('event','conversion', ev);
+}
+</script>
 </head>
 <body>
 
@@ -815,7 +849,7 @@ footer .logo img{height:64px;width:64px}
       </div>
     </div>
     <div class="ft-b">
-      <span>© 2026 Tapetto. Todos os direitos reservados.</span>
+      <span>© 2026 Tapetto. Todos os direitos reservados. <a href="privacidade.html" style="text-decoration:underline">Política de privacidade</a> · <a href="#" id="ckPrefs" style="text-decoration:underline">Preferências de cookies</a></span>
       <span>Valores sob consulta, conforme medida, material e arte. Algumas imagens são ilustrativas.</span>
     </div>
   </div>
@@ -1013,11 +1047,13 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     status.textContent = 'Pedido registrado com sucesso! Você pode continuar pelo WhatsApp.';
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
     continuation.style.display = 'inline-flex';
+    tapettoAds(window.__TAPETTO_ADS.form);
   }catch(error){
     if(error.message === 'registro-indisponivel' || error instanceof TypeError){
       status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
       continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
       continuation.style.display = 'inline-flex';
+      tapettoAds(window.__TAPETTO_ADS.form);
     } else {
       status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
     }
@@ -1027,6 +1063,62 @@ document.getElementById('fm').addEventListener('submit', async function(e){
 });
 
 })();
+
+/* ============ consentimento (Google Ads) ============ */
+(function(){
+  'use strict';
+  var KEY = 'tapetto-cookie-consent-v1';
+  var EEA = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
+  var banner = document.getElementById('cookieBanner');
+  var granted = function(){ gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'}); };
+  var save = function(choice){ try{ localStorage.setItem(KEY, JSON.stringify({choice:choice, at:new Date().toISOString(), notice:'2026-10'})); }catch(e){} };
+  document.getElementById('ckAccept').addEventListener('click', function(){ save('granted'); granted(); banner.hidden = true; });
+  document.getElementById('ckReject').addEventListener('click', function(){ save('denied'); banner.hidden = true; });
+  var prefs = document.getElementById('ckPrefs');
+  if(prefs) prefs.addEventListener('click', function(e){ e.preventDefault(); banner.hidden = false; });
+
+  var decided = false;
+  try{
+    var s = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if(s && (s.choice === 'granted' || s.choice === 'denied')){
+      decided = true;
+      if(s.choice === 'granted') granted();
+    }
+  }catch(e){}
+
+  /* Banner só nas regiões que exigem consentimento; em falha de leitura, mostra. */
+  var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 2000) : null;
+  var done = false;
+  var finish = function(needs){
+    if(done) return; done = true;
+    if(timer) clearTimeout(timer);
+    if(!decided && needs) banner.hidden = false;
+  };
+  fetch('/cdn-cgi/trace', ctrl ? {signal: ctrl.signal} : undefined)
+    .then(function(r){ return r.ok ? r.text() : Promise.reject(new Error('trace')); })
+    .then(function(text){
+      var m = /(?:^|\n)loc=([A-Za-z]{2})(?:\n|$)/.exec(text || '');
+      var loc = m ? m[1].toUpperCase() : 'XX';
+      finish(loc === 'XX' || loc === 'T1' || EEA.indexOf(loc) !== -1);
+    })
+    .catch(function(){ finish(true); });
+})();
+
+/* ============ conversão: clique no WhatsApp ============ */
+document.addEventListener('click', function(e){
+  var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+  if(a) tapettoAds(window.__TAPETTO_ADS.whatsapp);
+}, true);
 </script>
+</body>
+<!-- banner de consentimento (Google Ads) -->
+<div id="cookieBanner" class="ck-banner" hidden>
+  <p>Usamos cookies para medir o desempenho dos nossos anúncios no Google. Você pode aceitar ou recusar — os anúncios seguem sendo veiculados de qualquer forma. Saiba mais na <a href="privacidade.html">Política de privacidade</a>.</p>
+  <div class="ck-actions">
+    <button type="button" id="ckReject" class="ck-no">Recusar</button>
+    <button type="button" id="ckAccept" class="b-lar">Aceitar</button>
+  </div>
+</div>
 </body>
 </html>
