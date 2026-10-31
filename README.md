@@ -54,7 +54,16 @@ A página tem uma lista única de nichos (tapetes, grama sintética, pisos para 
 2. Em `src/lib/quote-schema.ts`, acrescente cada `id` de modelo em `PRODUCTS`, com o mesmo texto de `rotulo`.
 3. Ponha as fotos em `public/piizu/assets/img/galeria/` e inclua cada uma na galeria com `data-setor` igual ao `id` do nicho.
 
-A aba em “Mais produtos”, a aba da galeria e a opção no formulário aparecem sozinhas. Não precisa mudar o banco de dados. Os testes (`npm test`) avisam se as listas da página e do formulário ficarem diferentes ou se faltar foto para um nicho.
+A aba em “Mais produtos”, a aba da galeria e a opção no formulário aparecem sozinhas.
+
+### Fotos e vídeos de cada nicho
+
+As fotos e vídeos de cada aba de “Mais produtos” vêm da galeria: tudo que tem `data-setor="grama"` aparece na aba Grama sintética, e assim por diante.
+
+- Foto: `<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/NOME.webp" alt="Descrição" width="864" height="1080" loading="lazy"></div>`
+- Vídeo (MP4, de preferência vertical 4:5 e curto): `<div class="ph gal-it" data-setor="grama"><video src="assets/video/NOME.mp4" poster="assets/img/galeria/NOME-capa.webp" aria-label="Descrição" controls muted playsinline preload="metadata"></video></div>`
+
+Em “Soluções”, as fotos de cada segmento ficam na lista `fotos` de cada item de `AMB`. Não precisa mudar o banco de dados. Os testes (`npm test`) avisam se as listas da página e do formulário ficarem diferentes ou se faltar foto para um nicho.
 
 This project was built with [Lovable](https://lovable.dev).
 

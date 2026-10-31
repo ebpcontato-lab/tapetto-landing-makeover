@@ -61,6 +61,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ph:before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
   background:repeating-linear-gradient(92deg,transparent,transparent 9px,rgba(138,42,16,.16) 9px,rgba(138,42,16,.16) 10px)}
 .ph>img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
+.ph>video{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;background:#1f1813}
 .ph>img.product-art{object-fit:contain;background:var(--tinta)}
 
 /* ============ nav ============ */
@@ -1315,8 +1316,13 @@ function escolheProduto(id){
 
 /* mais produtos: abas por nicho, fotos no formato da galeria e cartões de modelos */
 var LID = null, lnTr = document.getElementById('lnTr');
+/* fotos e vídeos de um nicho, na ordem em que estão na galeria */
 function lnFotos(id){
-  return Array.prototype.map.call(document.querySelectorAll('.gal-it[data-setor="' + id + '"] img'), function(im){ return {src:im.getAttribute('src'), alt:im.alt}; });
+  return Array.prototype.map.call(document.querySelectorAll('.gal-it[data-setor="' + id + '"] > img, .gal-it[data-setor="' + id + '"] > video'), function(m){
+    return m.tagName === 'VIDEO'
+      ? {video:true, src:m.getAttribute('src'), poster:m.getAttribute('poster') || '', alt:m.getAttribute('aria-label') || ''}
+      : {src:m.getAttribute('src'), alt:m.alt};
+  });
 }
 function lnSetas(){ document.getElementById('lnGal').classList.toggle('sem-setas', lnTr.scrollWidth <= lnTr.clientWidth + 4); }
 function lnRender(){
@@ -1332,6 +1338,8 @@ function lnRender(){
     top.appendChild(b);
   });
   lnTr.innerHTML = lnFotos(LID).map(function(F){
+    if(F.video) return '<div class="ph gal-it"><video src="' + esc(F.src) + '"' + (F.poster ? ' poster="' + esc(F.poster) + '"' : '') +
+      ' aria-label="' + esc(F.alt) + '" controls muted playsinline preload="metadata"></video></div>';
     return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
   }).join('');
   lnTr.scrollLeft = 0;
