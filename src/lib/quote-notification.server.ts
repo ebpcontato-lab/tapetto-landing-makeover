@@ -1,5 +1,5 @@
 import { EmailAPIError } from '@lovable.dev/email-js';
-import { QUOTE_RECIPIENT, quoteSchema } from './quote-schema';
+import { PRODUCTS, QUOTE_RECIPIENT, quoteSchema } from './quote-schema';
 import { sendTemplateEmail } from './email-templates/send-email';
 import type { z } from 'zod';
 
@@ -10,7 +10,10 @@ const materials = { per: 'Personalizado', cap: 'Capacho personalizado', inf: 'Ta
 export async function notifyQuote(quote: z.infer<typeof quoteSchema>) {
   try {
     const result = await sendTemplateEmail('quote-notification', QUOTE_RECIPIENT, {
-      templateData: { ...quote, solution: solutions[quote.solution], material: materials[quote.material] },
+      // Solution and material describe rug choices only; other products leave them out.
+      templateData: quote.product === 'tapete'
+        ? { ...quote, product: PRODUCTS[quote.product], solution: solutions[quote.solution], material: materials[quote.material] }
+        : { ...quote, product: PRODUCTS[quote.product], solution: undefined, material: undefined },
       idempotencyKey: `quote-notification-${quote.id}`,
       replyTo: QUOTE_RECIPIENT,
     });

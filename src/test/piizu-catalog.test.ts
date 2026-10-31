@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { PRODUCTS } from '@/lib/quote-schema';
 
 const html = readFileSync('public/piizu/index.html', 'utf8');
 
@@ -25,5 +26,16 @@ describe('piizu personalized-only catalog', () => {
     for (const product of catalog('MATS')) {
       expect(product.pz?.length).toBeGreaterThan(0);
     }
+  });
+
+  it('offers in the page exactly the products the quote form accepts, with the same names', () => {
+    const nichos = catalog('NICHOS') as unknown as Array<{ id: string; itens: Array<{ id: string; rotulo: string }> }>;
+    const itens = nichos.flatMap((nicho) => nicho.itens);
+    expect(itens.map((item) => item.id).sort()).toEqual(Object.keys(PRODUCTS).sort());
+    for (const item of itens) expect(item.rotulo).toBe(PRODUCTS[item.id as keyof typeof PRODUCTS]);
+  });
+
+  it('has gallery photos for every product niche', () => {
+    for (const nicho of catalog('NICHOS')) expect(html).toContain(`data-setor="${nicho.id}"`);
   });
 });

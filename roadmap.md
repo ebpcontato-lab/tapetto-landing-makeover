@@ -20,3 +20,5 @@
 - [x] Trocar o e-mail de contato e destinatário dos pedidos para comercial.piizu@gmail.com.
 - [ ] Trocar o domínio de envio dos avisos (notify.tapetto.com) quando a piizu tiver domínio próprio — aguardando o usuário.
 - [ ] Regenerar o pacote estático com a tag do Google Ads inclusa — a pedido do usuário.
+- [x] Organizar a página por nichos (tapetes, grama sintética, piso para piscina e áreas molhadas, piso para quadra poliesportiva) a partir de uma lista única, com campo "O que você procura" no formulário.
+- [ ] Aplicar a migração 0002_add_quote_product (coluna product) no Lovable Cloud — até lá os pedidos são salvos com o produto anotado nos detalhes.

@@ -46,6 +46,16 @@ Depois de entregar, diga em uma linha quais variáveis de cor e quais blocos de 
 ## Entrega
 Um único index.html funcional (com a pasta assets do zip), pronto para publicar. Antes de terminar, confira: todos os links de WhatsApp com o número novo, nenhum texto do nicho antigo, todas as imagens anexadas usadas, títulos sem quebra estranha no celular e o componente interativo funcionando.
 
+## Como acrescentar um nicho de produto
+
+A página tem uma lista única de nichos (tapetes, grama sintética, pisos para piscina, pisos para quadra…). Para incluir um novo:
+
+1. Em `public/piizu/index.html`, acrescente um item na lista `NICHOS` (no script, perto de “NICHOS — lista única”), com `id`, `nome` (texto da aba), `titulo`, `sub`, `p` e os modelos em `itens` (cada um com `id`, `tag`, `nome`, `rotulo` e `p`).
+2. Em `src/lib/quote-schema.ts`, acrescente cada `id` de modelo em `PRODUCTS`, com o mesmo texto de `rotulo`.
+3. Ponha as fotos em `public/piizu/assets/img/galeria/` e inclua cada uma na galeria com `data-setor` igual ao `id` do nicho.
+
+A aba em “Mais produtos”, a aba da galeria e a opção no formulário aparecem sozinhas. Não precisa mudar o banco de dados. Os testes (`npm test`) avisam se as listas da página e do formulário ficarem diferentes ou se faltar foto para um nicho.
+
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable

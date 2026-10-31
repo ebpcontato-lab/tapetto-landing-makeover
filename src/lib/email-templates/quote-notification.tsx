@@ -12,24 +12,25 @@ interface Props {
   details?: string;
   solution?: string;
   material?: string;
+  product?: string;
 }
 
 function QuoteNotification(data: Props) {
   const fields = [
-    ['Nome', data.name], ['WhatsApp', data.phone], ['Bairro/cidade', data.city],
-    ['Destino do tapete', data.place], ['Prazo desejado', data.timeframe],
-    ['Solução', data.solution], ['Material de interesse', data.material],
+    ['Produto', data.product], ['Nome', data.name], ['WhatsApp', data.phone], ['Bairro/cidade', data.city],
+    ['Local de uso', data.place], ['Prazo desejado', data.timeframe],
+    ...(data.solution ? [['Solução', data.solution]] : []), ...(data.material ? [['Material de interesse', data.material]] : []),
     ['Detalhes', data.details || 'Ainda estou definindo'], ['Pedido', data.id],
   ];
   return (
     <Html lang="pt-BR" dir="ltr">
       <Head />
-      <Preview>Novo pedido de orçamento de tapete personalizado para a piizu.</Preview>
+      <Preview>Novo pedido de orçamento para a piizu.</Preview>
       <Body style={styles.body}>
         <Container style={styles.container}>
           <Text style={styles.brand}>piizu</Text>
           <Heading style={styles.heading}>Novo pedido de orçamento</Heading>
-          <Text>Um visitante solicitou um orçamento de tapete personalizado.</Text>
+          <Text>Um visitante solicitou um orçamento pelo site.</Text>
           {fields.map(([label, value]) => (
             <Section key={label} style={styles.field}>
               <Text style={styles.label}>{label}</Text>
@@ -44,13 +45,13 @@ function QuoteNotification(data: Props) {
 
 export const template = {
   component: QuoteNotification,
-  subject: 'piizu — Novo pedido de orçamento de tapete personalizado',
+  subject: 'piizu — Novo pedido de orçamento',
   displayName: 'Pedido de orçamento',
   to: QUOTE_RECIPIENT,
   previewData: {
     id: 'exemplo', name: 'Cliente de exemplo', phone: '(21) 90000-0000', city: 'Rio de Janeiro',
     place: 'Empresa ou comércio', timeframe: 'Nas próximas semanas',
-    solution: 'Empresa e comércio', material: 'Personalizado', details: 'Tapete com logotipo na entrada.',
+    product: 'Tapete ou capacho personalizado', solution: 'Empresa e comércio', material: 'Personalizado', details: 'Tapete com logotipo na entrada.',
   },
 } satisfies TemplateEntry;
 

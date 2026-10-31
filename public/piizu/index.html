@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>piizu — Tapetes personalizados no Rio de Janeiro</title>
-<meta name="description" content="Tapetes personalizados com seu logotipo, nome, cores ou desenho no Rio de Janeiro. Grama sintética Kapazi decorativa, recreativa e esportiva. Para empresas, condomínios, casas e escolas, com produção na maior fábrica da América Latina.">
+<meta name="description" content="Tapetes personalizados com seu logotipo, nome, cores ou desenho no Rio de Janeiro. Grama sintética Kapazi e pisos para piscina e quadras poliesportivas. Para empresas, condomínios, casas e escolas, com produção na maior fábrica da América Latina.">
 <meta property="og:title" content="piizu — Tapetes personalizados no Rio de Janeiro">
-<meta property="og:description" content="Tapetes personalizados sob medida, com sua marca e seu estilo, e grama sintética Kapazi. Peça seu orçamento no Rio de Janeiro.">
+<meta property="og:description" content="Tapetes personalizados sob medida, com sua marca e seu estilo, grama sintética e pisos Kapazi. Peça seu orçamento no Rio de Janeiro.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://piizu.com.br/piizu/index.html">
 <meta property="og:url" content="https://piizu.com.br/piizu/index.html">
@@ -244,15 +244,15 @@ section{padding:58px 0}
 .lb-cap{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:rgba(255,255,255,.78);font-size:.8rem;padding:0 70px}
 @media(max-width:640px){.lb-st{inset:56px 8px 48px}.lb .seta{top:auto;bottom:6px;transform:none}.lb .seta:hover{transform:none}.lb-cap{bottom:20px;padding:0 64px}}
 
-/* ============ grama sintética ============ */
-.gr{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.gr-c{border:1px solid var(--lin);border-radius:8px;background:var(--bg2);padding:22px 20px;display:flex;flex-direction:column;align-items:flex-start}
-.gr-c b{display:block;font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:400;color:var(--tinta);line-height:1;margin:14px 0 10px}
-.gr-c p{font-size:.85rem;color:var(--tx);line-height:1.75;flex:1;margin-bottom:18px}
-.gr-ft{margin-top:18px;font-size:.84rem;color:var(--tx2);line-height:1.75}
-.gr-ft a{color:var(--lar2);text-decoration:underline}
-@media(max-width:1060px){.gr{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.gr{grid-template-columns:1fr}}
+/* ============ mais produtos (nichos) ============ */
+.ln-it{margin-top:18px;border-bottom:1px solid var(--lin)}
+.ln-r{border-top:1px solid var(--lin);padding:14px 0;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center}
+.ln-r .tag{justify-self:start}
+.ln-r b{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:400;color:var(--tinta);margin-left:10px;vertical-align:middle}
+.ln-r p{grid-column:1;font-size:.82rem;color:var(--tx);line-height:1.7;margin:4px 0 0}
+.ln-r .b-lin{grid-column:2;grid-row:1/span 2}
+.pj-foto.uma .seta{display:none}
+@media(max-width:560px){.ln-r{grid-template-columns:1fr}.ln-r .b-lin{grid-column:1;grid-row:auto;justify-self:start;margin-top:8px}}
 
 /* ============ galeria (rolo com setas) ============ */
 .gal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
@@ -474,7 +474,7 @@ function piizuAds(label, extra){
     <nav class="nav-l" id="navl">
       <a href="#projetos">Soluções</a>
       <a href="#materiais">Materiais</a>
-      <a href="#grama">Grama</a>
+      <a href="#produtos">Produtos</a>
       <a href="#galeria">Galeria</a>
       <a href="#oficina">A fábrica</a>
       <a href="#processo">Como funciona</a>
@@ -617,41 +617,35 @@ function piizuAds(label, extra){
   </div>
 </section>
 
-<!-- ===== GRAMA SINTÉTICA ===== -->
-<section id="grama">
+<!-- ===== MAIS PRODUTOS — gerado pela lista NICHOS do script ===== -->
+<section id="produtos">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">04 / Grama sintética</div>
-      <h2 class="fr">Grama sintética Kapazi, <em>sempre verde, sem rega e sem poda.</em></h2>
-      <p>Também trabalhamos com as gramas sintéticas produzidas pela indústria Kapazi, reconhecidas pela excelente qualidade. São três linhas, cada uma com a altura certa para o uso.</p>
+      <div class="kick">04 / Mais produtos</div>
+      <h2 class="fr">Além dos tapetes, <em>soluções para cada tipo de piso.</em></h2>
+      <p>Grama sintética e pisos produzidos pela indústria Kapazi. Escolha a linha para ver os modelos e use as setas para passar as fotos.</p>
     </div>
-    <div class="gr rv">
-      <div class="gr-c">
-        <span class="tag">Decorativa</span>
-        <b class="fr">12 mm</b>
-        <p>Acabamento baixo e uniforme para varandas, sacadas, vitrines e detalhes de decoração.</p>
-        <a href="#orcamento" class="b-lin sm" data-grama="Grama Decorativa 12 mm">Pedir orçamento</a>
+
+    <div class="pj rv">
+      <div class="pj-top" id="lnTop" role="group" aria-label="Linhas de produtos"></div>
+      <div class="pj-g">
+        <div class="pj-foto" id="lnFoto">
+          <span class="cap" id="lnCap">—</span>
+          <button type="button" class="seta esq" id="lnPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="seta dir" id="lnNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="pj-info">
+          <div class="nm fr" id="lnNm">—</div>
+          <div class="lc" id="lnLc">—</div>
+          <p id="lnP">—</p>
+          <div class="ln-it" id="lnIt"></div>
+        </div>
       </div>
-      <div class="gr-c">
-        <span class="tag">Decorativa</span>
-        <b class="fr">20 mm</b>
-        <p>Mais volume e aspecto de gramado para jardins e áreas externas de casas e condomínios.</p>
-        <a href="#orcamento" class="b-lin sm" data-grama="Grama Decorativa 20 mm">Pedir orçamento</a>
-      </div>
-      <div class="gr-c">
-        <span class="tag">Recreativa</span>
-        <b class="fr">30 mm</b>
-        <p>Mais macia ao toque para áreas de lazer, playgrounds e espaços para pets.</p>
-        <a href="#orcamento" class="b-lin sm" data-grama="Grama Recreativa 30 mm">Pedir orçamento</a>
-      </div>
-      <div class="gr-c">
-        <span class="tag">Esportiva</span>
-        <b class="fr">50 mm</b>
-        <p>Fios altos para campos de futebol society e áreas esportivas.</p>
-        <a href="#orcamento" class="b-lin sm" data-grama="Grama Esportiva 50 mm">Pedir orçamento</a>
+      <div class="pj-ft">
+        <small>Medidas, quantidades e instalação são definidas com você no orçamento. Na dúvida sobre o modelo, conte o lugar e o uso que a gente indica.</small>
+        <a href="#galeria" class="b-lin sm" id="lnFotos">Ver fotos desta linha na galeria</a>
       </div>
     </div>
-    <p class="gr-ft rv">Não sabe qual escolher? Conte o lugar e o uso no orçamento que a gente indica. <a href="#galeria" id="grFotos">Ver fotos de grama instalada</a></p>
   </div>
 </section>
 
@@ -663,21 +657,16 @@ function piizuAds(label, extra){
       <h2 class="fr">Produtos instalados, <em>separados por setor.</em></h2>
       <p>Escolha o setor e use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
     </div>
-    <div class="gal-tabs rv" id="galTabs" role="group" aria-label="Filtrar galeria por setor">
-      <button type="button" class="ab on" data-setor="todos" aria-pressed="true">Todos</button>
-      <button type="button" class="ab" data-setor="tapetes" aria-pressed="false">Tapetes e capachos</button>
-      <button type="button" class="ab" data-setor="pisos" aria-pressed="false">Pisos (piscina e esportivo)</button>
-      <button type="button" class="ab" data-setor="grama" aria-pressed="false">Grama sintética</button>
-    </div>
+    <div class="gal-tabs rv" id="galTabs" role="group" aria-label="Filtrar galeria por setor"></div>
     <div class="gal rv">
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
-        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/tapete-loja-ferramentas.webp" alt="Tapete personalizado com as marcas atendidas por uma loja de ferramentas" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante na borda de piscina" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo ao redor de piscina à noite" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular esportivo em quadra de condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-loja-ferramentas.webp" alt="Tapete personalizado com as marcas atendidas por uma loja de ferramentas" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante na borda de piscina" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo ao redor de piscina à noite" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-condominio.webp" alt="Grama sintética em jardim de condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-pet.webp" alt="Grama sintética em área com cachorro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-verde-seca.webp" alt="Comparação entre grama sintética sempre verde e grama natural seca" width="864" height="1080" loading="lazy"></div>
@@ -849,26 +838,34 @@ function piizuAds(label, extra){
           <p>Depende do material do tapete personalizado e das condições do local. Conte se a entrada recebe chuva ou sol direto para indicarmos a base e o acabamento adequados. Explicamos os cuidados no orçamento.</p>
         </div>
         <div class="oi">
-          <h5><i>07</i><span>Vocês vendem grama sintética?</span></h5>
+          <h5><i>04</i><span>Vocês vendem grama sintética?</span></h5>
           <p>Sim. Trabalhamos com as gramas sintéticas da indústria Kapazi: decorativas de 12 mm e 20 mm, recreativa de 30 mm e esportiva de 50 mm. Peça o orçamento informando o tamanho da área.</p>
+        </div>
+        <div class="oi">
+          <h5><i>05</i><span>Vocês têm piso para piscina e áreas molhadas?</span></h5>
+          <p>Sim. O piso W-Kap é antiderrapante e antifungo, feito sob medida para bordas de piscina, vestiários, duchas e áreas de banho.</p>
         </div>
       </div>
       <div>
         <div class="oi">
-          <h5><i>04</i><span>Como faço a limpeza?</span></h5>
+          <h5><i>06</i><span>Como faço a limpeza?</span></h5>
           <p>Depende do material, mas em geral basta aspirar ou sacudir no dia a dia e lavar quando necessário. Junto com o pedido, você recebe as orientações certinhas para o seu tapete durar bastante.</p>
         </div>
         <div class="oi">
-          <h5><i>05</i><span>Quanto custa um tapete personalizado?</span></h5>
+          <h5><i>07</i><span>Quanto custa um tapete personalizado?</span></h5>
           <p>O valor depende do tamanho, do material e da complexidade da arte. Por isso preferimos entender o seu caso antes de passar um número — assim o orçamento sai justo e sem surpresa. Preencha o formulário que a gente responde.</p>
         </div>
         <div class="oi">
-          <h5><i>06</i><span>Vocês atendem onde?</span></h5>
+          <h5><i>08</i><span>Vocês atendem onde?</span></h5>
           <p>Atendemos no Rio de Janeiro. Se você está em outra cidade, mande uma mensagem mesmo assim que a gente verifica a melhor forma de te atender.</p>
         </div>
         <div class="oi">
-          <h5><i>08</i><span>Qual altura de grama escolher?</span></h5>
+          <h5><i>09</i><span>Qual altura de grama escolher?</span></h5>
           <p>Para decoração e varandas, 12 mm ou 20 mm. Para lazer, playgrounds e pets, a recreativa de 30 mm. Para futebol e esportes, a esportiva de 50 mm. Na dúvida, conte o uso que a gente indica.</p>
+        </div>
+        <div class="oi">
+          <h5><i>10</i><span>Vocês fazem piso para quadra poliesportiva?</span></h5>
+          <p>Fazemos. O piso modular esportivo é montado em placas e deixa a quadra ou o playground pronto em poucas horas. Envie as medidas da área no orçamento.</p>
         </div>
       </div>
     </div>
@@ -879,8 +876,8 @@ function piizuAds(label, extra){
 <section id="valores">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">10 / Linhas</div>
-      <h2 class="fr">Duas linhas, <em>uma para cada necessidade.</em></h2>
+      <div class="kick">10 / Linhas de tapetes</div>
+      <h2 class="fr">Tapetes em duas linhas, <em>uma para cada necessidade.</em></h2>
       <p>O valor final sai do seu projeto: medida, material e arte. Peça o orçamento e receba a proposta certa.</p>
     </div>
 
@@ -944,6 +941,10 @@ function piizuAds(label, extra){
 
       <form class="frm rv" id="fm" novalidate>
         <div class="row">
+          <label for="fProduto">O que você procura</label>
+          <select id="fProduto"><option value="tapete" selected>Tapete ou capacho personalizado</option></select>
+        </div>
+        <div class="row">
           <label for="fNome">Nome completo</label>
           <input id="fNome" type="text" placeholder="Como podemos te chamar" minlength="2" maxlength="100" required>
         </div>
@@ -996,7 +997,7 @@ function piizuAds(label, extra){
     <div class="ft">
       <div>
         <div class="logo"><img src="assets/img/marca/piizu-horizontal-sem-slogan-claro.svg" alt="pii-zü" width="284" height="83" loading="lazy"></div>
-        <p>Tapetes personalizados com logotipo, nome, cores e desenhos, e grama sintética Kapazi, no Rio de Janeiro. Para empresas, condomínios, residências e escolas, com produção na maior fábrica da América Latina, há mais de 48 anos no mercado nacional.</p>
+        <p>Tapetes personalizados com logotipo, nome, cores e desenhos, grama sintética e pisos para piscina e quadras, no Rio de Janeiro. Para empresas, condomínios, residências e escolas, com produção na maior fábrica da América Latina, há mais de 48 anos no mercado nacional.</p>
       </div>
       <div>
         <h6>Navegação</h6>
@@ -1220,19 +1221,106 @@ function pjPasso(d){
 document.getElementById('pjPrev').addEventListener('click', function(){ pjPasso(-1); });
 document.getElementById('pjNext').addEventListener('click', function(){ pjPasso(1); });
 
-/* grama: o botão de cada linha anota o interesse no campo de detalhes do pedido */
-document.querySelectorAll('[data-grama]').forEach(function(a){
-  a.addEventListener('click', function(){
-    var obs = document.getElementById('fObs'), txt = 'Tenho interesse na ' + a.getAttribute('data-grama') + ' (Kapazi). Área aproximada: ';
-    if(obs.value.indexOf(a.getAttribute('data-grama')) === -1) obs.value = obs.value ? txt + '\n' + obs.value : txt;
-    setTimeout(function(){ obs.focus({preventScroll:true}); }, 600);
+/* =========================================================
+   NICHOS — lista única dos produtos da página.
+   Para acrescentar um nicho: inclua aqui um item com id, nome, textos e modelos;
+   inclua os ids dos modelos em PRODUCTS (src/lib/quote-schema.ts);
+   e ponha as fotos na galeria com data-setor igual ao id do nicho.
+   O nicho "tapete" tem seções próprias acima e aparece só na galeria e no formulário.
+   ========================================================= */
+var NICHOS = [
+  {id:'tapete', nome:'Tapetes e capachos', proprio:true,
+   itens:[{id:'tapete', rotulo:'Tapete ou capacho personalizado'}]},
+  {id:'grama', nome:'Grama sintética', titulo:'Grama sintética Kapazi', sub:'Sempre verde, sem rega e sem poda',
+   p:'Gramas sintéticas produzidas pela indústria Kapazi, reconhecidas pela excelente qualidade. São três linhas, cada uma com a altura certa para o uso.',
+   itens:[
+    {id:'grama-12', tag:'Decorativa', nome:'12 mm', rotulo:'Grama Decorativa 12 mm', p:'Acabamento baixo e uniforme para varandas, sacadas, vitrines e detalhes de decoração.'},
+    {id:'grama-20', tag:'Decorativa', nome:'20 mm', rotulo:'Grama Decorativa 20 mm', p:'Mais volume e aspecto de gramado para jardins e áreas externas de casas e condomínios.'},
+    {id:'grama-30', tag:'Recreativa', nome:'30 mm', rotulo:'Grama Recreativa 30 mm', p:'Mais macia ao toque para áreas de lazer, playgrounds e espaços para pets.'},
+    {id:'grama-50', tag:'Esportiva', nome:'50 mm', rotulo:'Grama Esportiva 50 mm', p:'Fios altos para campos de futebol society e áreas esportivas.'}
+   ]},
+  {id:'piso-piscina', nome:'Piscina e áreas molhadas', titulo:'Piso W-Kap', sub:'Para piscinas e áreas úmidas e molhadas',
+   p:'A estética moderna com a funcionalidade que o espaço exige: piso antiderrapante e antifungo, feito sob medida para quem circula descalço e com o chão molhado.',
+   itens:[
+    {id:'piso-piscina', tag:'W-Kap', nome:'Antiderrapante', rotulo:'Piso W-Kap para piscina e áreas molhadas', p:'Bordas de piscina, vestiários, duchas e áreas de banho de casas, condomínios e clubes.'}
+   ]},
+  {id:'piso-quadra', nome:'Quadras poliesportivas', titulo:'Piso modular esportivo', sub:'Para quadras poliesportivas e playgrounds',
+   p:'Placas modulares que deixam a quadra pronta em poucas horas, sem dor de cabeça. Liberdade para montar o espaço do seu jeito, com as cores e marcações que você precisa.',
+   itens:[
+    {id:'piso-quadra', tag:'Modular', nome:'Quadras e playgrounds', rotulo:'Piso modular para quadra poliesportiva', p:'Quadras de futebol, basquete e vôlei e playgrounds de condomínios, escolas e clubes.'}
+   ]}
+];
+function nicho(id){ for(var i=0;i<NICHOS.length;i++){ if(NICHOS[i].id===id) return NICHOS[i]; } return null; }
+function produto(id){ for(var i=0;i<NICHOS.length;i++){ for(var k=0;k<NICHOS[i].itens.length;k++){ if(NICHOS[i].itens[k].id===id) return NICHOS[i].itens[k]; } } return null; }
+function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+/* formulário: opções de produto agrupadas por nicho */
+var fProduto = document.getElementById('fProduto');
+fProduto.innerHTML = NICHOS.map(function(N){
+  var ops = N.itens.map(function(P){ return '<option value="' + P.id + '"' + (P.id === 'tapete' ? ' selected' : '') + '>' + esc(P.rotulo) + '</option>'; }).join('');
+  return N.proprio ? ops : '<optgroup label="' + esc(N.nome) + '">' + ops + '</optgroup>';
+}).join('');
+function escolheProduto(id){
+  if(!produto(id)) return;
+  fProduto.value = id;
+  setTimeout(function(){ document.getElementById('fNome').focus({preventScroll:true}); }, 600);
+}
+
+/* mais produtos: abas por nicho, fotos com setas e modelos */
+var LID = null, lnFi = 0;
+function lnFotos(id){
+  return Array.prototype.map.call(document.querySelectorAll('.gal-it[data-setor="' + id + '"] img'), function(im){ return {src:im.getAttribute('src'), alt:im.alt}; });
+}
+function lnRender(){
+  var N = nicho(LID), top = document.getElementById('lnTop');
+  top.innerHTML = '';
+  NICHOS.forEach(function(X){
+    if(X.proprio) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ab' + (X.id === LID ? ' on' : '');
+    b.setAttribute('aria-pressed', X.id === LID ? 'true' : 'false');
+    b.textContent = X.nome;
+    b.addEventListener('click', function(){ LID = X.id; lnFi = 0; lnRender(); });
+    top.appendChild(b);
   });
-});
-document.getElementById('grFotos').addEventListener('click', function(){
-  var b = document.querySelector('#galTabs button[data-setor="grama"]'); if(b) b.click();
+  var fotos = lnFotos(LID), box = document.getElementById('lnFoto');
+  box.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
+  box.classList.toggle('uma', fotos.length < 2);
+  if(fotos.length){
+    var F = fotos[lnFi % fotos.length], d = document.createElement('div');
+    d.className = 'ph';
+    d.innerHTML = '<img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" loading="lazy">';
+    box.insertBefore(d, box.firstChild);
+    document.getElementById('lnCap').textContent = F.alt;
+  }
+  document.getElementById('lnNm').textContent = N.titulo;
+  document.getElementById('lnLc').textContent = N.sub;
+  document.getElementById('lnP').textContent = N.p;
+  document.getElementById('lnIt').innerHTML = N.itens.map(function(P){
+    return '<div class="ln-r"><div><span class="tag">' + esc(P.tag) + '</span><b>' + esc(P.nome) + '</b></div>' +
+      '<p>' + esc(P.p) + '</p><a href="#orcamento" class="b-lin sm" data-produto="' + P.id + '">Pedir orçamento</a></div>';
+  }).join('');
+}
+for(var ni=0; ni<NICHOS.length && !LID; ni++){ if(!NICHOS[ni].proprio) LID = NICHOS[ni].id; }
+lnRender();
+function lnPasso(d){ var n = lnFotos(LID).length; if(n){ lnFi = (lnFi + d + n) % n; lnRender(); } }
+document.getElementById('lnPrev').addEventListener('click', function(){ lnPasso(-1); });
+document.getElementById('lnNext').addEventListener('click', function(){ lnPasso(1); });
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('[data-produto]');
+  if(a) escolheProduto(a.getAttribute('data-produto'));
 });
 
-/* galeria: setas passam as fotos; no fim volta ao começo */
+/* galeria: uma aba para cada nicho que tem fotos */
+document.getElementById('galTabs').innerHTML = '<button type="button" class="ab on" data-setor="todos" aria-pressed="true">Todos</button>' +
+  NICHOS.filter(function(N){ return document.querySelector('.gal-it[data-setor="' + N.id + '"]'); }).map(function(N){
+    return '<button type="button" class="ab" data-setor="' + N.id + '" aria-pressed="false">' + esc(N.nome) + '</button>';
+  }).join('');
+document.getElementById('lnFotos').addEventListener('click', function(){
+  var b = document.querySelector('#galTabs button[data-setor="' + LID + '"]'); if(b) b.click();
+});
+
+/* galeria: setas passam as fotos; no fim volta ao começo *//* galeria: setas passam as fotos; no fim volta ao começo */
 var galTr = document.getElementById('galTr');
 function galPasso(d){
   var it = galTr.querySelector('.gal-it');
@@ -1350,18 +1438,21 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   }
   var A = aAtual(), M = null;
   for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
+  var P = produto(g('fProduto')) || produto('tapete');
   var msg =
-    'Olá! Quero um orçamento de tapete/capacho personalizado.\n\n' +
+    'Olá! Quero um orçamento pelo site da piizu.\n\n' +
+    'Produto: ' + P.rotulo + '\n' +
     'Nome: ' + nome + '\n' +
     'WhatsApp: ' + fone + '\n' +
     'Bairro/cidade: ' + bairro + '\n' +
     'Para onde é: ' + g('fFase') + '\n' +
     'Quando precisa: ' + g('fPrazo') + '\n' +
-    'Detalhes: ' + (g('fObs') || 'ainda estou definindo') + '\n\n' +
-    '--- O que eu estava vendo no site ---\n' +
-    'Solução: ' + A.nome + ' (' + A.local + ')\n' +
-    'Material de interesse: ' + M.nome + ' (' + M.sub + ')';
-  var payload = {name:nome, phone:fone, city:bairro, place:g('fFase'), timeframe:g('fPrazo'), details:g('fObs'), solution:AID, material:MID};
+    'Detalhes: ' + (g('fObs') || 'ainda estou definindo') +
+    (P.id === 'tapete' ?
+      '\n\n--- O que eu estava vendo no site ---\n' +
+      'Solução: ' + A.nome + ' (' + A.local + ')\n' +
+      'Material de interesse: ' + M.nome + ' (' + M.sub + ')' : '');
+  var payload = {name:nome, phone:fone, city:bairro, place:g('fFase'), timeframe:g('fPrazo'), details:g('fObs'), solution:AID, material:MID, product:P.id};
   var fingerprint = JSON.stringify(payload);
   if(fingerprint !== submissionPayload){ submissionId = crypto.randomUUID(); submissionPayload = fingerprint; }
   payload.id = submissionId;

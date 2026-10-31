@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from '@/integrations/supabase/types';
-import { quoteSchema } from '@/lib/quote-schema';
+import { PRODUCTS, quoteSchema } from '@/lib/quote-schema';
 
 // Best-effort per-instance abuse protection; no customer data is retained here.
 const submissionWindows = new Map<string, { count: number; expires: number }>();
@@ -51,7 +51,14 @@ export const Route = createFileRoute('/api/public/quotes')({
             },
           },
         });
-        const { error } = await client.from('quote_requests').insert(parsed.data);
+        let { error } = await client.from('quote_requests').insert(parsed.data);
+        // Until the product column migration is applied, save the request without it and
+        // keep the chosen product in the details so no quote is lost.
+        if (error && (error.code === 'PGRST204' || error.code === '42703')) {
+          const { product, ...rest } = parsed.data;
+          const details = `[Produto: ${PRODUCTS[product]}] ${rest.details}`.trim().slice(0, 2000);
+          ({ error } = await client.from('quote_requests').insert({ ...rest, details }));
+        }
         if (error && error.code !== '23505') {
           console.error('Quote request insert failed:', error.code);
           return Response.json({ error: 'Não foi possível registrar seu pedido. Tente novamente.' }, { status: 503, headers });

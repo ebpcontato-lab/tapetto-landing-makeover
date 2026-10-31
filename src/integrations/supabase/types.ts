@@ -23,6 +23,7 @@ export type Database = {
           material: string
           name: string
           phone: string
+          product: string
           place: string
           solution: string
           timeframe: string
@@ -35,6 +36,7 @@ export type Database = {
           material: string
           name: string
           phone: string
+          product?: string
           place: string
           solution: string
           timeframe: string
@@ -47,6 +49,7 @@ export type Database = {
           material?: string
           name?: string
           phone?: string
+          product?: string
           place?: string
           solution?: string
           timeframe?: string
