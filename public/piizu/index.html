@@ -509,14 +509,34 @@ footer{padding:38px 0 26px}
   .nav-l.open .nav-dg span{display:inline}
 }
 
-/* ============ galeria: setas abaixo das fotos, longe do botão do WhatsApp ============ */
-.gal{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.gal-tr{order:-1;flex:0 0 100%;min-width:0}
+/* ============ setas nas laterais, fora das fotos ============ */
+.gal{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:12px;align-items:center}
+.gal.sem-setas{grid-template-columns:minmax(0,1fr)}
+.gal-tr{min-width:0}
 .gal .seta{position:static;transform:none}
 .gal .seta:hover{transform:scale(1.06)}
-/* no computador, fotos e setas cabem juntas na altura da tela */
-@media(min-width:1061px){.gal-tr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 370px)*.8))}
-  #lnTr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 400px)*.8))}}
+/* no computador, fotos cabem na altura da tela */
+@media(min-width:1061px){.gal-tr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 330px)*.8))}
+  #lnTr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 350px)*.8))}}
+@media(max-width:560px){.gal{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.gal .seta{width:34px;height:34px}.gal-tr{grid-auto-columns:86%}}
+/* Soluções: a foto fica entre as setas, sem setas por cima dela */
+.pj-foto{display:flex;align-items:center;padding:0 56px}
+.pj-foto .ph{position:relative;inset:auto;flex:1;align-self:stretch}
+.pj-foto .seta.esq{left:6px}.pj-foto .seta.dir{right:6px}
+.pj-foto .cap{left:68px;max-width:calc(100% - 136px)}
+@media(min-width:1061px){
+  .pj-foto{--fh:clamp(330px,calc(var(--dobra) - 360px),540px);height:var(--fh);width:calc(var(--fh) + 112px);aspect-ratio:auto}
+}
+@media(max-width:1060px){.pj-foto{height:auto;aspect-ratio:auto}.pj-foto .ph{aspect-ratio:4/3}}
+@media(max-width:560px){
+  .pj-foto{padding:0 44px}.pj-foto .ph{aspect-ratio:1/1}
+  .pj-foto .seta{width:34px;height:34px}.pj-foto .seta.esq{left:5px}.pj-foto .seta.dir{right:5px}
+  .pj-foto .cap{left:54px;max-width:calc(100% - 108px)}
+}
+/* o botão do WhatsApp sai da frente quando passa por cima de uma seta */
+.wa-float{transition:opacity .2s}
+.wa-float.recua{opacity:0;pointer-events:none}
+
 
 /* ============ 7 dobras: por que a pii-zu, dúvidas que abrem e fecham, como funciona ============ */
 .mc{position:relative}
@@ -586,7 +606,7 @@ function piizuAds(label, extra){
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="nav-in">
-    <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-horizontal-sem-slogan-claro.svg" alt="pii-zü" width="284" height="83"></a>
+    <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-horizontal-sem-slogan-cobre.svg" alt="pii-zü" width="284" height="83"></a>
     <nav class="nav-l" id="navl" aria-label="Nosso menu degustação">
       <span class="nav-dg">Nosso menu <span>degustação</span></span>
       <a href="#projetos">Soluções</a>
@@ -986,6 +1006,19 @@ function medeNav(){ document.documentElement.style.setProperty('--nav-h', navEl.
 medeNav();
 window.addEventListener('resize', medeNav);
 window.addEventListener('load', medeNav);
+/* o botão do WhatsApp sai da frente enquanto passa por cima de uma seta de fotos */
+var waBtn = document.querySelector('.wa-float');
+function waSetas(){
+  if(!waBtn) return;
+  var w = waBtn.getBoundingClientRect(), bate = false;
+  document.querySelectorAll('.gal .seta, .pj-foto .seta').forEach(function(sx){
+    var r = sx.getBoundingClientRect();
+    if(r.width && !(r.right < w.left - 8 || r.left > w.right + 8 || r.bottom < w.top - 8 || r.top > w.bottom + 8)) bate = true;
+  });
+  waBtn.classList.toggle('recua', bate);
+}
+window.addEventListener('scroll', waSetas, {passive:true});
+window.addEventListener('resize', waSetas);
 
 function trataImg(im){
   var falhou = function(){ im.style.display = 'none'; im.parentNode.classList.remove('zm'); };
