@@ -542,6 +542,7 @@ footer{padding:38px 0 26px}
 }
 /* abas compactas no computador, para todas as linhas caberem numa fileira */
 @media(min-width:861px){.gal-tabs{gap:6px}.gal-tabs .ab{padding:8px 12px;font-size:.78rem}}
+.pj-foto.uma .seta{visibility:hidden}
 /* o botão do WhatsApp sai da frente quando passa por cima de uma seta */
 .wa-float{transition:opacity .2s}
 .wa-float.recua{opacity:0;pointer-events:none}
@@ -684,8 +685,8 @@ function piizuAds(label, extra){
       <div class="pj-g">
         <div class="pj-foto" id="pjFoto">
           <span class="cap" id="pjCap">—</span>
-          <button type="button" class="seta esq" id="pjPrev" aria-label="Solução anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button type="button" class="seta dir" id="pjNext" aria-label="Próxima solução"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          <button type="button" class="seta esq" id="pjPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="seta dir" id="pjNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
         <div class="pj-info">
           <div class="nm fr" id="pNm">—</div>
@@ -1083,58 +1084,71 @@ navl.addEventListener('click', function(e){
 /* =========================================================
    KILLER — projetos por ambiente
    ========================================================= */
+/* Soluções: cada segmento tem seu conjunto de fotos (as setas passam por elas).
+   Para acrescentar fotos a um segmento, inclua {src, alt, cap} na lista fotos. */
 var AMB = [
   {id:'cond', nome:'Condomínios', local:'Capachos para portaria, halls e elevadores',
    p:'O nome ou o logotipo do condomínio na portaria, nos halls e nos elevadores. Recebe bem moradores e visitantes, segura a sujeira na entrada e protege o piso das áreas comuns.',
    sp:[['Personalização','Nome e logotipo do condomínio'],['Uso indicado','Portarias, halls e elevadores'],['Formato','Sob medida, inclusive elevador']],
    al:'Para elevadores, informe as medidas exatas do piso da cabine. Em portarias que recebem chuva, peça um material de alta absorção.',
-   foto:'assets/img/galeria/capacho-elevador-unique.webp', arte:true,
-   alt:'Capacho personalizado Unique Residence no elevador do condomínio',
-   cap:'Capacho personalizado para elevador de condomínio'},
+   fotos:[
+    {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho personalizado Unique Residence no elevador do condomínio', cap:'Capacho personalizado para elevador de condomínio'},
+    {src:'assets/img/galeria/capa-elevador-liftkap.webp', alt:'Capa de elevador Liftkap protegendo as paredes da cabine', cap:'Capa de elevador para condomínio'},
+    {src:'assets/img/galeria/waterkap-entrada.webp', alt:'Capacho Waterkap de alta absorção de água na entrada de um prédio', cap:'Capacho de alta absorção na entrada do prédio'}
+   ]},
   {id:'esco', nome:'Escolas', local:'Tapetes infantis e capachos de entrada',
    p:'Tapete para as crianças brincarem, sentarem em roda e aprenderem. Pode levar alfabeto, números, cores e o nome da escola, deixando a sala mais acolhedora e protegendo os pequenos do piso frio.',
    sp:[['Personalização','Nome, letras e desenhos'],['Uso indicado','Salas de aula, brinquedotecas e entradas'],['Formato','Redondo, retangular ou sob medida']],
    al:'Em espaços infantis, priorize um material fácil de limpar e uma base que não deslize. Conte quantas crianças usam o espaço para indicarmos o tamanho ideal.',
-   foto:'assets/img/tapete-metamorfose-destaque.jpg',
-   alt:'Tapete infantil redondo com alfabeto e o nome da escola',
-   cap:'Tapete infantil com alfabeto e nome da escola'},
+   fotos:[
+    {src:'assets/img/tapete-metamorfose-destaque.jpg', alt:'Tapete infantil redondo com alfabeto e o nome da escola', cap:'Tapete infantil com alfabeto e nome da escola'},
+    {src:'assets/img/galeria/tapete-escola-patio-6.webp', alt:'Tapete com pista e amarelinha no pátio de escola', cap:'Pátio da escola com pista e amarelinha'},
+    {src:'assets/img/galeria/tapete-escola-patio-8.webp', alt:'Tapete com pista de carrinhos sob o refeitório da escola', cap:'Pista de carrinhos sob o refeitório'}
+   ]},
   {id:'come', nome:'Comércio e varejo', local:'Tapetes de entrada com a sua marca',
    p:'A entrada é a primeira impressão de quem chega. Um tapete com o seu logotipo recebe o cliente, retém a sujeira dos sapatos e protege o piso, tudo de uma vez. Funciona em lojas, restaurantes, farmácias e mercados.',
    sp:[['Personalização','Logotipo, marcas e cores'],['Uso indicado','Entradas de lojas e restaurantes'],['Formato','Sob medida, inclusive passarelas']],
    al:'Para entradas com muito movimento, escolha um material de alta resistência e base firme. Capacho fino demais desgasta rápido e pode escorregar.',
-   foto:'assets/img/galeria/tapete-loja-ferramentas.webp', arte:true,
-   alt:'Tapete personalizado com as marcas atendidas por uma loja de ferramentas',
-   cap:'Passarela personalizada em loja de ferramentas'},
+   fotos:[
+    {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete personalizado com as marcas atendidas por uma loja de ferramentas', cap:'Passarela personalizada em loja de ferramentas'},
+    {src:'assets/img/galeria/tapete-super-essencias.webp', alt:'Tapete personalizado Super Essências na entrada da loja', cap:'Tapete com a marca na entrada da loja'},
+    {src:'assets/img/galeria/tapete-hipermais-bem-vindo.webp', alt:'Tapete Bem-Vindo com a marca Hipermais na entrada do supermercado', cap:'Tapete de boas-vindas no supermercado'},
+    {src:'assets/img/galeria/cleankap-logo-detalhe.webp', alt:'Detalhe de tapete Cleankap azul com logotipo em branco', cap:'Detalhe do logotipo no tapete'}
+   ]},
   {id:'sala', nome:'Salas e conjuntos comerciais', local:'Capachos para escritórios, consultórios e clínicas',
    p:'Uma sala comercial com o logotipo na porta passa profissionalismo desde o primeiro passo. Ideal para escritórios, consultórios, clínicas e salas em centros empresariais.',
    sp:[['Personalização','Logotipo e cores da marca'],['Uso indicado','Portas de salas e recepções'],['Formato','Sob medida']],
    al:'Em corredores de prédios comerciais, prefira um capacho de perfil baixo, que não atrapalhe a abertura da porta.',
-   foto:'assets/img/galeria/tapete-dentaluni-recepcao.webp',
-   alt:'Tapete com logotipo Dentaluni na recepção do escritório',
-   cap:'Capacho com logotipo para recepção'},
+   fotos:[
+    {src:'assets/img/galeria/tapete-dentaluni-recepcao.webp', alt:'Tapete com logotipo Dentaluni na recepção do escritório', cap:'Tapete com logotipo na recepção do escritório'},
+    {src:'assets/img/capacho-empresa.jpg', alt:'Capacho com logotipo na recepção de um escritório', cap:'Capacho com logotipo na recepção'}
+   ]},
   {id:'indu', nome:'Indústrias', local:'Capachos de alta resistência para entradas',
    p:'Entradas de fábricas, galpões e refeitórios recebem muito tráfego, água e sujeira. Capachos de alta absorção e resistência ajudam a manter o piso limpo e mais seguro, com a marca da empresa.',
    sp:[['Personalização','Logotipo e sinalização'],['Uso indicado','Entradas de fábricas e galpões'],['Formato','Sob medida']],
    al:'Conte o volume de pessoas e se há água, óleo ou poeira no local: isso define o material e a base indicados.',
-   foto:'assets/img/galeria/tapete-terra-raspador.webp',
-   alt:'Tapete Terra raspador retendo a sujeira da bota na entrada',
-   cap:'Tapete raspador para entradas de fábricas e galpões'},
+   fotos:[
+    {src:'assets/img/galeria/tapete-terra-raspador.webp', alt:'Tapete Terra raspador retendo a sujeira da bota na entrada', cap:'Tapete raspador para entradas de fábricas e galpões'},
+    {src:'assets/img/galeria/tapete-firekap-extintor.webp', alt:'Tapete Firekap vermelho e amarelo sinalizando a área do extintor de incêndio', cap:'Tapete Firekap na área do extintor'}
+   ]},
   {id:'resi', nome:'Residências', local:'Capachos e tapetes personalizados para casa',
    p:'Capacho com o nome da família ou uma frase de boas-vindas. Um detalhe que deixa a entrada com a sua cara e ainda ajuda a manter a casa limpa.',
    sp:[['Personalização','Nome, frase ou desenho'],['Uso indicado','Portas, varandas e quartos'],['Formato','Sob medida']],
    al:'Se a entrada pega chuva ou sol direto, avise na hora do pedido: existem materiais próprios para áreas externas que não desbotam nem encharcam.',
-   foto:'assets/img/capacho-casa.jpg',
-   alt:'Capacho Bem-vindos na porta de entrada de uma casa',
-   cap:'Capacho de boas-vindas para residência'},
+   fotos:[
+    {src:'assets/img/capacho-casa.jpg', alt:'Capacho Bem-vindos na porta de entrada de uma casa', cap:'Capacho de boas-vindas para residência'}
+   ]},
   {id:'quad', nome:'Quadras e plays', local:'Pisos e tapetes para quadras e playgrounds',
    p:'Quadras poliesportivas e playgrounds de condomínios, escolas e clubes ganham piso modular, grama sintética ou tapete com as cores, marcações e desenhos do espaço, prontos em pouco tempo.',
    sp:[['Personalização','Cores, marcações e desenhos'],['Uso indicado','Quadras, playgrounds e áreas de lazer'],['Formato','Sob medida']],
    al:'Informe as medidas da área e se ela é coberta ou descoberta: isso define se o indicado é piso modular, grama sintética ou tapete.',
-   foto:'assets/img/galeria/playkap-playground.webp',
-   alt:'Playground sobre piso modular Playkap colorido',
-   cap:'Piso modular para playground'}
+   fotos:[
+    {src:'assets/img/galeria/playkap-playground.webp', alt:'Playground sobre piso modular Playkap colorido', cap:'Piso modular para playground'},
+    {src:'assets/img/galeria/playkap-antes-depois.webp', alt:'Área de lazer antes e depois da instalação do piso modular Playkap', cap:'Antes e depois do piso modular'},
+    {src:'assets/img/galeria/piso-quadra-esportiva.webp', alt:'Piso modular em quadra poliesportiva de condomínio', cap:'Quadra poliesportiva com piso modular'}
+   ]}
 ];
-var AID = 'cond';
+var AID = 'cond', PFI = 0;
 function aAtual(){ for(var i=0;i<AMB.length;i++){ if(AMB[i].id===AID) return AMB[i]; } return AMB[0]; }
 
 function pjRender(){
@@ -1146,18 +1160,19 @@ function pjRender(){
     b.className = 'ab' + (A.id === AID ? ' on' : '');
     b.setAttribute('aria-pressed', A.id === AID ? 'true' : 'false');
     b.textContent = A.nome;
-    b.addEventListener('click', function(){ AID = A.id; pjRender(); });
+    b.addEventListener('click', function(){ AID = A.id; PFI = 0; pjRender(); });
     top.appendChild(b);
   });
-  var A = aAtual();
+  var A = aAtual(), F = A.fotos[PFI % A.fotos.length];
   var foto = document.getElementById('pjFoto');
   var cap = document.getElementById('pjCap');
   foto.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
+  foto.classList.toggle('uma', A.fotos.length < 2);
   var d = document.createElement('div');
   d.className = 'ph';
-  d.innerHTML = '<img style="object-position:' + (A.pos || '50% 50%') + '" src="' + A.foto + '" alt="' + A.alt + '" loading="lazy">';
+  d.innerHTML = '<img src="' + F.src + '" alt="' + F.alt + '" loading="lazy">';
   foto.insertBefore(d, cap);
-  cap.textContent = A.cap;
+  cap.textContent = F.cap + (A.fotos.length > 1 ? ' · ' + (PFI % A.fotos.length + 1) + '/' + A.fotos.length : '');
   document.getElementById('pNm').textContent = A.nome;
   document.getElementById('pLc').textContent = A.local;
   document.getElementById('pP').textContent = A.p;
@@ -1227,10 +1242,10 @@ var ch = CLIENTES.map(function(c){ return '<img src="' + c.src + '" alt="' + c.a
 cliT.innerHTML = ch + ch.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
 
 /* setas da foto de soluções */
+/* setas de Soluções: passam pelas fotos do segmento escolhido */
 function pjPasso(d){
-  var i = 0;
-  for(var k=0;k<AMB.length;k++){ if(AMB[k].id===AID) i = k; }
-  AID = AMB[(i + d + AMB.length) % AMB.length].id;
+  var n = aAtual().fotos.length;
+  PFI = (PFI + d + n) % n;
   pjRender();
 }
 document.getElementById('pjPrev').addEventListener('click', function(){ pjPasso(-1); });
