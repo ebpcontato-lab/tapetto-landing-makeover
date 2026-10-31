@@ -21,8 +21,8 @@ const productIds = Object.keys(PRODUCTS) as [ProductId, ...ProductId[]];
 
 // Segments of the "Soluções" section (AMB list in public/piizu/index.html).
 export const SOLUTIONS = {
-  cond: 'Condomínios', esco: 'Escolas', sala: 'Salas comerciais',
-  come: 'Comércios', indu: 'Indústrias', resi: 'Residências',
+  cond: 'Condomínios', esco: 'Escolas', come: 'Comércio e varejo',
+  sala: 'Salas e conjuntos comerciais', indu: 'Indústrias', resi: 'Residências',
   // Earlier segments, still accepted from older static exports.
   emp: 'Empresa e comércio', esc: 'Creche e escola', cas: 'Casa e condomínio',
 } as const;
