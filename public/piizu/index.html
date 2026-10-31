@@ -574,6 +574,10 @@ footer{padding:38px 0 26px}
   #pjTop .ab:nth-child(4),#pjTop .ab:nth-child(6){grid-column:2/span 2}
   #pjTop .ab:nth-child(5),#pjTop .ab:nth-child(7){grid-column:4/span 2}
 }
+/* Tipos de tapete: cartões só com texto; o selo fica no fluxo, acima do nome */
+.mc{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+.mc .mc-bg{position:static;align-self:flex-start;margin:16px 18px 0}
+.mc .mc-bg+.bd{padding-top:10px}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1287,7 +1291,7 @@ function matRender(){
     b.type = 'button';
     b.className = 'mc' + (M.id === MID ? ' on' : '');
     b.setAttribute('aria-pressed', M.id === MID ? 'true' : 'false');
-    b.innerHTML = (M.destaque ? '<span class="mc-bg">' + M.destaque + '</span>' : '') + '<div class="ph"><img class="' + (M.foto.indexOf('/__l5e/') === 0 ? 'product-art' : '') + '" src="' + M.foto + '" alt="' + M.alt + '" loading="lazy"></div>' +
+    b.innerHTML = (M.destaque ? '<span class="mc-bg">' + M.destaque + '</span>' : '') +
       '<div class="bd"><b class="fr">' + M.nome + '</b><span>' + M.sub + '</span><div class="v">' + M.rel + '</div></div>';
     b.addEventListener('click', function(){ MID = M.id; matRender(); });
     host.appendChild(b);
