@@ -592,6 +592,29 @@ footer{padding:38px 0 26px}
   #projetos .pj-ft .b-lin{flex:none}
   #projetos .pj-al{margin-top:10px;padding:8px 12px}
 }
+/* Mais produtos no computador: fotos à esquerda e, à direita, texto da linha e modelos,
+   para a dobra inteira caber abaixo do cabeçalho ao clicar no menu */
+@media(min-width:1061px){
+  #produtos{padding-top:20px}
+  #produtos .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-items:start}
+  #produtos .head,#produtos #lnTop{grid-column:1/-1}
+  #produtos .head{margin-bottom:14px}
+  #produtos .head h2{font-size:clamp(1.8rem,2.7vw,2.4rem)}
+  #produtos #lnTop{margin-bottom:14px}
+  #produtos #lnGal{grid-column:1;grid-row:3/span 3}
+  #produtos #lnTr{grid-auto-columns:min(calc((100% - 16px)/2),calc((var(--dobra) - 210px)*.8))}
+  #produtos .ln-intro{grid-column:2;grid-row:3;margin:0 0 8px}
+  #produtos .ln-intro b{font-size:1.2rem}
+  #produtos .ln-intro span{margin-left:8px}
+  #produtos .ln-intro p{font-size:.8rem;line-height:1.55;margin-top:4px}
+  #produtos .ln-mod,#produtos .ln-mod:has(> :nth-child(4)){grid-column:2;grid-row:4;grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;gap:5px;margin-top:0}
+  #produtos .ln-c{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto auto;column-gap:10px;row-gap:1px;align-items:center;padding:5px 12px}
+  #produtos .ln-c .tag{grid-column:1;grid-row:1;font-size:.58rem;padding:2px 7px}
+  #produtos .ln-c b{grid-column:2;grid-row:1;font-size:1rem;margin:0}
+  #produtos .ln-c p{grid-column:1/-1;grid-row:2;font-size:.72rem;line-height:1.4;margin:0}
+  #produtos .ln-c .b-lin{grid-column:3;grid-row:1;padding:3px 10px;font-size:.7rem;white-space:nowrap}
+  #produtos .ln-ft{grid-column:2;grid-row:5;margin-top:8px;font-size:.72rem;line-height:1.5}
+}
 /* abas de Soluções e de Mais produtos no celular: 3 em cima e as outras em pares centralizados (prisma invertido) */
 @media(max-width:860px){
   #pjTop,#lnTop{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;overflow:visible;align-items:stretch}
