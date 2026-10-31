@@ -98,7 +98,7 @@ main,section,footer{position:relative;z-index:5}
 .rise.d1{animation-delay:.1s}.rise.d2{animation-delay:.24s}.rise.d3{animation-delay:.38s}.rise.d4{animation-delay:.52s}
 @keyframes rs{to{opacity:1;transform:none}}
 
-.faixa{margin-top:96px;border-top:1px solid var(--lin);border-bottom:1px solid var(--lin)}
+.faixa{margin-top:64px;border-top:1px solid var(--lin);border-bottom:1px solid var(--lin)}
 .faixa-in{max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
 .faixa-in>div{padding:26px 22px;border-left:1px solid var(--lin)}
 .faixa-in>div:first-child{border-left:0;padding-left:0}
@@ -106,10 +106,10 @@ main,section,footer{position:relative;z-index:5}
 .faixa-in span{display:block;font-size:.73rem;color:var(--tx2);margin-top:8px;line-height:1.55}
 
 /* ============ blocos ============ */
-section{padding:94px 0}
+section{padding:58px 0}
 .kick{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lar2);display:flex;align-items:center;gap:11px}
 .kick:before{content:"";width:26px;height:1px;background:var(--lar);display:block}
-.head{max-width:60ch;margin-bottom:46px}
+.head{max-width:60ch;margin-bottom:32px}
 .head h2{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.9rem,3.7vw,2.9rem);line-height:1.14;letter-spacing:-.02em;margin-top:16px}
 .head h2 em{font-style:italic;color:var(--lar2)}
 .head p{color:var(--tx);font-size:.94rem;line-height:1.9;margin-top:16px}
@@ -177,7 +177,7 @@ section{padding:94px 0}
 .mdet-n{padding:16px 24px;border-top:1px solid var(--lin);background:rgba(138,42,16,.05);font-size:.84rem;color:var(--tinta);line-height:1.8}
 
 /* ============ 05 zigue-zague ============ */
-.zz{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:78px}
+.zz{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:48px}
 .zz:last-child{margin-bottom:0}
 .zz.inv .zz-tx{order:2}
 .zz .ph{height:410px;border-radius:4px}
@@ -196,6 +196,43 @@ section{padding:94px 0}
   color:var(--tx2);white-space:nowrap;font-style:italic}
 .mq-t span:after{content:"◦";font-size:.9rem;color:var(--lar);font-style:normal}
 @keyframes mqR{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ clientes (logos) ============ */
+.cli{padding:30px 0 6px}
+.cli-t{text-align:center;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tx2);margin-bottom:16px}
+.cli-mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.cli-tr{display:flex;align-items:center;gap:56px;width:max-content;animation:mqR 34s linear infinite}
+.cli-mq:hover .cli-tr{animation-play-state:paused}
+.cli-tr img{height:52px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s}
+.cli-tr img:hover{filter:none;opacity:1}
+@media(max-width:860px){.cli-tr{gap:36px}.cli-tr img{height:40px}}
+
+/* ============ zoom de fotos + setas ============ */
+.ph.zm{cursor:zoom-in}
+.ph.zm:after{content:"";position:absolute;right:10px;top:10px;z-index:3;width:34px;height:34px;border-radius:50%;
+  background:rgba(31,24,19,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M20 20l-4.5-4.5M11 8v6M8 11h6'/%3E%3C/svg%3E") center/18px no-repeat;
+  opacity:.85;transition:opacity .25s,transform .25s;pointer-events:none}
+.ph.zm:hover:after{opacity:1;transform:scale(1.08)}
+.seta{position:absolute;top:50%;z-index:7;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(248,247,244,.92);color:var(--tinta);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(31,24,19,.18);transition:background .25s,transform .25s}
+.seta:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.seta svg{width:20px;height:20px}
+.seta.esq{left:14px}.seta.dir{right:14px}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(18,14,11,.94);display:flex;align-items:center;justify-content:center}
+.lb[hidden]{display:none}
+.lb-st{position:absolute;inset:56px 70px;overflow:hidden;display:flex;align-items:center;justify-content:center;touch-action:none}
+.lb-st img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .25s ease;cursor:zoom-in;user-select:none;-webkit-user-drag:none}
+.lb.zoom .lb-st img{cursor:grab;transition:none}
+.lb .seta{background:rgba(255,255,255,.14);color:#fff}
+.lb .seta:hover{background:rgba(255,255,255,.26)}
+.lb-x,.lb-z{position:absolute;top:12px;z-index:8;height:40px;min-width:40px;padding:0 12px;border-radius:20px;border:0;cursor:pointer;
+  background:rgba(255,255,255,.14);color:#fff;font-size:1.05rem;display:flex;align-items:center;justify-content:center;gap:6px}
+.lb-x{right:14px}
+.lb-z{right:66px;font-size:.8rem}
+.lb-x:hover,.lb-z:hover{background:rgba(255,255,255,.26)}
+.lb-cap{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:rgba(255,255,255,.78);font-size:.8rem;padding:0 70px}
+@media(max-width:640px){.lb-st{inset:56px 8px 48px}.lb .seta{top:auto;bottom:6px;transform:none}.lb .seta:hover{transform:none}.lb-cap{bottom:20px;padding:0 64px}}
 
 /* ============ 07 processo ============ */
 .pr-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px;align-items:start}
@@ -330,8 +367,10 @@ footer{border-top:1px solid var(--lin);padding:52px 0 34px}
   .split,.of,.obj,.mat{grid-template-columns:1fr}
   .mc .ph{height:auto;aspect-ratio:16/9}
   .oi:nth-child(1){border-top:1px solid var(--lin)}
-  section{padding:68px 0}
-  .faixa{margin-top:64px}
+  section{padding:44px 0}
+  .faixa{margin-top:44px}
+  .head{margin-bottom:24px}
+  .zz{margin-bottom:36px}
 }
 @media(max-width:560px){
   .ft{grid-template-columns:1fr;gap:28px}
@@ -439,6 +478,12 @@ function tapettoAds(label, extra){
   </div>
 </main>
 
+<!-- ===== CLIENTES (logos) — troque as imagens na lista CLIENTES do script ===== -->
+<div class="cli" aria-label="Clientes atendidos">
+  <div class="cli-t">Clientes que já pisam no nosso trabalho</div>
+  <div class="cli-mq"><div class="cli-tr" id="cliT"></div></div>
+</div>
+
 <!-- ===== 02 KILLER: SOLUÇÕES POR USO ===== -->
 <section id="projetos">
   <div class="wrap">
@@ -454,6 +499,8 @@ function tapettoAds(label, extra){
       <div class="pj-g">
         <div class="pj-foto" id="pjFoto">
           <span class="cap" id="pjCap">—</span>
+          <button type="button" class="seta esq" id="pjPrev" aria-label="Solução anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="seta dir" id="pjNext" aria-label="Próxima solução"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
         <div class="pj-info">
           <div class="nm fr" id="pNm">—</div>
@@ -864,6 +911,15 @@ function tapettoAds(label, extra){
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3C9.383 3 4 8.383 4 15.004c0 2.117.555 4.184 1.61 6.004L4 29l8.152-1.57a11.94 11.94 0 0 0 3.852.633h.004C22.625 28.063 28 22.68 28 16.06 28 9.437 22.625 4.055 16.004 4.055zm0 21.938h-.004a9.93 9.93 0 0 1-5.062-1.387l-.363-.215-4.84.93.93-4.715-.235-.383a9.92 9.92 0 0 1-1.523-5.309c0-5.492 4.469-9.96 9.965-9.96 2.66 0 5.16 1.039 7.039 2.921a9.9 9.9 0 0 1 2.918 7.047c-.004 5.492-4.472 9.96-9.965 9.96zm5.465-7.457c-.3-.152-1.77-.875-2.043-.973-.273-.098-.473-.148-.672.153-.199.297-.77.968-.945 1.168-.172.199-.348.222-.648.074-.301-.148-1.266-.465-2.41-1.489-.891-.793-1.492-1.773-1.668-2.074-.172-.297-.02-.457.133-.605.137-.133.301-.348.45-.523.152-.176.199-.301.3-.5.098-.203.05-.375-.023-.524-.078-.148-.672-1.621-.922-2.219-.242-.582-.488-.504-.672-.512l-.57-.011a1.1 1.1 0 0 0-.797.371c-.273.301-1.047 1.024-1.047 2.496s1.074 2.895 1.223 3.094c.148.199 2.113 3.226 5.121 4.523.715.309 1.273.492 1.707.633.719.227 1.371.195 1.887.117.575-.086 1.77-.723 2.02-1.422.246-.699.246-1.297.171-1.422-.07-.125-.269-.199-.57-.348z"/></svg>
 </a>
 
+<!-- visualizador de fotos com zoom -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button type="button" class="lb-z" id="lbZ" aria-label="Ampliar ou reduzir">🔍 Zoom</button>
+  <button type="button" class="lb-x" id="lbX" aria-label="Fechar">✕</button>
+  <button type="button" class="seta esq" id="lbPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <div class="lb-st" id="lbSt"><img id="lbImg" alt=""></div>
+  <button type="button" class="seta dir" id="lbNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
 <!-- banner de consentimento (Google Ads) -->
 <div id="cookieBanner" class="ck-banner" hidden>
   <p>Usamos cookies para medir o desempenho dos nossos anúncios no Google. Você pode aceitar ou recusar — os anúncios seguem sendo veiculados de qualquer forma. Saiba mais na <a href="privacidade.html">Política de privacidade</a>.</p>
@@ -879,7 +935,8 @@ function tapettoAds(label, extra){
 var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function trataImg(im){
-  var falhou = function(){ im.style.display = 'none'; };
+  var falhou = function(){ im.style.display = 'none'; im.parentNode.classList.remove('zm'); };
+  if(!im.closest('.mc')) im.parentNode.classList.add('zm');
   im.addEventListener('error', falhou);
   if(im.complete && im.naturalWidth === 0) falhou();
 }
@@ -1019,6 +1076,106 @@ var MQ = ['Tapetes personalizados','Tapetes com logotipo','Tapetes infantis','Cr
 var mqT = document.getElementById('mqT');
 var h = MQ.map(function(x){ return '<span>'+x+'</span>'; }).join('');
 mqT.innerHTML = h + h;
+
+/* clientes — logos genéricos de teste: troque src e alt pelos logos reais */
+var CLIENTES = [
+  {src:'assets/img/clientes/cliente-01.svg', alt:'Cliente Norte'},
+  {src:'assets/img/clientes/cliente-02.svg', alt:'Cliente Vértice'},
+  {src:'assets/img/clientes/cliente-03.svg', alt:'Cliente Alpha'},
+  {src:'assets/img/clientes/cliente-04.svg', alt:'Cliente Ondas'},
+  {src:'assets/img/clientes/cliente-05.svg', alt:'Cliente Prisma'},
+  {src:'assets/img/clientes/cliente-06.svg', alt:'Cliente Raiz'},
+  {src:'assets/img/clientes/cliente-07.svg', alt:'Cliente Órbita'},
+  {src:'assets/img/clientes/cliente-08.svg', alt:'Cliente Sol & Mar'}
+];
+var cliT = document.getElementById('cliT');
+var ch = CLIENTES.map(function(c){ return '<img src="' + c.src + '" alt="' + c.alt + '" loading="lazy">'; }).join('');
+cliT.innerHTML = ch + ch.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
+
+/* setas da foto de soluções */
+function pjPasso(d){
+  var i = 0;
+  for(var k=0;k<AMB.length;k++){ if(AMB[k].id===AID) i = k; }
+  AID = AMB[(i + d + AMB.length) % AMB.length].id;
+  pjRender();
+}
+document.getElementById('pjPrev').addEventListener('click', function(){ pjPasso(-1); });
+document.getElementById('pjNext').addEventListener('click', function(){ pjPasso(1); });
+
+/* visualizador de fotos: zoom + setas */
+var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbSt = document.getElementById('lbSt'), lbCap = document.getElementById('lbCap');
+var FOTOS = [], fi = 0, zoom = 1, px = 0, py = 0, ultimoFoco = null;
+function lbTransf(){ lbImg.style.transform = 'translate(' + px + 'px,' + py + 'px) scale(' + zoom + ')'; lb.classList.toggle('zoom', zoom > 1); }
+function lbZoom(z, cx, cy){
+  if(z <= 1){ zoom = 1; px = 0; py = 0; lbTransf(); return; }
+  var r = lbImg.getBoundingClientRect();
+  if(cx == null){ cx = r.left + r.width/2; cy = r.top + r.height/2; }
+  var ox = (cx - r.left) / r.width - .5, oy = (cy - r.top) / r.height - .5;
+  var w = r.width / zoom, hh = r.height / zoom;
+  zoom = Math.min(z, 4);
+  px = -ox * w * (zoom - 1); py = -oy * hh * (zoom - 1);
+  lbTransf();
+}
+function lbMostra(){
+  var f = FOTOS[fi];
+  lbImg.src = f.src; lbImg.alt = f.alt;
+  lbCap.textContent = (f.alt ? f.alt + ' · ' : '') + (fi + 1) + ' / ' + FOTOS.length;
+  lbZoom(1);
+}
+function lbAbre(img){
+  FOTOS = []; var vistos = {};
+  document.querySelectorAll('.ph > img').forEach(function(im){
+    if(im.style.display === 'none' || vistos[im.currentSrc || im.src]) return;
+    vistos[im.currentSrc || im.src] = 1;
+    FOTOS.push({src:im.currentSrc || im.src, alt:im.alt});
+  });
+  fi = 0;
+  for(var i=0;i<FOTOS.length;i++){ if(FOTOS[i].src === (img.currentSrc || img.src)) fi = i; }
+  ultimoFoco = document.activeElement;
+  lb.hidden = false; document.body.style.overflow = 'hidden';
+  lbMostra();
+  document.getElementById('lbX').focus();
+}
+function lbFecha(){ lb.hidden = true; document.body.style.overflow = ''; if(ultimoFoco) ultimoFoco.focus(); }
+function lbPasso(d){ fi = (fi + d + FOTOS.length) % FOTOS.length; lbMostra(); }
+document.addEventListener('click', function(e){
+  var ph = e.target.closest && e.target.closest('.ph.zm');
+  if(ph && !e.target.closest('.seta')){ var im = ph.querySelector('img'); if(im) lbAbre(im); }
+});
+document.getElementById('lbX').addEventListener('click', lbFecha);
+document.getElementById('lbPrev').addEventListener('click', function(){ lbPasso(-1); });
+document.getElementById('lbNext').addEventListener('click', function(){ lbPasso(1); });
+document.getElementById('lbZ').addEventListener('click', function(){ lbZoom(zoom > 1 ? 1 : 2.5); });
+lb.addEventListener('click', function(e){ if(e.target === lb || e.target === lbSt) lbFecha(); });
+document.addEventListener('keydown', function(e){
+  if(lb.hidden) return;
+  if(e.key === 'Escape') lbFecha();
+  else if(e.key === 'ArrowLeft') lbPasso(-1);
+  else if(e.key === 'ArrowRight') lbPasso(1);
+  else if(e.key === '+' || e.key === '=') lbZoom(zoom + .5);
+  else if(e.key === '-') lbZoom(zoom - .5);
+});
+lbSt.addEventListener('wheel', function(e){ e.preventDefault(); lbZoom(zoom + (e.deltaY < 0 ? .4 : -.4), e.clientX, e.clientY); }, {passive:false});
+/* arrastar: move a foto ampliada; sem zoom, deslizar troca de foto; toque simples amplia */
+var arr = null;
+lbImg.addEventListener('pointerdown', function(e){
+  e.preventDefault();
+  arr = {x:e.clientX, y:e.clientY, px:px, py:py, mov:false};
+  lbImg.setPointerCapture(e.pointerId);
+});
+lbImg.addEventListener('pointermove', function(e){
+  if(!arr) return;
+  var dx = e.clientX - arr.x, dy = e.clientY - arr.y;
+  if(Math.abs(dx) + Math.abs(dy) > 6) arr.mov = true;
+  if(zoom > 1){ px = arr.px + dx; py = arr.py + dy; lbTransf(); }
+});
+lbImg.addEventListener('pointerup', function(e){
+  if(!arr) return;
+  var dx = e.clientX - arr.x, a = arr; arr = null;
+  if(!a.mov){ lbZoom(zoom > 1 ? 1 : 2.5, e.clientX, e.clientY); return; }
+  if(zoom === 1 && Math.abs(dx) > 50) lbPasso(dx < 0 ? 1 : -1);
+});
+lbImg.addEventListener('pointercancel', function(){ arr = null; });
 
 /* formulário → registro seguro; WhatsApp opcional */
 var submissionId = null, submissionPayload = null, submitting = false;
