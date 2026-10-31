@@ -630,6 +630,20 @@ footer{padding:38px 0 26px}
 /* Mais produtos: aviso quando a linha ainda não tem fotos */
 .gal-tr.vazio{display:block}
 .ln-vazio{border:1px dashed var(--lin2);border-radius:8px;padding:28px 20px;text-align:center;font-size:.86rem;color:var(--tx2);background:var(--bg2)}
+/* dobra 2: compare os modelos */
+.cmp-box{border:1px solid var(--lin);border-radius:8px;background:var(--bg2);padding:18px 20px}
+.cmp-t{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;color:var(--tinta);margin-bottom:12px}
+.cmp-p{font-size:.86rem;color:var(--tx);line-height:1.7;margin:2px 0 12px}
+.cmp-mod{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:14px}
+.cmp-c{border:1px solid var(--lin);border-radius:8px;background:var(--bg);padding:12px 14px}
+.cmp-c b{display:block;font-size:1.15rem;font-weight:400;color:var(--tinta);margin:8px 0 6px}
+.cmp-c ul{list-style:none;display:grid;gap:4px}
+.cmp-c li{display:grid;grid-template-columns:auto 1fr;gap:8px;font-size:.8rem;color:var(--tx);line-height:1.5}
+.cmp-c li i{font-style:normal;color:var(--lar)}
+#cmpTr{grid-auto-columns:min(calc((100% - 48px)/4),260px)}
+@media(max-width:860px){#cmpTr{grid-auto-columns:calc((100% - 16px)/2)}}
+@media(max-width:560px){.cmp-box{padding:14px 12px}.cmp-mod{grid-template-columns:1fr 1fr;gap:8px}.cmp-c{padding:10px}.cmp-c b{font-size:1rem}.cmp-c li{font-size:.74rem}#cmpTr{grid-auto-columns:80%}
+  #cmpTop{display:grid;grid-template-columns:1fr 1fr;gap:6px}#cmpTop .ab{white-space:normal;text-align:center;padding:7px 6px;font-size:.76rem;line-height:1.25}}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -823,6 +837,19 @@ function piizuAds(label, extra){
       <div class="kick">02 / Tipos de tapete</div>
       <h2 class="fr">Tapetes e capachos personalizados <em>para diferentes funções:</em></h2>
       <p>Contenções contra entrada de sólidos ou contenção dupla função: contra entrada de sólidos e líquidos (“água da chuva que entra pelo sapato das pessoas”).</p>
+    </div>
+
+    <!-- Compare os modelos — gerado pela lista COMPARA do script -->
+    <div class="cmp-box rv">
+      <div class="cmp-t">Compare os modelos</div>
+      <div class="gal-tabs" id="cmpTop" role="group" aria-label="Tipos de contenção"></div>
+      <p class="cmp-p" id="cmpP">—</p>
+      <div class="cmp-mod" id="cmpMod"></div>
+      <div class="gal" id="cmpGal">
+        <button type="button" class="seta esq" id="cmpPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="gal-tr" id="cmpTr" tabindex="0" aria-label="Fotos dos modelos"></div>
+        <button type="button" class="seta dir" id="cmpNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
     </div>
 
     <p class="of-note rv">Cada tapete é pensado para o seu espaço: o valor sai da medida, do material e da arte. Por isso o orçamento é sempre personalizado, sem custo e sem compromisso.</p>
@@ -1492,6 +1519,66 @@ function faixaPasso(tr, d){
 }
 document.getElementById('lnPrev').addEventListener('click', function(){ faixaPasso(lnTr, -1); });
 document.getElementById('lnNext').addEventListener('click', function(){ faixaPasso(lnTr, 1); });
+
+/* =========================================================
+   COMPARA — dobra 2: tipos de contenção, modelos e fotos.
+   Para acrescentar fotos, inclua {src, alt} em fotos.
+   ========================================================= */
+var COMPARA = [
+  {id:'solidos', nome:'Contenção de sólidos — vinil',
+   p:'Capachos de vinil que seguram terra, areia e poeira na entrada. Compare as duas linhas:',
+   modelos:[
+    {nome:'Vinil Alto Tráfego', tag:'Alto tráfego', itens:['Para entradas de grande circulação']},
+    {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada']}
+   ],
+   fotos:[
+    {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho de vinil personalizado Unique Residence no elevador'}
+   ]},
+  {id:'dupla', nome:'Dupla função — sólidos e líquidos',
+   p:'Tapetes que seguram a sujeira e também a água da chuva que entra pelo sapato das pessoas. Compare os três modelos:',
+   modelos:[
+    {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores']},
+    {nome:'Waterkap', tag:'Cores variadas', itens:['Mais de 12 cores','Não aplica logo']},
+    {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única']}
+   ],
+   fotos:[
+    {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete Cleankap personalizado com as marcas de uma loja de ferramentas'},
+    {src:'assets/img/galeria/tapete-hipermais-bem-vindo.webp', alt:'Tapete Cleankap Bem-Vindo com a marca Hipermais'},
+    {src:'assets/img/galeria/cleankap-logo-detalhe.webp', alt:'Detalhe do logotipo em tapete Cleankap'},
+    {src:'assets/img/galeria/waterkap-entrada.webp', alt:'Tapete Waterkap de alta absorção na entrada de um prédio'}
+   ]}
+];
+var CID = COMPARA[0].id, cmpTr = document.getElementById('cmpTr');
+function cmpSetas(){ document.getElementById('cmpGal').classList.toggle('sem-setas', cmpTr.scrollWidth <= cmpTr.clientWidth + 4); }
+function cmpRender(){
+  var C = null;
+  for(var i=0;i<COMPARA.length;i++){ if(COMPARA[i].id===CID) C = COMPARA[i]; }
+  var top = document.getElementById('cmpTop');
+  top.innerHTML = '';
+  COMPARA.forEach(function(X){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ab' + (X.id === CID ? ' on' : '');
+    b.setAttribute('aria-pressed', X.id === CID ? 'true' : 'false');
+    b.textContent = X.nome;
+    b.addEventListener('click', function(){ CID = X.id; cmpRender(); });
+    top.appendChild(b);
+  });
+  document.getElementById('cmpP').textContent = C.p;
+  document.getElementById('cmpMod').innerHTML = C.modelos.map(function(M){
+    return '<div class="cmp-c"><span class="tag">' + esc(M.tag) + '</span><b class="fr">' + esc(M.nome) + '</b><ul>' +
+      M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul></div>';
+  }).join('');
+  cmpTr.innerHTML = C.fotos.length ? C.fotos.map(function(F){
+    return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
+  }).join('') : '<div class="ln-vazio">Fotos em breve.</div>';
+  cmpTr.classList.toggle('vazio', !C.fotos.length);
+  cmpTr.scrollLeft = 0;
+  cmpSetas();
+}
+cmpRender();
+window.addEventListener('resize', cmpSetas);
+document.getElementById('cmpPrev').addEventListener('click', function(){ faixaPasso(cmpTr, -1); });
+document.getElementById('cmpNext').addEventListener('click', function(){ faixaPasso(cmpTr, 1); });
 document.addEventListener('click', function(e){
   var a = e.target.closest && e.target.closest('[data-produto]');
   if(a) escolheProduto(a.getAttribute('data-produto'));
