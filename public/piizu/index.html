@@ -552,6 +552,29 @@ footer{padding:38px 0 26px}
 .hf-pt i{width:7px;height:7px;border-radius:50%;background:var(--lin2)}
 .hf-pt i.on{background:var(--lar)}
 @media(max-width:560px){.hero-f{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.hero-f .seta{width:34px;height:34px}}
+/* cabeçalho em tablets: sem o título do menu e itens mais juntos, para não vazar da tela */
+@media(min-width:861px) and (max-width:1100px){
+  .nav-dg{display:none}
+  .nav-in{gap:14px}
+  .nav-l{gap:12px;font-size:.76rem}
+  .nav .logo img{height:48px}
+}
+/* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
+@media(max-width:1060px){
+  .faixa-in{grid-template-columns:repeat(3,1fr)}
+  .faixa-in>div,.faixa-in>div:nth-child(3){border-top:0;border-left:1px solid var(--lin);padding:18px 12px}
+  .faixa-in>div:first-child{border-left:0;padding-left:0}
+  .faixa-in>div:nth-child(4){grid-column:1/-1;border-left:0;border-top:1px solid var(--lin);padding:14px 0;display:flex;align-items:baseline;gap:10px}
+  .faixa-in>div:nth-child(4) span{margin-top:0}
+}
+@media(max-width:560px){
+  .faixa-in b{font-size:clamp(.98rem,4.4vw,1.15rem);line-height:1.15}
+  .faixa-in span{font-size:.66rem;line-height:1.45;margin-top:6px}
+  .faixa-in>div,.faixa-in>div:nth-child(3){padding:14px 8px}
+  .faixa-in>div:first-child{padding-left:0}
+  .faixa-in b{white-space:nowrap}
+  .faixa-in>div:nth-child(4) b{font-size:1.05rem}
+}
 /* complemento do título do topo, em tamanho menor */
 .hero h1 .h1-sub{display:block;font-size:.5em;line-height:1.25;letter-spacing:-.01em;margin-top:.5em;color:var(--tinta)}
 /* abas compactas no computador, para todas as linhas caberem numa fileira */
