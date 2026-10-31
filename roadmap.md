@@ -26,3 +26,4 @@
 - [x] Soluções em seis segmentos: condomínios, escolas, salas comerciais, comércios, indústrias e residências.
 - [x] Menos espaço entre as dobras; links do menu param cada dobra alinhada abaixo do cabeçalho, com as fotos inteiras na tela (computador e celular).
 - [ ] Aplicar a migração 0003_open_quote_solution no Lovable Cloud — até lá os pedidos dos segmentos novos são salvos com o segmento anotado nos detalhes.
+- [x] Compactar a página de 11 para 7 dobras (Soluções, Tipos de tapete, Mais produtos, Galeria, Por que a pii-zu, Dúvidas, Orçamento com Como funciona); saíram Para quem é e a faixa de texto rolando.

@@ -517,6 +517,43 @@ footer{padding:38px 0 26px}
 /* no computador, fotos e setas cabem juntas na altura da tela */
 @media(min-width:1061px){.gal-tr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 370px)*.8))}
   #lnTr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 400px)*.8))}}
+
+/* ============ 7 dobras: por que a pii-zu, dúvidas que abrem e fecham, como funciona ============ */
+.mc{position:relative}
+.mc-bg{position:absolute;top:10px;left:10px;z-index:3;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:var(--lar);padding:4px 10px;border-radius:999px;font-weight:500}
+.pq{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.pq-tx p{color:var(--tx);font-size:.94rem;line-height:1.85;margin-bottom:14px}
+.pq-tx strong{color:var(--tinta);font-weight:400}
+.pq .pull{margin:18px 0}
+.pq-l{list-style:none;display:grid;gap:9px}
+.pq-l li{display:grid;grid-template-columns:auto 1fr;gap:11px;font-size:.87rem;color:var(--tx);line-height:1.6}
+.pq-l i{font-style:normal;color:var(--lar)}
+.pq-dep{margin:0;border:1px solid var(--lin);border-radius:8px;overflow:hidden;background:var(--bg2)}
+.pq-dep .ph{aspect-ratio:16/10}
+.pq-q{padding:20px 24px}
+.pq-q .str{color:var(--lar);letter-spacing:.26em;font-size:.85rem;margin-bottom:10px}
+.pq-q blockquote{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:1.2rem;line-height:1.45;margin-bottom:14px}
+.pq-q blockquote em{font-style:italic;color:var(--lar2)}
+.pq-q .who b{display:block;font-size:.86rem;font-weight:500}
+.pq-q .who span{display:block;font-size:.76rem;color:var(--tx2);margin-top:3px}
+.pq-q a{text-decoration:underline}
+.oi{padding:16px 0}
+.oi summary{list-style:none;cursor:pointer}
+.oi summary::-webkit-details-marker{display:none}
+.oi h5{margin-bottom:0;padding-right:30px;position:relative}
+.oi h5:after{content:"+";position:absolute;right:4px;top:-2px;color:var(--lar2);font-size:1.25rem;font-weight:300}
+.oi[open] h5:after{content:"–"}
+.oi p{margin-top:10px}
+.passos{margin-top:22px;border-top:1px solid var(--lin);padding-top:18px}
+.passos h3{font-weight:400;font-size:1.2rem;margin-bottom:12px;color:var(--tinta)}
+.passos ol{list-style:none;counter-reset:p;display:grid;gap:10px}
+.passos li{counter-increment:p;display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:.86rem;color:var(--tx);line-height:1.6}
+.passos li:before{content:counter(p);width:24px;height:24px;border-radius:50%;border:1px solid var(--lar);color:var(--lar2);
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;margin-top:1px}
+.passos b{color:var(--tinta);font-weight:500}
+.cta-l .lgpd{font-size:.76rem;color:var(--tx2);margin-top:14px;line-height:1.6}
+@media(max-width:1060px){.pq{grid-template-columns:1fr;gap:24px}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -558,7 +595,7 @@ function piizuAds(label, extra){
       <a href="#galeria">Galeria</a>
       <a href="#oficina">A fábrica</a>
       <a href="#processo">Como funciona</a>
-      <a href="#valores">Linhas</a>
+      <a href="#objecoes">Dúvidas</a>
     </nav>
     <button class="nav-tog" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
     <a href="#orcamento" class="b-lar sm" style="flex:none">Pedir orçamento</a>
@@ -639,42 +676,11 @@ function piizuAds(label, extra){
   </div>
 </section>
 
-<!-- ===== 03 EDITORIAL ===== -->
-<section id="verdade">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="kick">02 / Antes de comparar preço</div>
-      <h2 class="fr">Dois tapetes parecidos na foto <em>podem durar coisas muito diferentes.</em></h2>
-    </div>
-
-    <div class="ed">
-      <div class="rv">
-        <p>Na hora de escolher, é comum olhar só o desenho e o preço. Mas o que decide se o tapete continua bonito depois de muito uso é o que não aparece na foto: <strong>o tipo de fio, a base antiderrapante e a forma como a arte é aplicada</strong>.</p>
-        <p>Um capacho de entrada, por exemplo, recebe pisada, chuva e areia todos os dias. Se a base não segura bem no piso ou se as cores desbotam com o sol, ele perde a função rapidinho. <strong>Material certo para o lugar certo faz toda a diferença</strong> — e é isso que a gente te ajuda a escolher.</p>
-        <p>Por isso, no orçamento a gente explica com calma o material indicado, o acabamento e os cuidados de limpeza. <strong>Você entende o que está levando</strong>, e não compara só o valor final.</p>
-
-        <div class="pull">
-          <b class="fr">48 anos</b>
-          <span>é o tempo de estrada da fábrica onde o seu tapete é produzido — a maior da América Latina. Experiência que aparece no acabamento e na durabilidade.</span>
-        </div>
-
-        <p>Não vendemos só um tapete. <strong>A gente entrega a solução certa para o seu piso.</strong></p>
-      </div>
-
-      <div class="ed-fotos rv">
-        <div class="ph"><img class="product-art" src="/__l5e/assets-v1/332bb308-dbfa-432e-a4fd-3ad97403b6b3/tapetto-waterkap.png" alt="Imagem enviada do capacho Waterkap em uma entrada" loading="lazy"></div>
-        <div class="ph"><img class="product-art" src="/__l5e/assets-v1/a6e1a78a-21f3-439e-bd5b-0f9d24772ff5/tapetto-vinil.png" alt="Capacho personalizado Unique Residence no elevador do condomínio" loading="lazy"></div>
-        <div class="ph"><img class="product-art" src="/__l5e/assets-v1/6dbcb5e4-3fc8-48a8-8364-537540840615/tapetto-cleankap-entrada.png" alt="Tapete personalizado Cleankap com a marca Oak Tree na entrada" loading="lazy"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== 04 MATERIAIS ===== -->
 <section id="materiais">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">03 / Materiais</div>
+      <div class="kick">02 / Tipos de tapete</div>
       <h2 class="fr">Tapetes personalizados, <em>para diferentes usos.</em></h2>
       <p>Clique para comparar. O que muda não é só o visual: é a resistência a umidade, a facilidade de limpeza e onde cada material funciona melhor.</p>
     </div>
@@ -694,6 +700,7 @@ function piizuAds(label, extra){
       </div>
       <div class="mdet-n" id="mN">—</div>
     </div>
+    <p class="of-note rv">Cada tapete é pensado para o seu espaço: o valor sai da medida, do material e da arte. Por isso o orçamento é sempre personalizado, sem custo e sem compromisso.</p>
   </div>
 </section>
 
@@ -701,7 +708,7 @@ function piizuAds(label, extra){
 <section id="produtos">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">04 / Mais produtos</div>
+      <div class="kick">03 / Mais produtos</div>
       <h2 class="fr">Além dos tapetes, <em>soluções para cada tipo de piso.</em></h2>
     </div>
 
@@ -721,7 +728,7 @@ function piizuAds(label, extra){
 <section id="galeria">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">05 / Galeria</div>
+      <div class="kick">04 / Galeria</div>
       <h2 class="fr">Produtos instalados, <em>separados por setor.</em></h2>
       <p>Escolha o setor e use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
     </div>
@@ -744,141 +751,40 @@ function piizuAds(label, extra){
   </div>
 </section>
 
-<!-- ===== 05 FÁBRICA ===== -->
+<!-- ===== 05 POR QUE A PII-ZU (antes de comparar + fábrica + depoimento) ===== -->
 <section id="oficina">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">06 / A fábrica</div>
-      <h2 class="fr">O que muda por ser feito <em>na maior fábrica da América Latina.</em></h2>
+      <div class="kick">05 / Por que a pii-zu</div>
+      <h2 class="fr">Feito na maior fábrica da América Latina, <em>com atendimento de perto.</em></h2>
     </div>
-
-    <div class="zz rv">
-      <div class="zz-tx">
-        <span class="tag">Produção</span>
-        <h3 class="fr">Indústria grande, <em>atendimento de perto</em></h3>
-        <p>Seu tapete e capacho é produzido na maior fábrica da América Latina, com mais de 48 anos atuando no mercado nacional. Isso garante padrão de qualidade, cores firmes e acabamento caprichado em cada peça.</p>
-        <p>E aqui no Rio você conta com o nosso atendimento próximo: a gente entende o seu espaço, ajuda na arte e acompanha o pedido até ele chegar.</p>
-        <ul>
-          <li><i>◦</i><span>Produção industrial com padrão de qualidade consolidado</span></li>
+    <div class="pq">
+      <div class="pq-tx rv">
+        <p>Dois tapetes parecidos na foto podem durar coisas muito diferentes. O que decide é o que não aparece: <strong>o tipo de fio, a base antiderrapante e a forma como a arte é aplicada</strong>.</p>
+        <p>Seu tapete é produzido na maior fábrica da América Latina, e aqui no Rio a gente entende o seu espaço, ajuda na arte e acompanha o pedido até ele chegar. <strong>Você entende o que está levando</strong>, e não compara só o valor final.</p>
+        <div class="pull">
+          <b class="fr">48 anos</b>
+          <span>de estrada da fábrica onde o seu tapete é produzido. Experiência que aparece no acabamento e na durabilidade.</span>
+        </div>
+        <ul class="pq-l">
+          <li><i>◦</i><span>Sob medida, no tamanho e no formato do seu espaço</span></li>
+          <li><i>◦</i><span>Material certo para cada ambiente, interno ou externo</span></li>
           <li><i>◦</i><span>Sua marca, cores e desenho reproduzidos com fidelidade</span></li>
           <li><i>◦</i><span>Acompanhamento do pedido do início ao fim</span></li>
         </ul>
       </div>
-      <div class="ph"><img class="product-art" src="/__l5e/assets-v1/5798001e-d7f9-4daf-9246-0bea45432caa/tapetto-cleankap.png" alt="Tapete Cleankap personalizado com logotipos instalado em loja de ferramentas" loading="lazy"></div>
-    </div>
-
-    <div class="zz inv rv">
-      <div class="zz-tx">
-        <span class="tag">Medida</span>
-        <h3 class="fr">Tapete no tamanho do seu espaço, <em>não o contrário</em></h3>
-        <p>Entrada estreita, sala de aula redonda, recepção com formato diferente: tapete pronto quase nunca encaixa direito. Quando sobra ou falta, ele embola, escorrega e perde a graça.</p>
-        <p>Por isso trabalhamos sob medida. Você informa as medidas e o uso, e a gente indica o formato, o material e o acabamento que vão funcionar no seu piso.</p>
-        <ul>
-          <li><i>◦</i><span>Formatos e tamanhos sob medida</span></li>
-          <li><i>◦</i><span>Indicação do material certo para cada ambiente</span></li>
-          <li><i>◦</i><span>Opções para áreas internas e externas</span></li>
-        </ul>
-      </div>
-      <div class="ph"><img class="product-art" src="/__l5e/assets-v1/6dbcb5e4-3fc8-48a8-8364-537540840615/tapetto-cleankap-entrada.png" alt="Capacho Cleankap personalizado Oak Tree instalado junto à porta de entrada" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 06 MARQUEE ===== -->
-<div class="mq" aria-hidden="true"><div class="mq-t" id="mqT"></div></div>
-
-<!-- ===== 07 PROCESSO ===== -->
-<section id="processo">
-  <div class="wrap">
-    <div class="pr-g">
-      <div class="pr-s">
-        <div class="head rv" style="margin-bottom:26px">
-          <div class="kick">07 / Como funciona</div>
-          <h2 class="fr" style="font-size:clamp(1.75rem,2.8vw,2.3rem)">Do primeiro contato <em>ao tapete no&nbsp;piso</em></h2>
-          <p>Cinco etapas simples, com a sua aprovação antes da produção. Você vê a arte e só depois o tapete vai para a fábrica.</p>
+      <!-- AVALIAÇÕES DO GOOGLE: substitua o texto, o nome e a nota abaixo pelos dados reais do perfil -->
+      <figure class="pq-dep rv">
+        <div class="ph"><img src="assets/img/materiais.jpg" alt="Rolos de tapetes e capachos na fábrica" loading="lazy"></div>
+        <div class="pq-q">
+          <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
+          <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
+          <div class="who">
+            <b>Clientes pii-zu</b>
+            <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">nosso perfil no Google</a></span>
+          </div>
         </div>
-        <a href="#orcamento" class="b-lin">Pedir orçamento</a>
-      </div>
-
-      <div class="pr-l rv">
-        <div class="pi">
-          <div class="w">Etapa 01 · conversa</div>
-          <h5 class="fr">Entendemos o que você precisa</h5>
-          <p>Você conta onde o tapete vai ficar, quem usa o espaço e o que quer transmitir. Pode mandar foto do local e o seu logotipo. Sem compromisso.</p>
-        </div>
-        <div class="pi">
-          <div class="w">Etapa 02 · proposta</div>
-          <h5 class="fr">Indicação de material e orçamento</h5>
-          <p>Indicamos o material ideal para o seu uso e enviamos o orçamento com medidas, acabamento e cuidados explicados de forma clara.</p>
-        </div>
-        <div class="pi">
-          <div class="w">Etapa 03 · arte</div>
-          <h5 class="fr">Aprovação da arte</h5>
-          <p>Você vê como o tapete vai ficar, com cores e posição do logotipo ou desenho. Ajustamos até ficar do seu jeito antes de produzir.</p>
-        </div>
-        <div class="pi">
-          <div class="w">Etapa 04 · produção</div>
-          <h5 class="fr">Fabricação na maior fábrica da América Latina</h5>
-          <p>Com a arte aprovada, o pedido segue para produção com o padrão de qualidade de quem está há mais de 48 anos no mercado.</p>
-        </div>
-        <div class="pi">
-          <div class="w">Etapa 05 · entrega</div>
-          <h5 class="fr">Entrega e orientação de uso</h5>
-          <p>Seu tapete chega pronto para usar, e a gente explica como limpar e conservar para ele durar muito mais.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 08 DEPOIMENTO ===== -->
-<!-- AVALIAÇÕES DO GOOGLE: substitua o texto, o nome e a nota abaixo pelos dados reais do perfil -->
-<section id="prova">
-  <div class="wrap">
-    <div class="dep rv">
-      <div class="ph"><img src="assets/img/tapete-metamorfose-destaque-largo.jpg" alt="Tapete infantil personalizado com letras coloridas instalado em sala de escola" loading="lazy"></div>
-      <div class="dep-tx">
-        <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
-        <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
-        <div class="who">
-          <b>Clientes pii-zu</b>
-          <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener" style="text-decoration:underline">nosso perfil no Google</a></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 09 SPLIT ===== -->
-<section id="perfil">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="kick">08 / Para quem é</div>
-      <h2 class="fr">A pii-zu é para quem <em>quer fazer a escolha certa.</em></h2>
-      <p>Falamos com sinceridade logo na primeira conversa, para você não perder tempo nem dinheiro.</p>
-    </div>
-
-    <div class="split rv">
-      <div class="yy">
-        <h4 class="fr">Somos boa escolha se</h4>
-        <p class="lead">Perfis que costumam sair felizes com o resultado.</p>
-        <ul>
-          <li><i>◦</i><span>Você quer um capacho ou tapete com a sua marca, nome ou desenho, do jeito que imaginou.</span></li>
-          <li><i>◦</i><span>Tem um espaço com medida ou formato diferente, onde tapete pronto não encaixa.</span></li>
-          <li><i>◦</i><span>Valoriza durabilidade e acabamento, não só o menor preço.</span></li>
-          <li><i>◦</i><span>Quer atendimento próximo, de gente que explica e acompanha o pedido.</span></li>
-        </ul>
-      </div>
-      <div class="nn">
-        <h4 class="fr">Talvez não seja para você se</h4>
-        <p class="lead">Casos em que um tapete pronto de loja pode atender melhor — e a gente fala.</p>
-        <ul>
-          <li><i>◦</i><span>Você precisa do tapete para hoje. Peça personalizada leva um tempo de produção.</span></li>
-          <li><i>◦</i><span>Busca apenas um tapete simples, sem arte e em medida padrão.</span></li>
-          <li><i>◦</i><span>A decisão será somente pelo menor preço, sem olhar material e durabilidade.</span></li>
-          <li><i>◦</i><span>Não quer participar da aprovação da arte antes da produção.</span></li>
-        </ul>
-      </div>
+      </figure>
     </div>
   </div>
 </section>
@@ -887,107 +793,56 @@ function piizuAds(label, extra){
 <section id="objecoes">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">09 / Perguntas frequentes</div>
+      <div class="kick">06 / Dúvidas</div>
       <h2 class="fr">O que mais perguntam <em>antes de pedir.</em></h2>
     </div>
 
     <div class="obj rv">
       <div>
-        <div class="oi">
-          <h5><i>01</i><span>Dá para colocar o logotipo da minha empresa?</span></h5>
+        <details class="oi">
+          <summary><h5><i>01</i><span>Dá para colocar o logotipo da minha empresa?</span></h5></summary>
           <p>Dá, sim. Você nos envia o logotipo e as cores, e a gente prepara a arte para você aprovar antes da produção. Também fazemos frases, nomes e desenhos, como os tapetes infantis com alfabeto para creches e escolas.</p>
-        </div>
-        <div class="oi">
-          <h5><i>02</i><span>O capacho escorrega no piso?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>02</i><span>O capacho escorrega no piso?</span></h5></summary>
           <p>Indicamos sempre uma base adequada ao seu piso e ao local de uso, justamente para o tapete ficar firme. Na conversa, conte se o piso é liso, cerâmico, de madeira ou externo, que a gente indica a melhor opção.</p>
-        </div>
-        <div class="oi">
-          <h5><i>03</i><span>Serve para área externa e molhada?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>03</i><span>Serve para área externa e molhada?</span></h5></summary>
           <p>Depende do material do tapete personalizado e das condições do local. Conte se a entrada recebe chuva ou sol direto para indicarmos a base e o acabamento adequados. Explicamos os cuidados no orçamento.</p>
-        </div>
-        <div class="oi">
-          <h5><i>04</i><span>Vocês vendem grama sintética?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>04</i><span>Vocês vendem grama sintética?</span></h5></summary>
           <p>Sim. Trabalhamos com as gramas sintéticas da indústria Kapazi: decorativas de 12 mm e 20 mm, recreativa de 30 mm e esportiva de 50 mm. Peça o orçamento informando o tamanho da área.</p>
-        </div>
-        <div class="oi">
-          <h5><i>05</i><span>Vocês têm piso para piscina e áreas molhadas?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>05</i><span>Vocês têm piso para piscina e áreas molhadas?</span></h5></summary>
           <p>Sim. O piso W-Kap é antiderrapante e antifungo, feito sob medida para bordas de piscina, vestiários, duchas e áreas de banho.</p>
-        </div>
+        </details>
       </div>
       <div>
-        <div class="oi">
-          <h5><i>06</i><span>Como faço a limpeza?</span></h5>
+        <details class="oi">
+          <summary><h5><i>06</i><span>Como faço a limpeza?</span></h5></summary>
           <p>Depende do material, mas em geral basta aspirar ou sacudir no dia a dia e lavar quando necessário. Junto com o pedido, você recebe as orientações certinhas para o seu tapete durar bastante.</p>
-        </div>
-        <div class="oi">
-          <h5><i>07</i><span>Quanto custa um tapete personalizado?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>07</i><span>Quanto custa um tapete personalizado?</span></h5></summary>
           <p>O valor depende do tamanho, do material e da complexidade da arte. Por isso preferimos entender o seu caso antes de passar um número — assim o orçamento sai justo e sem surpresa. Preencha o formulário que a gente responde.</p>
-        </div>
-        <div class="oi">
-          <h5><i>08</i><span>Vocês atendem onde?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>08</i><span>Vocês atendem onde?</span></h5></summary>
           <p>Atendemos no Rio de Janeiro. Se você está em outra cidade, mande uma mensagem mesmo assim que a gente verifica a melhor forma de te atender.</p>
-        </div>
-        <div class="oi">
-          <h5><i>09</i><span>Qual altura de grama escolher?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>09</i><span>Qual altura de grama escolher?</span></h5></summary>
           <p>Para decoração e varandas, 12 mm ou 20 mm. Para lazer, playgrounds e pets, a recreativa de 30 mm. Para futebol e esportes, a esportiva de 50 mm. Na dúvida, conte o uso que a gente indica.</p>
-        </div>
-        <div class="oi">
-          <h5><i>10</i><span>Vocês fazem piso para quadra poliesportiva?</span></h5>
+        </details>
+        <details class="oi">
+          <summary><h5><i>10</i><span>Vocês fazem piso para quadra poliesportiva?</span></h5></summary>
           <p>Fazemos. O piso modular esportivo é montado em placas e deixa a quadra ou o playground pronto em poucas horas. Envie as medidas da área no orçamento.</p>
-        </div>
+        </details>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== 11 LINHAS ===== -->
-<section id="valores">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="kick">10 / Linhas de tapetes</div>
-      <h2 class="fr">Tapetes em duas linhas, <em>uma para cada necessidade.</em></h2>
-      <p>O valor final sai do seu projeto: medida, material e arte. Peça o orçamento e receba a proposta certa.</p>
-    </div>
-
-    <div class="of rv">
-      <div class="of-c">
-        <h4 class="fr">Tapetes com a sua marca</h4>
-        <p class="ds">Tapetes personalizados com logotipo, nome ou mensagem para receber bem em empresas, condomínios e residências.</p>
-        <div class="pr2">
-          <b class="fr">Sob consulta</b>
-          <small>conforme medida e material · orçamento sem compromisso</small>
-        </div>
-        <ul>
-          <li><i>◦</i><span>Tapetes personalizados para entradas e recepções</span></li>
-          <li><i>◦</i><span>Seu logotipo, nome ou frase de boas-vindas</span></li>
-          <li><i>◦</i><span>Indicação do material ideal para cada piso</span></li>
-          <li><i>◦</i><span>Opções para áreas internas e externas</span></li>
-          <li><i>◦</i><span>Orientação de limpeza e conservação</span></li>
-        </ul>
-        <a href="#orcamento" class="b-lin" style="width:100%">Pedir orçamento</a>
-      </div>
-
-      <div class="of-c mk">
-        <span class="bg">Mais pedido</span>
-        <h4 class="fr">Tapetes infantis personalizados</h4>
-        <p class="ds">Tapetes com letras, cores, nomes ou desenhos para deixar creches, escolas e espaços infantis mais acolhedores.</p>
-        <div class="pr2">
-          <b class="fr">Sob consulta</b>
-          <small>conforme medida, material e complexidade da arte</small>
-        </div>
-        <ul>
-          <li><i>◦</i><span>Material indicado para atividades no chão</span></li>
-          <li><i>◦</i><span>Arte com nomes, cores e desenhos</span></li>
-          <li><i>◦</i><span>Aprovação da arte antes da produção</span></li>
-          <li><i>◦</i><span>Tapetes infantis para creches e escolas</span></li>
-          <li><i>◦</i><span>Formatos e tamanhos sob medida</span></li>
-          <li><i>◦</i><span>Produção na maior fábrica da América Latina</span></li>
-        </ul>
-        <a href="#orcamento" class="b-lar" style="width:100%">Pedir orçamento</a>
-      </div>
-    </div>
-
-    <p class="of-note">Cada tapete é pensado para o seu espaço. Sem saber a medida, o material e a arte, qualquer número seria chute — por isso o orçamento é sempre personalizado.</p>
   </div>
 </section>
 
@@ -996,15 +851,20 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="cta">
       <div class="cta-l rv">
-        <div class="kick">11 / Próximo passo</div>
-        <h2 class="fr">Conte onde vai usar. <em>A gente indica o tapete certo.</em></h2>
-        <p>Preencha para registrar seu pedido, com a solução e o material que você escolheu. Depois, você também pode continuar a conversa pelo WhatsApp para montar o seu orçamento.</p>
-        <ul>
-          <li><i>◦</i><span>Orçamento sem custo e sem compromisso</span></li>
-          <li><i>◦</i><span>Indicação do material ideal para o seu piso</span></li>
-          <li><i>◦</i><span>Aprovação da arte antes da produção</span></li>
-          <li><i>◦</i><span>Seus dados são usados só para esse contato, conforme a LGPD</span></li>
-        </ul>
+        <div class="kick">07 / Orçamento</div>
+        <h2 class="fr">Conte onde vai usar. <em>A gente indica o produto certo.</em></h2>
+        <p>Preencha para registrar seu pedido com o produto que você escolheu. Depois, você também pode continuar a conversa pelo WhatsApp.</p>
+        <div class="passos" id="processo">
+          <h3 class="fr">Como funciona</h3>
+          <ol>
+            <li><span><b>Conversa:</b> você conta onde o produto vai ficar e manda foto do local e o seu logotipo.</span></li>
+            <li><span><b>Proposta:</b> indicamos o material e enviamos o orçamento com medidas e cuidados.</span></li>
+            <li><span><b>Arte:</b> você aprova cores e posição do logotipo antes da produção.</span></li>
+            <li><span><b>Produção:</b> fabricação na maior fábrica da América Latina.</span></li>
+            <li><span><b>Entrega:</b> chega pronto para usar, com orientação de limpeza e conservação.</span></li>
+          </ol>
+          <p class="lgpd">Orçamento sem custo e sem compromisso. Seus dados são usados só para esse contato, conforme a LGPD.</p>
+        </div>
       </div>
 
       <form class="frm rv" id="fm" novalidate>
@@ -1071,10 +931,10 @@ function piizuAds(label, extra){
         <h6>Navegação</h6>
         <ul>
           <li><a href="#projetos">Soluções por uso</a></li>
-          <li><a href="#materiais">Comparativo de materiais</a></li>
-          <li><a href="#oficina">A fábrica</a></li>
+          <li><a href="#materiais">Tipos de tapete</a></li>
+          <li><a href="#oficina">Por que a pii-zu</a></li>
           <li><a href="#processo">Como funciona</a></li>
-          <li><a href="#valores">Linhas</a></li>
+          <li><a href="#objecoes">Dúvidas</a></li>
         </ul>
       </div>
       <div>
@@ -1255,7 +1115,7 @@ var MATS = [
    foto:'assets/img/capacho-wkap.webp',
    alt:'Capacho W-Kap em área de piscina', rel:'Proteção', pr:'Portas e halls', um:'Alta', rp:'Sim', pz:'Nome ou logotipo',
    n:'Feito para aguentar pisada todos os dias. Segura a sujeira e a umidade dos sapatos antes que elas entrem, o que ajuda a conservar o piso e reduz a limpeza.'},
-  {id:'inf', nome:'Tapete infantil', sub:'para creches, escolas e quartos',
+  {id:'inf', destaque:'Mais pedido', nome:'Tapete infantil', sub:'para creches, escolas e quartos',
    foto:'assets/img/tapete-metamorfose-destaque-largo.jpg',
    alt:'Tapete infantil personalizado com alfabeto e nome da escola', rel:'Acolhimento', pr:'Salas e brinquedotecas', um:'Média', rp:'Sim', pz:'Letras, cores e nome',
    n:'Colorido, confortável e educativo. Pode levar alfabeto, números e o nome da escola. Ideal para atividades no chão, deixando o ambiente mais seguro e acolhedor para as crianças.'}
@@ -1269,7 +1129,7 @@ function matRender(){
     b.type = 'button';
     b.className = 'mc' + (M.id === MID ? ' on' : '');
     b.setAttribute('aria-pressed', M.id === MID ? 'true' : 'false');
-    b.innerHTML = '<div class="ph"><img class="' + (M.foto.indexOf('/__l5e/') === 0 ? 'product-art' : '') + '" src="' + M.foto + '" alt="' + M.alt + '" loading="lazy"></div>' +
+    b.innerHTML = (M.destaque ? '<span class="mc-bg">' + M.destaque + '</span>' : '') + '<div class="ph"><img class="' + (M.foto.indexOf('/__l5e/') === 0 ? 'product-art' : '') + '" src="' + M.foto + '" alt="' + M.alt + '" loading="lazy"></div>' +
       '<div class="bd"><b class="fr">' + M.nome + '</b><span>' + M.sub + '</span><div class="v">' + M.rel + '</div></div>';
     b.addEventListener('click', function(){ MID = M.id; matRender(); });
     host.appendChild(b);
@@ -1285,11 +1145,6 @@ function matRender(){
   document.getElementById('mN').textContent = M.n;
 }
 matRender();
-/* marquee */
-var MQ = ['Tapetes personalizados','Tapetes com logotipo','Tapetes infantis','Creches e escolas','Sua marca no tapete','Condomínios','Comércios','Capachos personalizados','Sob medida'];
-var mqT = document.getElementById('mqT');
-var h = MQ.map(function(x){ return '<span>'+x+'</span>'; }).join('');
-mqT.innerHTML = h + h;
 
 /* clientes — logos genéricos de teste: troque src e alt pelos logos reais */
 var CLIENTES = [
