@@ -256,8 +256,15 @@ section{padding:58px 0}
 .ln-c p{font-size:.8rem;color:var(--tx);line-height:1.65;flex:1;margin-bottom:12px}
 .ln-ft{margin-top:12px;font-size:.8rem;color:var(--tx2);line-height:1.7}
 .ln-ft a{color:var(--lar2);text-decoration:underline}
-@media(max-width:1060px){.ln-mod{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.ln-mod{grid-template-columns:1fr}}
+/* celular e tablet: modelos em 2 colunas, preenchendo de cima para baixo (12 sobre 20, 30 sobre 50) */
+@media(max-width:1060px){.ln-mod{grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,auto);grid-auto-flow:column}}
+@media(max-width:560px){
+  .ln-mod{gap:8px}
+  .ln-c{padding:12px 10px}
+  .ln-c b{font-size:1.1rem}
+  .ln-c p{font-size:.74rem;line-height:1.5}
+  .ln-c .b-lin{padding:8px 10px;font-size:.72rem}
+}
 
 /* ============ galeria (rolo com setas) ============ */
 .gal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
