@@ -10,7 +10,7 @@ describe('pii-zu quote requests', () => {
     for (const product of Object.keys(PRODUCTS)) expect(quoteSchema.safeParse({ ...quote, product }).success).toBe(true);
   });
   it('accepts the six solution segments and the earlier ones', () => {
-    for (const solution of ['cond', 'esco', 'sala', 'come', 'indu', 'resi', 'emp', 'esc', 'cas']) {
+    for (const solution of ['cond', 'esco', 'sala', 'come', 'indu', 'resi', 'quad', 'emp', 'esc', 'cas']) {
       expect(quoteSchema.safeParse({ ...quote, solution }).success).toBe(true);
     }
   });

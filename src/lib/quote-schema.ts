@@ -22,7 +22,7 @@ const productIds = Object.keys(PRODUCTS) as [ProductId, ...ProductId[]];
 // Segments of the "Soluções" section (AMB list in public/piizu/index.html).
 export const SOLUTIONS = {
   cond: 'Condomínios', esco: 'Escolas', come: 'Comércio e varejo',
-  sala: 'Salas e conjuntos comerciais', indu: 'Indústrias', resi: 'Residências',
+  sala: 'Salas e conjuntos comerciais', indu: 'Indústrias', resi: 'Residências', quad: 'Quadras e plays',
   // Earlier segments, still accepted from older static exports.
   emp: 'Empresa e comércio', esc: 'Creche e escola', cas: 'Casa e condomínio',
 } as const;
@@ -30,7 +30,7 @@ export type SolutionId = keyof typeof SOLUTIONS;
 const solutionIds = Object.keys(SOLUTIONS) as [SolutionId, ...SolutionId[]];
 // Closest earlier segment, used to save while the database still has the old check.
 export const LEGACY_SOLUTION: Partial<Record<SolutionId, 'emp' | 'esc' | 'cas'>> = {
-  cond: 'cas', resi: 'cas', esco: 'esc', sala: 'emp', come: 'emp', indu: 'emp',
+  cond: 'cas', resi: 'cas', esco: 'esc', sala: 'emp', come: 'emp', indu: 'emp', quad: 'cas',
 };
 
 export const quoteSchema = z.object({
