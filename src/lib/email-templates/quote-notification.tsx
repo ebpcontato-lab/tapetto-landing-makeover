@@ -24,10 +24,10 @@ function QuoteNotification(data: Props) {
   return (
     <Html lang="pt-BR" dir="ltr">
       <Head />
-      <Preview>Novo pedido de orçamento de tapete personalizado para a Tapetto.</Preview>
+      <Preview>Novo pedido de orçamento de tapete personalizado para a pii-zü.</Preview>
       <Body style={styles.body}>
         <Container style={styles.container}>
-          <Text style={styles.brand}>Tapetto</Text>
+          <Text style={styles.brand}>pii-zü</Text>
           <Heading style={styles.heading}>Novo pedido de orçamento</Heading>
           <Text>Um visitante solicitou um orçamento de tapete personalizado.</Text>
           {fields.map(([label, value]) => (
@@ -44,7 +44,7 @@ function QuoteNotification(data: Props) {
 
 export const template = {
   component: QuoteNotification,
-  subject: 'Tapetto — Novo pedido de orçamento de tapete personalizado',
+  subject: 'pii-zü — Novo pedido de orçamento de tapete personalizado',
   displayName: 'Pedido de orçamento',
   to: QUOTE_RECIPIENT,
   previewData: {

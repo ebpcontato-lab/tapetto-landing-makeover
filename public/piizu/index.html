@@ -4,9 +4,9 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tapetto — Tapetes personalizados no Rio de Janeiro</title>
+<title>pii-zü — Tapetes personalizados no Rio de Janeiro</title>
 <meta name="description" content="Tapetes personalizados com seu logotipo, nome, cores ou desenho no Rio de Janeiro. Para empresas, condomínios, casas e escolas, com produção na maior fábrica da América Latina.">
-<meta property="og:title" content="Tapetto — Tapetes personalizados no Rio de Janeiro">
+<meta property="og:title" content="pii-zü — Tapetes personalizados no Rio de Janeiro">
 <meta property="og:description" content="Tapetes personalizados sob medida, com sua marca e seu estilo. Peça seu orçamento no Rio de Janeiro.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/marca/compartilhar-1200x630.jpg">
@@ -427,12 +427,12 @@ gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personali
    Para acompanhar conversões, crie as conversões no Google Ads ("Enviar formulário"
    e "Clique em WhatsApp") e cole aqui o RÓTULO de cada uma no formato
    AW-17662893947/XXXX, no lugar de COLE_AQUI_... */
-window.__TAPETTO_ADS = {
+window.__PIIZU_ADS = {
   form: 'AW-17662893947/COLE_AQUI_ROTULO_DO_FORMULARIO',
   whatsapp: 'AW-17662893947/COLE_AQUI_ROTULO_DO_WHATSAPP'
 };
 gtag('config','AW-17662893947');
-function tapettoAds(label, extra){
+function piizuAds(label, extra){
   if(typeof label !== 'string' || label.indexOf('COLE_AQUI') !== -1) return;
   var ev = {send_to: label};
   if(extra) for(var k in extra) ev[k] = extra[k];
@@ -687,7 +687,7 @@ function tapettoAds(label, extra){
         <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
         <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
         <div class="who">
-          <b>Clientes Tapetto</b>
+          <b>Clientes pii-zü</b>
           <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener" style="text-decoration:underline">nosso perfil no Google</a></span>
         </div>
       </div>
@@ -700,7 +700,7 @@ function tapettoAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">06 / Para quem é</div>
-      <h2 class="fr">A Tapetto é para quem <em>quer fazer a escolha certa.</em></h2>
+      <h2 class="fr">A pii-zü é para quem <em>quer fazer a escolha certa.</em></h2>
       <p>Falamos com sinceridade logo na primeira conversa, para você não perder tempo nem dinheiro.</p>
     </div>
 
@@ -907,14 +907,13 @@ function tapettoAds(label, extra){
         <h6>Contato</h6>
         <ul>
           <li><a href="https://wa.me/5521998146495" target="_blank" rel="noopener">WhatsApp (21) 99814-6495</a></li>
-          <li><a href="mailto:tapetto.cooperkap@gmail.com">tapetto.cooperkap@gmail.com</a></li>
           <li>Rio de Janeiro · RJ</li>
           <li><a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Nosso perfil no Google</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-b">
-      <span>© 2026 Tapetto. Todos os direitos reservados. <a href="privacidade.html" style="text-decoration:underline">Política de privacidade</a> · <a href="#" id="ckPrefs" style="text-decoration:underline">Preferências de cookies</a></span>
+      <span>© 2026 pii-zü. Todos os direitos reservados. <a href="privacidade.html" style="text-decoration:underline">Política de privacidade</a> · <a href="#" id="ckPrefs" style="text-decoration:underline">Preferências de cookies</a></span>
       <span>Valores sob consulta, conforme medida, material e arte. Algumas imagens são ilustrativas.</span>
     </div>
   </div>
@@ -1231,13 +1230,13 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     status.textContent = 'Pedido registrado com sucesso! Você pode continuar pelo WhatsApp.';
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
     continuation.style.display = 'inline-flex';
-    tapettoAds(window.__TAPETTO_ADS.form);
+    piizuAds(window.__PIIZU_ADS.form);
   }catch(error){
     if(error.message === 'registro-indisponivel' || error instanceof TypeError){
       status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
       continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
       continuation.style.display = 'inline-flex';
-      tapettoAds(window.__TAPETTO_ADS.form);
+      piizuAds(window.__PIIZU_ADS.form);
     } else {
       status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
     }
@@ -1251,7 +1250,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
 /* ============ consentimento (Google Ads) ============ */
 (function(){
   'use strict';
-  var KEY = 'tapetto-cookie-consent-v1';
+  var KEY = 'piizu-cookie-consent-v1';
   var EEA = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
   var banner = document.getElementById('cookieBanner');
   var granted = function(){ gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'}); };
@@ -1292,7 +1291,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
 /* ============ conversão: clique no WhatsApp ============ */
 document.addEventListener('click', function(e){
   var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
-  if(a) tapettoAds(window.__TAPETTO_ADS.whatsapp);
+  if(a) piizuAds(window.__PIIZU_ADS.whatsapp);
 }, true);
 </script>
 </body>

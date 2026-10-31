@@ -11,7 +11,7 @@ import path from "node:path";
 export default defineConfig({
   vite: {
     plugins: [{
-      name: 'tapetto-server-env',
+      name: 'piizu-server-env',
       config: (_, { mode }) => {
         Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
       },

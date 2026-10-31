@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
-const html = readFileSync('public/tapetto/index.html', 'utf8');
+const html = readFileSync('public/piizu/index.html', 'utf8');
 
 function catalog(name: string): Array<{ id: string; pz?: string; sp?: string[][] }> {
   const literal = html.match(new RegExp(`var ${name} = (\\[[\\s\\S]*?\\n\\]);`))?.[1];
@@ -9,7 +9,7 @@ function catalog(name: string): Array<{ id: string; pz?: string; sp?: string[][]
   return Function(`"use strict"; return (${literal});`)();
 }
 
-describe('Tapetto personalized-only catalog', () => {
+describe('pii-zü personalized-only catalog', () => {
   it('does not offer synthetic grass as a solution or material', () => {
     for (const name of ['AMB', 'MATS']) {
       const products = catalog(name);

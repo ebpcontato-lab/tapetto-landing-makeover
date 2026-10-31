@@ -3,7 +3,7 @@ import { QUOTE_RECIPIENT, quoteSchema } from '@/lib/quote-schema';
 
 const quote = { id: '268f6bb7-fbf7-41ed-a25f-41cb230857b0', name: 'Cliente Teste', phone: '(21) 90000-0000', city: 'Rio de Janeiro', place: 'Condomínio', timeframe: 'Nas próximas semanas', details: 'Tapete com logotipo', solution: 'cas', material: 'per' };
 
-describe('Tapetto quote requests', () => {
+describe('pii-zü quote requests', () => {
   it('uses the corrected business email', () => { expect(QUOTE_RECIPIENT).toBe('tapetto.cooperkap@gmail.com'); });
   it('accepts a complete personalized rug quote', () => { expect(quoteSchema.safeParse(quote).success).toBe(true); });
   it('excludes synthetic grass requests', () => {

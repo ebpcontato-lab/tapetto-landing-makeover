@@ -15,5 +15,7 @@
 - [x] Gerar o pacote estático final com os textos atualizados (v5).
 - [x] Atualizar o parágrafo do topo e gerar o pacote estático final (v6).
 - [x] Instalar a tag do Google Ads (AW-17662893947) com banner de consentimento regional e conversões no formulário e no WhatsApp.
-- [ ] Colar os rótulos das conversões (AW-17662893947/...) criadas no Google Ads em window.__TAPETTO_ADS — aguardando o usuário.
+- [ ] Colar os rótulos das conversões (AW-17662893947/...) criadas no Google Ads em window.__PIIZU_ADS — aguardando o usuário.
+- [x] Renomear a marca para pii-zü na página, na política de privacidade e no e-mail de aviso (página agora em public/piizu/).
+- [ ] Trocar o e-mail que recebe os pedidos (ainda tapetto.cooperkap@gmail.com) e o domínio de envio (notify.tapetto.com) quando a pii-zü tiver e-mail e domínio próprios — aguardando o usuário.
 - [ ] Regenerar o pacote estático com a tag do Google Ads inclusa — a pedido do usuário.
