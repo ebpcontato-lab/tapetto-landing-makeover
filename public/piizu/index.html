@@ -822,24 +822,9 @@ function piizuAds(label, extra){
     <div class="head rv">
       <div class="kick">02 / Tipos de tapete</div>
       <h2 class="fr">Tapetes e capachos personalizados <em>para diferentes funções:</em></h2>
-      <p>Contenções contra entrada de sólidos ou contenção dupla função: contra entrada de sólidos e líquidos (“água da chuva que entra pelo sapato das pessoas”). Clique para comparar.</p>
+      <p>Contenções contra entrada de sólidos ou contenção dupla função: contra entrada de sólidos e líquidos (“água da chuva que entra pelo sapato das pessoas”).</p>
     </div>
 
-    <div class="mat rv" id="mat"></div>
-
-    <div class="mdet rv">
-      <div class="mdet-h">
-        <b class="fr" id="mT">—</b>
-        <span id="mS">—</span>
-      </div>
-      <div class="mdet-g">
-        <div><small>Ideal para</small><b class="fr" id="mPr">—</b></div>
-        <div><small>Resistência a umidade</small><b class="fr" id="mUm">—</b></div>
-        <div><small>Fácil de limpar?</small><b class="fr" id="mRp">—</b></div>
-        <div><small>Personalização</small><b class="fr" id="mPz">—</b></div>
-      </div>
-      <div class="mdet-n" id="mN">—</div>
-    </div>
     <p class="of-note rv">Cada tapete é pensado para o seu espaço: o valor sai da medida, do material e da arte. Por isso o orçamento é sempre personalizado, sem custo e sem compromisso.</p>
   </div>
 </section>
@@ -1337,6 +1322,7 @@ var MATS = [
 var MID = 'per';
 function matRender(){
   var host = document.getElementById('mat');
+  if(!host) return; /* cartões de materiais retirados da página */
   host.innerHTML = '';
   MATS.forEach(function(M){
     var b = document.createElement('button');
@@ -1650,8 +1636,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     'Detalhes: ' + (g('fObs') || 'ainda estou definindo') +
     (P.id === 'tapete' ?
       '\n\n--- O que eu estava vendo no site ---\n' +
-      'Solução: ' + A.nome + ' (' + A.local + ')\n' +
-      'Material de interesse: ' + M.nome + ' (' + M.sub + ')' : '');
+      'Solução: ' + A.nome + ' (' + A.local + ')' : '');
   var payload = {name:nome, phone:fone, city:bairro, place:g('fFase'), timeframe:g('fPrazo'), details:g('fObs'), solution:AID, material:MID, product:P.id};
   var fingerprint = JSON.stringify(payload);
   if(fingerprint !== submissionPayload){ submissionId = crypto.randomUUID(); submissionPayload = fingerprint; }
