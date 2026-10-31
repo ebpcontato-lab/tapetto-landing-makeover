@@ -104,7 +104,7 @@ main,section,footer{position:relative;z-index:5}
 .hero-f{position:relative}
 .hero-f .ph{border-radius:4px}
 .hero-f{width:100%;max-width:440px;justify-self:end}
-.hero-f .p1{width:100%;aspect-ratio:1100/850}
+.hero-f .p1{width:100%;aspect-ratio:1/1}
 .rise{opacity:0;transform:translateY(24px);animation:rs 1.05s cubic-bezier(.16,1,.3,1) forwards}
 .rise.d1{animation-delay:.1s}.rise.d2{animation-delay:.24s}.rise.d3{animation-delay:.38s}.rise.d4{animation-delay:.52s}
 @keyframes rs{to{opacity:1;transform:none}}
@@ -543,6 +543,15 @@ footer{padding:38px 0 26px}
 }
 /* título mais longo de Mais produtos: mais largo para caber em duas linhas */
 #produtos .head{max-width:980px}
+/* fotos do topo: setas dos lados, fora da foto */
+.hero-f{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:10px;align-items:center;max-width:520px}
+.hero-f .seta{position:static;transform:none}
+.hero-f .seta:hover{transform:scale(1.06)}
+.hero-f .p1>img{transition:opacity .25s}
+.hf-pt{grid-column:2;display:flex;justify-content:center;gap:6px;margin-top:2px}
+.hf-pt i{width:7px;height:7px;border-radius:50%;background:var(--lin2)}
+.hf-pt i.on{background:var(--lar)}
+@media(max-width:560px){.hero-f{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.hero-f .seta{width:34px;height:34px}}
 /* complemento do título do topo, em tamanho menor */
 .hero h1 .h1-sub{display:block;font-size:.5em;line-height:1.25;letter-spacing:-.01em;margin-top:.5em;color:var(--tinta)}
 /* abas compactas no computador, para todas as linhas caberem numa fileira */
@@ -655,7 +664,10 @@ function piizuAds(label, extra){
     </div>
 
     <div class="hero-f rise d2">
-      <div class="ph p1"><img src="assets/img/tapete-metamorfose-destaque-largo.jpg" alt="Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose" loading="eager"></div>
+      <button type="button" class="seta esq" id="hfPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ph p1" id="hfFoto"><img src="assets/img/tapete-metamorfose-destaque.jpg" alt="Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose" loading="eager"></div>
+      <button type="button" class="seta dir" id="hfNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="hf-pt" id="hfPt" aria-hidden="true"></div>
     </div>
   </div>
 
@@ -1031,6 +1043,29 @@ function piizuAds(label, extra){
 (function(){
 'use strict';
 var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* fotos de tapetes do topo — acrescente ou troque itens nesta lista */
+var HERO_FOTOS = [
+  {src:'assets/img/tapete-metamorfose-destaque.jpg', alt:'Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose'},
+  {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete personalizado com as marcas atendidas por uma loja de ferramentas'},
+  {src:'assets/img/galeria/tapete-super-essencias.webp', alt:'Tapete personalizado Super Essências na entrada da loja'},
+  {src:'assets/img/galeria/tapete-hipermais-bem-vindo.webp', alt:'Tapete Bem-Vindo com a marca Hipermais na entrada do supermercado'},
+  {src:'assets/img/galeria/tapete-dentaluni-recepcao.webp', alt:'Tapete com logotipo Dentaluni na recepção do escritório'},
+  {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho personalizado Unique Residence no elevador do condomínio'},
+  {src:'assets/img/galeria/tapete-escola-patio-6.webp', alt:'Tapete com pista e amarelinha no pátio de escola'},
+  {src:'assets/img/galeria/cleankap-logo-detalhe.webp', alt:'Detalhe de tapete Cleankap azul com logotipo em branco'}
+];
+var hfI = 0, hfImg = document.querySelector('#hfFoto img'), hfPt = document.getElementById('hfPt');
+hfPt.innerHTML = HERO_FOTOS.map(function(){ return '<i></i>'; }).join('');
+function hfMostra(){
+  var F = HERO_FOTOS[hfI];
+  hfImg.src = F.src; hfImg.alt = F.alt;
+  hfPt.querySelectorAll('i').forEach(function(p, k){ p.classList.toggle('on', k === hfI); });
+}
+function hfPasso(d){ hfI = (hfI + d + HERO_FOTOS.length) % HERO_FOTOS.length; hfMostra(); }
+document.getElementById('hfPrev').addEventListener('click', function(){ hfPasso(-1); });
+document.getElementById('hfNext').addEventListener('click', function(){ hfPasso(1); });
+hfMostra();
+HERO_FOTOS.forEach(function(F, k){ if(k) { var pre = new Image(); pre.src = F.src; } });
 /* altura real do cabeçalho: os links do menu param cada dobra logo abaixo dele */
 var navEl = document.querySelector('.nav');
 function medeNav(){ document.documentElement.style.setProperty('--nav-h', navEl.offsetHeight + 'px'); }
@@ -1042,7 +1077,7 @@ var waBtn = document.querySelector('.wa-float');
 function waSetas(){
   if(!waBtn) return;
   var w = waBtn.getBoundingClientRect(), bate = false;
-  document.querySelectorAll('.gal .seta, .pj-foto .seta').forEach(function(sx){
+  document.querySelectorAll('.gal .seta, .pj-foto .seta, .hero-f .seta').forEach(function(sx){
     var r = sx.getBoundingClientRect();
     if(r.width && !(r.right < w.left - 8 || r.left > w.right + 8 || r.bottom < w.top - 8 || r.top > w.bottom + 8)) bate = true;
   });
