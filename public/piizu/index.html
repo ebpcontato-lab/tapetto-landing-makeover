@@ -578,6 +578,9 @@ footer{padding:38px 0 26px}
 .mc{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
 .mc .mc-bg{position:static;align-self:flex-start;margin:16px 18px 0}
 .mc .mc-bg+.bd{padding-top:10px}
+/* Mais produtos: aviso quando a linha ainda não tem fotos */
+.gal-tr.vazio{display:block}
+.ln-vazio{border:1px dashed var(--lin2);border-radius:8px;padding:28px 20px;text-align:center;font-size:.86rem;color:var(--tx2);background:var(--bg2)}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1366,6 +1369,11 @@ var NICHOS = [
    itens:[
     {id:'piso-laminado', tag:'Laminado', nome:'Piso laminado', rotulo:'Piso laminado Kapazi', p:'Garagens, rampas, academias, áreas de serviço e piso de ônibus. O desenho é escolhido no orçamento.'}
    ]},
+  {id:'piso-vinilico', nome:'Pisos vinílicos', titulo:'Pisos vinílicos', sub:'Para residências, escritórios e comércios', fotosEmBreve:true,
+   p:'Pisos vinílicos em réguas ou mantas, com aparência de madeira ou de pedra. Confortáveis ao caminhar, silenciosos e fáceis de limpar, para renovar o ambiente sem quebra-quebra.',
+   itens:[
+    {id:'piso-vinilico', tag:'Vinílico', nome:'Piso vinílico', rotulo:'Piso vinílico', p:'Salas, quartos, escritórios, lojas e consultórios. Modelo, cor e forma de instalação definidos no orçamento.'}
+   ]},
   {id:'fita', nome:'Fitas antiderrapantes', titulo:'Fitas antiderrapantes', sub:'Segurança em escadas e rampas',
    p:'Invista em segurança: fitas antiderrapantes para degraus, rampas e pisos lisos, para a residência ou a empresa ficar mais livre de acidentes.',
    itens:[
@@ -1421,6 +1429,8 @@ function lnRender(){
       ' aria-label="' + esc(F.alt) + '" controls muted playsinline preload="metadata"></video></div>';
     return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
   }).join('');
+  lnTr.classList.toggle('vazio', !lnTr.children.length);
+  if(!lnTr.children.length) lnTr.innerHTML = '<div class="ln-vazio">Fotos em breve. Peça o orçamento e receba as opções de modelos e cores.</div>';
   lnTr.scrollLeft = 0;
   document.getElementById('lnNm').textContent = N.titulo;
   document.getElementById('lnLc').textContent = N.sub;

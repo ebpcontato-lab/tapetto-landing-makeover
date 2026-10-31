@@ -35,8 +35,10 @@ describe('piizu personalized-only catalog', () => {
     for (const item of itens) expect(item.rotulo).toBe(PRODUCTS[item.id as keyof typeof PRODUCTS]);
   });
 
-  it('has gallery photos for every product niche', () => {
-    for (const nicho of catalog('NICHOS')) expect(html).toContain(`data-setor="${nicho.id}"`);
+  it('has gallery photos for every product niche not marked as photos coming soon', () => {
+    for (const nicho of catalog('NICHOS') as unknown as Array<{ id: string; fotosEmBreve?: boolean }>) {
+      if (!nicho.fotosEmBreve) expect(html).toContain(`data-setor="${nicho.id}"`);
+    }
   });
 
   it('offers only solution segments the quote form accepts, each with a fallback for the old database check', () => {
