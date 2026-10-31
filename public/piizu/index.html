@@ -245,11 +245,14 @@ section{padding:58px 0}
 @media(max-width:640px){.lb-st{inset:56px 8px 48px}.lb .seta{top:auto;bottom:6px;transform:none}.lb .seta:hover{transform:none}.lb-cap{bottom:20px;padding:0 64px}}
 
 /* ============ galeria (rolo com setas) ============ */
+.gal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .gal{position:relative}
 .gal-tr{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
   scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
 .gal-tr::-webkit-scrollbar{display:none}
 .gal-it{aspect-ratio:4/5;border-radius:6px;scroll-snap-align:start}
+.gal-it[hidden]{display:none}
+.gal.sem-setas .seta{display:none}
 @media(max-width:860px){.gal-tr{grid-auto-columns:calc((100% - 16px)/2)}}
 @media(max-width:560px){.gal-tr{grid-auto-columns:84%;gap:12px}.gal .seta{width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){.gal-tr{scroll-behavior:auto}}
@@ -608,17 +611,27 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">04 / Galeria</div>
-      <h2 class="fr">Produtos instalados, <em>do jeito que ficam no piso.</em></h2>
-      <p>Use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
+      <h2 class="fr">Produtos instalados, <em>separados por setor.</em></h2>
+      <p>Escolha o setor e use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
+    </div>
+    <div class="gal-tabs rv" id="galTabs" role="group" aria-label="Filtrar galeria por setor">
+      <button type="button" class="ab on" data-setor="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="ab" data-setor="tapetes" aria-pressed="false">Tapetes e capachos</button>
+      <button type="button" class="ab" data-setor="pisos" aria-pressed="false">Pisos (piscina e esportivo)</button>
+      <button type="button" class="ab" data-setor="grama" aria-pressed="false">Grama sintética</button>
     </div>
     <div class="gal rv">
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
-        <div class="ph gal-it"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante na borda de piscina" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo ao redor de piscina à noite" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra esportiva de condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/tapete-loja-ferramentas.webp" alt="Tapete personalizado com as marcas atendidas por uma loja de ferramentas" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapetes"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante na borda de piscina" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo ao redor de piscina à noite" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="pisos"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular esportivo em quadra de condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-condominio.webp" alt="Grama sintética em jardim de condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-pet.webp" alt="Grama sintética em área com cachorro" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-verde-seca.webp" alt="Comparação entre grama sintética sempre verde e grama natural seca" width="864" height="1080" loading="lazy"></div>
       </div>
       <button type="button" class="seta dir" id="galNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
@@ -1160,6 +1173,18 @@ function galPasso(d){
   else if(d < 0 && galTr.scrollLeft <= 4) galTr.scrollTo({left:galTr.scrollWidth});
   else galTr.scrollBy({left:d * w});
 }
+function galSetas(){ document.querySelector('.gal').classList.toggle('sem-setas', galTr.scrollWidth <= galTr.clientWidth + 4); }
+document.getElementById('galTabs').addEventListener('click', function(e){
+  var b = e.target.closest('button[data-setor]');
+  if(!b) return;
+  var st = b.getAttribute('data-setor');
+  this.querySelectorAll('button').forEach(function(x){ var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+  galTr.querySelectorAll('.gal-it').forEach(function(it){ it.hidden = st !== 'todos' && it.getAttribute('data-setor') !== st; });
+  galTr.scrollTo({left:0, behavior:'auto'});
+  galSetas();
+});
+window.addEventListener('resize', galSetas);
+galSetas();
 document.getElementById('galPrev').addEventListener('click', function(){ galPasso(-1); });
 document.getElementById('galNext').addEventListener('click', function(){ galPasso(1); });
 galTr.addEventListener('keydown', function(e){
@@ -1190,7 +1215,7 @@ function lbMostra(){
 function lbAbre(img){
   FOTOS = []; var vistos = {};
   document.querySelectorAll('.ph > img').forEach(function(im){
-    if(im.style.display === 'none' || vistos[im.currentSrc || im.src]) return;
+    if(im.style.display === 'none' || im.closest('[hidden]') || vistos[im.currentSrc || im.src]) return;
     vistos[im.currentSrc || im.src] = 1;
     FOTOS.push({src:im.currentSrc || im.src, alt:im.alt});
   });
