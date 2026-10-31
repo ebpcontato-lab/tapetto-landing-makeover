@@ -1,4 +1,4 @@
-# piizu — Landing Page
+# pii-zu — Landing Page
 
 Monte uma landing page PERSONALIZANDO o template HTML que está no arquivo .zip anexo. O template já é uma página profissional pronta — design, animações e um componente interativo central — criada para o nicho "Marcenaria Autoral sob Medida". Seu trabalho é adaptá-la para o negócio abaixo, não redesenhá-la.
 
@@ -11,7 +11,7 @@ Monte uma landing page PERSONALIZANDO o template HTML que está no arquivo .zip 
 6. Zero lorem ipsum e zero copy do nicho antigo sobrando. Página inteira em português do Brasil.
 
 ## O negócio
-- Nome: piizu
+- Nome: pii-zu
 - O que vende: Tapetes e Capachos Personalizados, Gramas Sintéticas
 - Onde atua: Rio de Janeiro
 - Público: Homens e mulheres acima de 30 anos
@@ -34,7 +34,7 @@ Reescreva toda a copy para este negócio mantendo o papel e o tamanho aproximado
 ## Identidade visual
 - Cores: troque a cor de destaque do template pela da marca, SEM mudar layout, tipografia, espaçamentos ou animações. Cor principal: #0f766e.
   Regra de recoloração: troque o MATIZ, não a hierarquia. Cada elemento tem que manter a mesma força visual que tinha no template original — se um texto era colorido porém suave (opacidade baixa, tom dessaturado ou claro), ele continua suave na cor nova; só o que era vívido (botão principal, destaque de headline, selo) fica vívido. Na prática: leia a cor original de cada elemento, calcule a diferença de luminosidade e saturação dela para a cor de destaque original, e reproduza essa mesma diferença a partir da cor nova. Nunca pinte corpo de texto, legenda, borda ou fundo sutil com a cor cheia — é o erro mais comum e deixa a página gritada. Fundos, textos neutros (preto, branco, cinza) e a escala de cinzas do template permanecem como estão: a cor da marca entra onde já havia cor, e não em tudo.
-- Logotipo: arquivos do kit da marca piizu em public/piizu/assets/img/marca/.
+- Logotipo: arquivos do kit da marca pii-zu em public/piizu/assets/img/marca/.
 - Fotos: mantenha as do template, trocando apenas as que destoarem do novo nicho por outras coerentes de banco de imagem.
 
 ## Integrações

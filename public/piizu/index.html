@@ -4,9 +4,9 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>piizu — Tapetes personalizados no Rio de Janeiro</title>
+<title>pii-zu — Tapetes personalizados no Rio de Janeiro</title>
 <meta name="description" content="Tapetes personalizados com seu logotipo, nome, cores ou desenho no Rio de Janeiro. Grama sintética Kapazi e pisos para piscina e quadras poliesportivas. Para empresas, condomínios, casas e escolas, com produção na maior fábrica da América Latina.">
-<meta property="og:title" content="piizu — Tapetes personalizados no Rio de Janeiro">
+<meta property="og:title" content="pii-zu — Tapetes personalizados no Rio de Janeiro">
 <meta property="og:description" content="Tapetes personalizados sob medida, com sua marca e seu estilo, grama sintética e pisos Kapazi. Peça seu orçamento no Rio de Janeiro.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://piizu.com.br/piizu/index.html">
@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://piizu.com.br/piizu/assets/img/marca/compartilhar-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="piizu — tapetes e capachos personalizados">
+<meta property="og:image:alt" content="pii-zu — tapetes e capachos personalizados">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/marca/favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/marca/favicon-32.png" type="image/png" sizes="32x32">
@@ -438,6 +438,58 @@ footer .logo img{height:54px}
 .ck-actions .b-lar{padding:9px 20px;font-size:.85rem}
 .ck-no{background:transparent;border:1px solid var(--lin2);color:var(--tinta);border-radius:6px;padding:9px 20px;font-size:.85rem;cursor:pointer}
 @media(max-width:640px){.ck-banner{left:12px;right:12px;bottom:90px}}
+
+/* ============ dobras: espaço compacto e parada alinhada ============
+   --nav-h é a altura real do cabeçalho (medida pelo script). Os links do menu param
+   a seção logo abaixo dele, e os quadros com foto cabem na altura da tela (--dobra). */
+:root{--nav-h:67px;--dobra:calc(100svh - var(--nav-h))}
+html{scroll-padding-top:var(--nav-h)}
+section{padding:34px 0}
+.hero{padding-top:40px}
+.faixa{margin-top:40px}
+.head{margin-bottom:20px}
+.head h2{margin-top:10px}
+.head p{margin-top:10px}
+.zz{margin-bottom:30px}
+.mq{padding:14px 0}
+.cli{padding:22px 0 4px}
+footer{padding:38px 0 26px}
+.ft{padding-bottom:26px}
+.pj-top{padding:14px 22px}
+.pj-ft{padding:12px 22px}
+.pj-info{padding:22px}
+.pj-info p{margin-top:12px;font-size:.86rem;line-height:1.75}
+.pj-sp{margin-top:14px}
+.pj-sp>div{padding:10px 14px}
+.pj-al{margin-top:14px;padding:10px 14px}
+.gal-tabs{margin-bottom:14px}
+#produtos .pj-foto .ph>img{object-fit:contain;background:var(--tinta)}
+@media(min-width:1061px){
+  .pj-g{height:clamp(260px,calc(var(--dobra) - 450px),520px)}
+  .pj-foto{min-height:0}
+  .pj-info{overflow-y:auto}
+  .gal-tr{grid-auto-columns:calc((100% - 48px)/4)}
+}
+@media(max-width:1060px){
+  .pj-foto{min-height:0;height:clamp(230px,62vw,380px)}
+  /* no celular a foto vem antes do texto, para aparecer ao chegar na dobra */
+  .zz .ph{order:-1;height:clamp(220px,56vw,340px)}
+}
+@media(max-width:860px){
+  section{padding:28px 0}
+  .head{margin-bottom:16px}
+  .faixa{margin-top:32px}
+  .zz{margin-bottom:24px}
+  /* abas numa linha só, rolando para o lado, para a foto aparecer logo */
+  .pj-top,.gal-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .pj-top::-webkit-scrollbar,.gal-tabs::-webkit-scrollbar{display:none}
+  .pj-top .ab,.gal-tabs .ab{flex:none;white-space:nowrap}
+}
+@media(max-width:560px){
+  .hero{padding-top:28px}
+  .gal-tr{grid-auto-columns:72%}
+  .pj-top{padding:12px 16px}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -773,7 +825,7 @@ function piizuAds(label, extra){
         <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
         <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
         <div class="who">
-          <b>Clientes piizu</b>
+          <b>Clientes pii-zu</b>
           <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener" style="text-decoration:underline">nosso perfil no Google</a></span>
         </div>
       </div>
@@ -786,7 +838,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">08 / Para quem é</div>
-      <h2 class="fr">A piizu é para quem <em>quer fazer a escolha certa.</em></h2>
+      <h2 class="fr">A pii-zu é para quem <em>quer fazer a escolha certa.</em></h2>
       <p>Falamos com sinceridade logo na primeira conversa, para você não perder tempo nem dinheiro.</p>
     </div>
 
@@ -1020,7 +1072,7 @@ function piizuAds(label, extra){
       </div>
     </div>
     <div class="ft-b">
-      <span>© 2026 piizu. Todos os direitos reservados. <a href="privacidade.html" style="text-decoration:underline">Política de privacidade</a> · <a href="#" id="ckPrefs" style="text-decoration:underline">Preferências de cookies</a></span>
+      <span>© 2026 pii-zu. Todos os direitos reservados. <a href="privacidade.html" style="text-decoration:underline">Política de privacidade</a> · <a href="#" id="ckPrefs" style="text-decoration:underline">Preferências de cookies</a></span>
       <span>Valores sob consulta, conforme medida, material e arte. Algumas imagens são ilustrativas.</span>
     </div>
   </div>
@@ -1052,6 +1104,12 @@ function piizuAds(label, extra){
 (function(){
 'use strict';
 var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* altura real do cabeçalho: os links do menu param cada dobra logo abaixo dele */
+var navEl = document.querySelector('.nav');
+function medeNav(){ document.documentElement.style.setProperty('--nav-h', navEl.offsetHeight + 'px'); }
+medeNav();
+window.addEventListener('resize', medeNav);
+window.addEventListener('load', medeNav);
 
 function trataImg(im){
   var falhou = function(){ im.style.display = 'none'; im.parentNode.classList.remove('zm'); };
@@ -1092,29 +1150,50 @@ navl.addEventListener('click', function(e){
    KILLER — projetos por ambiente
    ========================================================= */
 var AMB = [
-  {id:'emp', nome:'Empresa e comércio', local:'Capacho de entrada com logotipo',
-   p:'A entrada é a primeira impressão de quem chega. Um capacho com o seu logotipo recebe o cliente, retém a sujeira dos sapatos e protege o piso — tudo de uma vez. Funciona em lojas, escritórios, clínicas e restaurantes.',
-   sp:[['Personalização','Logotipo e cores da marca'],['Uso indicado','Entradas e recepções'],['Formato','Sob medida']],
-   al:'Para entradas com muito movimento, escolha um material de alta resistência e base firme. Capacho fino demais desgasta rápido e pode escorregar.',
-   foto:'/__l5e/assets-v1/5798001e-d7f9-4daf-9246-0bea45432caa/tapetto-cleankap.png',
-   alt:'Tapete Cleankap com logotipos em loja de ferramentas',
-   cap:'Capacho personalizado para recepção'},
-  {id:'esc', nome:'Creche e escola', local:'Tapete infantil personalizado',
+  {id:'cond', nome:'Condomínios', local:'Capachos para portaria, halls e elevadores',
+   p:'O nome ou o logotipo do condomínio na portaria, nos halls e nos elevadores. Recebe bem moradores e visitantes, segura a sujeira na entrada e protege o piso das áreas comuns.',
+   sp:[['Personalização','Nome e logotipo do condomínio'],['Uso indicado','Portarias, halls e elevadores'],['Formato','Sob medida, inclusive elevador']],
+   al:'Para elevadores, informe as medidas exatas do piso da cabine. Em portarias que recebem chuva, peça um material de alta absorção.',
+   foto:'assets/img/galeria/capacho-elevador-unique.webp', arte:true,
+   alt:'Capacho personalizado Unique Residence no elevador do condomínio',
+   cap:'Capacho personalizado para elevador de condomínio'},
+  {id:'esco', nome:'Escolas', local:'Tapetes infantis e capachos de entrada',
    p:'Tapete para as crianças brincarem, sentarem em roda e aprenderem. Pode levar alfabeto, números, cores e o nome da escola, deixando a sala mais acolhedora e protegendo os pequenos do piso frio.',
-   sp:[['Personalização','Nome, letras e desenhos'],['Uso indicado','Salas de aula e brinquedotecas'],['Formato','Redondo, retangular ou sob medida']],
+   sp:[['Personalização','Nome, letras e desenhos'],['Uso indicado','Salas de aula, brinquedotecas e entradas'],['Formato','Redondo, retangular ou sob medida']],
    al:'Em espaços infantis, priorize um material fácil de limpar e uma base que não deslize. Conte quantas crianças usam o espaço para indicarmos o tamanho ideal.',
    foto:'assets/img/tapete-creche-escola.jpg',
-   alt:'Espaço interno preparado para receber um tapete infantil',
+   alt:'Tapete infantil redondo com alfabeto e o nome da escola',
    cap:'Tapete infantil com alfabeto e nome da escola'},
-  {id:'cas', nome:'Casa e condomínio', local:'Capachos e tapetes personalizados',
-   p:'Capacho com o nome da família, uma frase de boas-vindas ou o nome do condomínio. Um detalhe que deixa a entrada com a sua cara e ainda ajuda a manter a casa limpa.',
-   sp:[['Personalização','Nome, frase ou desenho'],['Uso indicado','Portas, halls e portarias'],['Formato','Sob medida']],
+  {id:'sala', nome:'Salas comerciais', local:'Capachos para escritórios, consultórios e clínicas',
+   p:'Uma sala comercial com o logotipo na porta passa profissionalismo desde o primeiro passo. Ideal para escritórios, consultórios, clínicas e salas em centros empresariais.',
+   sp:[['Personalização','Logotipo e cores da marca'],['Uso indicado','Portas de salas e recepções'],['Formato','Sob medida']],
+   al:'Em corredores de prédios comerciais, prefira um capacho de perfil baixo, que não atrapalhe a abertura da porta.',
+   foto:'assets/img/capacho-empresa.jpg',
+   alt:'Capacho com logotipo na recepção de um escritório',
+   cap:'Capacho com logotipo para recepção'},
+  {id:'come', nome:'Comércios', local:'Tapetes de entrada com a sua marca',
+   p:'A entrada é a primeira impressão de quem chega. Um tapete com o seu logotipo recebe o cliente, retém a sujeira dos sapatos e protege o piso, tudo de uma vez. Funciona em lojas, restaurantes, farmácias e mercados.',
+   sp:[['Personalização','Logotipo, marcas e cores'],['Uso indicado','Entradas de lojas e restaurantes'],['Formato','Sob medida, inclusive passarelas']],
+   al:'Para entradas com muito movimento, escolha um material de alta resistência e base firme. Capacho fino demais desgasta rápido e pode escorregar.',
+   foto:'assets/img/galeria/tapete-loja-ferramentas.webp', arte:true,
+   alt:'Tapete personalizado com as marcas atendidas por uma loja de ferramentas',
+   cap:'Passarela personalizada em loja de ferramentas'},
+  {id:'indu', nome:'Indústrias', local:'Capachos de alta resistência para entradas',
+   p:'Entradas de fábricas, galpões e refeitórios recebem muito tráfego, água e sujeira. Capachos de alta absorção e resistência ajudam a manter o piso limpo e mais seguro, com a marca da empresa.',
+   sp:[['Personalização','Logotipo e sinalização'],['Uso indicado','Entradas de fábricas e galpões'],['Formato','Sob medida']],
+   al:'Conte o volume de pessoas e se há água, óleo ou poeira no local: isso define o material e a base indicados.',
+   foto:'assets/img/galeria/waterkap-entrada.webp', arte:true,
+   alt:'Capacho Waterkap de alta absorção de água na entrada de um prédio',
+   cap:'Capacho de alta absorção para entradas'},
+  {id:'resi', nome:'Residências', local:'Capachos e tapetes personalizados para casa',
+   p:'Capacho com o nome da família ou uma frase de boas-vindas. Um detalhe que deixa a entrada com a sua cara e ainda ajuda a manter a casa limpa.',
+   sp:[['Personalização','Nome, frase ou desenho'],['Uso indicado','Portas, varandas e quartos'],['Formato','Sob medida']],
    al:'Se a entrada pega chuva ou sol direto, avise na hora do pedido: existem materiais próprios para áreas externas que não desbotam nem encharcam.',
-   foto:'/__l5e/assets-v1/a6e1a78a-21f3-439e-bd5b-0f9d24772ff5/tapetto-vinil.png',
-   alt:'Capacho de vinil Unique Residence em elevador',
-   cap:'Capacho personalizado para condomínio e elevador'}
+   foto:'assets/img/capacho-casa.jpg',
+   alt:'Capacho Bem-vindos na porta de entrada de uma casa',
+   cap:'Capacho de boas-vindas para residência'}
 ];
-var AID = 'emp';
+var AID = 'cond';
 function aAtual(){ for(var i=0;i<AMB.length;i++){ if(AMB[i].id===AID) return AMB[i]; } return AMB[0]; }
 
 function pjRender(){
@@ -1135,7 +1214,7 @@ function pjRender(){
   foto.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
   var d = document.createElement('div');
   d.className = 'ph';
-  d.innerHTML = '<img class="' + (A.foto.indexOf('/__l5e/') === 0 ? 'product-art' : '') + '" src="' + A.foto + '" alt="' + A.alt + '" loading="lazy">';
+  d.innerHTML = '<img class="' + (A.arte || A.foto.indexOf('/__l5e/') === 0 ? 'product-art' : '') + '" src="' + A.foto + '" alt="' + A.alt + '" loading="lazy">';
   foto.insertBefore(d, cap);
   cap.textContent = A.cap;
   document.getElementById('pNm').textContent = A.nome;
@@ -1440,7 +1519,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
   var P = produto(g('fProduto')) || produto('tapete');
   var msg =
-    'Olá! Quero um orçamento pelo site da piizu.\n\n' +
+    'Olá! Quero um orçamento pelo site da pii-zu.\n\n' +
     'Produto: ' + P.rotulo + '\n' +
     'Nome: ' + nome + '\n' +
     'WhatsApp: ' + fone + '\n' +

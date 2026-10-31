@@ -16,6 +16,20 @@ export const PRODUCTS = {
 export type ProductId = keyof typeof PRODUCTS;
 const productIds = Object.keys(PRODUCTS) as [ProductId, ...ProductId[]];
 
+// Segments of the "Soluções" section (AMB list in public/piizu/index.html).
+export const SOLUTIONS = {
+  cond: 'Condomínios', esco: 'Escolas', sala: 'Salas comerciais',
+  come: 'Comércios', indu: 'Indústrias', resi: 'Residências',
+  // Earlier segments, still accepted from older static exports.
+  emp: 'Empresa e comércio', esc: 'Creche e escola', cas: 'Casa e condomínio',
+} as const;
+export type SolutionId = keyof typeof SOLUTIONS;
+const solutionIds = Object.keys(SOLUTIONS) as [SolutionId, ...SolutionId[]];
+// Closest earlier segment, used to save while the database still has the old check.
+export const LEGACY_SOLUTION: Partial<Record<SolutionId, 'emp' | 'esc' | 'cas'>> = {
+  cond: 'cas', resi: 'cas', esco: 'esc', sala: 'emp', come: 'emp', indu: 'emp',
+};
+
 export const quoteSchema = z.object({
   id: z.string().uuid(),
   name: z.string().trim().min(2).max(100),
@@ -24,7 +38,7 @@ export const quoteSchema = z.object({
   place: z.enum(['Minha casa ou apartamento', 'Empresa ou comércio', 'Condomínio', 'Creche ou escola']),
   timeframe: z.enum(['O quanto antes', 'Nas próximas semanas', 'Daqui a alguns meses', 'Sem data definida']),
   details: z.string().trim().max(2000),
-  solution: z.enum(['emp', 'esc', 'cas']),
+  solution: z.enum(solutionIds),
   material: z.enum(['per', 'cap', 'inf']),
   // Older static exports do not send a product; they only offered rugs.
   product: z.enum(productIds).default('tapete'),

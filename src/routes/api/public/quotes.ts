@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from '@/integrations/supabase/types';
-import { PRODUCTS, quoteSchema } from '@/lib/quote-schema';
+import { LEGACY_SOLUTION, PRODUCTS, SOLUTIONS, quoteSchema } from '@/lib/quote-schema';
 
 // Best-effort per-instance abuse protection; no customer data is retained here.
 const submissionWindows = new Map<string, { count: number; expires: number }>();
@@ -51,13 +51,23 @@ export const Route = createFileRoute('/api/public/quotes')({
             },
           },
         });
-        let { error } = await client.from('quote_requests').insert(parsed.data);
-        // Until the product column migration is applied, save the request without it and
-        // keep the chosen product in the details so no quote is lost.
-        if (error && (error.code === 'PGRST204' || error.code === '42703')) {
-          const { product, ...rest } = parsed.data;
-          const details = `[Produto: ${PRODUCTS[product]}] ${rest.details}`.trim().slice(0, 2000);
-          ({ error } = await client.from('quote_requests').insert({ ...rest, details }));
+        // Until migrations 0002/0003 are applied, the database may lack the product column
+        // or only accept the earlier segments. Retry in the older shape, keeping the
+        // visitor's choices in the details so no quote is lost.
+        let row: Record<string, string> = { ...parsed.data };
+        const notes: string[] = [];
+        let { error } = await client.from('quote_requests').insert(row as typeof parsed.data);
+        for (let attempt = 0; error && attempt < 2; attempt += 1) {
+          if ((error.code === 'PGRST204' || error.code === '42703') && 'product' in row) {
+            const { product, ...rest } = row;
+            notes.push(`[Produto: ${PRODUCTS[product as keyof typeof PRODUCTS]}]`);
+            row = rest;
+          } else if (error.code === '23514' && LEGACY_SOLUTION[parsed.data.solution] && row['solution'] === parsed.data.solution) {
+            notes.push(`[Segmento: ${SOLUTIONS[parsed.data.solution]}]`);
+            row = { ...row, solution: LEGACY_SOLUTION[parsed.data.solution]! };
+          } else break;
+          const details = `${notes.join(' ')} ${parsed.data.details}`.trim().slice(0, 2000);
+          ({ error } = await client.from('quote_requests').insert({ ...row, details } as typeof parsed.data));
         }
         if (error && error.code !== '23505') {
           console.error('Quote request insert failed:', error.code);

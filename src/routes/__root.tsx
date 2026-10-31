@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "piizu — Tapetes personalizados" },
-      { name: "description", content: "Tapetes personalizados no Rio de Janeiro. Solicite seu orçamento à piizu." },
+      { title: "pii-zu — Tapetes personalizados" },
+      { name: "description", content: "Tapetes personalizados no Rio de Janeiro. Solicite seu orçamento à pii-zu." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "piizu — Tapetes personalizados" },
+      { property: "og:title", content: "pii-zu — Tapetes personalizados" },
       { property: "og:description", content: "Solicite seu orçamento de tapetes personalizados no Rio de Janeiro." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

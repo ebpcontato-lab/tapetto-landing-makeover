@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { PRODUCTS } from '@/lib/quote-schema';
+import { LEGACY_SOLUTION, PRODUCTS, SOLUTIONS } from '@/lib/quote-schema';
 
 const html = readFileSync('public/piizu/index.html', 'utf8');
 
@@ -37,5 +37,12 @@ describe('piizu personalized-only catalog', () => {
 
   it('has gallery photos for every product niche', () => {
     for (const nicho of catalog('NICHOS')) expect(html).toContain(`data-setor="${nicho.id}"`);
+  });
+
+  it('offers only solution segments the quote form accepts, each with a fallback for the old database check', () => {
+    for (const segment of catalog('AMB')) {
+      expect(Object.keys(SOLUTIONS)).toContain(segment.id);
+      expect(LEGACY_SOLUTION[segment.id as keyof typeof SOLUTIONS]).toBeDefined();
+    }
   });
 });

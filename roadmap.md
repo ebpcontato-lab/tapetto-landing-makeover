@@ -16,9 +16,13 @@
 - [x] Atualizar o parágrafo do topo e gerar o pacote estático final (v6).
 - [x] Instalar a tag do Google Ads (AW-17662893947) com banner de consentimento regional e conversões no formulário e no WhatsApp.
 - [ ] Colar os rótulos das conversões (AW-17662893947/...) criadas no Google Ads em window.__PIIZU_ADS — aguardando o usuário.
-- [x] Renomear a marca para piizu na página, na política de privacidade e no e-mail de aviso (página agora em public/piizu/).
+- [x] Renomear a marca para pii-zu na página, na política de privacidade e no e-mail de aviso (página agora em public/piizu/).
 - [x] Trocar o e-mail de contato e destinatário dos pedidos para comercial.piizu@gmail.com.
-- [ ] Trocar o domínio de envio dos avisos (notify.tapetto.com) quando a piizu tiver domínio próprio — aguardando o usuário.
+- [ ] Trocar o domínio de envio dos avisos (notify.tapetto.com) quando a pii-zu tiver domínio próprio — aguardando o usuário.
 - [ ] Regenerar o pacote estático com a tag do Google Ads inclusa — a pedido do usuário.
 - [x] Organizar a página por nichos (tapetes, grama sintética, piso para piscina e áreas molhadas, piso para quadra poliesportiva) a partir de uma lista única, com campo "O que você procura" no formulário.
 - [ ] Aplicar a migração 0002_add_quote_product (coluna product) no Lovable Cloud — até lá os pedidos são salvos com o produto anotado nos detalhes.
+- [x] Escrever o nome da marca como pii-zu nos textos (pii-zü só no logotipo).
+- [x] Soluções em seis segmentos: condomínios, escolas, salas comerciais, comércios, indústrias e residências.
+- [x] Menos espaço entre as dobras; links do menu param cada dobra alinhada abaixo do cabeçalho, com as fotos inteiras na tela (computador e celular).
+- [ ] Aplicar a migração 0003_open_quote_solution no Lovable Cloud — até lá os pedidos dos segmentos novos são salvos com o segmento anotado nos detalhes.
