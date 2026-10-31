@@ -10,7 +10,7 @@ export const PRODUCTS = {
   'grama-20': 'Grama Decorativa 20 mm',
   'grama-30': 'Grama Recreativa 30 mm',
   'grama-50': 'Grama Esportiva 50 mm',
-  'piso-piscina': 'Piso W-Kap para piscina e áreas molhadas',
+  'piso-piscina': 'Piso W-Kap para piscina, sauna e áreas molhadas ou úmidas',
   'piso-quadra': 'Piso modular para quadra poliesportiva',
   'piso-laminado': 'Piso laminado Kapazi',
   'piso-vinilico-regua-colada': 'Piso vinílico em régua colada',
