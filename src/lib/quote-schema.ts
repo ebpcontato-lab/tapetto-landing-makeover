@@ -15,7 +15,7 @@ export const PRODUCTS = {
   'piso-laminado': 'Piso laminado Kapazi',
   'piso-vinilico': 'Piso vinílico',
   'fita-antiderrapante': 'Fita antiderrapante',
-  'capa-elevador': 'Capa de elevador Liftkap',
+  'capa-elevador': 'Capa de proteção para elevador de serviço',
 } as const;
 export type ProductId = keyof typeof PRODUCTS;
 const productIds = Object.keys(PRODUCTS) as [ProductId, ...ProductId[]];
