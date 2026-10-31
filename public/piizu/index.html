@@ -425,9 +425,16 @@ footer{border-top:1px solid var(--lin);padding:52px 0 34px}
 }
 /* logotipo pii-zü (horizontal, sem slogan) */
 .logo{display:flex;align-items:center}
-.logo img{height:46px;width:auto;display:block}
+.logo img{height:60px;width:auto;display:block}
 footer .logo img{height:54px}
-@media(max-width:560px){.nav .logo img{height:34px}}
+.nav .logo{flex:none}
+@media(max-width:560px){
+  .nav .logo img{height:44px}
+  .nav-in{gap:10px;padding-left:16px;padding-right:16px}
+  .nav-tog{padding:8px 10px}
+  .nav-in .b-lar.sm{padding:9px 13px;font-size:.74rem}
+}
+@media(max-width:380px){.nav .logo img{height:38px}}
 /* selo do parceiro de fabricação */
 .selo{display:flex;align-items:center;gap:14px;margin-top:22px}
 .selo img{height:40px;width:auto;opacity:.85}
@@ -607,8 +614,8 @@ function piizuAds(label, extra){
 <header class="nav">
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-horizontal-sem-slogan-cobre.svg" alt="pii-zü" width="284" height="83"></a>
-    <nav class="nav-l" id="navl" aria-label="Nosso menu degustação">
-      <span class="nav-dg">Nosso menu <span>degustação</span></span>
+    <nav class="nav-l" id="navl" aria-label="Nosso menu degustação" translate="no">
+      <span class="nav-dg notranslate" translate="no">Nosso menu <span>degustação</span></span>
       <a href="#projetos">Soluções</a>
       <a href="#materiais">Materiais</a>
       <a href="#produtos">Produtos</a>
@@ -617,7 +624,7 @@ function piizuAds(label, extra){
       <a href="#processo">Como funciona</a>
       <a href="#objecoes">Dúvidas</a>
     </nav>
-    <button class="nav-tog" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
+    <button class="nav-tog notranslate" translate="no" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
     <a href="#orcamento" class="b-lar sm" style="flex:none">Pedir orçamento</a>
   </div>
 </header>
