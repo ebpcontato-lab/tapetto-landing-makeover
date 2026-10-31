@@ -13,7 +13,8 @@ export const PRODUCTS = {
   'piso-piscina': 'Piso W-Kap para piscina e áreas molhadas',
   'piso-quadra': 'Piso modular para quadra poliesportiva',
   'piso-laminado': 'Piso laminado Kapazi',
-  'piso-vinilico': 'Piso vinílico',
+  'piso-vinilico-colado': 'Piso vinílico colado (réguas ou placas)',
+  'piso-vinilico-clicado': 'Piso vinílico clicado em réguas',
   'fita-antiderrapante': 'Fita antiderrapante',
   'capa-elevador': 'Capa de proteção para elevador de serviço',
 } as const;
