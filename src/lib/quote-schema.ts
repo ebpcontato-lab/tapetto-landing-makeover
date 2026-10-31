@@ -12,6 +12,9 @@ export const PRODUCTS = {
   'grama-50': 'Grama Esportiva 50 mm',
   'piso-piscina': 'Piso W-Kap para piscina e áreas molhadas',
   'piso-quadra': 'Piso modular para quadra poliesportiva',
+  'piso-laminado': 'Piso laminado Kapazi',
+  'fita-antiderrapante': 'Fita antiderrapante',
+  'capa-elevador': 'Capa de elevador Liftkap',
 } as const;
 export type ProductId = keyof typeof PRODUCTS;
 const productIds = Object.keys(PRODUCTS) as [ProductId, ...ProductId[]];

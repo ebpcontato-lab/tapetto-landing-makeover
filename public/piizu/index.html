@@ -540,6 +540,8 @@ footer{padding:38px 0 26px}
   .pj-foto .seta{width:34px;height:34px}.pj-foto .seta.esq{left:5px}.pj-foto .seta.dir{right:5px}
   .pj-foto .cap{left:54px;max-width:calc(100% - 108px)}
 }
+/* abas compactas no computador, para todas as linhas caberem numa fileira */
+@media(min-width:861px){.gal-tabs{gap:6px}.gal-tabs .ab{padding:8px 12px;font-size:.78rem}}
 /* o botão do WhatsApp sai da frente quando passa por cima de uma seta */
 .wa-float{transition:opacity .2s}
 .wa-float.recua{opacity:0;pointer-events:none}
@@ -763,9 +765,19 @@ function piizuAds(label, extra){
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-loja-ferramentas.webp" alt="Tapete personalizado com as marcas atendidas por uma loja de ferramentas" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-super-essencias.webp" alt="Tapete personalizado Super Essências na entrada da loja" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-hipermais-bem-vindo.webp" alt="Tapete Bem-Vindo com a marca Hipermais na entrada do supermercado" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-dentaluni-recepcao.webp" alt="Tapete com logotipo Dentaluni na recepção do escritório" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-romma-loja.webp" alt="Capacho com logotipo ROMMA Loja e Salão de Beleza" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-edificio-dois-irmaos.webp" alt="Capacho personalizado Edifício Dois Irmãos na portaria" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-escola-patio-6.webp" alt="Tapete com pista e amarelinha no pátio de escola" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-escola-patio-8.webp" alt="Tapete com pista de carrinhos sob o refeitório da escola" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-italy-sala-floral.webp" alt="Tapete decorativo floral na sala de estar" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-italy-sala-listras.webp" alt="Tapete decorativo listrado azul e bege na sala de estar" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capa-elevador-cleankap.webp" alt="Capa de elevador com tapete Cleankap personalizado Ville Napoleon Residence" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-cleankap.webp" alt="Capa de elevador com tapete Cleankap personalizado Ville Napoleon Residence" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-liftkap.webp" alt="Capa de elevador Liftkap protegendo as paredes da cabine" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-firekap-extintor.webp" alt="Tapete Firekap vermelho e amarelo sinalizando a área do extintor de incêndio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cleankap-logo-detalhe.webp" alt="Detalhe de tapete Cleankap azul com logotipo em branco" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-terra-raspador.webp" alt="Tapete Terra raspador retendo a sujeira da bota na entrada" width="864" height="1080" loading="lazy"></div>
@@ -774,9 +786,16 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-playground.webp" alt="Playground sobre piso modular Playkap colorido" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-antes-depois.webp" alt="Área de lazer antes e depois da instalação do piso modular Playkap" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-rampa.webp" alt="Piso laminado Kapazi em rampa de acesso" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-garagem.webp" alt="Piso laminado em garagem, rampa e rolo" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-onibus.webp" alt="Piso laminado para ônibus em rolo e detalhe da textura" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="fita"><img src="assets/img/galeria/fita-antiderrapante-escada.webp" alt="Fitas antiderrapantes nos degraus da escada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-condominio.webp" alt="Grama sintética em jardim de condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-pet.webp" alt="Grama sintética em área com cachorro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-verde-seca.webp" alt="Comparação entre grama sintética sempre verde e grama natural seca" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-academia.webp" alt="Grama sintética no piso de academia" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-jardim.webp" alt="Grama sintética com placas de pedra no jardim de entrada" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-20-30mm.webp" alt="Comparação das gramas sintéticas de 20 mm e 30 mm" width="864" height="1080" loading="lazy"></div>
       </div>
       <button type="button" class="seta dir" id="galNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
@@ -807,7 +826,7 @@ function piizuAds(label, extra){
       </div>
       <!-- AVALIAÇÕES DO GOOGLE: substitua o texto, o nome e a nota abaixo pelos dados reais do perfil -->
       <figure class="pq-dep rv">
-        <div class="ph"><img src="assets/img/materiais.jpg" alt="Rolos de tapetes e capachos na fábrica" loading="lazy"></div>
+        <div class="ph"><img src="assets/img/fabrica-cleankap-maquina.webp" alt="Máquina imprimindo um tapete Cleankap personalizado na fábrica" loading="lazy"></div>
         <div class="pq-q">
           <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
           <blockquote class="fr">“Seu tapete e capacho produzido na maior fábrica da América Latina — <em>com dezenas de clientes satisfeitos.</em>”</blockquote>
@@ -1089,8 +1108,8 @@ var AMB = [
    p:'Uma sala comercial com o logotipo na porta passa profissionalismo desde o primeiro passo. Ideal para escritórios, consultórios, clínicas e salas em centros empresariais.',
    sp:[['Personalização','Logotipo e cores da marca'],['Uso indicado','Portas de salas e recepções'],['Formato','Sob medida']],
    al:'Em corredores de prédios comerciais, prefira um capacho de perfil baixo, que não atrapalhe a abertura da porta.',
-   foto:'assets/img/capacho-empresa.jpg',
-   alt:'Capacho com logotipo na recepção de um escritório',
+   foto:'assets/img/galeria/tapete-dentaluni-recepcao.webp',
+   alt:'Tapete com logotipo Dentaluni na recepção do escritório',
    cap:'Capacho com logotipo para recepção'},
   {id:'come', nome:'Comércios', local:'Tapetes de entrada com a sua marca',
    p:'A entrada é a primeira impressão de quem chega. Um tapete com o seu logotipo recebe o cliente, retém a sujeira dos sapatos e protege o piso, tudo de uma vez. Funciona em lojas, restaurantes, farmácias e mercados.',
@@ -1110,9 +1129,9 @@ var AMB = [
    p:'Capacho com o nome da família ou uma frase de boas-vindas. Um detalhe que deixa a entrada com a sua cara e ainda ajuda a manter a casa limpa.',
    sp:[['Personalização','Nome, frase ou desenho'],['Uso indicado','Portas, varandas e quartos'],['Formato','Sob medida']],
    al:'Se a entrada pega chuva ou sol direto, avise na hora do pedido: existem materiais próprios para áreas externas que não desbotam nem encharcam.',
-   foto:'assets/img/capacho-casa.jpg',
-   alt:'Capacho Bem-vindos na porta de entrada de uma casa',
-   cap:'Capacho de boas-vindas para residência'}
+   foto:'assets/img/galeria/tapete-italy-sala-floral.webp',
+   alt:'Tapete decorativo floral na sala de estar',
+   cap:'Tapete decorativo para a sala de estar'}
 ];
 var AID = 'cond';
 function aAtual(){ for(var i=0;i<AMB.length;i++){ if(AMB[i].id===AID) return AMB[i]; } return AMB[0]; }
@@ -1243,6 +1262,21 @@ var NICHOS = [
    p:'Placas modulares que deixam a quadra pronta em poucas horas, sem dor de cabeça. Liberdade para montar o espaço do seu jeito, com as cores e marcações que você precisa.',
    itens:[
     {id:'piso-quadra', tag:'Modular', nome:'Piso modular esportivo', rotulo:'Piso modular para quadra poliesportiva', p:'Quadras de futebol, basquete e vôlei e playgrounds de condomínios, escolas e clubes.'}
+   ]},
+  {id:'piso-laminado', nome:'Piso laminado', titulo:'Piso laminado Kapazi', sub:'Para garagens, rampas, academias e transporte',
+   p:'O piso resistente que acompanha o ritmo do seu negócio: mantas com textura antiderrapante, em diferentes desenhos, para áreas de muito tráfego.',
+   itens:[
+    {id:'piso-laminado', tag:'Laminado', nome:'Piso laminado', rotulo:'Piso laminado Kapazi', p:'Garagens, rampas, academias, áreas de serviço e piso de ônibus. O desenho é escolhido no orçamento.'}
+   ]},
+  {id:'fita', nome:'Fitas antiderrapantes', titulo:'Fitas antiderrapantes', sub:'Segurança em escadas e rampas',
+   p:'Invista em segurança: fitas antiderrapantes para degraus, rampas e pisos lisos, para a residência ou a empresa ficar mais livre de acidentes.',
+   itens:[
+    {id:'fita-antiderrapante', tag:'Fita', nome:'Fita antiderrapante', rotulo:'Fita antiderrapante', p:'Degraus, rampas e áreas de circulação de casas, condomínios e empresas.'}
+   ]},
+  {id:'capa-elevador', nome:'Capa de elevador', titulo:'Capa de elevador Liftkap', sub:'Proteção e acabamento para elevadores',
+   p:'Modernize o elevador: a capa protege as paredes da cabine e pode vir junto com um tapete personalizado Cleankap no piso.',
+   itens:[
+    {id:'capa-elevador', tag:'Liftkap', nome:'Capa de elevador', rotulo:'Capa de elevador Liftkap', p:'Elevadores de condomínios, prédios comerciais e hotéis, com ou sem tapete personalizado.'}
    ]}
 ];
 function nicho(id){ for(var i=0;i<NICHOS.length;i++){ if(NICHOS[i].id===id) return NICHOS[i]; } return null; }
