@@ -14,11 +14,11 @@ describe('Quote email notification', () => {
   beforeEach(() => vi.clearAllMocks());
   it('sends all quote details only to the corrected business recipient', async () => {
     vi.mocked(sendTemplateEmail).mockResolvedValue({ sent: true });
-    expect(template.to).toBe('tapetto.cooperkap@gmail.com');
+    expect(template.to).toBe('comercial.piizu@gmail.com');
     expect(await notifyQuote(quote)).toEqual({ emailSent: true });
-    expect(sendTemplateEmail).toHaveBeenCalledWith('quote-notification', 'tapetto.cooperkap@gmail.com', {
+    expect(sendTemplateEmail).toHaveBeenCalledWith('quote-notification', 'comercial.piizu@gmail.com', {
       templateData: { ...quote, solution: 'Casa e condomínio', material: 'Personalizado' },
-      idempotencyKey: `quote-notification-${quote.id}`, replyTo: 'tapetto.cooperkap@gmail.com',
+      idempotencyKey: `quote-notification-${quote.id}`, replyTo: 'comercial.piizu@gmail.com',
     });
   });
   it('does not retry a suppressed recipient', async () => {

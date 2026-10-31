@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 
 const html = readFileSync('public/piizu/index.html', 'utf8');
 
-describe('pii-zü Google Ads tag (AW-17662893947)', () => {
+describe('piizu Google Ads tag (AW-17662893947)', () => {
   it('loads the Google tag for the configured account exactly once', () => {
     expect((html.match(/googletagmanager\.com\/gtag\/js\?id=AW-17662893947/g) || []).length).toBe(1);
     expect((html.match(/gtag\('config','AW-17662893947'\)/g) || []).length).toBe(1);
@@ -31,7 +31,7 @@ describe('pii-zü Google Ads tag (AW-17662893947)', () => {
   it('links a privacy policy page naming the data and recipients', () => {
     const policy = readFileSync('public/piizu/privacidade.html', 'utf8');
     expect(policy).toContain('Google Ads');
-    expect(policy).toContain('Equipe pii-zü');
+    expect(policy).toContain('comercial.piizu@gmail.com');
     expect(policy).not.toMatch(/tapetto/i);
     expect(policy).toContain('Preferências de cookies');
   });

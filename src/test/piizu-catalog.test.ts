@@ -9,7 +9,7 @@ function catalog(name: string): Array<{ id: string; pz?: string; sp?: string[][]
   return Function(`"use strict"; return (${literal});`)();
 }
 
-describe('pii-zü personalized-only catalog', () => {
+describe('piizu personalized-only catalog', () => {
   it('does not offer synthetic grass as a solution or material', () => {
     for (const name of ['AMB', 'MATS']) {
       const products = catalog(name);
