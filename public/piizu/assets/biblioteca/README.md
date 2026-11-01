@@ -14,7 +14,7 @@ ficam aqui para serem usados nas seções.
 | `w-kap/` | Artes e fotos W-Kap / áreas úmidas |
 | `outros-produtos/` | H-Kap e fichas técnicas H-Kap / S-Kap |
 | `logos/` | Logos (PNG branca e preta; originais em CorelDRAW `.cdr`) |
-| `fotos-drive/` | 217 fotos de tapetes instalados (galeria do celular enviada ao Drive em 01/11/2026), nomes originais; fotos acima de 2 MB reduzidas para no máximo 2400 px |
+| `fotos-drive/` | 209 fotos de tapetes instalados (galeria do celular enviada ao Drive em 01/11/2026), nomes originais; fotos acima de 2 MB reduzidas para no máximo 2400 px |
 
 ## Vídeos (ficam no Google Drive, fora do repositório)
 
