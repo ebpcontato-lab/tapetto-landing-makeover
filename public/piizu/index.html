@@ -668,6 +668,20 @@ footer{padding:38px 0 26px}
 .busca-topo .busca-c{flex:1}
 @media(max-width:860px){.busca-topo .busca{flex-direction:column;align-items:stretch;gap:6px;margin-bottom:16px}}
 @media(min-width:861px){.busca-topo{margin-bottom:6px}}
+/* números da apresentação: abaixo do logo Kapazi e do selo */
+.hero-num{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--lin);border-radius:8px;background:var(--bg2);margin:2px 0 14px}
+.hero-num>div{padding:9px 12px;border-left:1px solid var(--lin)}
+.hero-num>div:first-child{border-left:0}
+.hero-num b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.15rem;color:var(--tinta);line-height:1.05}
+.hero-num span{display:block;font-size:.66rem;color:var(--tx2);line-height:1.4;margin-top:4px}
+.hero-num b .nw{display:inline;white-space:nowrap;font:inherit;color:inherit;margin:0;line-height:inherit}
+@media(max-width:860px){.hero-num{order:2;margin:4px 0 16px}}
+@media(max-width:560px){.hero-num{grid-template-columns:1fr 1fr}.hero-num>div:nth-child(3){border-left:0}.hero-num>div:nth-child(n+3){border-top:1px solid var(--lin)}}
+@media(max-width:420px){.hero-num>div{padding:8px 8px}.hero-num b{font-size:1.05rem}.hero-num span{font-size:.62rem}}
+/* faixa com um item só: centralizado */
+.faixa-in:has(> :only-child){grid-template-columns:1fr;text-align:center}
+.faixa-in:has(> :only-child)>div{border-left:0;padding-left:0;display:flex;align-items:baseline;justify-content:center;gap:12px;flex-wrap:wrap}
+.faixa-in:has(> :only-child) span{margin-top:0}
 /* Soluções: tarja fina na borda de cima da foto; lupa logo abaixo dela */
 #pjFoto .ph .cap{left:0;right:0;top:0;max-width:none;border:0;border-bottom:1px solid var(--lin);border-radius:0;
   font-size:.56rem;line-height:1.25;padding:3px 8px;background:rgba(248,247,244,.84);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -988,6 +1002,12 @@ function piizuAds(label, extra){
 
     <div class="hero-dir">
       <div class="selo selo-topo rise"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ" width="400" height="186"><span class="selo-ok"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span></div>
+      <div class="hero-num rise d2">
+        <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
+        <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
+        <div><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
+        <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
+      </div>
       <div class="hero-tx rise d2">
       <p>A Ind. Kapazi é líder no mercado nacional e atua há mais de 48 anos entregando Tapetes com a melhor matéria-prima do mercado para: <b>Condomínios, Shopping Centers, Centros e Salas Comerciais, Galerias, Supermercados, Farmácias, Escolas, Restaurantes e Redes de Comércio e varejo.</b></p>
       <p><b>Personalizações feitas com equipamentos automatizados de última geração</b>, proporcionando impressões exclusivas. Você escolhe: dimensões, cores, logo da sua marca ou textos desejados, e a gente cuida de tudo com você, da arte à produção e entrega.</p>
@@ -995,14 +1015,6 @@ function piizuAds(label, extra){
     </div>
   </div>
 
-  <div class="faixa">
-    <div class="faixa-in">
-      <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
-      <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
-      <div><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
-      <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
-    </div>
-  </div>
 </main>
 
 <!-- ===== CLIENTES (logos) — troque as imagens na lista CLIENTES do script ===== -->
