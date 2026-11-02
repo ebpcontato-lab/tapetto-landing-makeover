@@ -688,6 +688,12 @@ footer{padding:38px 0 26px}
   #produtos .ln-c p{grid-column:1/-1;grid-row:2;font-size:.72rem;line-height:1.4;margin:0}
   #produtos .ln-c .b-lin{grid-column:3;grid-row:1;padding:3px 10px;font-size:.7rem;white-space:nowrap}
   #produtos .ln-ft{grid-column:2;grid-row:5;margin-top:6px;font-size:.7rem;line-height:1.45}
+  /* abas com 3 ou mais modelos: cartões em duas colunas, para a dobra caber na tela */
+  #produtos .ln-mod:has(> :nth-child(3)){grid-template-columns:1fr 1fr}
+  #produtos .ln-mod:has(> :nth-child(3)) .ln-c{padding:5px 8px;column-gap:6px}
+  #produtos .ln-mod:has(> :nth-child(3)) .ln-c .b-lin{padding:3px 7px;font-size:.66rem}
+  #produtos .ln-mod:has(> :nth-child(3)) .ln-c b{line-height:1.15}
+  #produtos .h2-slogan{margin:2px 0 2px}
 }
 /* abas de Soluções e de Mais produtos no celular: 3 em cima e as outras em pares centralizados (prisma invertido) */
 @media(max-width:860px){
@@ -1039,6 +1045,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">03 / Mais produtos</div>
+      <div class="h2-slogan">Seu piso em nossas mãos.</div>
       <h2 class="fr">Além dos Tapetes e Capachos, <em>oferecemos soluções para várias outras modalidades de piso:</em></h2>
     </div>
 
