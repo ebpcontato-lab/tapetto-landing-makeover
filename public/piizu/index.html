@@ -2050,7 +2050,7 @@ document.getElementById('lnNext').addEventListener('click', function(){ faixaPas
    Para acrescentar fotos, inclua {src, alt} em fotos.
    ========================================================= */
 var COMPARA = [
-  {id:'solidos', nome:'Retenção de sólidos — vinil',
+  {id:'solidos', nome:'Função Única — retenção de sólidos (vinil)',
    modelos:[
     {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada'], fotos:[
      {src:'assets/img/galeria/vinil-lavier.webp', alt:'Capacho de vinil rosa com a marca Lavier na porta'},
@@ -2317,7 +2317,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   function norm(t){ return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
   function vai(id){ var el = document.getElementById(id); if(el) el.scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'start'}); }
   var EXTRA = {
-    solidos:'capacho vinil sujeira terra areia retencao contencao', dupla:'agua chuva absorcao molhado retencao',
+    solidos:'capacho vinil sujeira terra areia retencao contencao funcao unica', dupla:'agua chuva absorcao molhado retencao',
     grama:'grama gramado jardim verde pet', 'piso-piscina':'piscina sauna banheiro umido molhado antiderrapante wkap w-kap',
     'piso-quadra':'quadra esporte futebol playground parquinho kids crianca modular playkap',
     'piso-rubberkap':'quadra esporte playground parquinho kids crianca borracha emborrachado rubber rubberkap',
@@ -2331,7 +2331,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   });
   COMPARA.forEach(function(X){
     X.modelos.forEach(function(M, k){
-      IDX.push({t:M.nome, s:X.id === 'dupla' ? 'Dupla Função' : 'Retenção de sólidos', k:M.nome + ' ' + X.nome + ' ' + M.itens.join(' ') + ' tapete capacho ' + (EXTRA[X.id] || ''), go:function(){ CID = X.id; CMID = k; cmpRender(); vai('materiais'); }});
+      IDX.push({t:M.nome, s:X.id === 'dupla' ? 'Dupla Função' : 'Função Única', k:M.nome + ' ' + X.nome + ' ' + M.itens.join(' ') + ' tapete capacho ' + (EXTRA[X.id] || ''), go:function(){ CID = X.id; CMID = k; cmpRender(); vai('materiais'); }});
     });
   });
   NICHOS.forEach(function(N){
