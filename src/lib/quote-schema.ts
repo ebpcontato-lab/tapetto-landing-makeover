@@ -12,7 +12,7 @@ export const PRODUCTS = {
   'grama-50': 'Grama Esportiva 50 mm',
   'piso-piscina': 'Piso W-Kap para piscina, sauna e áreas molhadas ou úmidas',
   'piso-quadra': 'Piso modular para quadra poliesportiva, playground e áreas kids',
-  'piso-laminado': 'Piso laminado Kapazi',
+  'piso-laminado': 'Piso laminado emborrachado Kapazi',
   'piso-vinilico-regua-colada': 'Piso vinílico em régua colada',
   'piso-vinilico-placa-colada': 'Piso vinílico em placa colada 1 m × 1 m',
   'piso-vinilico-clicado': 'Piso vinílico em régua clicada',
