@@ -599,7 +599,7 @@ footer{padding:38px 0 26px}
 .hero-lead b{color:var(--lar2);font-weight:600}
 .hero-lead i{display:block;font-style:italic;font-size:1.12em;color:var(--lar2);margin-bottom:4px}
 .hero .hero-lead+h1{margin-top:6px;margin-bottom:16px}
-@media(min-width:861px) and (max-height:700px){.hero h1{font-size:clamp(1.9rem,3vw,2.6rem)}.hero .pill{padding-top:5px;padding-bottom:5px}.hero-cta .b-lar,.hero-cta .b-lin{padding-top:11px;padding-bottom:11px}.hero{padding-top:14px}.hero-lead{margin-top:8px}.hero .selo{margin-top:14px}.hero .faixa{margin-top:18px}.faixa-in>div{padding-top:16px;padding-bottom:16px}}
+@media(min-width:861px) and (max-height:700px){.hero h1{font-size:clamp(1.9rem,3vw,2.6rem)}.hero .pill{padding-top:5px;padding-bottom:5px}.hero-cta .b-lar,.hero-cta .b-lin{padding-top:11px;padding-bottom:11px}.hero{padding-top:14px}.hero-lead{margin-top:8px}.hero .selo{margin-top:8px}.hero-slogan{margin-top:8px}.hero .faixa{margin-top:18px}.faixa-in>div{padding-top:13px;padding-bottom:13px}}
 .hero-tx p{font-size:clamp(.95rem,1.25vw,1.08rem);color:var(--tx);line-height:1.75;max-width:52ch}
 .hero-tx p+p{margin-top:14px}
 .hero-tx b{font-weight:600;color:var(--tinta)}
@@ -609,8 +609,17 @@ footer{padding:38px 0 26px}
   .hero{min-height:0}
   .hero-g{display:flex;flex-direction:column;align-items:stretch;gap:0}
   .hero-g>div:first-child{display:contents}
-  .hero-tx{order:3;margin:4px 0 22px}.hero-cta{order:4}.hero-risk{order:5}.hero .selo{order:6}
+  .hero-tx{order:3;margin:4px 0 22px}.hero-cta{order:4}.hero-slogan{order:5}.hero .selo{order:6}
 }
+.selo .selo-pz{height:38px;opacity:1;border-left:1px solid var(--lin2);padding-left:14px}
+.selo .selo-ok{display:flex;align-items:center;gap:8px;border-left:1px solid var(--lin2);padding-left:14px;font-size:inherit}
+.selo .selo-ok>span{border:0;padding:0}
+.selo-ic{width:30px;height:30px;flex:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.faixa-in b .nw{display:inline;white-space:nowrap;font:inherit;color:inherit;margin:0;letter-spacing:inherit}
+.hero .selo{margin-top:12px}
+.hero-slogan{margin-top:10px;font-size:.84rem;color:var(--tx)}
+.hero-slogan b{color:var(--lar2);font-weight:600}
+@media(max-width:560px){.selo{flex-wrap:wrap;gap:10px 12px}.selo .selo-ok{border-left:0;padding-left:0;flex-basis:100%}}
 /* Soluções: tarja fina na borda de cima da foto; lupa logo abaixo dela */
 #pjFoto .ph .cap{left:0;right:0;top:0;max-width:none;border:0;border-bottom:1px solid var(--lin);border-radius:0;
   font-size:.56rem;line-height:1.25;padding:3px 8px;background:rgba(248,247,244,.84);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -805,7 +814,7 @@ function piizuAds(label, extra){
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="nav-in">
-    <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-horizontal-sem-slogan-cobre.svg" alt="pii-zü" width="284" height="83"></a>
+    <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-horizontal-solucoes-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83"></a>
     <nav class="nav-l" id="navl" aria-label="Nosso menu degustação" translate="no">
       <span class="nav-dg notranslate" translate="no">Nosso menu <span>degustação</span></span>
       <a href="#projetos">Soluções</a>
@@ -834,7 +843,8 @@ function piizuAds(label, extra){
         </a>
         <a href="#projetos" class="b-lin">Ver soluções</a>
       </div>
-      <div class="selo rise d4"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ" width="400" height="186"><span>Distribuidor autorizado<br>Indústria Kapazi</span></div>
+      <p class="hero-slogan rise d3">Sua marca conversa melhor com a gente, <b>peça seu orçamento agora mesmo.</b></p>
+      <div class="selo rise d4"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ" width="400" height="186"><img class="selo-pz" src="assets/img/marca/piizu-horizontal-solucoes-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83"><span class="selo-ok"><svg class="selo-ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span></div>
     </div>
 
     <div class="hero-tx rise d2">
@@ -848,7 +858,7 @@ function piizuAds(label, extra){
       <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
       <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
       <div><b class="fr">Sob medida</b><span>dimensões, cores, logo da sua marca ou textos desejados</span></div>
-      <div><b class="fr">Atendimento pii-zu</b><span>com pontualidade e qualidade satisfatória</span></div>
+      <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
     </div>
   </div>
 </main>
@@ -1364,7 +1374,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="ft">
       <div>
-        <div class="logo"><img src="assets/img/marca/piizu-horizontal-sem-slogan-claro.svg" alt="pii-zü" width="284" height="83" loading="lazy"></div>
+        <div class="logo"><img src="assets/img/marca/piizu-horizontal-solucoes-claro.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83" loading="lazy"></div>
         <p>Tapetes personalizados com logotipo, nome, cores e desenhos, grama sintética e pisos para piscina e quadras, no Rio de Janeiro. Para empresas, condomínios, residências e escolas, com produção na maior fábrica da América Latina, há mais de 48 anos no mercado nacional.</p>
       </div>
       <div>
