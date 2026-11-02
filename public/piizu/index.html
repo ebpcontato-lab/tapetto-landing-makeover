@@ -538,15 +538,15 @@ footer{padding:38px 0 26px}
 .pj-foto{display:flex;align-items:center;padding:0 56px}
 .pj-foto .ph{position:relative;inset:auto;flex:1;align-self:stretch}
 .pj-foto .seta.esq{left:6px}.pj-foto .seta.dir{right:6px}
-.pj-foto .cap{left:62px;top:8px;max-width:calc(100% - 172px)}
+.pj-foto .cap{left:8px;top:8px;max-width:calc(100% - 60px)}
 @media(min-width:1061px){
   .pj-foto{--fh:clamp(330px,calc(var(--dobra) - 360px),540px);height:var(--fh);width:calc(var(--fh) + 112px);aspect-ratio:auto}
 }
 @media(max-width:1060px){.pj-foto{height:auto;aspect-ratio:auto}.pj-foto .ph{aspect-ratio:4/3}}
 @media(max-width:560px){
-  .pj-foto{padding:0 44px}.pj-foto .ph{aspect-ratio:1/1}
+  .pj-foto{padding:0 44px}
   .pj-foto .seta{width:34px;height:34px}.pj-foto .seta.esq{left:5px}.pj-foto .seta.dir{right:5px}
-  .pj-foto .cap{left:50px;top:6px;max-width:calc(100% - 150px)}
+  .pj-foto .cap{left:6px;top:6px;max-width:calc(100% - 54px)}
 }
 /* título mais longo de Mais produtos: mais largo para caber em duas linhas */
 #produtos .head{max-width:980px}
@@ -591,6 +591,18 @@ footer{padding:38px 0 26px}
   #projetos .pj-ft small{font-size:.7rem;line-height:1.45}
   #projetos .pj-ft .b-lin{flex:none}
   #projetos .pj-al{margin-top:10px;padding:8px 12px}
+}
+/* Soluções: foto inteira (4:5), sem corte, e dobra mais compacta para caber abaixo do cabeçalho */
+@media(min-width:1061px){
+  #projetos{padding-top:12px;padding-bottom:12px}
+  #projetos .head{margin-bottom:10px}
+  #projetos .head h2{font-size:clamp(1.6rem,2.3vw,2.2rem);line-height:1.12}
+  #projetos .head p{font-size:.84rem;line-height:1.6}
+  #projetos .pj-foto{--fh:clamp(230px,calc(var(--dobra) - 290px),600px);width:calc(var(--fh) * .8 + 112px)}
+}
+@media(max-width:1060px){
+  .pj-foto{justify-content:center}
+  .pj-foto .ph{flex:0 1 auto;width:min(100%,calc(64svh * .8));aspect-ratio:4/5}
 }
 /* Mais produtos no computador: fotos à esquerda e, à direita, texto da linha e modelos,
    para a dobra inteira caber abaixo do cabeçalho ao clicar no menu */
@@ -1616,12 +1628,14 @@ function pjRender(){
   var A = aAtual(), F = A.fotos[PFI % A.fotos.length];
   var foto = document.getElementById('pjFoto');
   var cap = document.getElementById('pjCap');
+  foto.appendChild(cap);
   foto.querySelectorAll('.ph').forEach(function(e){ e.remove(); });
   foto.classList.toggle('uma', A.fotos.length < 2);
   var d = document.createElement('div');
   d.className = 'ph';
   d.innerHTML = '<img src="' + F.src + '" alt="' + F.alt + '" loading="lazy">';
   foto.insertBefore(d, cap);
+  d.appendChild(cap);
   cap.textContent = F.cap + (A.fotos.length > 1 ? ' · ' + (PFI % A.fotos.length + 1) + '/' + A.fotos.length : '');
   document.getElementById('pNm').textContent = A.nome;
   document.getElementById('pLc').textContent = A.local;
