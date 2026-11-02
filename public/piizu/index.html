@@ -823,15 +823,15 @@ footer{padding:38px 0 26px}
 @media(min-width:861px){.gal-tabs{gap:6px}.gal-tabs .ab{padding:8px 12px;font-size:.78rem}}
 /* setas sempre visíveis, mesmo com uma foto só */
 /* botão voltar para o topo: aparece em todas as dobras, acima do WhatsApp */
-.topo-float{position:fixed;right:28px;bottom:94px;z-index:89;width:46px;height:46px;border-radius:50%;background:var(--bg2);color:var(--lar2);
-  border:1px solid var(--lin2);box-shadow:0 6px 18px rgba(0,0,0,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;
+.topo-float{position:fixed;right:22px;bottom:94px;z-index:89;height:38px;padding:0 14px 0 11px;border-radius:999px;background:var(--bg2);color:var(--lar2);
+  border:1px solid var(--lin2);box-shadow:0 6px 18px rgba(0,0,0,.12);display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;
   opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s,background .15s;text-decoration:none}
 .topo-float.mostra{opacity:1;transform:none;pointer-events:auto}
 .topo-float.mostra.recua{opacity:0;pointer-events:none}
 .topo-float:hover{background:var(--lar);color:#fff;border-color:var(--lar)}
-.topo-float svg{width:18px;height:18px}
-.topo-float span{font-size:.52rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;line-height:1}
-@media(max-width:560px){.topo-float{right:22px;bottom:88px;width:42px;height:42px}}
+.topo-float svg{width:16px;height:16px;flex:none}
+.topo-float span{font-size:.72rem;font-weight:600;line-height:1;white-space:nowrap}
+@media(max-width:560px){.topo-float{right:16px;bottom:88px;height:36px;padding:0 12px 0 9px}.topo-float span{font-size:.68rem}}
 /* o botão do WhatsApp sai da frente quando passa por cima de uma seta */
 .wa-float{transition:opacity .2s}
 .wa-float.recua{opacity:0;pointer-events:none}
@@ -1508,7 +1508,7 @@ function piizuAds(label, extra){
   </div>
 </footer>
 
-<a class="topo-float" href="#topo" aria-label="Voltar para o topo" title="Voltar para o topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg><span>Topo</span></a>
+<a class="topo-float" href="#topo" aria-label="Voltar para o topo" title="Voltar para o topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg><span>Voltar ao topo</span></a>
 <a class="wa-float wa-pulse" href="https://wa.me/5521998146495?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20dos%20produtos%20do%20portf%C3%B3lio%20da%20pii-zu%20Solu%C3%A7%C3%B5es%20para%20Pisos." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3C9.383 3 4 8.383 4 15.004c0 2.117.555 4.184 1.61 6.004L4 29l8.152-1.57a11.94 11.94 0 0 0 3.852.633h.004C22.625 28.063 28 22.68 28 16.06 28 9.437 22.625 4.055 16.004 4.055zm0 21.938h-.004a9.93 9.93 0 0 1-5.062-1.387l-.363-.215-4.84.93.93-4.715-.235-.383a9.92 9.92 0 0 1-1.523-5.309c0-5.492 4.469-9.96 9.965-9.96 2.66 0 5.16 1.039 7.039 2.921a9.9 9.9 0 0 1 2.918 7.047c-.004 5.492-4.472 9.96-9.965 9.96zm5.465-7.457c-.3-.152-1.77-.875-2.043-.973-.273-.098-.473-.148-.672.153-.199.297-.77.968-.945 1.168-.172.199-.348.222-.648.074-.301-.148-1.266-.465-2.41-1.489-.891-.793-1.492-1.773-1.668-2.074-.172-.297-.02-.457.133-.605.137-.133.301-.348.45-.523.152-.176.199-.301.3-.5.098-.203.05-.375-.023-.524-.078-.148-.672-1.621-.922-2.219-.242-.582-.488-.504-.672-.512l-.57-.011a1.1 1.1 0 0 0-.797.371c-.273.301-1.047 1.024-1.047 2.496s1.074 2.895 1.223 3.094c.148.199 2.113 3.226 5.121 4.523.715.309 1.273.492 1.707.633.719.227 1.371.195 1.887.117.575-.086 1.77-.723 2.02-1.422.246-.699.246-1.297.171-1.422-.07-.125-.269-.199-.57-.348z"/></svg>
 </a>
