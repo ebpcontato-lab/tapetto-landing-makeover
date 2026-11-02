@@ -755,6 +755,12 @@ footer{padding:38px 0 26px}
 .cmp-c.sel{background:#fff;box-shadow:0 0 0 2px var(--lar) inset}
 .cmp-ver{display:block;margin-top:4px;font-size:.66rem;letter-spacing:.06em;color:var(--lar2);font-weight:600}
 .cmp-c.sel .cmp-ver{visibility:hidden}
+/* dobra 3: cartões que filtram as fotos por modelo */
+.ln-c.clic{cursor:pointer;transition:border-color .15s,background .15s}
+.ln-c.clic:hover{border-color:var(--lar)}
+.ln-c.sel{background:#fff;box-shadow:0 0 0 2px var(--lar) inset}
+.ln-ver{font:inherit;font-size:.68rem;font-weight:600;letter-spacing:.04em;color:var(--lar2);background:none;border:0;padding:0;cursor:pointer;margin-right:10px;white-space:nowrap}
+.ln-c.sel .ln-ver{color:var(--tx2)}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1041,9 +1047,9 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-terra-raspador.webp" alt="Tapete Terra raspador retendo a sujeira da bota na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante em volta da piscina, com a textura em destaque" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo na borda da piscina à noite" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-playground.webp" alt="Playground sobre piso modular Playkap colorido" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-antes-depois.webp" alt="Área de lazer antes e depois da instalação do piso modular Playkap" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/playkap-playground.webp" alt="Playground sobre piso modular Playkap colorido" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/playkap-antes-depois.webp" alt="Área de lazer antes e depois da instalação do piso modular Playkap" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-rampa.webp" alt="Piso laminado emborrachado Kapazi em rampa de acesso" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-garagem.webp" alt="Piso laminado emborrachado em garagem, rampa e rolo" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-onibus.webp" alt="Piso laminado emborrachado para ônibus em rolo e detalhe da textura" width="864" height="1080" loading="lazy"></div>
@@ -1063,11 +1069,11 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-amarelinha-fazenda.webp" alt="Tapete de amarelinha com tema de fazenda" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-gastroclinica.webp" alt="Capacho com o logotipo da Gastroclínica na entrada da clínica" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-autentica-moda.webp" alt="Capacho com a marca Autêntica Moda Feminina na porta da loja" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-modular.webp" alt="Playground sobre piso modular colorido em área externa" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-letras.webp" alt="Piso modular colorido com letras do alfabeto no playground" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-brinquedoteca-modular.webp" alt="Brinquedoteca com piso modular colorido em xadrez" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-xadrez.webp" alt="Playground sobre piso modular verde com tabuleiro de xadrez" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-colorido.webp" alt="Playground sobre piso modular verde e laranja" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/play-playground-modular.webp" alt="Playground sobre piso modular colorido em área externa" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/play-playground-letras.webp" alt="Piso modular colorido com letras do alfabeto no playground" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/play-brinquedoteca-modular.webp" alt="Brinquedoteca com piso modular colorido em xadrez" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/play-playground-xadrez.webp" alt="Playground sobre piso modular verde com tabuleiro de xadrez" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/play-playground-colorido.webp" alt="Playground sobre piso modular verde e laranja" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-toque-natural.webp" alt="Piso vinílico em régua com aparência de madeira na cozinha, linha Toque Natural" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-ecokap.webp" alt="Cores do piso vinílico em régua colada Ecokap" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-camadas.webp" alt="Camadas do piso vinílico em régua colada" width="864" height="1080" loading="lazy"></div>
@@ -1090,7 +1096,7 @@ function piizuAds(label, extra){
         <!-- portfólio acrescentado em 01/11/2026 (fotos do Drive, tratadas) -->
         <div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-holanda-lages.mp4" poster="assets/img/galeria/portfolio-video-holanda-lages.webp" aria-label="Vídeo do Tapete personalizado Holanda Lages Advocacia na entrada do escritório" controls muted playsinline preload="none"></video></div>
         <div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-tapete-sala.mp4" poster="assets/img/galeria/portfolio-video-tapete-sala.webp" aria-label="Vídeo de Tapete personalizado em formato orgânico na sala de estar" controls muted playsinline preload="none"></video></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><video src="assets/video/galeria/portfolio-video-playkap.mp4" poster="assets/img/galeria/portfolio-video-playkap.webp" aria-label="Vídeo do piso modular Playkap colorido em área kids" controls muted playsinline preload="none"></video></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><video src="assets/video/galeria/portfolio-video-playkap.mp4" poster="assets/img/galeria/portfolio-video-playkap.webp" aria-label="Vídeo do piso modular Playkap colorido em área kids" controls muted playsinline preload="none"></video></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-001.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-002.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-003.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
@@ -1185,11 +1191,11 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-092.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-093.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-094.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-095.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-096.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-097.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-098.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-099.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/portfolio-095.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/portfolio-096.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/portfolio-097.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/portfolio-098.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-quadra"><img src="assets/img/galeria/portfolio-099.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-100.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-101.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-102.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
@@ -1257,8 +1263,8 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-164.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-165.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-166.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-167.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-168.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-rubberkap"><img src="assets/img/galeria/portfolio-167.webp" alt="Piso emborrachado azul em playground coberto" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="piso-quadra" data-modelo="piso-rubberkap"><img src="assets/img/galeria/portfolio-168.webp" alt="Piso emborrachado azul sob os brinquedos do playground" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-169.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-170.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
       </div>
@@ -1869,10 +1875,14 @@ function escolheProduto(id){
 }
 
 /* mais produtos: abas por nicho, fotos no formato da galeria e cartões de modelos */
-var LID = null, lnTr = document.getElementById('lnTr');
+var LID = null, LMOD = null, lnTr = document.getElementById('lnTr');
+/* nichos com fotos separadas por modelo (galeria com data-modelo): clicar no cartão filtra as fotos */
+function lnPorModelo(id){ return !!document.querySelector('.gal-it[data-setor="' + id + '"][data-modelo]'); }
 /* fotos e vídeos de um nicho, na ordem em que estão na galeria */
-function lnFotos(id){
-  return Array.prototype.map.call(document.querySelectorAll('.gal-it[data-setor="' + id + '"] > img, .gal-it[data-setor="' + id + '"] > video'), function(m){
+/* com modelo: só as fotos marcadas com data-modelo daquele modelo */
+function lnFotos(id, modelo){
+  var sel = '.gal-it[data-setor="' + id + '"]' + (modelo ? '[data-modelo="' + modelo + '"]' : '');
+  return Array.prototype.map.call(document.querySelectorAll(sel + ' > img, ' + sel + ' > video'), function(m){
     return m.tagName === 'VIDEO'
       ? {video:true, src:m.getAttribute('src'), poster:m.getAttribute('poster') || '', alt:m.getAttribute('aria-label') || ''}
       : {src:m.getAttribute('src'), alt:m.alt};
@@ -1888,24 +1898,36 @@ function lnRender(){
     b.type = 'button'; b.className = 'ab' + (X.id === LID ? ' on' : '');
     b.setAttribute('aria-pressed', X.id === LID ? 'true' : 'false');
     b.textContent = X.nome;
-    b.addEventListener('click', function(){ LID = X.id; lnRender(); });
+    b.addEventListener('click', function(){ LID = X.id; LMOD = null; lnRender(); });
     top.appendChild(b);
   });
-  lnTr.innerHTML = lnFotos(LID).map(function(F){
+  var porMod = lnPorModelo(LID), modN = null;
+  if(LMOD) N.itens.forEach(function(P){ if(P.id === LMOD) modN = P.nome; });
+  lnTr.innerHTML = lnFotos(LID, porMod ? LMOD : null).map(function(F){
     if(F.video) return '<div class="ph gal-it"><video src="' + esc(F.src) + '"' + (F.poster ? ' poster="' + esc(F.poster) + '"' : '') +
       ' aria-label="' + esc(F.alt) + '" controls muted playsinline preload="metadata"></video></div>';
     return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
   }).join('');
   lnTr.classList.toggle('vazio', !lnTr.children.length);
-  if(!lnTr.children.length) lnTr.innerHTML = '<div class="ln-vazio">Fotos em breve. Peça o orçamento e receba as opções de modelos e cores.</div>';
+  if(!lnTr.children.length) lnTr.innerHTML = '<div class="ln-vazio">' + (modN ? 'Fotos do ' + esc(modN) + ' em breve. ' : 'Fotos em breve. ') + 'Peça o orçamento e receba as opções de modelos e cores.</div>';
   lnTr.scrollLeft = 0;
   document.getElementById('lnNm').textContent = N.titulo;
   document.getElementById('lnLc').textContent = N.sub;
   document.getElementById('lnP').textContent = N.p;
-  document.getElementById('lnIt').innerHTML = N.itens.map(function(P){
-    return '<div class="ln-c"><span class="tag">' + esc(P.tag) + '</span><b class="fr">' + esc(P.nome) + '</b>' +
-      '<p>' + esc(P.p) + '</p><a href="#orcamento" class="b-lin sm" data-produto="' + P.id + '">Pedir orçamento</a></div>';
+  var lnIt = document.getElementById('lnIt');
+  lnIt.innerHTML = N.itens.map(function(P){
+    var ver = porMod ? '<button type="button" class="ln-ver" data-mod="' + P.id + '" aria-pressed="' + (LMOD === P.id) + '">' + (LMOD === P.id ? 'Vendo as fotos' : 'Ver fotos') + '</button>' : '';
+    return '<div class="ln-c' + (porMod ? ' clic' : '') + (LMOD === P.id ? ' sel' : '') + '"' + (porMod ? ' data-mod="' + P.id + '"' : '') + '><span class="tag">' + esc(P.tag) + '</span><b class="fr">' + esc(P.nome) + '</b>' +
+      '<p>' + esc(P.p) + '</p>' + ver + '<a href="#orcamento" class="b-lin sm" data-produto="' + P.id + '">Pedir orçamento</a></div>';
   }).join('');
+  lnIt.querySelectorAll('.ln-c.clic').forEach(function(c){
+    c.addEventListener('click', function(e){
+      if(e.target.closest('a')) return;
+      var m = c.getAttribute('data-mod');
+      LMOD = LMOD === m ? null : m; lnRender();
+      if(window.innerWidth <= 1060) document.getElementById('lnGal').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'center'});
+    });
+  });
   lnSetas();
 }
 for(var ni=0; ni<NICHOS.length && !LID; ni++){ if(!NICHOS[ni].proprio) LID = NICHOS[ni].id; }
