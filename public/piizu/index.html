@@ -592,6 +592,20 @@ footer{padding:38px 0 26px}
   #projetos .pj-ft .b-lin{flex:none}
   #projetos .pj-al{margin-top:10px;padding:8px 12px}
 }
+/* Apresentação: só textos, enquadrada na tela abaixo do cabeçalho (fotos ficam na dobra 1) */
+.hero{min-height:calc(100svh - var(--nav-h,80px));display:flex;flex-direction:column}
+.hero>.hero-g{flex:1;align-content:center}
+.hero-tx p{font-size:clamp(.95rem,1.25vw,1.08rem);color:var(--tx);line-height:1.75;max-width:52ch}
+.hero-tx p+p{margin-top:14px}
+.hero-tx b{font-weight:600;color:var(--tinta)}
+.hero-tx p:first-child{border-left:2px solid var(--lar);padding-left:16px}
+@media(min-width:861px){.hero-g{grid-template-columns:1.05fr .95fr;gap:56px}.hero h1{font-size:clamp(2.1rem,3.9vw,3.4rem);max-width:15ch}}
+@media(max-width:860px){
+  .hero{min-height:0}
+  .hero-g{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .hero-g>div:first-child{display:contents}
+  .hero-tx{order:3;margin:4px 0 22px}.hero-cta{order:4}.hero-risk{order:5}.hero .selo{order:6}
+}
 /* Soluções: tarja fina na borda de cima da foto; lupa logo abaixo dela */
 #pjFoto .ph .cap{left:0;right:0;top:0;max-width:none;border:0;border-bottom:1px solid var(--lin);border-radius:0;
   font-size:.56rem;line-height:1.25;padding:3px 8px;background:rgba(248,247,244,.84);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -807,8 +821,7 @@ function piizuAds(label, extra){
   <div class="wrap hero-g">
     <div>
       <div class="rise"><span class="pill"><i></i><span>Rio de Janeiro</span><svg class="pill-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span>para todo o Brasil</span></span></div>
-      <h1 class="fr rise d1">Seu Tapete ou Capacho produzido em uma personalização exclusiva, <em>com as dimensões, cores e logo desejados</em>, <span class="h1-sub">na maior fábrica da América Latina.</span></h1>
-      <p class="sub rise d2">Feito para durar anos, com a melhor matéria-prima do mercado (KAPAZI). A gente cuida de tudo com você, da arte à entrega.</p>
+      <h1 class="fr rise d1">Seu Tapete ou Capacho produzido <em>na maior fábrica da América Latina.</em></h1>
       <div class="hero-cta rise d3" translate="no">
         <a href="#orcamento" class="b-lar">Pedir orçamento
           <svg class="arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
@@ -819,11 +832,10 @@ function piizuAds(label, extra){
       <div class="selo rise d4"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ" width="400" height="186"><span>Distribuidor autorizado<br>Indústria Kapazi</span></div>
     </div>
 
-    <div class="hero-f rise d2">
-      <button type="button" class="seta esq" id="hfPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <div class="ph p1" id="hfFoto"><img src="assets/img/tapete-metamorfose-destaque.jpg" alt="Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose" loading="eager"></div>
-      <button type="button" class="seta dir" id="hfNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
-      <div class="hf-pt" id="hfPt" aria-hidden="true"></div>
+    <div class="hero-tx rise d2">
+      <p>A Ind. Kapazi é líder no mercado nacional e atua há mais de 48 anos entregando a melhor matéria-prima para fábricas e produzindo os melhores Tapetes e Capachos para: <b>Condomínios, Supermercados, Farmácias, Escolas e Redes do varejo.</b></p>
+      <p><b>Personalização exclusiva</b>, você escolhe: dimensões, cores, logo da sua marca ou textos desejados.</p>
+      <p>A gente cuida de tudo com você, da arte à produção e entrega.</p>
     </div>
   </div>
 
@@ -1404,31 +1416,6 @@ function piizuAds(label, extra){
 (function(){
 'use strict';
 var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-/* fotos de Tapetes do topo — acrescente ou troque itens nesta lista */
-var HERO_FOTOS = [
-  {src:'assets/img/tapete-metamorfose-destaque.jpg', alt:'Tapete redondo personalizado para creche e escola, com alfabeto colorido e o nome da Escola Infantil Metamorfose'},
-  {src:'assets/img/galeria/loja-drogaria-ultra-popular.webp', alt:'Tapete vermelho com a marca Drogarias Ultra Popular na entrada da farmácia'},
-  {src:'assets/img/galeria/escola-maple-bear-redondo.webp', alt:'Tapete redondo com o logotipo da escola Maple Bear'},
-  {src:'assets/img/galeria/loja-churrascaria-tropeiro.webp', alt:'Capacho com o logotipo da churrascaria Tropeiro'},
-  {src:'assets/img/galeria/cond-bella-ciao-residencial.webp', alt:'Capacho com o logotipo do Bella Ciao Residencial'},
-  {src:'assets/img/galeria/loja-byd-concessionaria.webp', alt:'Tapete redondo com a marca BYD na concessionária'},
-  {src:'assets/img/galeria/loja-gracie-barra.webp', alt:'Tapete azul com a marca Gracie Barra'},
-  {src:'assets/img/galeria/escola-saber-infantil.webp', alt:'Capacho com o logotipo da escola Saber Educação Infantil'},
-  {src:'assets/img/galeria/loja-bhs-passarela.webp', alt:'Passarela vermelha com a marca BHS'},
-  {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete personalizado com as marcas atendidas por uma loja de ferramentas'}
-];
-var hfI = 0, hfImg = document.querySelector('#hfFoto img'), hfPt = document.getElementById('hfPt');
-hfPt.innerHTML = HERO_FOTOS.map(function(){ return '<i></i>'; }).join('');
-function hfMostra(){
-  var F = HERO_FOTOS[hfI];
-  hfImg.src = F.src; hfImg.alt = F.alt;
-  hfPt.querySelectorAll('i').forEach(function(p, k){ p.classList.toggle('on', k === hfI); });
-}
-function hfPasso(d){ hfI = (hfI + d + HERO_FOTOS.length) % HERO_FOTOS.length; hfMostra(); }
-document.getElementById('hfPrev').addEventListener('click', function(){ hfPasso(-1); });
-document.getElementById('hfNext').addEventListener('click', function(){ hfPasso(1); });
-hfMostra();
-HERO_FOTOS.forEach(function(F, k){ if(k) { var pre = new Image(); pre.src = F.src; } });
 /* altura real do cabeçalho: os links do menu param cada dobra logo abaixo dele */
 var navEl = document.querySelector('.nav');
 function medeNav(){ document.documentElement.style.setProperty('--nav-h', navEl.offsetHeight + 'px'); }
