@@ -767,6 +767,8 @@ footer{padding:38px 0 26px}
 /* troca suave quando as setas giram as fotos */
 .gal-tr.gira .gal-it{animation:giraF .3s ease}
 @keyframes giraF{from{opacity:.35;transform:translateX(8px)}to{opacity:1;transform:none}}
+/* instrução da galeria em destaque: negrito, cor cobre e fio lateral */
+#galeria .head p{font-weight:600;color:var(--lar2);border-left:3px solid var(--lar);padding-left:12px}
 /* abas da galeria: duas fileiras */
 #galTabs{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 #galTabs .gal-fila{display:flex;gap:6px}
@@ -776,7 +778,7 @@ footer{padding:38px 0 26px}
   #galeria .head{max-width:none;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);column-gap:40px;align-items:end;margin-bottom:12px}
   #galeria .head .kick{grid-column:1/-1}
   #galeria .head h2{grid-column:1;font-size:clamp(1.6rem,2.2vw,2.1rem);line-height:1.15}
-  #galeria .head p{grid-column:2;margin:0;font-size:.82rem;line-height:1.6}
+  #galeria .head p{grid-column:2;margin:0;font-size:.9rem;line-height:1.55}
   #galTabs{margin-bottom:12px}
   #galTabs .ab{padding:5px 9px;font-size:.7rem;line-height:1.25}
   #galTabs .gal-fila{flex-wrap:wrap}
