@@ -633,7 +633,7 @@ footer{padding:38px 0 26px}
 .busca-b svg{width:19px;height:19px}
 .busca-res{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:40;background:#fff;border:1px solid var(--lin);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:6px;max-height:min(320px,55vh);overflow:auto}
 .busca-res button{display:flex;justify-content:space-between;align-items:baseline;gap:12px;width:100%;text-align:left;border:0;background:none;font:inherit;padding:9px 10px;border-radius:7px;cursor:pointer;color:var(--tinta)}
-.busca-res button:hover,.busca-res button:focus-visible{background:var(--bg2);outline:none}
+.busca-res button:hover,.busca-res button.on,.busca-res button:focus-visible{background:var(--bg2);outline:none}
 .busca-res b{font-weight:500;font-size:.88rem}
 .busca-res small{font-size:.68rem;color:var(--tx2);white-space:nowrap}
 .busca-vz{padding:10px;font-size:.82rem;color:var(--tx)}
@@ -892,11 +892,11 @@ function piizuAds(label, extra){
     <form class="busca rise d1" id="busca" role="search" autocomplete="off">
       <label for="buscaQ" class="busca-l">Encontre o seu produto</label>
       <div class="busca-c">
-        <input type="search" id="buscaQ" placeholder="Ex.: capacho, grama, vinil, elevador…" aria-describedby="buscaDica" aria-controls="buscaRes" enterkeyhint="search">
+        <input type="search" id="buscaQ" placeholder="Ex.: capacho, grama, vinil, elevador…" aria-describedby="buscaDica" aria-controls="buscaRes" aria-autocomplete="list" aria-expanded="false" role="combobox" enterkeyhint="search">
         <button type="submit" class="busca-b" aria-label="Buscar produto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
       </div>
-      <span id="buscaDica" class="sr">Digite o tipo de produto e clique na lupa.</span>
-      <div class="busca-res" id="buscaRes" role="region" aria-live="polite" hidden></div>
+      <span id="buscaDica" class="sr">Digite o tipo de produto: as sugestões aparecem enquanto você digita. A lupa leva direto ao produto.</span>
+      <div class="busca-res" id="buscaRes" role="listbox" aria-label="Sugestões de produtos" hidden></div>
     </form>
       <div class="hero-tx rise d2">
       <p>A Ind. Kapazi é líder no mercado nacional e atua há mais de 48 anos entregando Tapetes com a melhor matéria-prima do mercado para: <b>Condomínios, Supermercados, Farmácias, Escolas e Redes do Comércio e varejo.</b></p>
@@ -2184,26 +2184,52 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     });
   });
   IDX.forEach(function(I){ I.h = norm(I.t + ' ' + I.k); I.n = norm(I.t); });
-  function busca(){
+  var achou = [], sel = -1;
+  function procura(){
     var termo = norm(q.value).trim();
     var pal = termo.split(/\s+/).filter(function(p){ return p.length > 1; }).map(function(p){ return p.replace(/(oes|aes|es|s)$/, ''); });
-    if(!pal.length){ res.hidden = true; q.focus(); return; }
-    var achou = IDX.map(function(I){
+    if(!pal.length) return null;
+    return IDX.map(function(I){
       var ok = pal.every(function(p){ return I.h.indexOf(p) >= 0; });
       return ok ? {I:I, pts: pal.filter(function(p){ return I.n.indexOf(p) >= 0; }).length} : null;
     }).filter(Boolean).sort(function(a, b){ return b.pts - a.pts; }).slice(0, 8);
-    res.innerHTML = achou.length ? achou.map(function(r, i){ return '<button type="button" data-i="' + i + '"><b>' + esc(r.I.t) + '</b><small>' + esc(r.I.s) + '</small></button>'; }).join('')
-      : '<div class="busca-vz">Não encontramos “' + esc(q.value) + '”. <a href="#orcamento">Fale com a gente</a> que encontramos a solução para o seu piso.</div>';
-    res.hidden = false;
-    res.querySelectorAll('button').forEach(function(b){
-      b.addEventListener('click', function(){ res.hidden = true; achou[+b.getAttribute('data-i')].I.go(); });
-    });
-    var a = res.querySelector('a'); if(a) a.addEventListener('click', function(){ res.hidden = true; });
   }
-  form.addEventListener('submit', function(e){ e.preventDefault(); busca(); });
-  q.addEventListener('input', function(){ if(!q.value.trim()) res.hidden = true; });
-  document.addEventListener('click', function(e){ if(!form.contains(e.target)) res.hidden = true; });
-  form.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ res.hidden = true; q.focus(); } });
+  function marca(){
+    res.querySelectorAll('button').forEach(function(b, k){ b.classList.toggle('on', k === sel); b.setAttribute('aria-selected', k === sel ? 'true' : 'false'); });
+  }
+  function fecha(){ res.hidden = true; sel = -1; q.setAttribute('aria-expanded', 'false'); }
+  function abre(r){ fecha(); q.blur(); r.I.go(); }
+  /* sugestões enquanto digita, como nas lojas on-line */
+  function sugere(){
+    var r = procura();
+    if(r === null){ achou = []; fecha(); return; }
+    achou = r; sel = -1;
+    res.innerHTML = achou.length ? achou.map(function(x, i){ return '<button type="button" role="option" data-i="' + i + '"><b>' + esc(x.I.t) + '</b><small>' + esc(x.I.s) + '</small></button>'; }).join('')
+      : '<div class="busca-vz">Não encontramos “' + esc(q.value) + '”. <a href="#orcamento">Fale com a gente</a> que encontramos a solução para o seu piso.</div>';
+    res.hidden = false; q.setAttribute('aria-expanded', 'true');
+    res.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){ abre(achou[+b.getAttribute('data-i')]); });
+    });
+    var a = res.querySelector('a'); if(a) a.addEventListener('click', fecha);
+  }
+  /* lupa ou Enter: vai direto para a dobra/aba do produto */
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var r = procura();
+    if(r === null){ q.focus(); return; }
+    if(r.length){ abre(sel >= 0 && achou[sel] ? achou[sel] : r[0]); return; }
+    sugere();
+  });
+  var tm;
+  q.addEventListener('input', function(){ clearTimeout(tm); tm = setTimeout(sugere, 120); });
+  q.addEventListener('focus', function(){ if(q.value.trim()) sugere(); });
+  q.addEventListener('keydown', function(e){
+    if(res.hidden || !achou.length) return;
+    if(e.key === 'ArrowDown'){ e.preventDefault(); sel = (sel + 1) % achou.length; marca(); }
+    else if(e.key === 'ArrowUp'){ e.preventDefault(); sel = (sel - 1 + achou.length) % achou.length; marca(); }
+  });
+  document.addEventListener('click', function(e){ if(!form.contains(e.target)) fecha(); });
+  form.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ fecha(); q.focus(); } });
 })();
 
 })();
