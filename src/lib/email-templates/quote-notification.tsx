@@ -51,7 +51,7 @@ export const template = {
   previewData: {
     id: 'exemplo', name: 'Cliente de exemplo', phone: '(21) 90000-0000', city: 'Rio de Janeiro',
     place: 'Empresa ou comércio', timeframe: 'Nas próximas semanas',
-    product: 'Tapete ou capacho personalizado', solution: 'Empresa e comércio', material: 'Personalizado', details: 'Tapete com logotipo na entrada.',
+    product: 'Tapete ou Capacho personalizado', solution: 'Empresa e comércio', material: 'Personalizado', details: 'Tapete com logotipo na entrada.',
   },
 } satisfies TemplateEntry;
 

@@ -5,7 +5,7 @@ export const QUOTE_RECIPIENT = 'comercial.piizu@gmail.com';
 // Product lines offered on the landing page. To add a niche, add its ids here and in
 // the NICHOS list of public/piizu/index.html (a test checks both lists match).
 export const PRODUCTS = {
-  'tapete': 'Tapete ou capacho personalizado',
+  'tapete': 'Tapete ou Capacho personalizado',
   'grama-12': 'Grama Decorativa 12 mm',
   'grama-20': 'Grama Decorativa 20 mm',
   'grama-30': 'Grama Recreativa 30 mm',

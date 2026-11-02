@@ -17,7 +17,7 @@ describe('Quote email notification', () => {
     expect(template.to).toBe('comercial.piizu@gmail.com');
     expect(await notifyQuote(quote)).toEqual({ emailSent: true });
     expect(sendTemplateEmail).toHaveBeenCalledWith('quote-notification', 'comercial.piizu@gmail.com', {
-      templateData: { ...quote, product: 'Tapete ou capacho personalizado', solution: 'Casa e condomínio', material: 'Personalizado' },
+      templateData: { ...quote, product: 'Tapete ou Capacho personalizado', solution: 'Casa e condomínio', material: 'Personalizado' },
       idempotencyKey: `quote-notification-${quote.id}`, replyTo: 'comercial.piizu@gmail.com',
     });
   });
