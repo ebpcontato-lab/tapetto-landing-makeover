@@ -1813,7 +1813,7 @@ document.getElementById('pjNext').addEventListener('click', function(){ pjPasso(
    O nicho "tapete" tem seções próprias acima e aparece só na galeria e no formulário.
    ========================================================= */
 var NICHOS = [
-  {id:'tapete', nome:'Tapetes ou Capachos', proprio:true,
+  {id:'tapete', nome:'Tapetes, Capachos e Passadeiras', proprio:true,
    itens:[{id:'tapete', rotulo:'Tapete ou Capacho personalizado'}]},
   {id:'grama', nome:'Gramas sintéticas', titulo:'Gramas sintéticas Kapazi', sub:'Sempre verde, sem rega e sem poda',
    p:'Gramas sintéticas produzidas pela indústria Kapazi, reconhecidas pela excelente qualidade. São três linhas, cada uma com a altura certa para o uso.',
@@ -2224,7 +2224,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   };
   var IDX = [];
   AMB.forEach(function(A){
-    IDX.push({t:'Tapetes ou Capachos para ' + A.nome, s:'Soluções', k:A.nome + ' ' + A.local + ' tapete capacho logo personalizado', go:function(){ AID = A.id; PFI = 0; pjRender(); vai('projetos'); }});
+    IDX.push({t:'Tapetes ou Capachos para ' + A.nome, s:'Soluções', k:A.nome + ' ' + A.local + ' tapete capacho passadeira passarela logo personalizado', go:function(){ AID = A.id; PFI = 0; pjRender(); vai('projetos'); }});
   });
   COMPARA.forEach(function(X){
     X.modelos.forEach(function(M, k){
