@@ -2234,7 +2234,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     if(!isJson) throw new Error('registro-indisponivel');
     var result = await response.json();
     if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
-    status.textContent = 'Solicitação entregue. Bem-vindo à pii-zu Soluções para Pisos! Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Você também pode continuar pelo WhatsApp.';
+    status.textContent = 'Solicitação entregue. Seja bem-vindo à pii-zu Soluções para Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos.';
     status.classList.add('ok');
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
     continuation.style.display = 'inline-flex';
