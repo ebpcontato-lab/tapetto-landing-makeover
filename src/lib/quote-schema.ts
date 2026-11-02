@@ -17,6 +17,7 @@ export const PRODUCTS = {
   'piso-vinilico-placa-colada': 'Piso vinílico em placa colada 1 m × 1 m',
   'piso-vinilico-clicado': 'Piso vinílico em régua clicada',
   'fita-antiderrapante': 'Fita antiderrapante',
+  'fita-demarcacao': 'Fita de demarcação',
   'capa-elevador': 'Capa de proteção para elevador de serviço',
 } as const;
 export type ProductId = keyof typeof PRODUCTS;
