@@ -767,6 +767,28 @@ footer{padding:38px 0 26px}
 /* troca suave quando as setas giram as fotos */
 .gal-tr.gira .gal-it{animation:giraF .3s ease}
 @keyframes giraF{from{opacity:.35;transform:translateX(8px)}to{opacity:1;transform:none}}
+/* abas da galeria: duas fileiras */
+#galTabs{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+#galTabs .gal-fila{display:flex;gap:6px}
+/* Galeria no computador: título compacto, abas em duas fileiras e fotos na altura que sobra da tela */
+@media(min-width:1061px){
+  #galeria{padding-top:14px}
+  #galeria .head{max-width:none;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);column-gap:40px;align-items:end;margin-bottom:12px}
+  #galeria .head .kick{grid-column:1/-1}
+  #galeria .head h2{grid-column:1;font-size:clamp(1.6rem,2.2vw,2.1rem);line-height:1.15}
+  #galeria .head p{grid-column:2;margin:0;font-size:.82rem;line-height:1.6}
+  #galTabs{margin-bottom:12px}
+  #galTabs .ab{padding:5px 9px;font-size:.7rem;line-height:1.25}
+  #galTabs .gal-fila{flex-wrap:wrap}
+  #galeria .gal-tr{grid-auto-columns:min(calc((100% - 48px)/4),calc((var(--dobra) - 250px)*.8))}
+}
+/* Galeria no celular e tablet: abas em duas fileiras, deslizando para o lado */
+@media(max-width:1060px){
+  #galTabs{overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  #galTabs::-webkit-scrollbar{display:none}
+  #galTabs .gal-fila{width:max-content;flex-wrap:nowrap}
+  #galTabs .ab{white-space:nowrap;padding:6px 10px;font-size:.74rem;flex:none}
+}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1032,7 +1054,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">04 / Galeria</div>
-      <h2 class="fr">Nosso portfólio instalado, <em>separado por setores ou gêneros:</em></h2>
+      <h2 class="fr">Degustação do nosso portfólio por nossos clientes amigos, <em>separado por setores ou gêneros:</em></h2>
       <p>Escolha o setor e use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
     </div>
     <div class="gal-tabs rv" id="galTabs" role="group" aria-label="Filtrar galeria por setor"></div>
@@ -2052,10 +2074,14 @@ document.addEventListener('click', function(e){
 });
 
 /* galeria: uma aba para cada nicho que tem fotos */
-document.getElementById('galTabs').innerHTML = '<button type="button" class="ab on" data-setor="todos" aria-pressed="true">Todos</button>' +
-  NICHOS.filter(function(N){ return document.querySelector('.gal-it[data-setor="' + N.id + '"]'); }).map(function(N){
-    return '<button type="button" class="ab" data-setor="' + N.id + '" aria-pressed="false">' + esc(N.nome) + '</button>';
-  }).join('');
+/* as abas ficam em duas fileiras, divididas pelo tamanho dos nomes */
+(function(){
+  var abas = [{id:'todos', nome:'Todos'}].concat(NICHOS.filter(function(N){ return document.querySelector('.gal-it[data-setor="' + N.id + '"]'); }));
+  var total = abas.reduce(function(t, N){ return t + N.nome.length + 6; }, 0), soma = 0, corte = abas.length;
+  for(var i = 0; i < abas.length; i++){ soma += abas[i].nome.length + 6; if(soma >= total / 2){ corte = i + 1; break; } }
+  function bt(N){ var on = N.id === 'todos'; return '<button type="button" class="ab' + (on ? ' on' : '') + '" data-setor="' + N.id + '" aria-pressed="' + on + '">' + esc(N.nome) + '</button>'; }
+  document.getElementById('galTabs').innerHTML = '<div class="gal-fila">' + abas.slice(0, corte).map(bt).join('') + '</div><div class="gal-fila">' + abas.slice(corte).map(bt).join('') + '</div>';
+})();
 document.getElementById('lnFotos').addEventListener('click', function(){
   var b = document.querySelector('#galTabs button[data-setor="' + LID + '"]'); if(b) b.click();
 });
