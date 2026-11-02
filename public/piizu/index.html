@@ -726,6 +726,11 @@ footer{padding:38px 0 26px}
   #cmpTr{grid-auto-columns:min(calc((100% - 16px)/2),calc((var(--dobra) - 400px)*.8))}
 }
 @media(max-width:1060px){.cmp-mod .cmp-c .tag{display:inline-block;margin-right:8px;vertical-align:middle}.cmp-mod .cmp-c b{display:inline;margin:0;vertical-align:middle}.cmp-mod .cmp-c ul{margin-top:6px}.cmp-mod{gap:6px}}
+.cmp-mod button.cmp-c{font:inherit;text-align:left;cursor:pointer;width:100%;color:inherit;transition:border-color .15s,box-shadow .15s,background .15s}
+.cmp-mod button.cmp-c:hover{border-color:var(--lar)}
+.cmp-c.sel{background:#fff;box-shadow:0 0 0 2px var(--lar) inset}
+.cmp-ver{display:block;margin-top:4px;font-size:.66rem;letter-spacing:.06em;color:var(--lar2);font-weight:600}
+.cmp-c.sel .cmp-ver{visibility:hidden}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1863,35 +1868,36 @@ document.getElementById('lnNext').addEventListener('click', function(){ faixaPas
    ========================================================= */
 var COMPARA = [
   {id:'solidos', nome:'Contenção de sólidos — vinil',
-   p:'Capachos de vinil que seguram terra, areia e poeira na entrada. Compare as duas linhas:',
    modelos:[
-    {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada']},
-    {nome:'Vinil Alto Tráfego', tag:'Alto tráfego', itens:['Para entradas de grande circulação']}
-   ],
-   fotos:[
-    {src:'assets/img/galeria/vinil-supermercado-acougue.webp', alt:'Capacho de vinil vermelho diante da vitrine refrigerada do supermercado'},
-    {src:'assets/img/galeria/vinil-passarela-supermercado.webp', alt:'Passarela de vinil vermelho no corredor do supermercado'},
-    {src:'assets/img/galeria/vinil-spazio.webp', alt:'Capacho de vinil rosa com a marca Spazio'},
-    {src:'assets/img/galeria/vinil-lavier.webp', alt:'Capacho de vinil rosa com a marca Lavier na porta'},
-    {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho de vinil personalizado Unique Residence no elevador'}
+    {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada'], fotos:[
+     {src:'assets/img/galeria/vinil-lavier.webp', alt:'Capacho de vinil rosa com a marca Lavier na porta'},
+     {src:'assets/img/galeria/vinil-spazio.webp', alt:'Capacho de vinil rosa com a marca Spazio'},
+     {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho de vinil personalizado Unique Residence no elevador'}
+    ]},
+    {nome:'Vinil Alto Tráfego', tag:'Alto tráfego', itens:['Para entradas de grande circulação'], fotos:[
+     {src:'assets/img/galeria/vinil-supermercado-acougue.webp', alt:'Capacho de vinil vermelho diante da vitrine refrigerada do supermercado'},
+     {src:'assets/img/galeria/vinil-passarela-supermercado.webp', alt:'Passarela de vinil vermelho no corredor do supermercado'}
+    ]}
    ]},
   {id:'dupla', nome:'Dupla Função — sólidos e líquidos',
-   p:'Tapetes que seguram a sujeira e também a água da chuva que entra pelo sapato das pessoas. Compare os três modelos:',
    modelos:[
-    {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores']},
-    {nome:'Waterkap', tag:'Cores variadas', itens:['Mais de 12 cores','Não aplica logo']},
-    {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única']}
-   ],
-   fotos:[
-    {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete Cleankap personalizado com as marcas de uma loja de ferramentas'},
-    {src:'assets/img/galeria/tapete-hipermais-bem-vindo.webp', alt:'Tapete Cleankap Bem-Vindo com a marca Hipermais'},
-    {src:'assets/img/galeria/cleankap-logo-detalhe.webp', alt:'Detalhe do logotipo em Tapete Cleankap'},
-    {src:'assets/img/galeria/waterkap-entrada.webp', alt:'Tapete Waterkap de alta absorção na entrada de um prédio'},
-    {src:'assets/img/galeria/duo-entrada-predio.webp', alt:'Tapete Duo cinza na entrada de vidro de um prédio'},,
-    {src:'assets/img/galeria/duo-entrada-loja.webp', alt:'Tapete Duo na porta de uma loja'}
+    {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores'], fotos:[
+     {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete Cleankap personalizado com as marcas de uma loja de ferramentas'},
+     {src:'assets/img/galeria/tapete-hipermais-bem-vindo.webp', alt:'Tapete Cleankap Bem-Vindo com a marca Hipermais'},
+     {src:'assets/img/galeria/cleankap-logo-detalhe.webp', alt:'Detalhe do logotipo em Tapete Cleankap'}
+    ]},
+    {nome:'Waterkap', tag:'Cores variadas', itens:['Mais de 12 cores','Não aplica logo'], fotos:[
+     {src:'assets/img/galeria/waterkap-entrada.webp', alt:'Tapete Waterkap de alta absorção na entrada de um prédio'},
+     {src:'assets/img/galeria/waterkap-porta-arte.webp', alt:'Tapete Waterkap diante de uma porta de entrada, com detalhe da trama'}
+    ]},
+    {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única'], fotos:[
+     {src:'assets/img/galeria/duo-entrada-predio.webp', alt:'Tapete Duo cinza na entrada de vidro de um prédio'},
+     {src:'assets/img/galeria/duo-entrada-loja.webp', alt:'Tapete Duo na porta de uma loja'}
+    ]}
    ]}
 ];
-var CID = COMPARA[0].id, cmpTr = document.getElementById('cmpTr');
+/* CID = tipo de contenção escolhido; MID = modelo escolhido (-1 = todos do tipo) */
+var CID = COMPARA[0].id, MID = 0, cmpTr = document.getElementById('cmpTr');
 function cmpSetas(){ document.getElementById('cmpGal').classList.toggle('sem-setas', cmpTr.scrollWidth <= cmpTr.clientWidth + 4); }
 function cmpRender(){
   var C = null;
@@ -1900,23 +1906,34 @@ function cmpRender(){
   top.innerHTML = '';
   COMPARA.forEach(function(X){
     var b = document.createElement('button');
-    b.type = 'button'; b.className = 'ab' + (X.id === CID ? ' on' : '');
-    b.setAttribute('aria-pressed', X.id === CID ? 'true' : 'false');
+    b.type = 'button'; b.className = 'ab' + (X.id === CID && MID < 0 ? ' on' : '');
+    b.setAttribute('aria-pressed', X.id === CID && MID < 0 ? 'true' : 'false');
     b.textContent = X.nome;
-    b.addEventListener('click', function(){ CID = X.id; cmpRender(); });
+    b.addEventListener('click', function(){ CID = X.id; MID = -1; cmpRender(); });
     top.appendChild(b);
   });
-  /* todos os modelos aparecem juntos: vinil primeiro e, abaixo, Dupla Função; a aba escolhe as fotos */
-  document.getElementById('cmpMod').innerHTML = COMPARA.map(function(X){
-    return '<div class="cmp-gr' + (X.id === CID ? ' on' : '') + '">' + esc(X.nome) + '</div>' + X.modelos.map(function(M){
-      return '<div class="cmp-c g-' + esc(X.id) + (X.id === CID ? ' on' : '') + '"><span class="tag">' + esc(M.tag) + '</span><b class="fr">' + esc(M.nome) + '</b><ul>' +
-        M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul></div>';
+  /* todos os modelos aparecem juntos; clicar num modelo mostra só as fotos dele */
+  var mod = document.getElementById('cmpMod');
+  mod.innerHTML = COMPARA.map(function(X){
+    return '<div class="cmp-gr' + (X.id === CID ? ' on' : '') + '">' + esc(X.nome) + '</div>' + X.modelos.map(function(M, k){
+      var on = X.id === CID && (MID < 0 || MID === k);
+      var sel = X.id === CID && MID === k;
+      return '<button type="button" class="cmp-c g-' + esc(X.id) + (on ? ' on' : '') + (sel ? ' sel' : '') + '" data-g="' + esc(X.id) + '" data-k="' + k + '" aria-pressed="' + sel + '"><span class="tag">' + esc(M.tag) + '</span><b class="fr">' + esc(M.nome) + '</b><ul>' +
+        M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul><span class="cmp-ver">Ver fotos →</span></button>';
     }).join('');
   }).join('');
-  cmpTr.innerHTML = C.fotos.length ? C.fotos.map(function(F){
+  mod.querySelectorAll('.cmp-c').forEach(function(b){
+    b.addEventListener('click', function(){
+      CID = b.getAttribute('data-g'); MID = +b.getAttribute('data-k'); cmpRender();
+      if(window.innerWidth <= 1060) document.getElementById('cmpGal').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'center'});
+    });
+  });
+  var fotos = MID >= 0 ? C.modelos[MID].fotos : [].concat.apply([], C.modelos.map(function(M){ return M.fotos; }));
+  cmpTr.setAttribute('aria-label', 'Fotos: ' + (MID >= 0 ? C.modelos[MID].nome : C.nome));
+  cmpTr.innerHTML = fotos.length ? fotos.map(function(F){
     return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
   }).join('') : '<div class="ln-vazio">Fotos em breve.</div>';
-  cmpTr.classList.toggle('vazio', !C.fotos.length);
+  cmpTr.classList.toggle('vazio', !fotos.length);
   cmpTr.scrollLeft = 0;
   cmpSetas();
 }
