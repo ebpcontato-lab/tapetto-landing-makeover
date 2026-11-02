@@ -433,16 +433,21 @@ footer{border-top:1px solid var(--lin);padding:52px 0 34px}
 }
 /* logotipo pii-zü (horizontal, sem slogan) */
 .logo{display:flex;align-items:center}
-.logo img{height:60px;width:auto;display:block}
+.logo img{height:78px;width:auto;display:block}
 footer .logo img{height:54px}
 .nav .logo{flex:none}
 @media(max-width:560px){
-  .nav .logo img{height:44px}
+  .nav .logo img{height:57px}
   .nav-in{gap:10px;padding-left:16px;padding-right:16px}
   .nav-tog{padding:8px 10px}
   .nav-in .b-lar.sm{padding:9px 13px;font-size:.74rem}
 }
-@media(max-width:380px){.nav .logo img{height:38px}}
+@media(max-width:380px){.nav .logo img{height:49px}}
+@media(max-width:560px){.nav-in{gap:8px;padding-left:12px;padding-right:12px}.nav-tog{padding:7px 8px;font-size:.68rem}.nav-in .b-lar.sm{padding:8px 10px;font-size:.7rem}}
+@media(min-width:861px){.nav-in{padding-top:4px;padding-bottom:4px}}
+.nav-in .b-lar.sm{gap:0}
+@media(max-width:400px){.nav-in .b-lar.sm .lg-txt{display:none}.nav-in .b-lar.sm{text-transform:capitalize}}
+
 /* selo do parceiro de fabricação */
 .selo{display:flex;align-items:center;gap:14px;margin-top:22px}
 .selo img{height:40px;width:auto;opacity:.85}
@@ -567,7 +572,7 @@ footer{padding:38px 0 26px}
   .nav-dg{display:none}
   .nav-in{gap:14px}
   .nav-l{gap:12px;font-size:.76rem}
-  .nav .logo img{height:48px}
+  .nav .logo img{height:62px}
 }
 /* Soluções no computador: texto ao lado do título e foto na altura que sobra da tela,
    para a dobra inteira caber abaixo do cabeçalho ao clicar no menu */
@@ -768,7 +773,8 @@ footer{padding:38px 0 26px}
   #materiais .head h2{grid-column:1}
   #materiais .head p{grid-column:2;margin:0}
   #materiais .head p b{color:var(--tinta);font-weight:700}
-  #materiais{padding-top:14px}
+  #materiais{padding-top:8px}
+  #materiais .of-note{margin-top:4px}
   #materiais .head{margin-bottom:10px}
 }
 @media(max-width:1060px){.cmp-mod .cmp-c .tag{display:inline-block;margin-right:8px;vertical-align:middle}.cmp-mod .cmp-c b{display:inline;margin:0;vertical-align:middle}.cmp-mod .cmp-c ul{margin-top:6px}.cmp-mod{gap:6px}}
@@ -936,7 +942,7 @@ function piizuAds(label, extra){
       <a href="#objecoes">Dúvidas</a>
     </nav>
     <button class="nav-tog notranslate" translate="no" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
-    <a href="#orcamento" class="b-lar sm" style="flex:none" translate="no">Pedir orçamento</a>
+    <a href="#orcamento" class="b-lar sm" style="flex:none" translate="no"><span class="lg-txt">Pedir&nbsp;</span>orçamento</a>
   </div>
 </header>
 
