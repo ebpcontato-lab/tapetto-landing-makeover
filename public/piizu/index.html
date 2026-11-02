@@ -711,6 +711,21 @@ footer{padding:38px 0 26px}
   #cmpTr{grid-auto-columns:min(calc((100% - 16px)/2),calc((var(--dobra) - 350px)*.8))}
   #materiais .of-note{margin-top:8px}
 }
+/* dobra 2: lista única com os cinco modelos, separados por tipo de contenção */
+.cmp-gr{grid-column:1/-1;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);margin:4px 0 -2px}
+.cmp-gr.on{color:var(--lar2);font-weight:600}
+.cmp-c.on{border-color:var(--lar)}
+@media(min-width:1061px){
+  .cmp-mod{grid-row:2/span 2;grid-template-columns:repeat(6,minmax(0,1fr));align-content:start}
+  .cmp-mod .cmp-c{grid-column:span 3;display:block;padding:6px 10px}
+  .cmp-mod .cmp-c.g-dupla{grid-column:span 2}
+  .cmp-mod .cmp-c .tag{display:inline-block;margin-bottom:2px}
+  .cmp-mod .cmp-c b{display:block;margin:0 0 2px;font-size:1rem}
+  .cmp-mod .cmp-c li{font-size:.72rem;line-height:1.35}
+  #cmpGal{grid-row:2/span 2;align-self:center}
+  #cmpTr{grid-auto-columns:min(calc((100% - 16px)/2),calc((var(--dobra) - 400px)*.8))}
+}
+@media(max-width:1060px){.cmp-mod .cmp-c .tag{display:inline-block;margin-right:8px;vertical-align:middle}.cmp-mod .cmp-c b{display:inline;margin:0;vertical-align:middle}.cmp-mod .cmp-c ul{margin-top:6px}.cmp-mod{gap:6px}}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -917,7 +932,6 @@ function piizuAds(label, extra){
     <div class="cmp-box rv">
       <div class="cmp-t">Compare os modelos</div>
       <div class="gal-tabs" id="cmpTop" role="group" aria-label="Tipos de contenção"></div>
-      <p class="cmp-p" id="cmpP">—</p>
       <div class="cmp-mod" id="cmpMod"></div>
       <div class="gal" id="cmpGal">
         <button type="button" class="seta esq" id="cmpPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -1892,10 +1906,12 @@ function cmpRender(){
     b.addEventListener('click', function(){ CID = X.id; cmpRender(); });
     top.appendChild(b);
   });
-  document.getElementById('cmpP').textContent = C.p;
-  document.getElementById('cmpMod').innerHTML = C.modelos.map(function(M){
-    return '<div class="cmp-c"><span class="tag">' + esc(M.tag) + '</span><b class="fr">' + esc(M.nome) + '</b><ul>' +
-      M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul></div>';
+  /* todos os modelos aparecem juntos: vinil primeiro e, abaixo, Dupla Função; a aba escolhe as fotos */
+  document.getElementById('cmpMod').innerHTML = COMPARA.map(function(X){
+    return '<div class="cmp-gr' + (X.id === CID ? ' on' : '') + '">' + esc(X.nome) + '</div>' + X.modelos.map(function(M){
+      return '<div class="cmp-c g-' + esc(X.id) + (X.id === CID ? ' on' : '') + '"><span class="tag">' + esc(M.tag) + '</span><b class="fr">' + esc(M.nome) + '</b><ul>' +
+        M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul></div>';
+    }).join('');
   }).join('');
   cmpTr.innerHTML = C.fotos.length ? C.fotos.map(function(F){
     return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
