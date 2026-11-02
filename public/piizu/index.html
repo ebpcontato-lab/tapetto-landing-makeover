@@ -761,6 +761,9 @@ footer{padding:38px 0 26px}
 .ln-c.sel{background:#fff;box-shadow:0 0 0 2px var(--lar) inset}
 .ln-ver{font:inherit;font-size:.68rem;font-weight:600;letter-spacing:.04em;color:var(--lar2);background:none;border:0;padding:0;cursor:pointer;margin-right:10px;white-space:nowrap}
 .ln-c.sel .ln-ver{color:var(--tx2)}
+/* troca suave quando as setas giram as fotos */
+.gal-tr.gira .gal-it{animation:giraF .3s ease}
+@keyframes giraF{from{opacity:.35;transform:translateX(8px)}to{opacity:1;transform:none}}
 /* faixa de números: 48 anos, Nº 1 e Sob medida lado a lado também no celular */
 @media(max-width:1060px){
   .faixa-in{grid-template-columns:repeat(3,1fr)}
@@ -1894,7 +1897,7 @@ function lnFotos(id, modelo){
       : {src:m.getAttribute('src'), alt:m.alt};
   });
 }
-function lnSetas(){ document.getElementById('lnGal').classList.toggle('sem-setas', lnTr.scrollWidth <= lnTr.clientWidth + 4); }
+function lnSetas(){ document.getElementById('lnGal').classList.toggle('sem-setas', faixaQtd(lnTr) < 2); }
 function lnRender(){
   var N = nicho(LID), top = document.getElementById('lnTop');
   top.innerHTML = '';
@@ -1940,7 +1943,17 @@ for(var ni=0; ni<NICHOS.length && !LID; ni++){ if(!NICHOS[ni].proprio) LID = NIC
 lnRender();
 window.addEventListener('resize', lnSetas);
 /* setas de uma faixa de fotos: passam um cartão; no fim volta ao começo */
+/* quando todas as fotos já cabem na tela, as setas trocam a ordem das fotos (gira a fila) */
+function faixaCabe(tr){ return tr.scrollWidth <= tr.clientWidth + 4; }
+function faixaQtd(tr){ return tr.querySelectorAll('.gal-it:not([hidden])').length; }
+function faixaGira(tr, d){
+  var its = tr.querySelectorAll('.gal-it:not([hidden])');
+  if(its.length < 2) return;
+  if(d > 0) tr.appendChild(its[0]); else tr.insertBefore(its[its.length - 1], tr.firstChild);
+  if(!RM){ tr.classList.remove('gira'); void tr.offsetWidth; tr.classList.add('gira'); }
+}
 function faixaPasso(tr, d){
+  if(faixaCabe(tr)){ faixaGira(tr, d); return; }
   var it = tr.querySelector('.gal-it:not([hidden])');
   var w = it ? it.getBoundingClientRect().width + parseFloat(getComputedStyle(tr).columnGap || 16) : tr.clientWidth;
   var fim = tr.scrollWidth - tr.clientWidth - 4;
@@ -1987,7 +2000,7 @@ var COMPARA = [
 ];
 /* CID = tipo de contenção escolhido; MID = modelo escolhido (-1 = todos do tipo) */
 var CID = COMPARA[0].id, MID = 0, cmpTr = document.getElementById('cmpTr');
-function cmpSetas(){ document.getElementById('cmpGal').classList.toggle('sem-setas', cmpTr.scrollWidth <= cmpTr.clientWidth + 4); }
+function cmpSetas(){ document.getElementById('cmpGal').classList.toggle('sem-setas', faixaQtd(cmpTr) < 2); }
 function cmpRender(){
   var C = null;
   for(var i=0;i<COMPARA.length;i++){ if(COMPARA[i].id===CID) C = COMPARA[i]; }
@@ -2047,6 +2060,7 @@ document.getElementById('lnFotos').addEventListener('click', function(){
 /* galeria: setas passam as fotos; no fim volta ao começo *//* galeria: setas passam as fotos; no fim volta ao começo */
 var galTr = document.getElementById('galTr');
 function galPasso(d){
+  if(faixaCabe(galTr)){ faixaGira(galTr, d); return; }
   var it = galTr.querySelector('.gal-it');
   var w = it ? it.getBoundingClientRect().width + parseFloat(getComputedStyle(galTr).columnGap || 16) : galTr.clientWidth;
   var fim = galTr.scrollWidth - galTr.clientWidth - 4;
@@ -2054,7 +2068,7 @@ function galPasso(d){
   else if(d < 0 && galTr.scrollLeft <= 4) galTr.scrollTo({left:galTr.scrollWidth});
   else galTr.scrollBy({left:d * w});
 }
-function galSetas(){ galTr.parentNode.classList.toggle('sem-setas', galTr.scrollWidth <= galTr.clientWidth + 4); }
+function galSetas(){ galTr.parentNode.classList.toggle('sem-setas', faixaQtd(galTr) < 2); }
 document.getElementById('galTabs').addEventListener('click', function(e){
   var b = e.target.closest('button[data-setor]');
   if(!b) return;
