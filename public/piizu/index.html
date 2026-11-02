@@ -758,6 +758,13 @@ footer{padding:38px 0 26px}
   .cmp-mod .cmp-c li{font-size:.72rem;line-height:1.35}
   #cmpGal{grid-row:2/span 2;align-self:center}
   #cmpTr{grid-auto-columns:min(calc((100% - 16px)/2),calc((var(--dobra) - 400px)*.8))}
+  .cmp-mod .cmp-ver{margin-top:2px}
+  #materiais .head{max-width:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);column-gap:40px;align-items:end}
+  #materiais .head .kick{grid-column:1/-1}
+  #materiais .head h2{grid-column:1}
+  #materiais .head p{grid-column:2;margin:0}
+  #materiais{padding-top:14px}
+  #materiais .head{margin-bottom:10px}
 }
 @media(max-width:1060px){.cmp-mod .cmp-c .tag{display:inline-block;margin-right:8px;vertical-align:middle}.cmp-mod .cmp-c b{display:inline;margin:0;vertical-align:middle}.cmp-mod .cmp-c ul{margin-top:6px}.cmp-mod{gap:6px}}
 .cmp-mod button.cmp-c{font:inherit;text-align:left;cursor:pointer;width:100%;color:inherit;transition:border-color .15s,box-shadow .15s,background .15s}
@@ -1021,7 +1028,7 @@ function piizuAds(label, extra){
     <div class="head rv">
       <div class="kick">02 / Tipos de Tapete</div>
       <h2 class="fr">Tapetes ou Capachos personalizados <em>para diferentes funções:</em></h2>
-      <p>Contenção de sólidos ou Dupla Função, que segura sólidos e líquidos (“água da chuva que entra pelo sapato das pessoas”).</p>
+      <p>Contenção de sólidos ou Dupla Função, com retenção de sólidos e líquidos (“água da chuva que entra pelo sapato das pessoas”).</p>
     </div>
 
     <!-- Compare os modelos — gerado pela lista COMPARA do script -->
@@ -2018,7 +2025,7 @@ var COMPARA = [
      {src:'assets/img/galeria/vinil-passarela-supermercado.webp', alt:'Passarela de vinil vermelho no corredor do supermercado'}
     ]}
    ]},
-  {id:'dupla', nome:'Dupla Função — sólidos e líquidos',
+  {id:'dupla', nome:'Dupla Função — retenção de sólidos e líquidos',
    modelos:[
     {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores'], fotos:[
      {src:'assets/img/galeria/tapete-loja-ferramentas.webp', alt:'Tapete Cleankap personalizado com as marcas de uma loja de ferramentas'},
@@ -2272,7 +2279,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   function norm(t){ return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
   function vai(id){ var el = document.getElementById(id); if(el) el.scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'start'}); }
   var EXTRA = {
-    solidos:'capacho vinil sujeira terra areia', dupla:'agua chuva absorcao molhado',
+    solidos:'capacho vinil sujeira terra areia', dupla:'agua chuva absorcao molhado retencao',
     grama:'grama gramado jardim verde pet', 'piso-piscina':'piscina sauna banheiro umido molhado antiderrapante wkap w-kap',
     'piso-quadra':'quadra esporte futebol playground parquinho kids crianca modular playkap',
     'piso-rubberkap':'quadra esporte playground parquinho kids crianca borracha emborrachado rubber rubberkap',
