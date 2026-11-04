@@ -964,7 +964,7 @@ footer{padding:38px 0 26px}
 @media(min-width:861px){
   .hero{padding-top:12px;padding-bottom:18px}
   .hero-g{align-items:stretch;align-content:stretch;height:100%}
-  .hero-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .hero-g{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
   .hero-g>div:first-child{align-self:start;padding-top:8px}
   .qd-box{position:static;height:100%}
   .qd-tit{margin-bottom:8px}
@@ -972,10 +972,16 @@ footer{padding:38px 0 26px}
   .qd-linha .seta{position:static;transform:none;flex:none}
   .qd-box{height:calc(var(--dobra) - 30px);container-type:size;justify-content:center}
   .qd-linha{flex:none}
-  .quadro{width:min(calc(100cqw - 112px),calc((100cqh - 148px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
-  .qd-box .hero-num{flex:none;margin:10px 0 0;grid-template-columns:repeat(4,minmax(0,1fr))}
-  .qd-box .hero-num>div:nth-child(3){border-left:1px solid var(--lin)}
-  .qd-box .hero-num>div:nth-child(n+3){border-top:0}
+  .qd-linha{gap:8px}
+  .quadro{width:min(calc(100cqw - 104px),calc((100cqh - 34px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
+  /* abas grandes ocupando o espaço à esquerda, abaixo do título */
+  .hero-g>div:first-child{align-self:stretch;display:flex;flex-direction:column;height:calc(var(--dobra) - 30px);padding-top:8px}
+  .hero-num{flex:1;min-height:0;margin:22px 0 0;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;border-radius:12px}
+  .hero-num>div{display:flex;flex-direction:column;justify-content:center;padding:18px 26px}
+  .hero-num>div:nth-child(3){border-left:0}
+  .hero-num>div:nth-child(n+3){border-top:1px solid var(--lin)}
+  .hero-num b{font-size:clamp(1.5rem,2.3vw,2.4rem);line-height:1.05}
+  .hero-num span{font-size:clamp(.82rem,1vw,1rem);margin-top:10px;line-height:1.45;max-width:30ch}
 }
 @media(max-width:860px){
   .hero{padding-top:12px;padding-bottom:12px}
@@ -983,7 +989,7 @@ footer{padding:38px 0 26px}
   .qd-box{order:5;flex:1;margin:10px 0 10px}
   .qd-tit{font-size:.95rem;margin-bottom:6px}
   .quadro{width:auto;aspect-ratio:4/5;max-width:100%}
-  .qd-box .hero-num{flex:none;margin:10px 0 0}
+  .hero-num{order:3;flex:none;margin:12px 0 0}
   .qd-box{margin-bottom:0}
 }
 </style>
@@ -1040,6 +1046,12 @@ function piizuAds(label, extra){
     <div>
       <div class="rise"><span class="pill"><i></i><span>Rio de Janeiro</span><svg class="pill-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span>para todo o Brasil</span></span></div>
       <h1 class="fr rise d1">Seu Tapete ou Capacho personalizado produzido <em>na maior fábrica da América Latina.</em></h1>
+      <div class="hero-num rise d2">
+        <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
+        <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
+        <div><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
+        <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
+      </div>
     </div>
 
     <div class="qd-box rise d2">
@@ -1052,12 +1064,6 @@ function piizuAds(label, extra){
         </div>
         <button type="button" class="seta dir" id="qdProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
-        <div class="hero-num rise d2">
-          <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
-          <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
-          <div><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
-          <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
-        </div>
     </div>
     </div>
 
