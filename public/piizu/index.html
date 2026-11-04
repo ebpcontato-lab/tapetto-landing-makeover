@@ -877,6 +877,9 @@ footer{padding:38px 0 26px}
 #projetos .pj-ft a{margin-left:auto}
 @media(min-width:1061px){#projetos .pj-foto{--fh:clamp(300px,calc(var(--dobra) - 284px),640px);width:calc(var(--fh) * .8 + 112px);justify-self:center}
   #projetos .pj-g{grid-template-columns:minmax(0,1fr) minmax(0,470px)}
+  #projetos .pj-foto{width:auto;justify-self:stretch;padding:0 62px}
+  #pjFoto .ph:before{background:var(--pjbg) center/cover no-repeat;filter:blur(22px) brightness(.85);opacity:1;inset:-30px}
+  #pjFoto .ph>img{object-fit:contain}
   #projetos .pj-info{padding:16px 22px}
   #projetos .pj-top{flex-wrap:nowrap;gap:6px}
   #projetos .pj-top button{padding-left:11px;padding-right:11px;font-size:.8rem;white-space:nowrap}}
@@ -1072,7 +1075,7 @@ function piizuAds(label, extra){
       </div>
 
       <div class="pj-ft">
-        <a href="#orcamento" class="b-lin sm">Quero uma solução assim</a>
+        <a href="#orcamento" class="b-lar">Quero uma solução assim</a>
       </div>
     </div>
   </div>
@@ -1828,6 +1831,7 @@ function pjRender(){
   var d = document.createElement('div');
   d.className = 'ph';
   d.innerHTML = '<img src="' + F.src + '" alt="' + F.alt + '" loading="lazy">';
+  d.style.setProperty('--pjbg', 'url("' + F.src + '")');
   foto.insertBefore(d, cap);
   d.appendChild(cap);
   cap.textContent = (A.fotos.length > 1 ? (PFI % A.fotos.length + 1) + '/' + A.fotos.length + ' · ' : '') + F.cap;
