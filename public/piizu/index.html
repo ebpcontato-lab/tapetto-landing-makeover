@@ -1052,6 +1052,17 @@ footer{padding:38px 0 26px}
   .qd-linha .seta{width:24px;height:24px}
   .qd-linha .seta svg{width:12px;height:12px}
 }
+
+/* setas crescem só no espaço que sobra ao lado da foto, sem mudar o tamanho da foto */
+@media(min-width:861px){
+  .qd-linha .seta{--fw:min(calc(100cqw - 60px),calc((100cqh - 34px) * .8));--sz:clamp(26px,calc((100cqw - var(--fw) - 8px) / 2),44px);width:var(--sz);height:var(--sz)}
+  .qd-linha .seta svg{width:calc(var(--sz) * .45);height:calc(var(--sz) * .45)}
+}
+@media(max-width:860px){
+  .qd-linha{container-type:size}
+  .qd-linha .seta{--sz:clamp(24px,calc((100cqw - 100cqh * .8 - 6px) / 2),40px);width:var(--sz);height:var(--sz)}
+  .qd-linha .seta svg{width:calc(var(--sz) * .45);height:calc(var(--sz) * .45)}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
