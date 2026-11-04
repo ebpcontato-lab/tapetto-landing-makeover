@@ -996,10 +996,15 @@ footer{padding:38px 0 26px}
 /* aba Personalizados: palavra centralizada e sem invadir a aba vizinha */
 .hero-num>div{overflow:hidden}
 .hero-num b{overflow-wrap:anywhere}
-.hero-num .hn-pers b{text-align:center;font-size:min(1.02rem,13cqw)}
+.hero-num .hn-pers b{text-align:center;white-space:nowrap;font-size:min(1.02rem,13cqw)}
 @media(min-width:861px){.hero-num .hn-pers b{font-size:min(clamp(1.5rem,2.3vw,2.4rem),13cqw)}}
 .hero-num span .nw{display:inline;margin:0;white-space:nowrap;font:inherit;color:inherit}
 .hero-num>div.hn-pers{container-type:inline-size}
+
+/* aba Atendimento: "Atendimento" numa linha só e "pii-zu" embaixo */
+.hero-num>div.hn-at{container-type:inline-size}
+.hero-num .hn-at b{font-size:min(1.02rem,15cqw)}
+@media(min-width:861px){.hero-num .hn-at b{font-size:min(clamp(1.5rem,2.3vw,2.4rem),15cqw)}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1058,7 +1063,7 @@ function piizuAds(label, extra){
         <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes e Capachos</span></div>
         <div><b class="fr">Nº 1</b><span>Maior fábrica da América Latina, maior fornecedor nacional. A marca preferida das grandes redes e shopping centers.</span></div>
         <div class="hn-pers"><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
-        <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>Deixe sua marca em evidência. Chame a <span class="nw">pii-zu</span>.</span></div>
+        <div class="hn-at"><b class="fr"><span class="nw">Atendimento</span><br><span class="nw">pii-zu</span></b><span>Deixe sua marca em evidência. Chame a <span class="nw">pii-zu</span>.</span></div>
       </div>
     </div>
 
