@@ -954,9 +954,34 @@ footer{padding:38px 0 26px}
 .cta-l .lgpd{font-size:.76rem;color:var(--tx2);margin-top:14px;line-height:1.6}
 @media(max-width:1060px){.pq{grid-template-columns:1fr;gap:24px}}
 
-/* quadro de fotos mais alto, dentro da 1ª dobra */
-@media(min-width:861px){.hero{padding-top:8px}.qd-box{top:76px}.qd-tit{margin-bottom:8px}.quadro{height:min(640px,calc(100svh - 128px))}}
-@media(max-width:860px){.qd-box{order:5;margin:14px 0 18px}.qd-tit{font-size:.95rem;margin-bottom:8px}.quadro{aspect-ratio:4/5;height:auto;max-height:calc(100svh - 330px)}}
+/* topo = exatamente a 1ª dobra: texto, quadro de fotos e números, sem sobrar nem invadir */
+.hero{box-sizing:border-box;height:var(--dobra);min-height:0;overflow:hidden}
+.hero>.hero-g{flex:1;min-height:0}
+.qd-box{display:flex;flex-direction:column;min-height:0}
+.qd-tit{flex:none}
+.qd-linha{flex:1;min-height:0;grid-template-rows:minmax(0,1fr)}
+.quadro{aspect-ratio:auto;height:100%;max-height:none;min-height:0;justify-self:center}
+@media(min-width:861px){
+  .hero{padding-top:12px;padding-bottom:18px}
+  .hero-g{align-items:stretch;align-content:stretch;height:100%}
+  .hero-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .hero-g>div:first-child{align-self:start;padding-top:8px}
+  .qd-box{position:static;height:100%}
+  .qd-tit{margin-bottom:8px}
+  .qd-linha{flex:none;display:block;position:relative;width:fit-content;max-width:100%;margin:0 auto}
+  .qd-linha .seta{position:absolute;top:50%;transform:translateY(-50%);z-index:3}
+  .qd-linha .seta:hover{transform:translateY(-50%) scale(1.06)}
+  .qd-linha .seta.esq{left:12px}.qd-linha .seta:not(.esq){right:12px}
+  .quadro{height:calc(var(--dobra) - 72px);width:auto;aspect-ratio:4/5;max-width:100%}
+}
+@media(max-width:860px){
+  .hero{padding-top:12px;padding-bottom:12px}
+  .hero .pill+h1,.hero .rise+h1{margin:10px 0 0}
+  .qd-box{order:5;flex:1;margin:10px 0 10px}
+  .qd-tit{font-size:.95rem;margin-bottom:6px}
+  .quadro{width:auto;aspect-ratio:4/5;max-width:100%}
+  .hero-num{order:7;flex:none;margin:0}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
