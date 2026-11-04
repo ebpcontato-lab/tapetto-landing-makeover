@@ -1031,6 +1031,27 @@ footer{padding:38px 0 26px}
   .hero-num span{font-size:.6rem;line-height:1.3;margin-top:2px}
   .hero-num .hn-pers b{font-size:min(.92rem,13cqw)}.hero-num .hn-at b{font-size:min(.92rem,15cqw)}
 }
+
+/* quadro de fotos no maior tamanho possível: setas menores e espaços mais justos */
+@media(min-width:861px){
+  .hero-g{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px}
+  .hero{padding-top:8px;padding-bottom:10px}
+  .qd-box{height:calc(var(--dobra) - 18px)}
+  .hero-g>div:first-child{height:calc(var(--dobra) - 18px)}
+  .qd-tit{margin-bottom:4px}
+  .qd-linha{gap:4px}
+  .qd-linha .seta{width:26px;height:26px}
+  .qd-linha .seta svg{width:14px;height:14px}
+  .quadro{width:min(calc(100cqw - 60px),calc((100cqh - 34px) * .8))}
+}
+@media(max-width:860px){
+  .hero{padding-top:8px;padding-bottom:8px}
+  .qd-box{margin-top:6px}
+  .qd-tit{font-size:1.08rem;margin-bottom:2px}
+  .qd-linha{gap:3px}
+  .qd-linha .seta{width:24px;height:24px}
+  .qd-linha .seta svg{width:12px;height:12px}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
