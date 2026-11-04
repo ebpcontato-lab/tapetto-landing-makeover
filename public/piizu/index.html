@@ -867,15 +867,15 @@ footer{padding:38px 0 26px}
 @media(max-width:860px){.qd-box{order:8;margin:18px 0 10px}}
 @media(max-width:560px){.qd-linha{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.qd-linha .seta{width:34px;height:34px}}
 /* Soluções: textos maiores ocupando o espaço do painel */
-#projetos .pj-info .nm{font-size:2.2rem}
-#projetos .pj-info .lc{font-size:1.06rem;margin-top:6px}
-#projetos .pj-info p{font-size:1.12rem;line-height:1.7;margin-top:16px}
-#projetos .pj-sp{margin-top:22px}
-#projetos .pj-sp>div{padding:14px 16px}
+#projetos .pj-info .nm{font-size:1.95rem}
+#projetos .pj-info .lc{font-size:.98rem;margin-top:4px}
+#projetos .pj-info p{font-size:1.02rem;line-height:1.6;margin-top:12px}
+#projetos .pj-sp{margin-top:16px}
+#projetos .pj-sp>div{padding:10px 14px}
 #projetos .pj-sp span{font-size:.8rem}
-#projetos .pj-sp b{font-size:1.15rem;line-height:1.35}
+#projetos .pj-sp b{font-size:1.04rem;line-height:1.3}
 #projetos .pj-ft a{margin-left:auto}
-@media(min-width:1061px){#projetos .pj-foto{--fh:clamp(420px,calc(var(--dobra) - 190px),720px);width:calc(var(--fh) * .8 + 112px)}}
+@media(min-width:1061px){#projetos .pj-foto{--fh:clamp(300px,calc(var(--dobra) - 330px),620px);width:calc(var(--fh) * .8 + 112px)}}
 @media(max-width:560px){#projetos .pj-info .nm{font-size:1.8rem}#projetos .pj-info .lc{font-size:.98rem}#projetos .pj-info p{font-size:1rem}#projetos .pj-sp b{font-size:1.02rem}}
 @media(max-width:860px){#projetos .pj-sp>div{flex-direction:column;align-items:flex-start;gap:3px}#projetos .pj-sp b{white-space:normal;line-height:1.35}#projetos .pj-sp span{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tx2)}}
 /* botões do topo nunca quebram nem cortam o texto */
@@ -1783,7 +1783,7 @@ var AMB = [
     {src:'assets/img/galeria/casa-sala-tapete-listrado.webp', alt:'Tapete listrado azul e bege na sala de estar', cap:'Tapete listrado para a sala'},
     {src:'assets/img/galeria/casa-sala-tapete-geometrico.webp', alt:'Tapete colorido com desenho geométrico na sala de TV', cap:'Tapete geométrico para a sala de TV'}
    ]},
-  {id:'quad', nome:'Quadras e áreas play e kids', local:'Pisos e Tapetes para quadras, playgrounds e espaços kids',
+  {id:'quad', nome:'Quadras Poliesportivas, Áreas Playground e Espaços kids', local:'',
    p:'Quadras poliesportivas e playgrounds de condomínios, escolas e clubes ganham piso modular, grama sintética ou Tapete com as cores, marcações e desenhos do espaço, prontos em pouco tempo.',
    sp:[['Personalização','Cores, marcações e desenhos'],['Uso indicado','Quadras, playgrounds e áreas de lazer'],['Formato','Medidas personalizadas']],
    al:'Informe as medidas da área e se ela é coberta ou descoberta: isso define se o indicado é piso modular, grama sintética ou Tapete.',
@@ -1827,7 +1827,7 @@ function pjRender(){
   d.appendChild(cap);
   cap.textContent = (A.fotos.length > 1 ? (PFI % A.fotos.length + 1) + '/' + A.fotos.length + ' · ' : '') + F.cap;
   document.getElementById('pNm').textContent = A.nome;
-  document.getElementById('pLc').textContent = A.local;
+  var pLc=document.getElementById('pLc'); pLc.textContent = A.local || ''; pLc.style.display = A.local ? '' : 'none';
   document.getElementById('pP').textContent = A.p;
   var sp = document.getElementById('pSp');
   sp.innerHTML = '';
