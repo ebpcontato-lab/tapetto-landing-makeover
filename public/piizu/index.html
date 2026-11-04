@@ -953,6 +953,10 @@ footer{padding:38px 0 26px}
 .passos b{color:var(--tinta);font-weight:500}
 .cta-l .lgpd{font-size:.76rem;color:var(--tx2);margin-top:14px;line-height:1.6}
 @media(max-width:1060px){.pq{grid-template-columns:1fr;gap:24px}}
+
+/* quadro de fotos mais alto, dentro da 1ª dobra */
+@media(min-width:861px){.hero{padding-top:8px}.qd-box{top:76px}.qd-tit{margin-bottom:8px}.quadro{height:min(640px,calc(100svh - 128px))}}
+@media(max-width:860px){.qd-box{order:5;margin:14px 0 18px}.qd-tit{font-size:.95rem;margin-bottom:8px}.quadro{aspect-ratio:4/5;height:auto;max-height:calc(100svh - 330px)}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1006,7 +1010,7 @@ function piizuAds(label, extra){
   <div class="wrap hero-g">
     <div>
       <div class="rise"><span class="pill"><i></i><span>Rio de Janeiro</span><svg class="pill-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span>para todo o Brasil</span></span></div>
-      <h1 class="fr rise d1">Seu Tapete ou Capacho personalizado produzido <em>na maior fábrica da América Latina: Ind. Kapazi.</em></h1>
+      <h1 class="fr rise d1">Seu Tapete ou Capacho personalizado produzido <em>na maior fábrica da América Latina.</em></h1>
       <div class="hero-num rise d2">
         <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes ou Capachos</span></div>
         <div><b class="fr">Nº 1</b><span>produção na maior fábrica da América Latina</span></div>
