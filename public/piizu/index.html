@@ -852,6 +852,19 @@ footer{padding:38px 0 26px}
 /* topo em uma coluna, conteúdo começando no alto da tela */
 @media(min-width:861px){.hero-g{grid-template-columns:minmax(0,760px);gap:0}.hero>.hero-g{align-content:start}.hero{min-height:0;padding-top:22px;padding-bottom:40px}}
 .hero .selo-topo{margin:22px 0 12px}
+
+/* quadro de fotos do topo (lado direito) */
+.quadro{position:relative;border-radius:14px;overflow:hidden;background:var(--bg2);border:1px solid var(--lin);box-shadow:0 18px 40px -22px rgba(60,30,10,.45);aspect-ratio:4/5;width:100%}
+.qd-tela,.qd-tela img{position:absolute;inset:0;width:100%;height:100%}
+.qd-tela img{object-fit:cover;transition:opacity .35s}
+.qd-tela img.qd-sai{opacity:0}
+.qd-seta{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.88);box-shadow:0 4px 14px rgba(0,0,0,.22);display:grid;place-items:center;cursor:pointer;z-index:2;transition:background .2s,transform .2s}
+.qd-seta:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.qd-seta svg{width:24px;height:24px;fill:none;stroke:var(--cobre2);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.qd-ant{left:12px}.qd-prox{right:12px}
+.qd-cont{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem;padding:4px 10px;border-radius:20px;z-index:2;letter-spacing:.03em}
+@media(min-width:861px){.hero-g{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:48px;align-items:start}.quadro{position:sticky;top:90px;max-height:calc(100vh - 110px);aspect-ratio:auto;height:min(640px,calc(100vh - 110px))}}
+@media(max-width:860px){.quadro{order:8;margin:6px 0 10px}.qd-seta{width:42px;height:42px}}
 /* botões do topo nunca quebram nem cortam o texto */
 .hero-cta a,.nav-in .b-lar{white-space:nowrap;flex:none}
 /* título do topo um pouco menor, para a abertura caber melhor na tela */
@@ -988,6 +1001,13 @@ function piizuAds(label, extra){
         <div><b class="fr">Personalizados</b><span>Sob medida: dimensões, cores, logo da sua marca ou textos desejados</span></div>
         <div><b class="fr">Atendimento <span class="nw">pii-zu</span></b><span>com pontualidade e qualidade satisfatória</span></div>
       </div>
+    </div>
+
+    <div class="quadro rise d2" id="quadro" aria-roledescription="carrossel" aria-label="Fotos de Tapetes e Capachos instalados">
+      <div class="qd-tela"><img id="qdImg" alt="" width="864" height="1080"></div>
+      <button class="qd-seta qd-ant" id="qdAnt" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="qd-seta qd-prox" id="qdProx" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="qd-cont" id="qdCont" aria-live="polite"></div>
     </div>
 
   </div>
@@ -2344,6 +2364,20 @@ document.addEventListener('click', function(e){
   var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
   if(a) piizuAds(window.__PIIZU_ADS.whatsapp);
 }, true);
+
+/* quadro de fotos do topo: usa as fotos da galeria */
+(function(){var q=document.getElementById('quadro');if(!q)return;
+var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
+if(!fs.length){q.style.display='none';return}
+var img=document.getElementById('qdImg'),ct=document.getElementById('qdCont'),k=0,cache={};
+function pre(n){var f=fs[(n+fs.length)%fs.length];if(!cache[f.s]){cache[f.s]=new Image();cache[f.s].src=f.s}}
+function ir(n){k=(n+fs.length)%fs.length;var f=fs[k];img.classList.add('qd-sai');setTimeout(function(){img.src=f.s;img.alt=f.a;img.onload=function(){img.classList.remove('qd-sai')};if(img.complete)img.classList.remove('qd-sai')},150);ct.textContent=(k+1)+' / '+fs.length;pre(k+1);pre(k-1)}
+document.getElementById('qdAnt').onclick=function(){ir(k-1)};
+document.getElementById('qdProx').onclick=function(){ir(k+1)};
+q.tabIndex=0;q.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')ir(k-1);if(e.key==='ArrowRight')ir(k+1)});
+var x0=null;q.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+q.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)ir(d<0?k+1:k-1);x0=null});
+img.src=fs[0].s;img.alt=fs[0].a;ct.textContent='1 / '+fs.length;pre(1);pre(-1)})();
 </script>
 </body>
 </html>
