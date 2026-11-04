@@ -866,6 +866,18 @@ footer{padding:38px 0 26px}
 @media(min-width:861px){.hero-g{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px;align-items:start}.qd-box{position:sticky;top:90px}.quadro{aspect-ratio:auto;height:min(600px,calc(100vh - 150px))}}
 @media(max-width:860px){.qd-box{order:8;margin:18px 0 10px}}
 @media(max-width:560px){.qd-linha{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.qd-linha .seta{width:34px;height:34px}}
+/* Soluções: textos maiores ocupando o espaço do painel */
+#projetos .pj-info .nm{font-size:2.2rem}
+#projetos .pj-info .lc{font-size:1.06rem;margin-top:6px}
+#projetos .pj-info p{font-size:1.12rem;line-height:1.7;margin-top:16px}
+#projetos .pj-sp{margin-top:22px}
+#projetos .pj-sp>div{padding:14px 16px}
+#projetos .pj-sp span{font-size:.8rem}
+#projetos .pj-sp b{font-size:1.15rem;line-height:1.35}
+#projetos .pj-ft a{margin-left:auto}
+@media(min-width:1061px){#projetos .pj-foto{--fh:clamp(420px,calc(var(--dobra) - 190px),720px);width:calc(var(--fh) * .8 + 112px)}}
+@media(max-width:560px){#projetos .pj-info .nm{font-size:1.8rem}#projetos .pj-info .lc{font-size:.98rem}#projetos .pj-info p{font-size:1rem}#projetos .pj-sp b{font-size:1.02rem}}
+@media(max-width:860px){#projetos .pj-sp>div{flex-direction:column;align-items:flex-start;gap:3px}#projetos .pj-sp b{white-space:normal;line-height:1.35}#projetos .pj-sp span{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tx2)}}
 /* botões do topo nunca quebram nem cortam o texto */
 .hero-cta a,.nav-in .b-lar{white-space:nowrap;flex:none}
 /* título do topo um pouco menor, para a abertura caber melhor na tela */
@@ -1055,7 +1067,6 @@ function piizuAds(label, extra){
       </div>
 
       <div class="pj-ft">
-        <small>Medidas, cores e acabamento são definidos com você no orçamento. O valor depende do tamanho, do material e da complexidade da arte — por isso conversamos antes de passar qualquer número.</small>
         <a href="#orcamento" class="b-lin sm">Quero uma solução assim</a>
       </div>
     </div>
@@ -1667,7 +1678,7 @@ var AMB = [
   {id:'cond', nome:'Condomínios', local:'Capachos para portaria, halls e elevadores',
    p:'O nome ou o logotipo do condomínio na portaria, nos halls e nos elevadores. Recebe bem moradores e visitantes, segura a sujeira na entrada e protege o piso das áreas comuns.',
    sp:[['Personalização','Nome, logotipo do condomínio e dimensões do Tapete ou Capacho'],['Uso indicado','Portarias, halls e elevadores'],['Formato','Medidas personalizadas, inclusive elevador']],
-   al:'Para hall de entrada e elevadores, opte por Tapetes de Dupla Função, que absorvem água, mantendo o piso limpo e seguro, livre de escorregões e acidentes.',
+   al:'',
    fotos:[
     {src:'assets/img/galeria/capacho-elevador-unique.webp', alt:'Capacho personalizado Unique Residence no elevador do condomínio', cap:'Capacho personalizado para elevador de condomínio'},
     {src:'assets/img/galeria/capa-elevador-liftkap.webp', alt:'Capa de proteção Liftkap nas paredes do elevador de serviço', cap:'Capa de proteção para elevador de serviço'},
@@ -1825,7 +1836,7 @@ function pjRender(){
     e.innerHTML = '<span>' + par[0] + '</span><b class="fr">' + par[1] + '</b>';
     sp.appendChild(e);
   });
-  document.getElementById('pAl').textContent = A.al;
+  var pAl=document.getElementById('pAl'); pAl.textContent = A.al || ''; pAl.style.display = A.al ? '' : 'none';
 }
 pjRender();
 var MATS = [
