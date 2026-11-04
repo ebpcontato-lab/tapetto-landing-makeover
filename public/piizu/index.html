@@ -964,7 +964,7 @@ footer{padding:38px 0 26px}
 @media(min-width:861px){
   .hero{padding-top:12px;padding-bottom:18px}
   .hero-g{align-items:stretch;align-content:stretch;height:100%}
-  .hero-g{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
+  .hero-g{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:32px}
   .hero-g>div:first-child{align-self:start;padding-top:8px}
   .qd-box{position:static;height:100%}
   .qd-tit{margin-bottom:8px}
@@ -972,8 +972,10 @@ footer{padding:38px 0 26px}
   .qd-linha .seta{position:static;transform:none;flex:none}
   .qd-box{height:calc(var(--dobra) - 30px);container-type:size;justify-content:center}
   .qd-linha{flex:none}
-  .qd-linha{gap:8px}
-  .quadro{width:min(calc(100cqw - 104px),calc((100cqh - 34px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
+  .qd-linha{gap:6px}
+  .qd-linha .seta{width:32px;height:32px}
+  .qd-linha .seta svg{width:16px;height:16px}
+  .quadro{width:min(calc(100cqw - 76px),calc((100cqh - 34px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
   /* abas grandes ocupando o espaço à esquerda, abaixo do título */
   .hero-g>div:first-child{align-self:stretch;display:flex;flex-direction:column;height:calc(var(--dobra) - 30px);padding-top:8px}
   .hero-num{flex:1;min-height:0;margin:22px 0 0;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;border-radius:12px}
@@ -1005,6 +1007,14 @@ footer{padding:38px 0 26px}
 .hero-num>div.hn-at{container-type:inline-size}
 .hero-num .hn-at b{font-size:min(1.02rem,15cqw)}
 @media(min-width:861px){.hero-num .hn-at b{font-size:min(clamp(1.5rem,2.3vw,2.4rem),15cqw)}}
+
+/* celular: setas menores para o quadro de fotos ganhar espaço */
+@media(max-width:860px){.qd-linha{gap:4px}.qd-linha .seta{width:28px;height:28px}.qd-linha .seta svg{width:14px;height:14px}.qd-box{margin:8px 0 0}.qd-tit{margin-bottom:4px}}
+
+/* "Sua marca conversa melhor com a gente." em letra manuscrita, menos formal */
+@font-face{font-family:'Caveat';src:url(assets/fonts/caveat-latin.woff) format('woff');font-weight:400 700;font-display:swap}
+.qd-tit{font-family:'Caveat','Segoe Print','Comic Sans MS',cursive;font-weight:700;font-size:clamp(1.45rem,2.1vw,1.9rem);line-height:1.1;letter-spacing:0}
+@media(max-width:860px){.qd-tit{font-size:1.45rem}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
