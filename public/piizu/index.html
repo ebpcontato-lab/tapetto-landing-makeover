@@ -212,8 +212,7 @@ section{padding:58px 0}
 .cli{padding:30px 0 6px}
 .cli-t{text-align:center;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tx2);margin-bottom:16px}
 .cli-mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.cli-tr{display:flex;align-items:center;gap:56px;width:max-content;animation:mqR 34s linear infinite}
-.cli-mq:hover .cli-tr{animation-play-state:paused}
+.cli-tr{display:flex;align-items:center;gap:56px;width:max-content;will-change:transform}
 .cli-tr img{height:52px;width:auto;max-width:150px;object-fit:contain;border-radius:6px;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s}
 .cli-tr img:hover{filter:none;opacity:1}
 @media(max-width:860px){.cli-tr{gap:36px}.cli-tr img{height:40px}}
@@ -2002,18 +2001,35 @@ var CLIENTES = [
   {src:'assets/img/clientes/cliente-rede-jb.webp', alt:'Rede JB'},
   {src:'assets/img/clientes/cliente-maravista.webp', alt:'Supermercado Maravista'},
   {src:'assets/img/clientes/cliente-papizzo.webp', alt:'Papizzo'},
-  {src:'assets/img/clientes/cliente-01.svg', alt:'Cliente Norte'},
-  {src:'assets/img/clientes/cliente-02.svg', alt:'Cliente Vértice'},
-  {src:'assets/img/clientes/cliente-03.svg', alt:'Cliente Alpha'},
-  {src:'assets/img/clientes/cliente-04.svg', alt:'Cliente Ondas'},
-  {src:'assets/img/clientes/cliente-05.svg', alt:'Cliente Prisma'},
-  {src:'assets/img/clientes/cliente-06.svg', alt:'Cliente Raiz'},
-  {src:'assets/img/clientes/cliente-07.svg', alt:'Cliente Órbita'},
-  {src:'assets/img/clientes/cliente-08.svg', alt:'Cliente Sol & Mar'}
 ];
+/* faixa de clientes: corre sempre (computador e celular), sem buracos mesmo com poucas logos */
 var cliT = document.getElementById('cliT');
-var ch = CLIENTES.map(function(c){ return '<img src="' + c.src + '" alt="' + c.alt + '" loading="lazy">'; }).join('');
-cliT.innerHTML = ch + ch.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
+(function(){
+  var ch = CLIENTES.map(function(c){ return '<img src="' + c.src + '" alt="' + c.alt + '">'; }).join('');
+  var oculto = CLIENTES.map(function(c){ return '<img src="' + c.src + '" alt="" aria-hidden="true">'; }).join('');
+  var mq = cliT.parentElement, x = 0, larg = 0, t0 = 0, parado = false, VEL = 45; /* px por segundo */
+  function montar(){
+    cliT.innerHTML = ch;
+    var g = parseFloat(getComputedStyle(cliT).columnGap) || 0;
+    var umaVez = cliT.scrollWidth + g, n = Math.max(1, Math.ceil(mq.clientWidth / umaVez));
+    var html = ch; for(var k=1;k<n;k++) html += oculto;
+    cliT.innerHTML = html + oculto.repeat(n);
+    larg = umaVez * n;
+  }
+  function passo(t){
+    if(!t0) t0 = t; var dt = Math.min(100, t - t0); t0 = t;
+    if(!parado && larg){ x -= VEL * dt / 1000; if(-x >= larg) x += larg; cliT.style.transform = 'translate3d(' + x.toFixed(2) + 'px,0,0)'; }
+    requestAnimationFrame(passo);
+  }
+  montar();
+  window.addEventListener('load', function(){ montar(); });
+  window.addEventListener('resize', function(){ montar(); });
+  if(window.matchMedia && matchMedia('(hover:hover)').matches){
+    mq.addEventListener('mouseenter', function(){ parado = true; });
+    mq.addEventListener('mouseleave', function(){ parado = false; });
+  }
+  requestAnimationFrame(passo);
+})();
 
 /* setas da foto de soluções */
 /* setas de Soluções: passam pelas fotos do segmento escolhido */
