@@ -1204,6 +1204,15 @@ footer .ft p{font-size:.84rem}
 @media(min-width:1061px){#projetos .pj-g{--fh:calc(var(--dobra) - 150px)}#projetos .pj-g .pj-ft-foto{width:calc(var(--fh) * .8 + 112px);justify-self:start}#projetos .pj-foto{justify-self:start}}
 @media(max-width:1060px){.pj-g .pj-foto{order:1}.pj-g .pj-ft-foto{order:2}.pj-g .pj-info{order:3}}
 #projetos .pj-ft-foto a{margin:0 auto!important}
+
+/* logo Kapazi Cooperkap - RJ ao lado do logo pii-zu */
+.nav-parc{display:flex;align-items:center;flex:none;padding-left:14px;margin-left:2px;border-left:1px solid var(--lin2,#d8cfc2)}
+.nav-parc img{height:38px;width:auto;display:block}
+.nav-in .logo{margin-right:0}
+@media(min-width:861px){.nav-l{margin-left:auto}}
+@media(max-width:1200px) and (min-width:861px){.nav-parc img{height:32px}}
+@media(max-width:860px){.nav-parc{padding-left:10px}.nav-parc img{height:28px}.nav-tog{margin-left:auto}}
+@media(max-width:400px){.nav-parc{padding-left:7px}.nav-parc img{height:22px}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1237,6 +1246,7 @@ function piizuAds(label, extra){
 <header class="nav">
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-grafite-prata-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83"></a>
+    <span class="nav-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186"></span>
     <nav class="nav-l" id="navl" aria-label="Menu">
       <a href="#materiais">Opções de Matéria-Prima</a>
       <a href="#projetos">Soluções e Aplicações</a>
