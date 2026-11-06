@@ -16,4 +16,4 @@ Use como banco de peças para outras landing pages. Blocos que existem aqui:
 - `#orcamento` — como funciona + formulário completo com todos os produtos
 
 As fotos e fontes ficam em `public/piizu/assets/` (o arquivo usa os mesmos caminhos).
-Versão no Git: tag `piizu-completa-2026-11-06`.
+Versão no Git: branch `modelo-piizu-completa-2026-11-06` (página inteira congelada nesse dia).

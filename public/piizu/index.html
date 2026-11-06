@@ -1065,6 +1065,20 @@ footer{padding:38px 0 26px}
 /* faixa de clientes parceiros: título em negrito */
 .cli-t{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.25rem,1.7vw,1.6rem);line-height:1.2;letter-spacing:-.01em;text-transform:none;color:var(--lar2);padding:0 16px}
 @media(max-width:860px){.cli-t{font-size:1.2rem}}
+
+/* ===== landing page enxuta (06/11/2026) ===== */
+.cli-av{text-align:center;margin:14px 0 0;font-size:.9rem;color:var(--tx2)}
+.cli-av .str{color:#e0a100;letter-spacing:2px;margin-right:6px}
+.cli-av a{color:var(--lar2);font-weight:600;text-decoration:underline}
+#tambem{padding:28px 0}
+.tb{border:1px solid var(--lin);border-radius:14px;padding:22px 24px;display:flex;gap:18px 28px;align-items:center;flex-wrap:wrap}
+.tb-h{display:flex;flex-direction:column;gap:4px;min-width:220px}
+.tb-h b{font-size:clamp(1.15rem,1.6vw,1.45rem);font-weight:400;line-height:1.2}
+.tb-l{display:flex;flex-wrap:wrap;gap:8px;flex:1}
+.tb-c{border:1px solid var(--lin);border-radius:999px;padding:7px 14px;font-size:.85rem;color:var(--tx);text-decoration:none;background:rgba(255,255,255,.5)}
+.tb-c:hover{border-color:var(--lar2);color:var(--lar2)}
+.row[hidden]{display:none!important}
+@media(max-width:860px){#tambem{padding:18px 0}.tb{padding:16px;gap:12px}.tb-l{display:grid;grid-template-columns:1fr 1fr;gap:6px}.tb-c{font-size:.72rem;padding:6px 8px;text-align:center;border-radius:10px;line-height:1.25;display:flex;align-items:center;justify-content:center}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1098,17 +1112,6 @@ function piizuAds(label, extra){
 <header class="nav">
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-grafite-prata-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83"></a>
-    <nav class="nav-l" id="navl" aria-label="Nosso menu degustação" translate="no">
-      <span class="nav-dg notranslate" translate="no">Nosso menu <span>degustação</span></span>
-      <a href="#projetos">Soluções</a>
-      <a href="#materiais">Materiais</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#oficina">A indústria e fábrica</a>
-      <a href="#orcamento">Como funciona</a>
-      <a href="#objecoes">Dúvidas</a>
-    </nav>
-    <button class="nav-tog notranslate" translate="no" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
     <a href="#orcamento" class="b-lar sm" style="flex:none" translate="no"><span class="lg-txt">Pedir&nbsp;</span>orçamento</a>
   </div>
 </header>
@@ -1149,6 +1152,7 @@ function piizuAds(label, extra){
 <div class="cli" aria-label="Clientes atendidos">
   <div class="cli-t">Clientes parceiros que já recepcionam com nossa linha premium de Tapetes e Capachos personalizados:</div>
   <div class="cli-mq"><div class="cli-tr" id="cliT"></div></div>
+  <p class="cli-av"><span class="str">★★★★★</span> Dezenas de clientes satisfeitos. <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Veja as avaliações no Google</a></p>
 </div>
 
 <!-- ===== 02 KILLER: SOLUÇÕES POR USO ===== -->
@@ -1212,35 +1216,15 @@ function piizuAds(label, extra){
 </section>
 
 <!-- ===== MAIS PRODUTOS — gerado pela lista NICHOS do script ===== -->
-<section id="produtos">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="kick">03 / Mais produtos</div>
-      <div class="h2-slogan">Seu piso em nossas mãos.</div>
-      <h2 class="fr">Além dos Tapetes e Capachos, <em>oferecemos soluções para várias outras modalidades de piso:</em></h2>
-    </div>
-
-    <div class="gal-tabs rv" id="lnTop" role="group" aria-label="Linhas de produtos"></div>
-    <div class="ln-intro rv"><b class="fr" id="lnNm">—</b><span id="lnLc">—</span><p id="lnP">—</p></div>
-    <div class="gal rv" id="lnGal">
-      <button type="button" class="seta esq" id="lnPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <div class="gal-tr" id="lnTr" tabindex="0" aria-label="Fotos da linha"></div>
-      <button type="button" class="seta dir" id="lnNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
-    </div>
-    <div class="ln-mod rv" id="lnIt"></div>
-    <p class="ln-ft rv">Medidas, quantidades e instalação são definidas com você no orçamento. Na dúvida sobre o modelo, conte o lugar e o uso que a gente indica. <a href="#galeria" id="lnFotos">Ver todas as fotos na galeria</a></p>
-  </div>
-</section>
 
 <!-- ===== GALERIA ===== -->
 <section id="galeria">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">04 / Galeria</div>
-      <h2 class="fr">Degustação do nosso portfólio por clientes já atendidos no Rio de Janeiro e em todo o Brasil. <em>Variado por segmentos e nichos:</em></h2>
-      <p>Escolha o setor e use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
+      <div class="kick">03 / Galeria</div>
+      <h2 class="fr">Tapetes e Capachos que já recebem clientes <em>no Rio de Janeiro e em todo o Brasil:</em></h2>
+      <p>Use as setas para passar as fotos. Clique em uma delas para ampliar.</p>
     </div>
-    <div class="gal-tabs rv" id="galTabs" role="group" aria-label="Filtrar galeria por setor"></div>
     <div class="gal rv">
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
@@ -1252,282 +1236,26 @@ function piizuAds(label, extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-escola-patio-8.webp" alt="Tapete com pista de carrinhos sob o refeitório da escola" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-liftkap.webp" alt="Capa de proteção Liftkap nas paredes do elevador de serviço" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-firekap-extintor.webp" alt="Tapete Firekap vermelho e amarelo sinalizando a área do extintor de incêndio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cleankap-logo-detalhe.webp" alt="Detalhe de Tapete Cleankap azul com logotipo em branco" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-terra-raspador.webp" alt="Tapete Terra raspador retendo a sujeira da bota na entrada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante em volta da piscina, com a textura em destaque" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo na borda da piscina à noite" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-rolo-cores.webp" alt="Rolo do piso W-Kap e as cores disponíveis: preto, cinza, azul e bege" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-textura.webp" alt="Textura vazada e antiderrapante do piso W-Kap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-playground.webp" alt="Playground sobre piso modular Playkap colorido" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-antes-depois.webp" alt="Área de lazer antes e depois da instalação do piso modular Playkap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-rampa.webp" alt="Piso laminado emborrachado Kapazi em rampa de acesso" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-garagem.webp" alt="Piso laminado emborrachado em garagem, rampa e rolo" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-onibus.webp" alt="Piso laminado emborrachado para ônibus em rolo e detalhe da textura" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-drogaria-ultra-popular.webp" alt="Tapete vermelho com a marca Drogarias Ultra Popular na entrada da farmácia" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-churrascaria-tropeiro.webp" alt="Capacho com o logotipo da churrascaria Tropeiro na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-maple-bear-redondo.webp" alt="Tapetes redondos com o logotipo da escola Maple Bear na produção" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-byd-concessionaria.webp" alt="Tapete redondo com a marca BYD sob o balcão da concessionária" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-advocacia.webp" alt="Capacho com o logotipo de escritório de advocacia na porta" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-gracie-barra.webp" alt="Tapete azul com a marca Gracie Barra na entrada da academia" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-saber-infantil.webp" alt="Capacho com o logotipo colorido da escola Saber Educação Infantil na entrada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-elevador-iporanga.webp" alt="Capacho com o nome do Condomínio Iporanga no piso do elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-bangu-offices.webp" alt="Tapete redondo com o logotipo do Bangu Offices na recepção" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-bhs-passarela.webp" alt="Passarela vermelha com a marca BHS no corredor da loja" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/indu-polenghi-portaria.webp" alt="Capacho com a marca Polenghi na portaria da fábrica" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/casa-que-bom-que-voce-veio.webp" alt="Capacho Que bom que você veio na porta de casa" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-amarelinha-fazenda.webp" alt="Tapete de amarelinha com tema de fazenda" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-gastroclinica.webp" alt="Capacho com o logotipo da Gastroclínica na entrada da clínica" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-autentica-moda.webp" alt="Capacho com a marca Autêntica Moda Feminina na porta da loja" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-modular.webp" alt="Playground sobre piso modular colorido em área externa" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-letras.webp" alt="Piso modular colorido com letras do alfabeto no playground" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-brinquedoteca-modular.webp" alt="Brinquedoteca com piso modular colorido em xadrez" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-xadrez.webp" alt="Playground sobre piso modular verde com tabuleiro de xadrez" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-colorido.webp" alt="Playground sobre piso modular verde e laranja" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-toque-natural.webp" alt="Piso vinílico em régua com aparência de madeira na cozinha, linha Toque Natural" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-ecokap.webp" alt="Cores do piso vinílico em régua colada Ecokap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-camadas.webp" alt="Camadas do piso vinílico em régua colada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-placa-colada.webp" alt="Cores do piso vinílico em placa colada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-clicada.webp" alt="Piso vinílico em régua clicada com encaixe tipo clique" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-tapete.webp" alt="Capa de proteção Liftkap instalada no elevador, com Capacho personalizado no piso" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-cabine.webp" alt="Cabine de elevador com as paredes protegidas pela capa Liftkap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-lateral.webp" alt="Capa Liftkap protegendo a parede lateral e o corrimão do elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-textura.webp" alt="Detalhe da textura e do acabamento da capa de proteção Liftkap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-marluvas.webp" alt="Tapete redondo com a marca Marluvas" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-mkr-premium.webp" alt="Tapete com recorte especial e a marca MKR Premium na entrada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-mandala.webp" alt="Tapete em formato de mandala, com recorte especial" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="fita"><img src="assets/img/galeria/fita-antiderrapante-escada.webp" alt="Fitas antiderrapantes nos degraus da escada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-condominio.webp" alt="Grama sintética em jardim de condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-pet.webp" alt="Grama sintética em área com cachorro" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-verde-seca.webp" alt="Comparação entre grama sintética sempre verde e grama natural seca" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-academia.webp" alt="Grama sintética no piso de academia" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-jardim.webp" alt="Grama sintética com placas de pedra no jardim de entrada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-20-30mm.webp" alt="Comparação das gramas sintéticas de 20 mm e 30 mm" width="864" height="1080" loading="lazy"></div>
-        <!-- portfólio acrescentado em 01/11/2026 (fotos do Drive, tratadas) -->
-        <div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-holanda-lages.mp4" poster="assets/img/galeria/portfolio-video-holanda-lages.webp" aria-label="Vídeo do Tapete personalizado Holanda Lages Advocacia na entrada do escritório" controls muted playsinline preload="none"></video></div>
-        <div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-tapete-sala.mp4" poster="assets/img/galeria/portfolio-video-tapete-sala.webp" aria-label="Vídeo de Tapete personalizado em formato orgânico na sala de estar" controls muted playsinline preload="none"></video></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><video src="assets/video/galeria/portfolio-video-playkap.mp4" poster="assets/img/galeria/portfolio-video-playkap.webp" aria-label="Vídeo do piso modular Playkap colorido em área kids" controls muted playsinline preload="none"></video></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-001.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-002.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-003.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-004.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-005.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-006.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-007.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-008.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-009.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-010.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-011.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-012.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-013.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-014.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-015.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-016.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-017.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-018.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-019.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-020.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-021.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-022.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-023.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-024.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-025.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-026.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-027.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-028.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-029.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-030.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-031.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-032.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-033.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-034.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-035.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-036.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-037.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-038.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-039.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-040.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-041.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-042.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-043.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-044.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-045.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-046.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-047.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-048.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-049.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-050.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-051.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-052.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-053.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-054.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-055.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-056.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-057.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-058.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-059.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-060.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-061.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-062.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-063.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-064.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-065.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-066.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-067.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-068.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-069.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-070.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-071.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-072.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-073.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-074.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-075.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-076.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-077.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-078.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-079.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-080.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-081.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-082.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-083.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-084.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-085.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-086.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-087.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-088.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-089.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-090.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-091.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-092.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-093.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-094.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-095.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-096.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-097.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-098.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-099.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-100.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-101.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-102.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-103.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-104.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-105.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-106.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/portfolio-107.webp" alt="Detalhe do piso W-Kap antiderrapante para áreas molhadas" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/portfolio-108.webp" alt="Detalhe do piso W-Kap antiderrapante para áreas molhadas" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-109.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-110.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-111.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-112.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-113.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-114.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-115.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-116.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-117.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-118.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-119.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-120.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-121.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-122.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-123.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-124.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-125.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-126.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-127.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-128.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-129.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-130.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-131.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-132.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-133.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-134.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-135.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-136.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-137.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-138.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-139.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-140.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-141.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-142.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-143.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-144.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-145.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-146.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-147.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-148.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-149.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-150.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-151.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-152.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-153.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-154.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-155.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-156.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-157.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-158.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-159.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-160.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-161.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-162.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-163.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-164.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-165.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-166.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-rubberkap"><img src="assets/img/galeria/portfolio-167.webp" alt="Piso emborrachado azul em playground coberto" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="piso-rubberkap"><img src="assets/img/galeria/portfolio-168.webp" alt="Piso emborrachado azul sob os brinquedos do playground" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-169.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-170.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
       </div>
       <button type="button" class="seta dir" id="galNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
   </div>
 </section>
 
-<!-- ===== 05 POR QUE A PII-ZU (antes de comparar + fábrica + depoimento) ===== -->
-<section id="oficina">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="kick">05 / Por que a pii-zu</div>
-      <h2 class="fr">Sua encomenda produzida na maior fábrica da América Latina, <em>com o atendimento personalizado pii-zu:</em></h2>
-    </div>
-    <div class="pq">
-      <div class="pq-tx rv">
-        <p><b class="pq-lead">Seu piso em nossas mãos;</b> dois Tapetes parecidos na foto podem durar coisas muito diferentes. O que decide é o que não aparece: <strong>o tipo de fio, a base antiderrapante e a forma como a arte é aplicada</strong>.</p>
-        <p>Aqui no Rio a gente entende o seu espaço e ajuda na arte. <strong>Você entende o que está levando</strong>, e não compara só o valor final.</p>
-        <div class="pull">
-          <b class="fr">48 anos</b>
-          <span>de estrada da fábrica. Experiência que aparece no acabamento e na durabilidade.</span>
-        </div>
-        <ul class="pq-l">
-          <li><i>◦</i><span>Sob medida, no tamanho e no formato do seu espaço</span></li>
-          <li><i>◦</i><span>Material certo para cada ambiente, interno ou externo</span></li>
-          <li><i>◦</i><span>Sua marca, cores e desenho reproduzidos com fidelidade</span></li>
-          <li><i>◦</i><span>Acompanhamento do pedido do início ao fim</span></li>
-        </ul>
-      </div>
-      <!-- AVALIAÇÕES DO GOOGLE: substitua o texto, o nome e a nota abaixo pelos dados reais do perfil -->
-      <figure class="pq-dep rv">
-        <div class="pq-q">
-          <div class="str" aria-label="Clientes satisfeitos">★★★★★</div>
-          <blockquote class="fr">“Tapetes ou Capachos pii-zu — <em>dezenas de clientes satisfeitos.</em>”</blockquote>
-          <div class="who">
-            <b>Clientes pii-zu</b>
-            <span>Veja as avaliações no <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">nosso perfil no Google</a></span>
-          </div>
-        </div>
-      </figure>
-    </div>
-  </div>
-</section>
 
 <!-- ===== 10 OBJEÇÕES ===== -->
 <section id="objecoes">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">06 / Dúvidas</div>
+      <div class="kick">04 / Dúvidas</div>
       <h2 class="fr">O que mais perguntam <em>antes de pedir:</em></h2>
     </div>
 
@@ -1545,36 +1273,35 @@ function piizuAds(label, extra){
           <summary><h5><i>03</i><span>Serve para área externa e molhada?</span></h5></summary>
           <p>Depende do material do Tapete personalizado e das condições do local. Conte se a entrada recebe chuva ou sol direto para indicarmos a base e o acabamento adequados. Explicamos os cuidados no orçamento.</p>
         </details>
-        <details class="oi">
-          <summary><h5><i>04</i><span>Vocês vendem grama sintética?</span></h5></summary>
-          <p>Sim. Trabalhamos com as gramas sintéticas da indústria Kapazi: decorativas de 12 mm e 20 mm, recreativa de 30 mm e esportiva de 50 mm. Peça o orçamento informando o tamanho da área.</p>
-        </details>
-        <details class="oi">
-          <summary><h5><i>05</i><span>Vocês têm piso para piscina e áreas molhadas?</span></h5></summary>
-          <p>Sim. O piso W-Kap é antiderrapante e antifungo, feito sob medida para bordas de piscina, vestiários, duchas e áreas de banho.</p>
-        </details>
       </div>
       <div>
         <details class="oi">
-          <summary><h5><i>06</i><span>Como faço a limpeza?</span></h5></summary>
+          <summary><h5><i>04</i><span>Como faço a limpeza?</span></h5></summary>
           <p>Depende do material, mas em geral basta aspirar ou sacudir no dia a dia e lavar quando necessário. Junto com o pedido, você recebe as orientações certinhas para o seu Tapete durar bastante.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>07</i><span>Quanto custa um Tapete personalizado?</span></h5></summary>
+          <summary><h5><i>05</i><span>Quanto custa um Tapete personalizado?</span></h5></summary>
           <p>O valor depende do tamanho, do material e da complexidade da arte. Por isso preferimos entender o seu caso antes de passar um número — assim o orçamento sai justo e sem surpresa. Preencha o formulário que a gente responde.</p>
         </details>
-        <details class="oi">
-          <summary><h5><i>08</i><span>Vocês atendem onde?</span></h5></summary>
-          <p>Atendemos no Rio de Janeiro. Se você está em outra cidade, mande uma mensagem mesmo assim que a gente verifica a melhor forma de te atender.</p>
-        </details>
-        <details class="oi">
-          <summary><h5><i>09</i><span>Qual altura de grama escolher?</span></h5></summary>
-          <p>Para decoração e varandas, 12 mm ou 20 mm. Para lazer, playgrounds e pets, a recreativa de 30 mm. Para futebol e esportes, a esportiva de 50 mm. Na dúvida, conte o uso que a gente indica.</p>
-        </details>
-        <details class="oi">
-          <summary><h5><i>10</i><span>Vocês fazem piso para quadra poliesportiva?</span></h5></summary>
-          <p>Fazemos. O piso modular esportivo é montado em placas e deixa a quadra ou o playground pronto em poucas horas. Envie as medidas da área no orçamento.</p>
-        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TAMBÉM FAZEMOS ===== -->
+<section id="tambem">
+  <div class="wrap">
+    <div class="tb rv">
+      <div class="tb-h"><span class="kick">Também fazemos</span><b class="fr">Outras soluções para pisos <em>da indústria Kapazi:</em></b></div>
+      <div class="tb-l">
+        <a class="tb-c" href="#orcamento" data-produto="grama-20">Gramas sintéticas</a>
+        <a class="tb-c" href="#orcamento" data-produto="piso-piscina">Piso W-Kap para piscina e áreas molhadas</a>
+        <a class="tb-c" href="#orcamento" data-produto="piso-quadra">Piso modular Playkap</a>
+        <a class="tb-c" href="#orcamento" data-produto="piso-rubberkap">Piso emborrachado Rubberkap</a>
+        <a class="tb-c" href="#orcamento" data-produto="piso-laminado">Piso laminado emborrachado</a>
+        <a class="tb-c" href="#orcamento" data-produto="piso-vinilico-regua-colada">Pisos vinílicos</a>
+        <a class="tb-c" href="#orcamento" data-produto="fita-antiderrapante">Fitas antiderrapantes e de demarcação</a>
+        <a class="tb-c" href="#orcamento" data-produto="capa-elevador">Capa de proteção para elevador (Liftkap)</a>
       </div>
     </div>
   </div>
@@ -1585,7 +1312,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="cta">
       <div class="cta-l rv">
-        <div class="kick">07 / Orçamento</div>
+        <div class="kick">05 / Orçamento</div>
         <h2 class="fr">Seu Tapete ou Capacho produzido na maior fábrica da América Latina <em>e entregue pela pii-zu.</em></h2>
         <p>Preencha para registrar seu pedido com o produto que você escolheu. Depois, você também pode continuar a conversa pelo WhatsApp.</p>
         <div class="passos" id="processo">
@@ -1620,7 +1347,7 @@ function piizuAds(label, extra){
             <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" minlength="2" maxlength="120" required>
           </div>
         </div>
-        <div class="row r2">
+        <div class="row r2" hidden>
           <div>
             <label for="fFase">Para onde é</label>
             <select id="fFase">
@@ -1642,7 +1369,7 @@ function piizuAds(label, extra){
         </div>
         <div class="row">
           <label for="fObs">Conte um pouco do que precisa</label>
-          <textarea id="fObs" maxlength="2000" placeholder="Ex.: Tapete para a entrada da loja com o nosso logotipo, mais ou menos 1 m de largura — ou grama sintética para um jardim de 20 m²"></textarea>
+          <textarea id="fObs" maxlength="2000" placeholder="Ex.: Tapete para a entrada da loja com o nosso logotipo, mais ou menos 1 m de largura — com o logotipo e a cor preferida"></textarea>
         </div>
         <div class="sb"><button type="submit" class="b-lar">Pedir orçamento</button></div>
         <p class="lg">Seu pedido fica registrado para atendimento. Não fazemos disparos em massa.</p>
@@ -1653,6 +1380,243 @@ function piizuAds(label, extra){
   </div>
 </section>
 
+<template id="todasFotos">
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-loja-ferramentas.webp" alt="Tapete personalizado com as marcas atendidas por uma loja de ferramentas" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-super-essencias.webp" alt="Tapete personalizado Super Essências na entrada da loja" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-hipermais-bem-vindo.webp" alt="Tapete Bem-Vindo com a marca Hipermais na entrada do supermercado" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-dentaluni-recepcao.webp" alt="Tapete com logotipo Dentaluni na recepção do escritório" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-escola-patio-6.webp" alt="Tapete com pista e amarelinha no pátio de escola" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-escola-patio-8.webp" alt="Tapete com pista de carrinhos sob o refeitório da escola" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/capacho-elevador-unique.webp" alt="Capacho personalizado com a marca Unique Residence no elevador do condomínio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/waterkap-entrada.webp" alt="Capacho Waterkap de alta absorção de água na entrada de um prédio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-liftkap.webp" alt="Capa de proteção Liftkap nas paredes do elevador de serviço" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-firekap-extintor.webp" alt="Tapete Firekap vermelho e amarelo sinalizando a área do extintor de incêndio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cleankap-logo-detalhe.webp" alt="Detalhe de Tapete Cleankap azul com logotipo em branco" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tapete-terra-raspador.webp" alt="Tapete Terra raspador retendo a sujeira da bota na entrada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina.webp" alt="Piso W-Kap antiderrapante em volta da piscina, com a textura em destaque" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-piscina-noite.webp" alt="Piso W-Kap antiderrapante e antifungo na borda da piscina à noite" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-rolo-cores.webp" alt="Rolo do piso W-Kap e as cores disponíveis: preto, cinza, azul e bege" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/wkap-textura.webp" alt="Textura vazada e antiderrapante do piso W-Kap" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/piso-quadra-esportiva.webp" alt="Piso modular em quadra poliesportiva de condomínio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-playground.webp" alt="Playground sobre piso modular Playkap colorido" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/playkap-antes-depois.webp" alt="Área de lazer antes e depois da instalação do piso modular Playkap" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-rampa.webp" alt="Piso laminado emborrachado Kapazi em rampa de acesso" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-garagem.webp" alt="Piso laminado emborrachado em garagem, rampa e rolo" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-laminado"><img src="assets/img/galeria/piso-laminado-onibus.webp" alt="Piso laminado emborrachado para ônibus em rolo e detalhe da textura" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-drogaria-ultra-popular.webp" alt="Tapete vermelho com a marca Drogarias Ultra Popular na entrada da farmácia" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-churrascaria-tropeiro.webp" alt="Capacho com o logotipo da churrascaria Tropeiro na entrada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-maple-bear-redondo.webp" alt="Tapetes redondos com o logotipo da escola Maple Bear na produção" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-byd-concessionaria.webp" alt="Tapete redondo com a marca BYD sob o balcão da concessionária" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-advocacia.webp" alt="Capacho com o logotipo de escritório de advocacia na porta" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-gracie-barra.webp" alt="Tapete azul com a marca Gracie Barra na entrada da academia" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-saber-infantil.webp" alt="Capacho com o logotipo colorido da escola Saber Educação Infantil na entrada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-elevador-iporanga.webp" alt="Capacho com o nome do Condomínio Iporanga no piso do elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-bangu-offices.webp" alt="Tapete redondo com o logotipo do Bangu Offices na recepção" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-bhs-passarela.webp" alt="Passarela vermelha com a marca BHS no corredor da loja" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/indu-polenghi-portaria.webp" alt="Capacho com a marca Polenghi na portaria da fábrica" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/casa-que-bom-que-voce-veio.webp" alt="Capacho Que bom que você veio na porta de casa" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/escola-amarelinha-fazenda.webp" alt="Tapete de amarelinha com tema de fazenda" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/sala-gastroclinica.webp" alt="Capacho com o logotipo da Gastroclínica na entrada da clínica" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-autentica-moda.webp" alt="Capacho com a marca Autêntica Moda Feminina na porta da loja" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-modular.webp" alt="Playground sobre piso modular colorido em área externa" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-letras.webp" alt="Piso modular colorido com letras do alfabeto no playground" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-brinquedoteca-modular.webp" alt="Brinquedoteca com piso modular colorido em xadrez" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-xadrez.webp" alt="Playground sobre piso modular verde com tabuleiro de xadrez" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/play-playground-colorido.webp" alt="Playground sobre piso modular verde e laranja" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-toque-natural.webp" alt="Piso vinílico em régua com aparência de madeira na cozinha, linha Toque Natural" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-ecokap.webp" alt="Cores do piso vinílico em régua colada Ecokap" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-colada-camadas.webp" alt="Camadas do piso vinílico em régua colada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-placa-colada.webp" alt="Cores do piso vinílico em placa colada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/vinilico-regua-clicada.webp" alt="Piso vinílico em régua clicada com encaixe tipo clique" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-tapete.webp" alt="Capa de proteção Liftkap instalada no elevador, com Capacho personalizado no piso" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-cabine.webp" alt="Cabine de elevador com as paredes protegidas pela capa Liftkap" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-instalada-lateral.webp" alt="Capa Liftkap protegendo a parede lateral e o corrimão do elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/capa-elevador-textura.webp" alt="Detalhe da textura e do acabamento da capa de proteção Liftkap" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-marluvas.webp" alt="Tapete redondo com a marca Marluvas" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-mkr-premium.webp" alt="Tapete com recorte especial e a marca MKR Premium na entrada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/redondo-mandala.webp" alt="Tapete em formato de mandala, com recorte especial" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="fita"><img src="assets/img/galeria/fita-antiderrapante-escada.webp" alt="Fitas antiderrapantes nos degraus da escada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-condominio.webp" alt="Grama sintética em jardim de condomínio" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-pet.webp" alt="Grama sintética em área com cachorro" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-verde-seca.webp" alt="Comparação entre grama sintética sempre verde e grama natural seca" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-academia.webp" alt="Grama sintética no piso de academia" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-jardim.webp" alt="Grama sintética com placas de pedra no jardim de entrada" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="grama"><img src="assets/img/galeria/grama-sintetica-20-30mm.webp" alt="Comparação das gramas sintéticas de 20 mm e 30 mm" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-holanda-lages.mp4" poster="assets/img/galeria/portfolio-video-holanda-lages.webp" aria-label="Vídeo do Tapete personalizado Holanda Lages Advocacia na entrada do escritório" controls muted playsinline preload="none"></video></div>
+<div class="ph gal-it" data-setor="tapete"><video src="assets/video/galeria/portfolio-video-tapete-sala.mp4" poster="assets/img/galeria/portfolio-video-tapete-sala.webp" aria-label="Vídeo de Tapete personalizado em formato orgânico na sala de estar" controls muted playsinline preload="none"></video></div>
+<div class="ph gal-it" data-setor="piso-quadra"><video src="assets/video/galeria/portfolio-video-playkap.mp4" poster="assets/img/galeria/portfolio-video-playkap.webp" aria-label="Vídeo do piso modular Playkap colorido em área kids" controls muted playsinline preload="none"></video></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-001.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-002.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-003.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-004.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-005.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-006.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-007.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-008.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-009.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-010.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-011.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-012.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-013.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-014.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-015.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-016.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-017.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-018.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-019.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-020.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-021.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-022.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-023.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-024.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-025.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-026.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-027.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-028.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-029.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-030.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-031.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-032.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-033.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-034.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-035.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-036.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-037.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-038.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-039.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-040.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-041.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-042.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-043.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-044.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-045.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-046.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-047.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-048.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-049.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-050.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-051.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-052.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-053.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-054.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-055.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-056.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-057.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-058.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-059.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-060.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-061.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-062.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-063.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-064.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-065.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-066.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-067.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-068.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-069.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-070.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-071.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-072.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-073.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-074.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-075.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-076.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-077.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-078.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-079.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-080.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-081.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-082.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-083.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-084.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-085.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-086.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-087.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-088.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-089.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-090.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-091.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-092.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-093.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-094.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-095.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-096.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-097.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-098.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-quadra"><img src="assets/img/galeria/portfolio-099.webp" alt="Piso modular colorido instalado em playground ou quadra" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-100.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-101.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-102.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-103.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-104.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-105.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-106.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/portfolio-107.webp" alt="Detalhe do piso W-Kap antiderrapante para áreas molhadas" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-piscina"><img src="assets/img/galeria/portfolio-108.webp" alt="Detalhe do piso W-Kap antiderrapante para áreas molhadas" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-109.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-110.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-111.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-112.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-113.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-114.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-115.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-116.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-117.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-118.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-119.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-120.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-121.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-122.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-123.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-124.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-125.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-126.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-127.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-128.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-129.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-130.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-131.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-132.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-133.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-134.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-135.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-136.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-137.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-138.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-139.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-140.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-141.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-142.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-143.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-144.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="capa-elevador"><img src="assets/img/galeria/portfolio-145.webp" alt="Capa de proteção Liftkap instalada no elevador" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-146.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-147.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-148.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-149.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-150.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-151.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-152.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-153.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-154.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-155.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-156.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-vinilico"><img src="assets/img/galeria/portfolio-157.webp" alt="Piso vinílico com aparência de madeira instalado" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-158.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-159.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-160.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-161.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-162.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-163.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-164.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-165.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-166.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-rubberkap"><img src="assets/img/galeria/portfolio-167.webp" alt="Piso emborrachado azul em playground coberto" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="piso-rubberkap"><img src="assets/img/galeria/portfolio-168.webp" alt="Piso emborrachado azul sob os brinquedos do playground" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-169.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+<div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-170.webp" alt="Tapete personalizado instalado em cliente pii-zu" width="864" height="1080" loading="lazy"></div>
+</template>
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
@@ -1666,7 +1630,7 @@ function piizuAds(label, extra){
         <ul>
           <li><a href="#projetos">Soluções por uso</a></li>
           <li><a href="#materiais">Tipos de Tapete</a></li>
-          <li><a href="#oficina">Por que a pii-zu</a></li>
+          <li><a href="#galeria">Galeria</a></li>
           <li><a href="#orcamento">Como funciona</a></li>
           <li><a href="#objecoes">Dúvidas</a></li>
         </ul>
@@ -1773,14 +1737,6 @@ else{
   document.querySelectorAll('.rv').forEach(function(e){ io.observe(e); });
 }
 
-var tog = document.getElementById('navtog'), navl = document.getElementById('navl');
-tog.addEventListener('click', function(){
-  var o = navl.classList.toggle('open');
-  tog.setAttribute('aria-expanded', o ? 'true' : 'false');
-});
-navl.addEventListener('click', function(e){
-  if(e.target.tagName === 'A'){ navl.classList.remove('open'); tog.setAttribute('aria-expanded','false'); }
-});
 
 /* =========================================================
    KILLER — projetos por ambiente
@@ -1895,21 +1851,6 @@ var AMB = [
     {src:'assets/img/galeria/casa-quarto-tapete.webp', alt:'Tapete geométrico preto e branco ao lado da cama', cap:'Tapete para o quarto'},
     {src:'assets/img/galeria/casa-sala-tapete-listrado.webp', alt:'Tapete listrado azul e bege na sala de estar', cap:'Tapete listrado para a sala'},
     {src:'assets/img/galeria/casa-sala-tapete-geometrico.webp', alt:'Tapete colorido com desenho geométrico na sala de TV', cap:'Tapete geométrico para a sala de TV'}
-   ]},
-  {id:'quad', nome:'Quadras Poliesportivas, Playground e Espaços kids', local:'',
-   p:'Quadras poliesportivas e playgrounds de condomínios, escolas e clubes ganham piso modular, grama sintética ou Tapete com as cores, marcações e desenhos do espaço, prontos em pouco tempo.',
-   sp:[['Personalização','Cores, marcações e desenhos'],['Uso indicado','Quadras Poliesportivas, playgrounds e áreas de lazer'],['Formato','Medidas personalizadas']],
-   al:'Informe as medidas da área e se ela é coberta ou descoberta: isso define se o indicado é piso modular, grama sintética ou Tapete.',
-   fotos:[
-    {src:'assets/img/galeria/playkap-playground.webp', alt:'Playground sobre piso modular Playkap colorido', cap:'Piso modular para playground'},
-    {src:'assets/img/galeria/playkap-antes-depois.webp', alt:'Área de lazer antes e depois da instalação do piso modular Playkap', cap:'Antes e depois do piso modular'},
-    {src:'assets/img/galeria/piso-quadra-esportiva.webp', alt:'Piso modular em quadra poliesportiva de condomínio', cap:'Quadra poliesportiva com piso modular'},
-    {src:'assets/img/galeria/play-playground-modular.webp', alt:'Playground sobre piso modular colorido em área externa', cap:'Playground com piso modular'},
-    {src:'assets/img/galeria/play-playground-letras.webp', alt:'Piso modular colorido com letras do alfabeto no playground', cap:'Piso modular com letras no playground'},
-    {src:'assets/img/galeria/play-brinquedoteca-modular.webp', alt:'Brinquedoteca com piso modular colorido em xadrez', cap:'Piso modular colorido na brinquedoteca'},
-    {src:'assets/img/galeria/play-playground-xadrez.webp', alt:'Playground sobre piso modular verde com tabuleiro de xadrez', cap:'Piso modular com tabuleiro de xadrez'},
-    {src:'assets/img/galeria/play-playground-colorido.webp', alt:'Playground sobre piso modular verde e laranja', cap:'Piso modular no playground'},
-    {src:'assets/img/galeria/play-amarelinha-grama.webp', alt:'Tapete de amarelinha sobre grama sintética na área kids', cap:'Amarelinha sobre grama sintética'}
    ]}
 ];
 var AID = 'cond', PFI = 0;
@@ -2119,64 +2060,6 @@ function escolheProduto(id){
 }
 
 /* mais produtos: abas por nicho, fotos no formato da galeria e cartões de modelos */
-var LID = null, LMOD = null, lnTr = document.getElementById('lnTr');
-/* nichos com fotos separadas por modelo (galeria com data-modelo): clicar no cartão filtra as fotos */
-function lnPorModelo(id){ return !!document.querySelector('.gal-it[data-setor="' + id + '"][data-modelo]'); }
-/* fotos e vídeos de um nicho, na ordem em que estão na galeria */
-/* com modelo: só as fotos marcadas com data-modelo daquele modelo */
-function lnFotos(id, modelo){
-  var sel = '.gal-it[data-setor="' + id + '"]' + (modelo ? '[data-modelo="' + modelo + '"]' : '');
-  return Array.prototype.map.call(document.querySelectorAll(sel + ' > img, ' + sel + ' > video'), function(m){
-    return m.tagName === 'VIDEO'
-      ? {video:true, src:m.getAttribute('src'), poster:m.getAttribute('poster') || '', alt:m.getAttribute('aria-label') || ''}
-      : {src:m.getAttribute('src'), alt:m.alt};
-  });
-}
-function lnSetas(){ document.getElementById('lnGal').classList.remove('sem-setas'); /* setas sempre visíveis */ faixaEncaixa(lnTr); }
-function lnRender(){
-  var N = nicho(LID), top = document.getElementById('lnTop');
-  top.innerHTML = '';
-  NICHOS.forEach(function(X){
-    if(X.proprio) return;
-    var b = document.createElement('button');
-    b.type = 'button'; b.className = 'ab' + (X.id === LID ? ' on' : '');
-    b.setAttribute('aria-pressed', X.id === LID ? 'true' : 'false');
-    b.textContent = X.nome;
-    b.addEventListener('click', function(){ LID = X.id; LMOD = null; lnRender(); });
-    top.appendChild(b);
-  });
-  var porMod = lnPorModelo(LID), modN = null;
-  if(LMOD) N.itens.forEach(function(P){ if(P.id === LMOD) modN = P.nome; });
-  lnTr.innerHTML = lnFotos(LID, porMod ? LMOD : null).map(function(F){
-    if(F.video) return '<div class="ph gal-it"><video src="' + esc(F.src) + '"' + (F.poster ? ' poster="' + esc(F.poster) + '"' : '') +
-      ' aria-label="' + esc(F.alt) + '" controls muted playsinline preload="metadata"></video></div>';
-    return '<div class="ph gal-it"><img src="' + esc(F.src) + '" alt="' + esc(F.alt) + '" width="864" height="1080" loading="lazy"></div>';
-  }).join('');
-  lnTr.classList.toggle('vazio', !lnTr.children.length);
-  if(!lnTr.children.length) lnTr.innerHTML = '<div class="ln-vazio">' + (modN ? 'Fotos do ' + esc(modN) + ' em breve. ' : 'Fotos em breve. ') + 'Peça o orçamento e receba as opções de modelos e cores.</div>';
-  lnTr.scrollLeft = 0;
-  document.getElementById('lnNm').textContent = N.titulo;
-  document.getElementById('lnLc').textContent = N.sub;
-  document.getElementById('lnP').textContent = N.p;
-  var lnIt = document.getElementById('lnIt');
-  lnIt.innerHTML = N.itens.map(function(P){
-    var ver = porMod ? '<button type="button" class="ln-ver" data-mod="' + P.id + '" aria-pressed="' + (LMOD === P.id) + '">' + (LMOD === P.id ? 'Vendo as fotos' : 'Ver fotos') + '</button>' : '';
-    return '<div class="ln-c' + (porMod ? ' clic' : '') + (LMOD === P.id ? ' sel' : '') + '"' + (porMod ? ' data-mod="' + P.id + '"' : '') + '><span class="tag">' + esc(P.tag) + '</span><b class="fr">' + esc(P.nome) + '</b>' +
-      '<p>' + esc(P.p) + '</p>' + ver + '<a href="#orcamento" class="b-lin sm" data-produto="' + P.id + '">Pedir orçamento</a></div>';
-  }).join('');
-  lnIt.querySelectorAll('.ln-c.clic').forEach(function(c){
-    c.addEventListener('click', function(e){
-      if(e.target.closest('a')) return;
-      var m = c.getAttribute('data-mod');
-      LMOD = LMOD === m ? null : m; lnRender();
-      if(window.innerWidth <= 1060) document.getElementById('lnGal').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'center'});
-    });
-  });
-  lnSetas();
-}
-for(var ni=0; ni<NICHOS.length && !LID; ni++){ if(!NICHOS[ni].proprio) LID = NICHOS[ni].id; }
-lnRender();
-window.addEventListener('resize', lnSetas);
 /* setas de uma faixa de fotos: passam um cartão; no fim volta ao começo */
 /* faixas de fotos: mostram só fotos inteiras (sem pedaço da próxima); max = limite de fotos lado a lado */
 function faixaEncaixa(tr, max){
@@ -2207,8 +2090,6 @@ function faixaPasso(tr, d){
   else if(d < 0 && tr.scrollLeft <= 4) tr.scrollTo({left:tr.scrollWidth});
   else tr.scrollBy({left:d * w});
 }
-document.getElementById('lnPrev').addEventListener('click', function(){ faixaPasso(lnTr, -1); });
-document.getElementById('lnNext').addEventListener('click', function(){ faixaPasso(lnTr, 1); });
 
 /* =========================================================
    COMPARA — dobra 2: tipos de contenção, modelos e fotos.
@@ -2294,18 +2175,6 @@ document.addEventListener('click', function(e){
   if(a) escolheProduto(a.getAttribute('data-produto'));
 });
 
-/* galeria: uma aba para cada nicho que tem fotos */
-/* as abas ficam em duas fileiras, divididas pelo tamanho dos nomes */
-(function(){
-  var abas = [{id:'todos', nome:'Todos'}].concat(NICHOS.filter(function(N){ return document.querySelector('.gal-it[data-setor="' + N.id + '"]'); }));
-  var total = abas.reduce(function(t, N){ return t + N.nome.length + 6; }, 0), soma = 0, corte = abas.length;
-  for(var i = 0; i < abas.length; i++){ soma += abas[i].nome.length + 6; if(soma >= total / 2){ corte = i + 1; break; } }
-  function bt(N){ var on = N.id === 'todos'; return '<button type="button" class="ab' + (on ? ' on' : '') + '" data-setor="' + N.id + '" aria-pressed="' + on + '">' + esc(N.nome) + '</button>'; }
-  document.getElementById('galTabs').innerHTML = '<div class="gal-fila">' + abas.slice(0, corte).map(bt).join('') + '</div><div class="gal-fila">' + abas.slice(corte).map(bt).join('') + '</div>';
-})();
-document.getElementById('lnFotos').addEventListener('click', function(){
-  var b = document.querySelector('#galTabs button[data-setor="' + LID + '"]'); if(b) b.click();
-});
 
 /* galeria: setas passam as fotos; no fim volta ao começo *//* galeria: setas passam as fotos; no fim volta ao começo */
 var galTr = document.getElementById('galTr');
@@ -2319,15 +2188,6 @@ function galPasso(d){
   else galTr.scrollBy({left:d * w});
 }
 function galSetas(){ galTr.parentNode.classList.remove('sem-setas'); /* setas sempre visíveis */ faixaEncaixa(galTr); }
-document.getElementById('galTabs').addEventListener('click', function(e){
-  var b = e.target.closest('button[data-setor]');
-  if(!b) return;
-  var st = b.getAttribute('data-setor');
-  this.querySelectorAll('button').forEach(function(x){ var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-  galTr.querySelectorAll('.gal-it').forEach(function(it){ it.hidden = st !== 'todos' && it.getAttribute('data-setor') !== st; });
-  galTr.scrollTo({left:0, behavior:'auto'});
-  galSetas();
-});
 window.addEventListener('resize', galSetas);
 galSetas();
 document.getElementById('galPrev').addEventListener('click', function(){ galPasso(-1); });
@@ -2425,6 +2285,10 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     return;
   }
   var A = aAtual(), M = null;
+  /* "para onde é" e "quando precisa" saíram da tela: vêm do segmento escolhido em Soluções */
+  var LUGAR = {cond:'Condomínio', esco:'Creche ou escola', resi:'Minha casa ou apartamento'};
+  document.getElementById('fFase').value = LUGAR[AID] || 'Empresa ou comércio';
+  document.getElementById('fPrazo').value = 'Sem data definida';
   for(var i=0;i<MATS.length;i++){ if(MATS[i].id===MID) M = MATS[i]; }
   var P = produto(g('fProduto')) || produto('tapete');
   var msg =
@@ -2433,8 +2297,6 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     'Nome: ' + nome + '\n' +
     'WhatsApp: ' + fone + '\n' +
     'Bairro/cidade: ' + bairro + '\n' +
-    'Para onde é: ' + g('fFase') + '\n' +
-    'Quando precisa: ' + g('fPrazo') + '\n' +
     'Detalhes: ' + (g('fObs') || 'ainda estou definindo') +
     (P.id === 'tapete' ?
       '\n\n--- O que eu estava vendo no site ---\n' +
@@ -2524,7 +2386,7 @@ document.addEventListener('click', function(e){
 
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
-var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
+var fs=[].slice.call(document.getElementById('todasFotos').content.querySelectorAll('.gal-it[data-setor="tapete"] img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
 if(!fs.length){q.style.display='none';return}
 var img=document.getElementById('qdImg'),ct=document.getElementById('qdCont'),k=0,cache={};
 function pre(n){var f=fs[(n+fs.length)%fs.length];if(!cache[f.s]){cache[f.s]=new Image();cache[f.s].src=f.s}}
