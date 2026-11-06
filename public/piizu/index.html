@@ -1084,6 +1084,13 @@ footer{padding:38px 0 26px}
 #materiais .head{display:block!important;max-width:none}
 #materiais .head p{margin-top:10px!important;font-size:.95rem;line-height:1.6}
 #cmpTop .ab:last-child,.cmp-gr:nth-of-type(2),.cmp-mod .cmp-gr~.cmp-gr{font-weight:700}
+
+/* menu (06/11/2026): 4 itens + botão de orçamento */
+.nav-l .nav-orc{display:none}
+.nav-bt .bt-sm{display:none}
+@media(min-width:861px) and (max-width:1300px){.nav-l{gap:12px!important;font-size:.76rem!important}.nav-bt{font-size:.74rem}}
+@media(min-width:861px) and (max-width:1100px){.nav-bt .bt-lg{display:none}.nav-bt .bt-sm{display:inline}}
+@media(max-width:860px){.nav-bt .bt-lg{display:none}.nav-bt .bt-sm{display:inline}.nav-l.open .nav-orc{display:block;color:var(--lar2)}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1117,7 +1124,15 @@ function piizuAds(label, extra){
 <header class="nav">
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-grafite-prata-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83"></a>
-    <a href="#orcamento" class="b-lar sm" style="flex:none" translate="no"><span class="lg-txt">Pedir&nbsp;</span>orçamento</a>
+    <nav class="nav-l" id="navl" aria-label="Menu">
+      <a href="#materiais">Opções de Matéria-Prima</a>
+      <a href="#projetos">Soluções e Aplicações</a>
+      <a href="#galeria">Galeria de “Artes”</a>
+      <a href="#objecoes">Tire suas Dúvidas</a>
+      <a href="#orcamento" class="nav-orc">Solicite Aqui Seu Orçamento!</a>
+    </nav>
+    <button class="nav-tog notranslate" translate="no" id="navtog" aria-expanded="false" aria-controls="navl">MENU</button>
+    <a href="#orcamento" class="b-lar sm nav-bt" style="flex:none"><span class="bt-lg">Solicite Aqui Seu Orçamento!</span><span class="bt-sm">Orçamento</span></a>
   </div>
 </header>
 
@@ -1685,6 +1700,14 @@ medeNav();
 window.addEventListener('resize', medeNav);
 window.addEventListener('load', medeNav);
 /* o botão do WhatsApp sai da frente enquanto passa por cima de uma seta de fotos */
+var tog = document.getElementById('navtog'), navl = document.getElementById('navl');
+tog.addEventListener('click', function(){
+  var o = navl.classList.toggle('open');
+  tog.setAttribute('aria-expanded', o ? 'true' : 'false');
+});
+navl.addEventListener('click', function(e){
+  if(e.target.tagName === 'A'){ navl.classList.remove('open'); tog.setAttribute('aria-expanded','false'); }
+});
 var waBtn = document.querySelector('.wa-float');
 function bateSeta(el){
   var w = el.getBoundingClientRect(), bate = false;
