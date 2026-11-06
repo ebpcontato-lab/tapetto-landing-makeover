@@ -1281,6 +1281,7 @@ window.__PIIZU_ADS = {
   form: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB',
   whatsapp: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB'
 };
+gtag('js', new Date());
 gtag('config','AW-17662893947');
 function piizuAds(label, extra){
   if(typeof label !== 'string' || label.indexOf('COLE_AQUI') !== -1) return;
@@ -1301,7 +1302,14 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('consent','revoke');
+/* Retém os eventos só para quem recusou no banner ou está num fuso da Europa
+   (regiões que exigem consentimento); para os demais, o pixel envia na hora. */
+(function(){
+  var neg = false;
+  try{ var c = JSON.parse(localStorage.getItem('piizu-cookie-consent-v1') || 'null'); if(c && c.choice === 'denied') neg = true; if(c && c.choice === 'granted') return; }catch(e){}
+  try{ var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; if(/^Europe\//.test(tz) || tz === 'Atlantic/Reykjavik' || tz === 'Atlantic/Canary' || tz === 'Atlantic/Madeira' || tz === 'Atlantic/Azores') neg = true; }catch(e){}
+  if(neg) fbq('consent','revoke');
+})();
 fbq('init', '1688511512871069');
 fbq('track', 'PageView');
 /* Lead na Meta: disparado junto com cada conversão do Google Ads (CTA, WhatsApp e formulário). */
@@ -2549,21 +2557,21 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
   var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 2000) : null;
   var done = false;
-  var finish = function(needs){
+  var finish = function(needs, known){
     if(done) return; done = true;
     if(timer) clearTimeout(timer);
     if(!decided && needs) banner.hidden = false;
-    /* Meta: fora das regiões que exigem consentimento, libera o pixel sem esperar o banner. */
-    if(!decided && !needs && typeof fbq === 'function') fbq('consent','grant');
+    /* Meta: confirma a região pelo servidor — retém nas que exigem consentimento, libera nas demais. */
+    if(!decided && known && typeof fbq === 'function') fbq('consent', needs ? 'revoke' : 'grant');
   };
   fetch('/cdn-cgi/trace', ctrl ? {signal: ctrl.signal} : undefined)
     .then(function(r){ return r.ok ? r.text() : Promise.reject(new Error('trace')); })
     .then(function(text){
       var m = /(?:^|\n)loc=([A-Za-z]{2})(?:\n|$)/.exec(text || '');
       var loc = m ? m[1].toUpperCase() : 'XX';
-      finish(loc === 'XX' || loc === 'T1' || EEA.indexOf(loc) !== -1);
+      finish(loc === 'XX' || loc === 'T1' || EEA.indexOf(loc) !== -1, loc !== 'XX' && loc !== 'T1');
     })
-    .catch(function(){ finish(true); });
+    .catch(function(){ finish(true, false); });
 })();
 
 /* ============ conversão: clique no WhatsApp ============ */
