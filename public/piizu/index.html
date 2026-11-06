@@ -1097,16 +1097,21 @@ footer{padding:38px 0 26px}
 .hero-num .hn-n1 b{white-space:nowrap;font-size:min(1.02rem,14cqw)}
 @media(min-width:861px){
   .hero-num>div{justify-content:flex-start;padding:min(16px,1.6vh) 18px;overflow:hidden}
-  .hero-num b,.hero-num .hn-pers b,.hero-num .hn-at b,.hero-num .hn-n1 b{font-size:clamp(1.15rem,min(2.2vw,3vh),2.3rem)}
-  .hero-num .hn-pers b{font-size:min(clamp(1.15rem,min(2.2vw,3vh),2.3rem),13cqw)}
-  .hero-num .hn-at b{font-size:min(clamp(1.15rem,min(2.2vw,3vh),2.3rem),15cqw)}
-  .hero-num .hn-n1 b{font-size:min(clamp(1.15rem,min(2.2vw,3vh),2.3rem),14cqw)}
-  .hero-num span{font-size:clamp(.66rem,min(.95vw,1.55vh),1rem);line-height:1.3;margin-top:min(8px,.7vh)}
+  .hero-num b,.hero-num .hn-pers b,.hero-num .hn-at b,.hero-num .hn-n1 b{font-size:clamp(1.15rem,min(2.2vw,2.7vh),2.3rem)}
+  .hero-num .hn-pers b{font-size:min(clamp(1.15rem,min(2.2vw,2.7vh),2.3rem),13cqw)}
+  .hero-num .hn-at b{font-size:min(clamp(1.15rem,min(2.2vw,2.7vh),2.3rem),15cqw)}
+  .hero-num .hn-n1 b{font-size:min(clamp(1.15rem,min(2.2vw,2.7vh),2.3rem),14cqw)}
+  .hero-num span{font-size:clamp(.64rem,min(.95vw,1.42vh),1rem);line-height:1.3;margin-top:min(8px,.7vh)}
 }
 
 /* título de "Nossas linhas" numa linha só no computador */
 #materiais .head{container-type:inline-size}
 @media(min-width:861px){#materiais .head h2.h2-linhas{white-space:nowrap;font-size:min(2.4rem,2.62cqw)}}
+
+/* aba Personalizados alinhada à esquerda, como as outras */
+.hero-num .hn-pers b{text-align:left!important}
+
+@media(min-width:861px){.hero-num{grid-template-rows:minmax(min-content,1fr) minmax(min-content,1fr)!important}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1161,14 +1166,14 @@ function piizuAds(label, extra){
       <p class="hero-dura rise d1"><b>Aqui seu Tapete dura muito mais!</b><br>Seu Tapete produzido nas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) / Vinil <b class="nw">A/T</b> (alto tráfego).<br><b>Não produzimos personalizados na linha inferior:</b> Vinil <b class="nw">Silver</b>: tráfego leve.<br><b>Grande diferencial que você só encontra aqui na <span class="nw">pii-zu</span>: Tapetes e Capachos feitos para durarem...</b></p>
       <div class="hero-num rise d2">
         <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes e Capachos</span></div>
-        <div class="hn-n1"><b class="fr">Nº 1 - Kapazi</b><span>A maior fábrica da América Latina. A marca preferida dos condomínios, escolas, grandes redes e shopping centers.</span></div>
+        <div class="hn-n1"><b class="fr">Nº 1 - Kapazi</b><span>A maior fabricante de Tapetes e revestimentos. Atuando em países de 3 continentes. A marca preferida dos condomínios, escolas, grandes redes e shopping centers.</span></div>
         <div class="hn-pers"><b class="fr">Personalizados</b><span>Tapetes e Capachos com as suas dimensões, o logo da sua marca ou textos desejados e a cor preferida do seu Tapete.</span></div>
         <div class="hn-at"><b class="fr"><span class="nw">Atendimento</span><br><span class="nw">pii-zu</span></b><span>Deixe sua marca em evidência – Traga sua marca para a <span class="nw">pii-zu</span>, Seu Piso em nossas mãos...</span></div>
       </div>
     </div>
 
     <div class="qd-box rise d2">
-      <p class="qd-tit">Sua marca “conversa” melhor com A Gente!</p>
+      <p class="qd-tit">Sua marca “conversa” melhor com A Gente!!!</p>
       <div class="qd-linha">
         <button type="button" class="seta esq" id="qdAnt" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
         <div class="quadro" id="quadro" aria-roledescription="carrossel" aria-label="Fotos de Tapetes e Capachos instalados">
