@@ -1134,6 +1134,15 @@ footer{padding:38px 0 26px}
 /* frase de "Nossas linhas" com a mesma letra que tinha sobre a foto do topo */
 .mat-slogan{font-family:'Fraunces',Georgia,serif!important;font-style:italic;font-weight:300!important;color:var(--lar2);font-size:clamp(1.25rem,1.7vw,1.6rem)!important;line-height:1.15;letter-spacing:-.01em}
 @media(max-width:860px){.mat-slogan{font-size:1.2rem!important}}
+
+/* Compare os modelos: os cinco cartões do mesmo tamanho, todos com "Ver fotos" */
+.cmp-c.sel .cmp-ver{visibility:visible}
+@media(min-width:1061px){
+  .cmp-mod .cmp-c,.cmp-mod .cmp-c.g-dupla{grid-column:span 2}
+  .cmp-mod .cmp-c{display:flex!important;flex-direction:column;min-height:var(--cmp-h,0px)}
+  .cmp-mod .cmp-c .cmp-ver{margin-top:auto;padding-top:4px}
+}
+@media(max-width:1060px){.cmp-mod .cmp-c{min-height:var(--cmp-h,0px);align-content:center}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -2222,6 +2231,8 @@ function cmpRender(){
         M.itens.map(function(t){ return '<li><i>◦</i><span>' + esc(t) + '</span></li>'; }).join('') + '</ul><span class="cmp-ver">Ver fotos →</span></button>';
     }).join('');
   }).join('');
+  mod.style.removeProperty('--cmp-h');
+  requestAnimationFrame(function(){ var mx = 0; mod.querySelectorAll('.cmp-c').forEach(function(c){ mx = Math.max(mx, c.offsetHeight); }); if(mx) mod.style.setProperty('--cmp-h', mx + 'px'); });
   mod.querySelectorAll('.cmp-c').forEach(function(b){
     b.addEventListener('click', function(){
       CID = b.getAttribute('data-g'); CMID = +b.getAttribute('data-k'); cmpRender();
