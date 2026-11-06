@@ -973,7 +973,7 @@ footer{padding:38px 0 26px}
   .qd-linha{gap:6px}
   .qd-linha .seta{width:32px;height:32px}
   .qd-linha .seta svg{width:16px;height:16px}
-  .quadro{width:min(calc(100cqw - 76px),calc((100cqh - 34px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
+  .quadro{width:min(calc(100cqw - 76px),calc(100cqh * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
   /* abas grandes ocupando o espaço à esquerda, abaixo do título */
   .hero-g>div:first-child{align-self:stretch;display:flex;flex-direction:column;height:calc(var(--dobra) - 30px);padding-top:8px}
   .hero-num{flex:1;min-height:0;margin:22px 0 0;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;border-radius:12px}
@@ -1040,7 +1040,7 @@ footer{padding:38px 0 26px}
   .qd-linha{gap:4px}
   .qd-linha .seta{width:26px;height:26px}
   .qd-linha .seta svg{width:14px;height:14px}
-  .quadro{width:min(calc(100cqw - 60px),calc((100cqh - 34px) * .8))}
+  .quadro{width:min(calc(100cqw - 60px),calc(100cqh * .8))}
 }
 @media(max-width:860px){
   .hero{padding-top:8px;padding-bottom:8px}
@@ -1053,7 +1053,7 @@ footer{padding:38px 0 26px}
 
 /* setas crescem só no espaço que sobra ao lado da foto, sem mudar o tamanho da foto */
 @media(min-width:861px){
-  .qd-linha .seta{--fw:min(calc(100cqw - 60px),calc((100cqh - 34px) * .8));--sz:clamp(26px,calc((100cqw - var(--fw) - 8px) / 2),44px);width:var(--sz);height:var(--sz)}
+  .qd-linha .seta{--fw:min(calc(100cqw - 60px),calc(100cqh * .8));--sz:clamp(26px,calc((100cqw - var(--fw) - 8px) / 2),44px);width:var(--sz);height:var(--sz)}
   .qd-linha .seta svg{width:calc(var(--sz) * .45);height:calc(var(--sz) * .45)}
 }
 @media(max-width:860px){
@@ -1191,7 +1191,6 @@ function piizuAds(label, extra){
     </div>
 
     <div class="qd-box rise d2">
-      <p class="qd-tit">Sua marca “conversa” melhor com A Gente!!!</p>
       <div class="qd-linha">
         <button type="button" class="seta esq" id="qdAnt" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
         <div class="quadro" id="quadro" aria-roledescription="carrossel" aria-label="Fotos de Tapetes e Capachos instalados">
@@ -1219,6 +1218,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">01 / Nossas linhas</div>
+      <div class="mat-slogan">Sua marca “conversa” melhor com A Gente!!!</div>
       <h2 class="fr h2-linhas">Cinco linhas de Tapetes e Capachos:</h2>
       <ul class="mat-ls">
         <li><b class="fr">Linha Vinil – <em>Gold</em> Médio Tráfego ou <em>A/T</em> (Alto Tráfego).</b> Retenção de sólidos. Variedade de cores. Produzido em PVC.</li>
