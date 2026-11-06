@@ -1143,6 +1143,16 @@ footer{padding:38px 0 26px}
   .cmp-mod .cmp-c .cmp-ver{margin-top:auto;padding-top:4px}
 }
 @media(max-width:1060px){.cmp-mod .cmp-c{min-height:var(--cmp-h,0px);align-content:center}}
+
+/* ===== enxugar (06/11 tarde): menos dobras ===== */
+/* Compare os modelos: cartões só com nome e Ver fotos (os detalhes estão na lista acima) */
+.cmp-mod .cmp-c ul{display:none!important}
+@media(max-width:1060px){.cmp-mod{grid-template-columns:1fr 1fr!important}.cmp-mod .cmp-gr{grid-column:1/-1}.cmp-mod .cmp-c{min-height:0!important;padding:8px 10px}}
+/* Soluções: sem a ficha técnica (personalização / uso / formato) */
+#pSp{display:none!important}
+/* rodapé em duas colunas */
+@media(min-width:861px){.ft{grid-template-columns:1.4fr 1fr!important}}
+@media(max-width:860px){.ft{grid-template-columns:1fr!important;gap:20px!important}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1255,7 +1265,6 @@ function piizuAds(label, extra){
     </div>
 
     <div class="pj-ft rv" style="justify-content:center;text-align:center;margin-top:22px"><a href="#orcamento" class="b-lar">Pedir orçamento</a></div>
-    <p class="of-note rv">Cada Tapete é pensado para o seu espaço: o valor sai da medida, do material e da arte. Por isso o orçamento é sempre personalizado, sem custo e sem compromisso.</p>
   </div>
 </section>
 
@@ -1375,7 +1384,6 @@ function piizuAds(label, extra){
       <div class="cta-l rv">
         <div class="kick">05 / Orçamento</div>
         <h2 class="fr">Seu Tapete ou Capacho produzido na maior fábrica da América Latina <em>e entregue pela pii-zu.</em></h2>
-        <p>Preencha para registrar seu pedido com o produto que você escolheu. Depois, você também pode continuar a conversa pelo WhatsApp.</p>
         <div class="passos" id="processo">
           <h3 class="fr">Como funciona</h3>
           <ol>
@@ -1695,17 +1703,7 @@ function piizuAds(label, extra){
     <div class="ft">
       <div>
         <div class="logo"><img src="assets/img/marca/piizu-grafite-prata-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83" loading="lazy"></div>
-        <p>Tapetes personalizados com logotipo, nome, cores e desenhos, grama sintética e pisos para piscina e quadras, no Rio de Janeiro. Para empresas, condomínios, residências e escolas, com produção na maior fábrica da América Latina, há mais de 48 anos no mercado nacional.</p>
-      </div>
-      <div>
-        <h6>Navegação</h6>
-        <ul>
-          <li><a href="#projetos">Soluções por uso</a></li>
-          <li><a href="#materiais">Tipos de Tapete</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#orcamento">Como funciona</a></li>
-          <li><a href="#objecoes">Dúvidas</a></li>
-        </ul>
+        <p>Tapetes e Capachos personalizados com o logo da sua marca, nas linhas Vinil Gold, Vinil A/T, Cleankap, Waterkap e Duo. Produzidos pela indústria Kapazi, a maior fábrica da América Latina, com atendimento pii-zu no Rio de Janeiro e entrega para todo o Brasil.</p>
       </div>
       <div>
         <h6>Contato</h6>
@@ -2232,7 +2230,7 @@ function cmpRender(){
     }).join('');
   }).join('');
   mod.style.removeProperty('--cmp-h');
-  requestAnimationFrame(function(){ var mx = 0; mod.querySelectorAll('.cmp-c').forEach(function(c){ mx = Math.max(mx, c.offsetHeight); }); if(mx) mod.style.setProperty('--cmp-h', mx + 'px'); });
+  requestAnimationFrame(function(){ var mx = 0; mod.querySelectorAll('.cmp-c').forEach(function(c){ mx = Math.max(mx, c.offsetHeight); }); if(mx && window.innerWidth > 1060) mod.style.setProperty('--cmp-h', mx + 'px'); });
   mod.querySelectorAll('.cmp-c').forEach(function(b){
     b.addEventListener('click', function(){
       CID = b.getAttribute('data-g'); CMID = +b.getAttribute('data-k'); cmpRender();
