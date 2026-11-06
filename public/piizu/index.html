@@ -1175,6 +1175,18 @@ footer .ft p{font-size:.84rem}
 /* número de cada foto */
 .fnum{position:absolute;top:8px;left:8px;z-index:6;background:#8a2a10;color:#fff;font:700 13px/1 Inter,system-ui,sans-serif;padding:5px 9px;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.35);pointer-events:none}
 #pjFoto .ph > .fnum{top:40px}
+
+/* Nossas Soluções Variadas (computador): fotos na coluna da direita, do alto da seção até o botão */
+@media(min-width:1061px){
+  #materiais .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
+  #materiais .head{grid-column:1;grid-row:1;margin-bottom:10px}
+  #materiais .cmp-box{display:contents}
+  #materiais .cmp-t{grid-column:1!important;grid-row:2!important;margin:6px 0 8px!important}
+  #materiais .cmp-mod{grid-column:1!important;grid-row:3!important}
+  #cmpGal{grid-column:2!important;grid-row:1/span 3!important;align-self:start!important;justify-self:center!important;width:100%;max-width:min(100%,calc((var(--dobra) - 140px) * .8 + 112px))!important;margin-top:4px}
+  #cmpTr{grid-auto-columns:100%!important}
+  #materiais .quero-ft{grid-column:1/-1;grid-row:4}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1254,7 +1266,7 @@ function piizuAds(label, extra){
 
 <!-- ===== CLIENTES (logos) — troque as imagens na lista CLIENTES do script ===== -->
 <div class="cli" aria-label="Clientes atendidos">
-  <div class="cli-t">Clientes parceiros que já recepcionam com nossa linha premium de Tapetes e Capachos personalizados:</div>
+  <div class="cli-t">Clientes parceiros que já recepcionam com nossa linha Alto Padrão e Premium de Tapetes e Capachos personalizados:</div>
   <div class="cli-mq"><div class="cli-tr" id="cliT"></div></div>
   <p class="cli-av"><span class="str">★★★★★</span> Dezenas de clientes satisfeitos. <a href="https://maps.app.goo.gl/jkLHsukCuMakfaU7A" target="_blank" rel="noopener">Veja as avaliações no Google</a></p>
 </div>
@@ -1263,7 +1275,7 @@ function piizuAds(label, extra){
 <section id="materiais">
   <div class="wrap">
     <div class="head rv">
-      <div class="kick">01 / Nossas linhas</div>
+      <div class="kick">01 / Nossas Soluções Variadas</div>
       <div class="mat-slogan">Sua marca “conversa” melhor com A Gente!!!</div>
       <ul class="mat-ls">
         <li><b class="fr">Linha Vinil – <em>Gold</em> Médio Tráfego ou <em>A/T</em> (Alto Tráfego).</b> Retenção de sólidos. Variedade de cores. Produzido em PVC.</li>
@@ -1271,7 +1283,6 @@ function piizuAds(label, extra){
         <li><b class="fr">Linha Dupla Função A/T – <em>Waterkap</em>.</b> Retenção de sólidos e líquidos. Produzido em Polipropileno e Borracha. Variedade de cores.</li>
         <li><b class="fr">E nossa terceira opção Dupla Função A/T – <em>Duo</em>.</b> Retenção de sólidos e líquidos. Cor única. Produzido em Polipropileno.</li>
       </ul>
-      <p class="mat-linhas"><b>Retenção de sólidos Vinil (PVC)</b> (seu piso livre de terra, areia e poeira)<br><b>Retenção Dupla Função</b> (retenção de líquidos: águas pluviais).</p>
     </div>
 
     <!-- Compare os modelos — gerado pela lista COMPARA do script -->
