@@ -1287,10 +1287,34 @@ function piizuAds(label, extra){
   var ev = {send_to: label};
   if(extra) for(var k in extra) ev[k] = extra[k];
   gtag('event','conversion', ev);
+  piizuLead(extra);
 }
 </script>
+<!-- Meta Pixel Code — consentimento: eventos retidos (revoke) até a região ser
+     conferida ou o visitante aceitar no banner; liberados com fbq('consent','grant'). -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('consent','revoke');
+fbq('init', '1688511512871069');
+fbq('track', 'PageView');
+/* Lead na Meta: disparado junto com cada conversão do Google Ads (CTA, WhatsApp e formulário). */
+function piizuLead(extra){
+  if(typeof fbq !== 'function') return;
+  if(extra && extra.transaction_id) fbq('track','Lead',{},{eventID: extra.transaction_id});
+  else fbq('track','Lead');
+}
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1688511512871069&ev=PageView&noscript=1"></noscript>
 
 <!-- ===== NAV ===== -->
 <header class="nav">
@@ -1825,7 +1849,7 @@ function piizuAds(label, extra){
 </div>
 <!-- banner de consentimento (Google Ads) -->
 <div id="cookieBanner" class="ck-banner" hidden>
-  <p>Usamos cookies para medir o desempenho dos nossos anúncios no Google. Você pode aceitar ou recusar — os anúncios seguem sendo veiculados de qualquer forma. Saiba mais na <a href="privacidade.html">Política de privacidade</a>.</p>
+  <p>Usamos cookies para medir o desempenho dos nossos anúncios no Google e na Meta (Facebook e Instagram). Você pode aceitar ou recusar — os anúncios seguem sendo veiculados de qualquer forma. Saiba mais na <a href="privacidade.html">Política de privacidade</a>.</p>
   <div class="ck-actions">
     <button type="button" id="ckReject" class="ck-no">Recusar</button>
     <button type="button" id="ckAccept" class="b-lar">Aceitar</button>
@@ -2505,10 +2529,10 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   var KEY = 'piizu-cookie-consent-v1';
   var EEA = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
   var banner = document.getElementById('cookieBanner');
-  var granted = function(){ gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'}); };
+  var granted = function(){ gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'}); if(typeof fbq === 'function') fbq('consent','grant'); };
   var save = function(choice){ try{ localStorage.setItem(KEY, JSON.stringify({choice:choice, at:new Date().toISOString(), notice:'2026-10'})); }catch(e){} };
   document.getElementById('ckAccept').addEventListener('click', function(){ save('granted'); granted(); banner.hidden = true; });
-  document.getElementById('ckReject').addEventListener('click', function(){ save('denied'); banner.hidden = true; });
+  document.getElementById('ckReject').addEventListener('click', function(){ save('denied'); if(typeof fbq === 'function') fbq('consent','revoke'); banner.hidden = true; });
   var prefs = document.getElementById('ckPrefs');
   if(prefs) prefs.addEventListener('click', function(e){ e.preventDefault(); banner.hidden = false; });
 
@@ -2529,6 +2553,8 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     if(done) return; done = true;
     if(timer) clearTimeout(timer);
     if(!decided && needs) banner.hidden = false;
+    /* Meta: fora das regiões que exigem consentimento, libera o pixel sem esperar o banner. */
+    if(!decided && !needs && typeof fbq === 'function') fbq('consent','grant');
   };
   fetch('/cdn-cgi/trace', ctrl ? {signal: ctrl.signal} : undefined)
     .then(function(r){ return r.ok ? r.text() : Promise.reject(new Error('trace')); })
