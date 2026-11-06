@@ -1223,6 +1223,45 @@ footer .ft p{font-size:.84rem}
 /* título da Galeria numa linha só (computador e tablet) */
 #galeria .head{container-type:inline-size}
 @media(min-width:700px){#galeria .head h2.gal-h2{white-space:nowrap;font-size:min(2.6rem,2.75cqw)}}
+
+/* ============ ritmo vertical: respiro entre as seções ============ */
+:root{--sec-y:clamp(56px,7vw,96px)}
+section{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
+.cli{padding:var(--sec-y) 0 0}
+footer{padding:64px 0 36px}
+.head{margin-bottom:clamp(28px,3vw,40px)}
+
+/* ============ 1ª dobra: título, subtítulo e botão à esquerda; fotos à direita ============ */
+.hero{height:auto!important;min-height:0!important;overflow:visible;padding:72px 0!important}
+.hero>.hero-g{flex:none}
+.hero-g>div:first-child{display:block!important;height:auto!important;padding-top:0!important}
+.hero .hero-cta{display:flex;justify-content:flex-start;margin-top:32px}
+.hero .hero-cta .b-lar{padding:16px 30px;font-size:.95rem;min-height:48px}
+.hero-dura{margin-top:20px}
+@media(min-width:861px){
+  .hero-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:56px!important;align-items:center!important;height:auto!important}
+  .hero-g>div:first-child{align-self:center!important;max-width:620px}
+  .qd-box{height:clamp(420px,calc(var(--dobra) - 144px),640px)!important}
+}
+@media(max-width:860px){
+  .hero-g{display:flex!important;flex-direction:column;gap:32px!important}
+  .hero h1{font-size:clamp(1.7rem,7.4vw,2.2rem)!important;line-height:1.12}
+  .hero-dura{font-size:.95rem!important;line-height:1.55!important;margin-top:16px!important}
+  .hero .hero-cta{margin-top:24px}
+  .hero .hero-cta .b-lar{width:100%}
+  .qd-box{order:0!important;margin:0!important}
+}
+
+/* ============ 2ª dobra: números de autoridade ============ */
+.aut{background:var(--bg2);border-top:1px solid var(--lin);border-bottom:1px solid var(--lin)}
+.aut-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.aut-g>div{background:var(--bg);border:1px solid var(--lin);border-radius:12px;padding:28px 24px;display:flex;flex-direction:column}
+.aut-g b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(1.5rem,2.1vw,2rem);line-height:1.1;color:var(--lar2)}
+.aut-g b .nw{display:inline;white-space:nowrap;font:inherit;color:inherit}
+.aut-g span{display:block;margin-top:12px;font-size:.95rem;line-height:1.6;color:var(--tx)}
+.aut-g span .nw{display:inline;white-space:nowrap;font:inherit;color:inherit;margin:0}
+@media(max-width:1060px){.aut-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:560px){.aut-g{grid-template-columns:1fr;gap:12px}.aut-g>div{padding:20px}.aut-g b{font-size:1.45rem}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1276,12 +1315,7 @@ function piizuAds(label, extra){
       <div class="rise"><span class="pill"><i></i><span>Rio de Janeiro</span><svg class="pill-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span>para todo o Brasil</span></span></div>
       <h1 class="fr rise d1">Seu Tapete ou Capacho personalizado produzido <em>na maior fábrica da América Latina.</em></h1>
       <p class="hero-dura rise d1">Seu Tapete produzido nas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) / Vinil <b class="nw">A/T</b> (alto tráfego).<br><b>Não produzimos personalizados na linha inferior:</b> Vinil <b class="nw">Silver</b>: tráfego leve.</p>
-      <div class="hero-num rise d2">
-        <div><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes e Capachos. Tecnologia exclusiva e maquinários de última geração.</span></div>
-        <div class="hn-n1"><b class="fr">Nº 1 - Kapazi</b><span>A maior fabricante de Tapetes e revestimentos.<br>A marca preferida dos condomínios, escolas, grandes redes e shopping centers.</span></div>
-        <div class="hn-pers"><b class="fr">Personalizados</b><span>Nas suas dimensões / o logo da sua marca ou textos desejados / sua cor preferida no seu Tapete ou Capacho.</span></div>
-        <div class="hn-at"><b class="fr"><span class="nw">Atendimento</span><br><span class="nw"><span class="nw">pii-zu</span></span></b><span>Deixe sua marca em evidência – Traga sua marca para a <span class="nw"><span class="nw">pii-zu</span></span>, Seu Piso em nossas mãos...</span></div>
-      </div>
+      <div class="hero-cta rise d2"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
     </div>
 
     <div class="qd-box rise d2">
@@ -1293,13 +1327,21 @@ function piizuAds(label, extra){
         </div>
         <button type="button" class="seta dir" id="qdProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
-      <div class="pj-ft quero-ft"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
-    </div>
     </div>
 
   </div>
 
 </main>
+
+<!-- ===== AUTORIDADE (2ª dobra) ===== -->
+<section id="autoridade" class="aut" aria-label="Por que a pii-zu">
+  <div class="wrap aut-g" role="list">
+    <div role="listitem"><b class="fr">48+ anos</b><span>atuando no mercado nacional de Tapetes e Capachos. Tecnologia exclusiva e maquinários de última geração.</span></div>
+    <div role="listitem" class="hn-n1"><b class="fr">Nº 1 - Kapazi</b><span>A maior fabricante de Tapetes e revestimentos.<br>A marca preferida dos condomínios, escolas, grandes redes e shopping centers.</span></div>
+    <div role="listitem" class="hn-pers"><b class="fr">Personalizados</b><span>Nas suas dimensões / o logo da sua marca ou textos desejados / sua cor preferida no seu Tapete ou Capacho.</span></div>
+    <div role="listitem" class="hn-at"><b class="fr"><span class="nw">Atendimento</span><br><span class="nw"><span class="nw">pii-zu</span></span></b><span>Deixe sua marca em evidência – Traga sua marca para a <span class="nw"><span class="nw">pii-zu</span></span>, Seu Piso em nossas mãos...</span></div>
+  </div>
+</section>
 
 <!-- ===== CLIENTES (logos) — troque as imagens na lista CLIENTES do script ===== -->
 <div class="cli" aria-label="Clientes atendidos">
