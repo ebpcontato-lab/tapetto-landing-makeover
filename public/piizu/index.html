@@ -973,7 +973,7 @@ footer{padding:38px 0 26px}
   .qd-linha{gap:6px}
   .qd-linha .seta{width:32px;height:32px}
   .qd-linha .seta svg{width:16px;height:16px}
-  .quadro{width:min(calc(100cqw - 76px),calc(100cqh * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
+  .quadro{width:min(calc(100cqw - 76px),calc((100cqh - 80px) * .8));height:auto;aspect-ratio:4/5;max-width:none;flex:none}
   /* abas grandes ocupando o espaço à esquerda, abaixo do título */
   .hero-g>div:first-child{align-self:stretch;display:flex;flex-direction:column;height:calc(var(--dobra) - 30px);padding-top:8px}
   .hero-num{flex:1;min-height:0;margin:22px 0 0;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;border-radius:12px}
@@ -1040,7 +1040,7 @@ footer{padding:38px 0 26px}
   .qd-linha{gap:4px}
   .qd-linha .seta{width:26px;height:26px}
   .qd-linha .seta svg{width:14px;height:14px}
-  .quadro{width:min(calc(100cqw - 60px),calc(100cqh * .8))}
+  .quadro{width:min(calc(100cqw - 60px),calc((100cqh - 80px) * .8))}
 }
 @media(max-width:860px){
   .hero{padding-top:8px;padding-bottom:8px}
@@ -1053,7 +1053,7 @@ footer{padding:38px 0 26px}
 
 /* setas crescem só no espaço que sobra ao lado da foto, sem mudar o tamanho da foto */
 @media(min-width:861px){
-  .qd-linha .seta{--fw:min(calc(100cqw - 60px),calc(100cqh * .8));--sz:clamp(26px,calc((100cqw - var(--fw) - 8px) / 2),44px);width:var(--sz);height:var(--sz)}
+  .qd-linha .seta{--fw:min(calc(100cqw - 60px),calc((100cqh - 80px) * .8));--sz:clamp(26px,calc((100cqw - var(--fw) - 8px) / 2),44px);width:var(--sz);height:var(--sz)}
   .qd-linha .seta svg{width:calc(var(--sz) * .45);height:calc(var(--sz) * .45)}
 }
 @media(max-width:860px){
@@ -1153,6 +1153,19 @@ footer{padding:38px 0 26px}
 /* rodapé em duas colunas */
 @media(min-width:861px){.ft{grid-template-columns:1.4fr 1fr!important}}
 @media(max-width:860px){.ft{grid-template-columns:1fr!important;gap:20px!important}}
+
+/* Compare os modelos: sem as duas abas de cima; um quadro de fotos só, maior */
+#cmpTop{display:none!important}
+#cmpTr{grid-auto-columns:100%!important}
+@media(min-width:1061px){#cmpGal{max-width:min(100%,calc((var(--dobra) - 230px) * .8 + 112px));justify-self:center}}
+/* botão "Quero uma solução assim!" abaixo dos quadros de fotos */
+.quero-ft{display:flex;justify-content:center;margin-top:14px}
+.qd-box .quero-ft{margin-top:10px;flex:none}
+.qd-box .quero-ft .b-lar{padding:11px 22px}
+/* aviãozinho no título da galeria */
+.gal-h2 .gal-aviao{width:.72em;height:.72em;fill:var(--lar2);vertical-align:middle;margin:0 .12em}
+.qd-box .quero-ft{border-top:0!important;padding-top:0!important}
+#galeria .head{max-width:none}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1222,6 +1235,7 @@ function piizuAds(label, extra){
         </div>
         <button type="button" class="seta dir" id="qdProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
+      <div class="pj-ft quero-ft"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
     </div>
     </div>
 
@@ -1263,7 +1277,7 @@ function piizuAds(label, extra){
       </div>
     </div>
 
-    <div class="pj-ft rv" style="justify-content:center;text-align:center;margin-top:22px"><a href="#orcamento" class="b-lar">Pedir orçamento</a></div>
+    <div class="pj-ft quero-ft rv"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
   </div>
 </section>
 
@@ -1293,7 +1307,7 @@ function piizuAds(label, extra){
       </div>
 
       <div class="pj-ft">
-        <a href="#orcamento" class="b-lar">Quero uma solução assim</a>
+        <a href="#orcamento" class="b-lar">Quero uma solução assim!</a>
       </div>
     </div>
   </div>
@@ -1308,7 +1322,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">03 / Galeria</div>
-      <h2 class="fr">Tapetes e Capachos que já recebem clientes <em>no Rio de Janeiro e em todo o Brasil:</em></h2>
+      <h2 class="fr gal-h2">Tapetes e Capachos personalizados <em>no Rio de Janeiro</em> <svg class="gal-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> <em>e por todo Brasil</em></h2>
     </div>
     <div class="gal rv">
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -1332,6 +1346,7 @@ function piizuAds(label, extra){
       </div>
       <button type="button" class="seta dir" id="galNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
+    <div class="pj-ft quero-ft"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
   </div>
 </section>
 
@@ -2201,7 +2216,7 @@ var COMPARA = [
 ];
 /* CID = tipo de contenção escolhido; CMID = modelo escolhido (-1 = todos do tipo) */
 var CID = COMPARA[0].id, CMID = 0, cmpTr = document.getElementById('cmpTr');
-function cmpSetas(){ document.getElementById('cmpGal').classList.remove('sem-setas'); /* setas sempre visíveis */ faixaEncaixa(cmpTr, 2); }
+function cmpSetas(){ document.getElementById('cmpGal').classList.remove('sem-setas'); /* setas sempre visíveis */ faixaEncaixa(cmpTr, 1); }
 function cmpRender(){
   var C = null;
   for(var i=0;i<COMPARA.length;i++){ if(COMPARA[i].id===CID) C = COMPARA[i]; }
