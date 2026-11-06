@@ -1176,17 +1176,34 @@ footer .ft p{font-size:.84rem}
 .fnum{position:absolute;top:8px;left:8px;z-index:6;background:#8a2a10;color:#fff;font:700 13px/1 Inter,system-ui,sans-serif;padding:5px 9px;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.35);pointer-events:none}
 #pjFoto .ph > .fnum{top:40px}
 
-/* Nossas Soluções Variadas (computador): fotos na coluna da direita, do alto da seção até o botão */
+/* Nossas Soluções Variadas (computador): fotos + botão na coluna da direita, do alto da seção */
 @media(min-width:1061px){
   #materiais .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
   #materiais .head{grid-column:1;grid-row:1;margin-bottom:10px}
-  #materiais .cmp-box{display:contents}
-  #materiais .cmp-t{grid-column:1!important;grid-row:2!important;margin:6px 0 8px!important}
-  #materiais .cmp-mod{grid-column:1!important;grid-row:3!important}
-  #cmpGal{grid-column:2!important;grid-row:1/span 3!important;align-self:start!important;justify-self:center!important;width:100%;max-width:min(100%,calc((var(--dobra) - 140px) * .8 + 112px))!important;margin-top:4px}
+  #materiais .cmp-box{grid-column:1;grid-row:2;display:block;background:none;border:0;padding:0}
+  #materiais .cmp-box .cmp-t{margin:6px 0 8px!important}
+  #materiais .cmp-box .cmp-mod{display:grid!important}
+  #materiais .mat-fotos{grid-column:2;grid-row:1/span 2;align-self:start;display:flex;flex-direction:column;align-items:center}
+  #cmpGal{width:100%;max-width:min(100%,calc((var(--dobra) - 150px) * .8 + 112px))!important;margin:4px auto 0}
   #cmpTr{grid-auto-columns:100%!important}
-  #materiais .quero-ft{grid-column:1/-1;grid-row:4}
 }
+
+/* botões "Quero uma solução assim!" logo abaixo das fotos, centralizados nelas */
+.quero-ft,.pj-ft-foto{display:flex!important;justify-content:center!important;border-top:0!important;padding:0!important;margin-top:12px}
+.mat-fotos .quero-ft{width:100%}
+#galeria .quero-ft{margin-top:14px}
+@media(min-width:1061px){.pj-g .pj-ft-foto{grid-column:1;grid-row:2;padding:0 0 16px!important}.pj-g .pj-info{grid-row:1/span 2}}
+@media(max-width:1060px){.pj-g .pj-ft-foto{padding:12px 0 16px!important;margin:0}}
+/* frase "Sua marca conversa" maior e mais afastada da lista */
+.mat-slogan{font-size:clamp(1.6rem,2.4vw,2.2rem)!important;margin:10px 0 22px!important}
+@media(max-width:860px){.mat-slogan{font-size:1.5rem!important;margin-bottom:16px!important}}
+/* Soluções: quadro de fotos grande, em pé (4:5), como o do topo */
+@media(min-width:1061px){#projetos .pj-foto{--fh:calc(var(--dobra) - 150px)!important;height:var(--fh)!important;width:calc(var(--fh) * .8 + 112px)!important}}
+@media(max-width:1060px){.pj-foto .ph{aspect-ratio:4/5!important}}
+
+@media(min-width:1061px){#projetos .pj-g{--fh:calc(var(--dobra) - 150px)}#projetos .pj-g .pj-ft-foto{width:calc(var(--fh) * .8 + 112px);justify-self:start}#projetos .pj-foto{justify-self:start}}
+@media(max-width:1060px){.pj-g .pj-foto{order:1}.pj-g .pj-ft-foto{order:2}.pj-g .pj-info{order:3}}
+#projetos .pj-ft-foto a{margin:0 auto!important}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1290,14 +1307,17 @@ function piizuAds(label, extra){
       <div class="cmp-t">Compare os modelos</div>
       <div class="gal-tabs" id="cmpTop" role="group" aria-label="Tipos de retenção"></div>
       <div class="cmp-mod" id="cmpMod"></div>
+
+    </div>
+
+    <div class="mat-fotos rv">
       <div class="gal" id="cmpGal">
         <button type="button" class="seta esq" id="cmpPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
         <div class="gal-tr" id="cmpTr" tabindex="0" aria-label="Fotos dos modelos"></div>
         <button type="button" class="seta dir" id="cmpNext" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
+      <div class="pj-ft quero-ft"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
     </div>
-
-    <div class="pj-ft quero-ft rv"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
   </div>
 </section>
 
@@ -1305,7 +1325,7 @@ function piizuAds(label, extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">02 / Soluções</div>
-      <h2 class="fr">Escolha onde vai usar, <em>encontre aqui a solução;</em> cada espaço pede um tipo de Tapete.</h2>
+      <h2 class="fr">Escolha onde e como irá usar, <em>encontre aqui a melhor solução para seu piso.</em> Lembre-se, cada espaço pede um tipo específico de Tapete e Capacho!</h2>
     </div>
 
     <div class="pj rv">
@@ -1324,10 +1344,9 @@ function piizuAds(label, extra){
           <div class="pj-sp" id="pSp"></div>
           <div class="pj-al" id="pAl">—</div>
         </div>
-      </div>
-
-      <div class="pj-ft">
-        <a href="#orcamento" class="b-lar">Quero uma solução assim!</a>
+        <div class="pj-ft pj-ft-foto">
+          <a href="#orcamento" class="b-lar">Quero uma solução assim!</a>
+        </div>
       </div>
     </div>
   </div>
