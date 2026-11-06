@@ -1273,12 +1273,13 @@ gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personali
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17662893947"></script>
 <script>
 /* Google Ads AW-17662893947 — medição de anúncios.
-   Para acompanhar conversões, crie as conversões no Google Ads ("Enviar formulário"
-   e "Clique em WhatsApp") e cole aqui o RÓTULO de cada uma no formato
-   AW-17662893947/XXXX, no lugar de COLE_AQUI_... */
+   Conversão "Contato" (AW-17662893947/UuIoCIWRx7MdEPu-qeZB): disparada no clique
+   dos botões de orçamento (CTA), no clique do WhatsApp e no envio do formulário.
+   Para separar depois, troque o rótulo de cada item no formato AW-17662893947/XXXX. */
 window.__PIIZU_ADS = {
-  form: 'AW-17662893947/COLE_AQUI_ROTULO_DO_FORMULARIO',
-  whatsapp: 'AW-17662893947/COLE_AQUI_ROTULO_DO_WHATSAPP'
+  cta: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB',
+  form: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB',
+  whatsapp: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB'
 };
 gtag('config','AW-17662893947');
 function piizuAds(label, extra){
@@ -2479,13 +2480,13 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     status.classList.add('ok');
     continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
     continuation.style.display = 'inline-flex';
-    piizuAds(window.__PIIZU_ADS.form);
+    piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
   }catch(error){
     if(error.message === 'registro-indisponivel' || error instanceof TypeError){
       status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
       continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
       continuation.style.display = 'inline-flex';
-      piizuAds(window.__PIIZU_ADS.form);
+      piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
     } else {
       status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
     }
@@ -2543,6 +2544,12 @@ document.getElementById('fm').addEventListener('submit', async function(e){
 document.addEventListener('click', function(e){
   var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
   if(a) piizuAds(window.__PIIZU_ADS.whatsapp);
+}, true);
+
+/* ============ conversão: clique nos botões de orçamento (CTA) ============ */
+document.addEventListener('click', function(e){
+  var a = e.target && e.target.closest ? e.target.closest('a[href="#orcamento"]') : null;
+  if(a) piizuAds(window.__PIIZU_ADS.cta);
 }, true);
 
 /* quadro de fotos do topo: usa as fotos da galeria */
