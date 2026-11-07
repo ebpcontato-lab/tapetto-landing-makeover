@@ -1269,6 +1269,20 @@ footer{padding:64px 0 36px}
 .ft-parc{display:flex;align-items:center;padding-left:16px;border-left:1px solid var(--lin)}
 .ft-parc img{height:46px;width:auto;display:block}
 @media(max-width:860px){.ft-parc img{height:38px}}
+
+/* 1ª dobra mais próxima do cabeçalho (~15% mais alta): foto a 32px e texto a ~72px do menu */
+@media(min-width:861px){
+  .hero{padding-top:32px!important}
+  .hero-g{align-items:start!important}
+  .hero-g>div:first-child{align-self:start!important;padding-top:40px!important}
+  .qd-box{justify-content:flex-start!important;height:auto!important;container-type:inline-size!important}
+  .quadro{width:min(calc(100cqw - 60px),calc((var(--dobra) - 140px) * .8),512px)!important}
+  .qd-linha{gap:12px!important}
+  .qd-linha .seta{width:44px!important;height:44px!important}
+  .qd-linha .seta svg{width:18px!important;height:18px!important}
+  .quadro{width:min(calc(100cqw - 112px),calc((var(--dobra) - 140px) * .8),512px)!important}
+}
+@media(max-width:860px){.hero{padding-top:40px!important}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
