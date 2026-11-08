@@ -1305,6 +1305,14 @@ footer{padding:64px 0 36px}
 
 /* dica das abas de Soluções: respeita a quebra de linha do texto */
 .pj-al{white-space:pre-line}
+
+/* slogans abaixo dos rótulos 02 e 03 */
+.head .sec-slogan{margin:10px 0 6px!important}
+@media(min-width:1061px){#projetos .head .sec-slogan{grid-column:1/-1;grid-row:2}#projetos .head h2{grid-row:3}}
+/* slogans em destaque no rodapé */
+.ft-slogans{margin:22px 0 18px;padding-left:16px;border-left:3px solid var(--lar)}
+footer .ft .ft-slogans p{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;color:var(--lar2);font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.3;letter-spacing:-.01em;margin:0;max-width:none}
+footer .ft .ft-slogans p+p{margin-top:6px}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1465,6 +1473,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">02 / Soluções orientadas e guiadas</div>
+      <div class="mat-slogan sec-slogan">Seu Piso em Nossas Mãos...</div>
       <h2 class="fr">Aqui na <span class="nw">pii-zü</span> sua escolha é <em>guiada e orientada</em> por nossos consultores técnicos, treinados por aqueles que desenvolveram as Soluções: <em>os engenheiros da Indústria Kapazi.</em></h2>
           </div>
 
@@ -1501,6 +1510,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="head rv">
       <div class="kick">03 / Galeria de Artes</div>
+      <div class="mat-slogan sec-slogan">Nossas Soluções Personalizadas para Pisos</div>
       <h2 class="fr gal-h2">Nossos Tapetes e Capachos personalizados <em>no Rio de Janeiro e por todo</em> <svg class="gal-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> <em>Brasil</em></h2>
     </div>
     <div class="gal rv">
@@ -1883,6 +1893,11 @@ function piizuLead(extra){
     <div class="ft">
       <div>
         <div class="ft-logos"><div class="logo"><img src="assets/img/marca/piizu-horizontal-solucoes-cobre.svg" alt="pii-zü — Soluções para Pisos" width="284" height="83" loading="lazy"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186" loading="lazy"></span></div>
+        <div class="ft-slogans">
+          <p>Soluções para Pisos</p>
+          <p>Sua marca “conversa” melhor com a <span class="nw">pii-zü</span></p>
+          <p>Seu Piso em Nossas Mãos...</p>
+        </div>
         <p>Produzidos na indústria Kapazi, a maior fábrica da América Latina. Comercializados e distribuídos pela <span class="nw">pii-zü</span> no Rio de Janeiro.<br>Entregamos em todo o Brasil.<br>Seu personalizado com atendimento personalizado.</p>
       </div>
       <div>
