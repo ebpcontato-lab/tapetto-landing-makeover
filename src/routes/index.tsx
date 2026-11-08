@@ -9,9 +9,9 @@ export const Route = createFileRoute("/")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "pii-zu — Tapetes personalizados no Rio de Janeiro" },
+      { title: "pii-zü — Tapetes personalizados no Rio de Janeiro" },
       { name: "description", content: "Tapetes personalizados com logotipo, nome, cores ou desenho no Rio de Janeiro." },
-      { property: "og:title", content: "pii-zu — Tapetes personalizados" },
+      { property: "og:title", content: "pii-zü — Tapetes personalizados" },
       { property: "og:description", content: "Tapetes personalizados sob medida para empresas, condomínios, casas e escolas no Rio de Janeiro." },
     ],
   }),
