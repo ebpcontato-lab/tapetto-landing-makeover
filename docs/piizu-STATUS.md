@@ -17,10 +17,10 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - **10/11:** as 49 entraram na Galeria (depois das 12 que já estavam), como `assets/img/galeria/tratada-T01…T49.webp` (864×1080), com números nº 230 a nº 278.
   - Página de escolha (antes/depois): https://claude.ai/artifact/9NDPcrHCCU88h9ed9sz3fR
 - Acervo completo numerado A001–A268 (todas tratadas) para o Seu Zecones marcar o que sai: https://claude.ai/artifact/49uVgjAkrPh82AAV8ZK9NK
-- Pacote estático mais recente: `piizu-site-2026-11-10-c7.zip`.
+- **10/11:** foto nº 145 (Birutt@o, `portfolio-124.webp`) retirada do site — tinha a marca de outra empresa ("Alovisi Tapetes") no tapete.
+- Pacote estático mais recente: `piizu-site-2026-11-10-c8.zip`.
 
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
-- [ ] Foto nº 145 (Birutt@o, `portfolio-124.webp`, quadro do topo) tem marca "Alovisi Tapetes" no tapete: decidir se sai.
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
 - [ ] Pergunta frequente sobre bordas, quando chegar o arquivo de bordas.
