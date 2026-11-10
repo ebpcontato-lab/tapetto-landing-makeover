@@ -14,3 +14,4 @@
 - Send quote notifications through the server-only notification module after a successful new insert, using the fixed recipient and event-derived idempotency key; email failures must preserve the saved request, and duplicate IDs must not resend altered data. Never create an email queue or claim delivery before sending succeeds.
 - Keep the landing form's submit usable on a plain static host: when the save endpoint is unreachable or answers without JSON, offer the WhatsApp handoff with the composed message instead of claiming the order was saved; only a JSON error from the real backend shows a failure message.
 - Piizu page copy: always capitalize the product words Tapete(s), Capacho(s) and Passadeira(s), and write the brand as on the logo, "pii-zü" (keep piizu only in URLs, e-mail, domain and file names).
+- Production (piizu.com.br) is deployed automatically by a Cloudflare Worker connected to GitHub on every push to main; no Lovable Publish step is needed.
