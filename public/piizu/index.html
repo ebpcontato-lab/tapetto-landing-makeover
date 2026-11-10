@@ -2596,7 +2596,7 @@ lbImg.addEventListener('pointerup', function(e){
 });
 lbImg.addEventListener('pointercancel', function(){ arr = null; });
 
-/* formulário → registro seguro; WhatsApp opcional */
+/* formulário → registro seguro; depois abre o WhatsApp em nova aba */
 var submissionId = null, submissionPayload = null, submitting = false;
 document.getElementById('fm').addEventListener('submit', async function(e){
   e.preventDefault();
@@ -2633,24 +2633,40 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   var submit = e.currentTarget.querySelector('[type="submit"]');
   submitting = true; submit.disabled = true; submit.textContent = 'Registrando…';
   status.textContent = ''; status.classList.remove('ok'); continuation.style.display = 'none';
+  /* Abre a nova aba já no clique (senão o navegador bloqueia como pop-up) e,
+     depois do registro, leva essa aba para o WhatsApp com a mensagem pronta. */
+  var waUrl = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+  var aba = null;
+  try{
+    aba = window.open('', '_blank');
+    if(aba){ aba.opener = null; aba.document.title = 'Abrindo o WhatsApp…'; aba.document.body.innerHTML = '<p style="font-family:system-ui,sans-serif;padding:32px;color:#6B5F52">Abrindo o WhatsApp com a sua mensagem pronta…</p>'; }
+  }catch(_){ aba = null; }
+  var abrirWhats = function(){
+    if(aba && !aba.closed){ try{ aba.location.replace(waUrl); return; }catch(_){} }
+    window.open(waUrl, '_blank', 'noopener');
+  };
+  var fecharAba = function(){ try{ if(aba && !aba.closed) aba.close(); }catch(_){} };
   try{
     var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
     var isJson = (response.headers.get('content-type') || '').indexOf('application/json') !== -1;
     if(!isJson) throw new Error('registro-indisponivel');
     var result = await response.json();
     if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
-    status.textContent = 'Solicitação entregue. Seja bem-vindo à pii-zü Soluções para Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos.';
+    status.textContent = 'Solicitação entregue. Seja bem-vindo à pii-zü Soluções para Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Abrimos o WhatsApp em uma nova aba com a sua mensagem pronta; se ele não abriu, use o botão abaixo.';
     status.classList.add('ok');
-    continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+    continuation.href = waUrl;
     continuation.style.display = 'inline-flex';
     piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
+    abrirWhats();
   }catch(error){
     if(error.message === 'registro-indisponivel' || error instanceof TypeError){
       status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
-      continuation.href = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+      continuation.href = waUrl;
       continuation.style.display = 'inline-flex';
       piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
+      abrirWhats();
     } else {
+      fecharAba();
       status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
     }
   }finally{
