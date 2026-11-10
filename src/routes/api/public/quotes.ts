@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from '@/integrations/supabase/types';
-import { LEGACY_SOLUTION, PRODUCTS, SOLUTIONS, quoteSchema } from '@/lib/quote-schema';
+import { LEGACY_SOLUTION, PRODUCTS, SOLUTIONS, quoteSchema, toStoredQuote } from '@/lib/quote-schema';
 
 // Best-effort per-instance abuse protection; no customer data is retained here.
 const submissionWindows = new Map<string, { count: number; expires: number }>();
@@ -24,7 +24,7 @@ export const Route = createFileRoute('/api/public/quotes')({
         try { input = JSON.parse(body); }
         catch { return Response.json({ error: 'Pedido inválido.' }, { status: 400, headers }); }
         const parsed = quoteSchema.safeParse(input);
-        if (!parsed.success) return Response.json({ error: 'Confira nome, WhatsApp, cidade e os detalhes do pedido.' }, { status: 400, headers });
+        if (!parsed.success) return Response.json({ error: 'Preencha pelo menos um dos campos para enviarmos o seu pedido.' }, { status: 400, headers });
 
         const now = Date.now();
         for (const [key, value] of submissionWindows) if (value.expires <= now) submissionWindows.delete(key);
@@ -54,9 +54,11 @@ export const Route = createFileRoute('/api/public/quotes')({
         // Until migrations 0002/0003 are applied, the database may lack the product column
         // or only accept the earlier segments. Retry in the older shape, keeping the
         // visitor's choices in the details so no quote is lost.
-        let row: Record<string, string> = { ...parsed.data };
-        const notes: string[] = [];
-        let { error } = await client.from('quote_requests').insert(row as typeof parsed.data);
+        const stored = toStoredQuote(parsed.data);
+        const notes: string[] = [...stored.notes];
+        const withNotes = () => `${notes.join(' ')} ${parsed.data.details}`.trim().slice(0, 2000);
+        let row: Record<string, string> = { ...stored.row };
+        let { error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as typeof parsed.data);
         for (let attempt = 0; error && attempt < 2; attempt += 1) {
           if ((error.code === 'PGRST204' || error.code === '42703') && 'product' in row) {
             const { product, ...rest } = row;
@@ -66,8 +68,7 @@ export const Route = createFileRoute('/api/public/quotes')({
             notes.push(`[Segmento: ${SOLUTIONS[parsed.data.solution]}]`);
             row = { ...row, solution: LEGACY_SOLUTION[parsed.data.solution]! };
           } else break;
-          const details = `${notes.join(' ')} ${parsed.data.details}`.trim().slice(0, 2000);
-          ({ error } = await client.from('quote_requests').insert({ ...row, details } as typeof parsed.data));
+          ({ error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as typeof parsed.data));
         }
         if (error && error.code !== '23505') {
           console.error('Quote request insert failed:', error.code);

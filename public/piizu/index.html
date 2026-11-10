@@ -1681,16 +1681,16 @@ function piizuLead(extra){
         </div>
         <div class="row">
           <label for="fNome">Nome completo</label>
-          <input id="fNome" type="text" placeholder="Como podemos te chamar" minlength="2" maxlength="100" required>
+          <input id="fNome" type="text" placeholder="Como podemos te chamar" maxlength="100">
         </div>
         <div class="row r2">
           <div>
             <label for="fFone">WhatsApp</label>
-            <input id="fFone" type="tel" placeholder="(21) 90000-0000" maxlength="25" required>
+            <input id="fFone" type="tel" placeholder="(21) 90000-0000" maxlength="40">
           </div>
           <div>
             <label for="fBairro">Bairro / cidade</label>
-            <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" minlength="2" maxlength="120" required>
+            <input id="fBairro" type="text" placeholder="Tijuca / Rio de Janeiro" maxlength="120">
           </div>
         </div>
         <div class="row r2" hidden>
@@ -2354,7 +2354,7 @@ var NICHOS = [
     {id:'piso-vinilico-placa-colada', tag:'Colado', nome:'Placa 1 m × 1 m', rotulo:'Piso vinílico em placa colada 1 m × 1 m', p:'Placas de 1 m × 1 m, também coladas sobre o contrapiso. Boa opção para áreas maiores, como lojas, consultórios e escritórios.'},
     {id:'piso-vinilico-clicado', tag:'Clicado', nome:'Régua clicada', rotulo:'Piso vinílico em régua clicada', p:'Réguas com encaixe tipo clique, instalação flutuante sem cola. Para residências e escritórios.'}
    ]},
-  {id:'fita', nome:'Fitas antiderrapantes e de demarcação', titulo:'Fitas antiderrapantes e de demarcação', sub:'Segurança e sinalização de pisos',
+  {id:'fita', fotosEmBreve:true, nome:'Fitas antiderrapantes e de demarcação', titulo:'Fitas antiderrapantes e de demarcação', sub:'Segurança e sinalização de pisos',
    p:'Invista em segurança: fitas antiderrapantes para degraus, rampas e pisos lisos, e fitas de demarcação para sinalizar áreas e caminhos, para a residência ou a empresa ficar mais livre de acidentes.',
    itens:[
     {id:'fita-antiderrapante', tag:'Antiderrapante', nome:'Fita antiderrapante', rotulo:'Fita antiderrapante', p:'Degraus, rampas e áreas de circulação de casas, condomínios e empresas.'},
@@ -2604,8 +2604,9 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   var status = document.getElementById('fStatus'), continuation = document.getElementById('fContinue');
   var g = function(id){ return (document.getElementById(id).value || '').trim(); };
   var nome = g('fNome'), fone = g('fFone'), bairro = g('fBairro');
-  if(nome.length < 2 || nome.length > 100 || bairro.length < 2 || bairro.length > 120 || !/^[+\d\s().-]+$/.test(fone) || fone.replace(/\D/g,'').length < 10 || fone.length > 25 || g('fObs').length > 2000){
-    status.textContent = 'Confira nome, WhatsApp, bairro e os detalhes do pedido.';
+  /* Aceita qualquer resposta; só não envia o formulário totalmente vazio. */
+  if(!nome && !fone && !bairro && !g('fObs')){
+    status.textContent = 'Preencha pelo menos um dos campos para enviarmos o seu pedido.';
     return;
   }
   var A = aAtual(), M = null;

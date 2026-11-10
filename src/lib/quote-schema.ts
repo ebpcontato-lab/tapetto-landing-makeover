@@ -38,16 +38,43 @@ export const LEGACY_SOLUTION: Partial<Record<SolutionId, 'emp' | 'esc' | 'cas'>>
   cond: 'cas', resi: 'cas', esco: 'esc', sala: 'emp', come: 'emp', indu: 'emp', quad: 'cas',
 };
 
+// Every answer is accepted: free-text fields only need something filled in somewhere
+// (a fully empty form is the only refusal), and unexpected choice values fall back to
+// a default instead of blocking the request. toStoredQuote() then fits the values to
+// the database limits, keeping anything adjusted in the details so nothing is lost.
+const text = (max: number) => z.string().trim().max(max).catch((ctx) => String(ctx.input ?? '').trim().slice(0, max)).default('');
+
 export const quoteSchema = z.object({
   id: z.string().uuid(),
-  name: z.string().trim().min(2).max(100),
-  phone: z.string().trim().min(10).max(25).regex(/^[+\d\s().-]+$/).refine((value) => value.replace(/\D/g, '').length >= 10),
-  city: z.string().trim().min(2).max(120),
-  place: z.enum(['Minha casa ou apartamento', 'Empresa ou comércio', 'Condomínio', 'Creche ou escola']),
-  timeframe: z.enum(['O quanto antes', 'Nas próximas semanas', 'Daqui a alguns meses', 'Sem data definida']),
-  details: z.string().trim().max(2000),
-  solution: z.enum(solutionIds),
-  material: z.enum(['per', 'cap', 'inf']),
+  name: text(500),
+  phone: text(200),
+  city: text(500),
+  place: z.enum(['Minha casa ou apartamento', 'Empresa ou comércio', 'Condomínio', 'Creche ou escola']).catch('Empresa ou comércio'),
+  timeframe: z.enum(['O quanto antes', 'Nas próximas semanas', 'Daqui a alguns meses', 'Sem data definida']).catch('Sem data definida'),
+  details: text(4000),
+  solution: z.enum(solutionIds).catch('come'),
+  material: z.enum(['per', 'cap', 'inf']).catch('per'),
   // Older static exports do not send a product; they only offered rugs.
-  product: z.enum(productIds).default('tapete'),
-}).strict();
+  product: z.enum(productIds).catch('tapete').default('tapete'),
+}).strict().refine((q) => [q.name, q.phone, q.city, q.details].some((v) => v.length > 0));
+
+export type QuoteInput = z.infer<typeof quoteSchema>;
+
+// Database limits (migration 0000): name 2–100, phone 10–25, city 2–120, details ≤ 2000.
+export function toStoredQuote(q: QuoteInput) {
+  const notes: string[] = [];
+  const fit = (value: string, label: string, min: number, max: number) => {
+    if (value.length === 0) return 'Não informado';
+    if (value.length > max) { notes.push(`[${label} completo: ${value}]`); return value.slice(0, max); }
+    if (value.length < min) return value.padEnd(min, '.');
+    return value;
+  };
+  let phone = q.phone;
+  if (phone.length === 0) phone = 'Não informado';
+  else if (phone.length > 25) { notes.push(`[WhatsApp completo: ${phone}]`); phone = phone.slice(0, 25); }
+  else if (phone.length < 10) phone = `${phone} (incompleto)`;
+  return {
+    row: { ...q, name: fit(q.name, 'Nome', 2, 100), phone, city: fit(q.city, 'Bairro/cidade', 2, 120), details: '' },
+    notes,
+  };
+}
