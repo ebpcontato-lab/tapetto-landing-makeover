@@ -2636,14 +2636,21 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   /* Abre a nova aba já no clique (senão o navegador bloqueia como pop-up) e,
      depois do registro, leva essa aba para o WhatsApp com a mensagem pronta. */
   var waUrl = 'https://wa.me/5521998146495?text=' + encodeURIComponent(msg);
+  /* Navegadores internos (Instagram, Facebook, WhatsApp, TikTok…) não abrem nova aba
+     direito: neles a própria página vai para o WhatsApp. */
+  var appInterno = /FBAN|FBAV|FB_IAB|Instagram|Messenger|WhatsApp|TikTok|musical_ly|Line\/|wv\)/i.test(navigator.userAgent || '');
   var aba = null;
-  try{
-    aba = window.open('', '_blank');
-    if(aba){ aba.opener = null; aba.document.title = 'Abrindo o WhatsApp…'; aba.document.body.innerHTML = '<p style="font-family:system-ui,sans-serif;padding:32px;color:#6B5F52">Abrindo o WhatsApp com a sua mensagem pronta…</p>'; }
-  }catch(_){ aba = null; }
+  if(!appInterno){
+    try{
+      aba = window.open('', '_blank');
+      if(aba){ aba.document.title = 'Abrindo o WhatsApp…'; aba.document.body.innerHTML = '<p style="font-family:system-ui,sans-serif;padding:32px;color:#6B5F52">Abrindo o WhatsApp com a sua mensagem pronta…</p>'; }
+    }catch(_){ aba = null; }
+  }
   var abrirWhats = function(){
-    if(aba && !aba.closed){ try{ aba.location.replace(waUrl); return; }catch(_){} }
-    window.open(waUrl, '_blank', 'noopener');
+    /* 1) leva a aba aberta no clique para o WhatsApp */
+    if(aba && !aba.closed){ try{ aba.location.href = waUrl; return; }catch(_){} }
+    /* 2) aba bloqueada ou navegador interno: vai nesta mesma página */
+    setTimeout(function(){ window.location.href = waUrl; }, 600);
   };
   var fecharAba = function(){ try{ if(aba && !aba.closed) aba.close(); }catch(_){} };
   try{
