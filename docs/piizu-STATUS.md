@@ -26,6 +26,14 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - 34 de outros produtos ficaram guardadas no `<template id="todasFotos">` com o setor certo (piso-piscina 28, capa-elevador 4, piso-rubberkap 2). Não aparecem na página porque hoje ela não tem seção desses produtos.
   - Não entraram: 4 fotos HDR de 6–7 MB (folha nº 213–216), grandes demais para o conector do Drive, e 18 fotos com menos de 65 KB (resolução baixa).
 
+## Situação em 11/11/2026
+
+### Conversa Landing page
+- **Espaço Cleankap ("Compare os modelos") completado com as fotos da pasta "FOTOS SITE PII-ZU":** as 69 fotos da pasta que já estavam no site (repetidas, ficaram de fora em 10/11) só apareciam na Galeria e nas Soluções, em nenhum modelo. Conferidas uma a uma: **33 são Cleankap** e entraram no Cleankap (de 87 para 120 fotos), sem arquivo novo, usando as fotos que já estavam no site:
+  - folha nº 21, 25, 27/121, 31, 38, 43, 46, 47, 60/184, 63, 70, 73, 75, 76, 78, 82, 95, 96, 127, 132, 137, 139, 142, 158, 159, 160, 177, 181, 187, 209, 212, 219, 220 → `tratada-T04, T05, T08, T09, T12, T13, T14, T17, T21, T22, T24, T25, T26, T28, T30, T31, T34, T35, T37, T38, T39, T42, T43, T48, T49` e `portfolio-002, 007, 010, 025, 070, 113, 120, 161`.
+  - Ficaram fora do Cleankap as repetidas de vinil (nº 6, 18, 26, 40, 41, 52, 57, 64, 66, 67, 74, 88, 110, 134, 135, 145, 164, 173, 196, 197, 199, 200, 207), fibra de coco (257, 261), capa de elevador (192, 193, 203, 205), piso laminado (2) e 4 com textura duvidosa (9 Share, 143 Garden Center, 172 t:me, 186 CCAA).
+- As 22 fotos da pasta sem miniatura (4 HDR de 6–7 MB e 18 com menos de 65 KB) continuam fora do site; não deu para conferir se alguma é Cleankap.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
