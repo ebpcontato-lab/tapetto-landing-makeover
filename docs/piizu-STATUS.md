@@ -19,6 +19,12 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Acervo completo numerado A001–A268 (todas tratadas) para o Seu Zecones marcar o que sai: https://claude.ai/artifact/49uVgjAkrPh82AAV8ZK9NK
 - **10/11:** foto nº 145 (Birutt@o, `portfolio-124.webp`) retirada do site — tinha a marca de outra empresa ("Alovisi Tapetes") no tapete.
 - Pacote estático mais recente: `piizu-site-2026-11-10-c8.zip`.
+- **10/11 (noite):** as fotos da pasta "FOTOS SITE PII-ZU" entraram no site. Folha numerada da pasta (nº 1–285): https://claude.ai/artifact/5J2HCTQfv6Nj9Rr6JdmdqT
+  - 69 já estavam no site (iguais ou a mesma foto em outro ângulo) e ficaram de fora. Em 2 delas a foto da pasta era mais nítida e substituiu a do site: `tratada-T23.webp` (AMZ Tropical) e `tratada-T29.webp` (Maxi Farma).
+  - 194 novas, tratadas no mesmo padrão (4:5, 864×1080, foto inteira com fundo desfocado), em `assets/img/galeria/tratada-F###.webp` (### = número da folha). Números no site: nº 279 a nº 472.
+  - 160 Tapetes/Capachos foram para a Galeria e para "Compare os modelos", cada uma no seu material: Vinil Gold 52, Vinil A/T 4, Cleankap 85, Waterkap 7, Duo 6. 6 Capachos com aparência de fibra de coco (folha nº 5, 90, 117, 118, 119, 268) entraram só na Galeria, sem modelo.
+  - 34 de outros produtos ficaram guardadas no `<template id="todasFotos">` com o setor certo (piso-piscina 28, capa-elevador 4, piso-rubberkap 2). Não aparecem na página porque hoje ela não tem seção desses produtos.
+  - Não entraram: 4 fotos HDR de 6–7 MB (folha nº 213–216), grandes demais para o conector do Drive, e 18 fotos com menos de 65 KB (resolução baixa).
 
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
