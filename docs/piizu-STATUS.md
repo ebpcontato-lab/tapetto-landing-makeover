@@ -24,6 +24,7 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - 194 novas, tratadas no mesmo padrão (4:5, 864×1080, foto inteira com fundo desfocado), em `assets/img/galeria/tratada-F###.webp` (### = número da folha). Números no site: nº 279 a nº 472.
   - 160 Tapetes/Capachos foram para a Galeria e para "Compare os modelos", cada uma no seu material: Vinil Gold 52, Vinil A/T 4, Cleankap 85, Waterkap 7, Duo 6. 6 Capachos com aparência de fibra de coco (folha nº 5, 90, 117, 118, 119, 268) entraram só na Galeria, sem modelo.
   - 34 de outros produtos ficaram guardadas no `<template id="todasFotos">` com o setor certo (piso-piscina 28, capa-elevador 4, piso-rubberkap 2). Não aparecem na página porque hoje ela não tem seção desses produtos.
+  - **10/11 (23h):** novo grupo em "Compare os modelos" (mesma dobra): **Áreas Molhadas ou Úmidas — Pisos vazados**, com W-Kap (10 fotos), Acquakap (4), S-Kap (8) e H-Kap (6), item novo na lista de linhas e 4 opções novas no formulário. Espaços da seção apertados no computador para caber na dobra (1536×864 e maiores).
   - Não entraram: 4 fotos HDR de 6–7 MB (folha nº 213–216), grandes demais para o conector do Drive, e 18 fotos com menos de 65 KB (resolução baixa).
 
 ## Situação em 11/11/2026

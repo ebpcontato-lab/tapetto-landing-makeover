@@ -1136,6 +1136,7 @@ footer{padding:38px 0 26px}
 @media(max-width:860px){.mat-slogan{font-size:1.2rem!important}}
 
 /* Compare os modelos: os cinco cartões do mesmo tamanho, todos com "Ver fotos" */
+@media(min-width:1061px){.cmp-mod{grid-template-columns:repeat(12,minmax(0,1fr))!important}.cmp-mod .cmp-c,.cmp-mod .cmp-c.g-dupla{grid-column:span 4!important}.cmp-mod .cmp-c.g-molhadas{grid-column:span 3!important}#materiais{padding-top:28px!important;padding-bottom:56px!important}.cmp-mod{row-gap:6px!important}.cmp-mod .cmp-c{padding:5px 8px!important;min-height:0!important}.cmp-mod .cmp-c .tag{margin:0 0 1px!important;font-size:.56rem!important;padding:1px 6px!important}.cmp-mod .cmp-c b{font-size:.95rem!important;margin:0!important;line-height:1.25}.cmp-mod .cmp-c .cmp-ver{padding-top:1px!important;margin-top:0!important}.cmp-gr{margin:2px 0 -3px!important}#materiais .mat-slogan{margin:4px 0 10px!important}#materiais .mat-ls{gap:3px}#materiais .mat-ls li{line-height:1.38}#materiais .cmp-box .cmp-t{margin:4px 0 4px!important}}
 .cmp-c.sel .cmp-ver{visibility:visible}
 @media(min-width:1061px){
   .cmp-mod .cmp-c,.cmp-mod .cmp-c.g-dupla{grid-column:span 2}
@@ -1451,6 +1452,7 @@ function piizuLead(extra){
         <li><b class="fr">Linha Premium Dupla Função A/T – <em>Cleankap</em>.</b> Retenção de sólidos e líquidos. Produzido em Nylon. Variedade na opção de cores.</li>
         <li><b class="fr">Linha Dupla Função A/T – <em>Waterkap</em>.</b> Retenção de sólidos e líquidos. Produzido em Polipropileno e Borracha. Variedade na opção de cores.</li>
         <li><b class="fr">E nossa terceira opção Dupla Função A/T – <em>Duo</em>.</b> Retenção de sólidos e líquidos. Cor única. Produzido em Polipropileno.</li>
+        <li><b class="fr">Áreas Molhadas ou Úmidas – <em>W-Kap</em>, <em>Acquakap</em>, <em>S-Kap</em> e <em>H-Kap</em>.</b> Pisos vazados que deixam a água escoar.</li>
       </ul>
     </div>
 
@@ -1833,6 +1835,10 @@ function piizuLead(extra){
             <option>Cleankap (personalizável, retém sólidos e líquidos)</option>
             <option>Waterkap (retém sólidos e líquidos, sem logo)</option>
             <option>Tapete Duo (cor única, sem logo)</option>
+            <option>W-Kap (piso modular vazado para áreas molhadas)</option>
+            <option>Acquakap (piso modular vazado para áreas molhadas)</option>
+            <option>S-Kap (piso vazado em rolo para áreas molhadas)</option>
+            <option>H-Kap (piso vazado colmeia para áreas molhadas)</option>
           </select>
         </div>
         <div class="row" hidden>
@@ -2822,6 +2828,45 @@ var COMPARA = [
      {src:'assets/img/galeria/tratada-F141.webp', alt:'Tapete Duo grande na entrada do prédio'},
      {src:'assets/img/galeria/tratada-F178.webp', alt:'Passadeira Duo preta no corredor'},
      {src:'assets/img/galeria/tratada-F188.webp', alt:'Passadeira Duo preta no corredor da loja'}
+    ]}
+   ]},
+  {id:'molhadas', nome:'Áreas Molhadas ou Úmidas — Pisos vazados',
+   modelos:[
+    {nome:'W-Kap', tag:'Encaixe', itens:['Piso modular vazado','Deixa a água escoar'], fotos:[
+     {src:'assets/img/galeria/tratada-F004.webp', alt:'Placa do piso modular W-Kap vazado'},
+     {src:'assets/img/galeria/tratada-F011.webp', alt:'Placa azul do piso modular W-Kap'},
+     {src:'assets/img/galeria/tratada-F012.webp', alt:'Placa preta do piso modular W-Kap'},
+     {src:'assets/img/galeria/tratada-F013.webp', alt:'Placa bege do piso modular W-Kap'},
+     {src:'assets/img/galeria/tratada-F017.webp', alt:'Embalagem do piso modular W-Kap Multiuso'},
+     {src:'assets/img/galeria/tratada-F218.webp', alt:'Embalagem do piso modular W-Kap Multiuso'},
+     {src:'assets/img/galeria/tratada-F264.webp', alt:'Piso vazado bege para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F265.webp', alt:'Piso vazado azul para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F266.webp', alt:'Piso vazado cinza para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F267.webp', alt:'Piso vazado grafite para áreas molhadas'}
+    ]},
+    {nome:'Acquakap', tag:'Encaixe', itens:['Piso modular vazado','Para banheiros e piscinas'], fotos:[
+     {src:'assets/img/galeria/tratada-F272.webp', alt:'Piso modular W-Kap no banheiro'},
+     {src:'assets/img/galeria/tratada-F273.webp', alt:'Placas empilhadas do piso modular W-Kap'},
+     {src:'assets/img/galeria/tratada-F274.webp', alt:'Piso modular W-Kap na borda da piscina'},
+     {src:'assets/img/galeria/tratada-F285.webp', alt:'Piso modular W-Kap azul na área da piscina'}
+    ]},
+    {nome:'S-Kap', tag:'Rolo', itens:['Piso vazado em rolo','Para bordas de piscina'], fotos:[
+     {src:'assets/img/galeria/tratada-F032.webp', alt:'Rolo do piso vazado bege para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F033.webp', alt:'Rolo do piso vazado azul para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F034.webp', alt:'Piso vazado azul na borda da piscina'},
+     {src:'assets/img/galeria/tratada-F035.webp', alt:'Rolo do piso vazado cinza na borda da piscina'},
+     {src:'assets/img/galeria/tratada-F036.webp', alt:'Piso vazado azul cobrindo a borda da piscina'},
+     {src:'assets/img/galeria/tratada-F281.webp', alt:'Piso vazado preto'},
+     {src:'assets/img/galeria/tratada-F283.webp', alt:'Piso vazado azul na borda da piscina'},
+     {src:'assets/img/galeria/tratada-F284.webp', alt:'Detalhe do piso vazado cinza'}
+    ]},
+    {nome:'H-Kap', tag:'Rolo', itens:['Piso vazado colmeia','Para lavanderias e áreas úmidas'], fotos:[
+     {src:'assets/img/galeria/tratada-F263.webp', alt:'Cores do piso vazado para áreas molhadas'},
+     {src:'assets/img/galeria/tratada-F270.webp', alt:'Piso vazado azul em rolo'},
+     {src:'assets/img/galeria/tratada-F276.webp', alt:'Piso vazado na lavanderia'},
+     {src:'assets/img/galeria/tratada-F277.webp', alt:'Detalhe do piso vazado colmeia'},
+     {src:'assets/img/galeria/tratada-F278.webp', alt:'Piso vazado colmeia preto'},
+     {src:'assets/img/galeria/tratada-F279.webp', alt:'Rolos do piso vazado'}
     ]}
    ]}
 ];
