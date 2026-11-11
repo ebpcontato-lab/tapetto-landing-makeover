@@ -37,6 +37,7 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 
 ### Conversa Fotos (11/11)
 - Fotos **nº 2** (Super Essências, `tapete-super-essencias.webp`) e **nº 3** (Hipermais Bem-Vindo, `tapete-hipermais-bem-vindo.webp`) retiradas do site, de todos os lugares (Galeria, quadro do topo, Soluções e Cleankap), a pedido do Seu Zecones. Arquivos mantidos no repositório.
+- **Logo novo "pii-zü PISOS"** (balão laranja + palavra pii-zü PISOS) aplicado no site: topo, rodapé, ícone da aba (favicon), ícone do celular e imagem de compartilhamento (WhatsApp/Facebook). Arquivos em `assets/img/marca/piizu-pisos-*.svg` e `piizu-balao-laranja.svg`; cópias em PNG em `assets/biblioteca/logos/`. Os logos antigos (`piizu-grafite-prata-cobre.svg`, `piizu-horizontal-*`) não são mais usados na página. **Daqui pra frente, usar só o logo novo.**
 
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
