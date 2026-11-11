@@ -35,6 +35,9 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - Ficaram fora do Cleankap as repetidas de vinil (nº 6, 18, 26, 40, 41, 52, 57, 64, 66, 67, 74, 88, 110, 134, 135, 145, 164, 173, 196, 197, 199, 200, 207), fibra de coco (257, 261), capa de elevador (192, 193, 203, 205), piso laminado (2) e 4 com textura duvidosa (9 Share, 143 Garden Center, 172 t:me, 186 CCAA).
 - As 22 fotos da pasta sem miniatura (4 HDR de 6–7 MB e 18 com menos de 65 KB) continuam fora do site; não deu para conferir se alguma é Cleankap.
 
+### Conversa Fotos (11/11)
+- Fotos **nº 2** (Super Essências, `tapete-super-essencias.webp`) e **nº 3** (Hipermais Bem-Vindo, `tapete-hipermais-bem-vindo.webp`) retiradas do site, de todos os lugares (Galeria, quadro do topo, Soluções e Cleankap), a pedido do Seu Zecones. Arquivos mantidos no repositório.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
