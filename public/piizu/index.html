@@ -1271,6 +1271,16 @@ footer{padding:64px 0 36px}
 .ft-parc img{height:46px;width:auto;display:block}
 @media(max-width:860px){.ft-parc img{height:38px}}
 
+/* selo de garantia (medalha) ao lado do logo Kapazi Cooperkap - RJ: topo e rodapé */
+.nav-garantia,.ft-garantia{display:flex;align-items:center;gap:8px;flex:none;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);line-height:1.45}
+.nav-garantia .selo-ic{width:25px;height:34px}
+.ft-garantia{padding-left:16px;border-left:1px solid var(--lin);font-size:.68rem}
+.ft-garantia .selo-ic{width:31px;height:42px}
+@media(max-width:1579px){.nav-garantia>span{display:none}}
+@media(max-width:860px){.nav-garantia>span{display:none}.nav-garantia .selo-ic{width:21px;height:29px}}
+@media(max-width:400px){.nav-garantia .selo-ic{width:17px;height:23px}}
+@media(min-width:861px) and (max-width:959px){.nav-garantia{display:none}}
+
 /* 1ª dobra mais próxima do cabeçalho (~15% mais alta): foto a 32px e texto a ~72px do menu */
 @media(min-width:861px){
   .hero{padding-top:32px!important}
@@ -1403,6 +1413,7 @@ function piizuLead(extra){
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-pisos-horizontal.svg" alt="pii-zü Pisos" width="275" height="100"></a>
     <span class="nav-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186"></span>
+    <span class="nav-garantia" title="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span>
     <nav class="nav-l" id="navl" aria-label="Menu">
       <a href="#materiais">Opções de Matéria-Prima</a>
       <a href="#projetos">Soluções e Aplicações</a>
@@ -2133,7 +2144,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="ft">
       <div>
-        <div class="ft-logos"><div class="logo"><img src="assets/img/marca/piizu-pisos-horizontal.svg" alt="pii-zü Pisos" width="275" height="100" loading="lazy"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186" loading="lazy"></span></div>
+        <div class="ft-logos"><div class="logo"><img src="assets/img/marca/piizu-pisos-horizontal.svg" alt="pii-zü Pisos" width="275" height="100" loading="lazy"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186" loading="lazy"></span><span class="ft-garantia"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span></div>
         <div class="ft-slogans">
           <p>Soluções para Pisos</p>
           <p>Sua marca “conversa” melhor com a <span class="nw">pii-zü</span></p>
