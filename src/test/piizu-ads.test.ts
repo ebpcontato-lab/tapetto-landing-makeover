@@ -16,7 +16,7 @@ describe('piizu Google Ads tag (AW-17662893947)', () => {
   });
 
   it('fires a conversion on form submission and WhatsApp clicks only', () => {
-    expect((html.match(/piizuAds\(window\.__PIIZU_ADS\.form, \{transaction_id: submissionId\}\);/g) || []).length).toBe(2);
+    expect((html.match(/piizuAds\(window\.__PIIZU_ADS\.form, \{transaction_id: submissionId\}\);/g) || []).length).toBe(1);
     expect(html).not.toContain('__PIIZU_ADS.cta');
     expect(html).toContain('piizuAds(window.__PIIZU_ADS.whatsapp)');
     expect(html).toContain('a[href*="wa.me"]');

@@ -3058,33 +3058,30 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     /* 2) aba bloqueada ou navegador interno: vai nesta mesma página */
     setTimeout(function(){ window.location.href = waUrl; }, 600);
   };
-  var fecharAba = function(){ try{ if(aba && !aba.closed) aba.close(); }catch(_){} };
+  /* Todo envio vira contato: tenta registrar o pedido (até 8 s) e, com ou sem
+     registro, dispara a conversão e leva o visitante ao WhatsApp com a mensagem pronta. */
+  var salvo = false;
   try{
-    var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
-    var isJson = (response.headers.get('content-type') || '').indexOf('application/json') !== -1;
-    if(!isJson) throw new Error('registro-indisponivel');
-    var result = await response.json();
-    if(!response.ok || !result.saved) throw new Error(result.error || 'Não foi possível registrar seu pedido. Tente novamente.');
-    status.textContent = 'Solicitação entregue. Seja bem-vindo à pii-zü Soluções para Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Abrimos o WhatsApp em uma nova aba com a sua mensagem pronta; se ele não abriu, use o botão abaixo.';
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var limite = ctrl ? setTimeout(function(){ ctrl.abort(); }, 8000) : null;
+    var response = await fetch('/api/public/quotes', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload), signal: ctrl ? ctrl.signal : undefined});
+    if(limite) clearTimeout(limite);
+    if((response.headers.get('content-type') || '').indexOf('application/json') !== -1){
+      var result = await response.json();
+      salvo = !!(response.ok && result && result.saved);
+    }
+  }catch(_){ salvo = false; }
+  try{
+    status.textContent = salvo
+      ? 'Solicitação entregue. Seja bem-vindo à pii-zü Soluções para Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Abrimos o WhatsApp com a sua mensagem pronta; se ele não abriu, use o botão abaixo.'
+      : 'Seu pedido segue pelo WhatsApp com a mensagem pronta — é só enviar por lá. Se ele não abriu, use o botão abaixo.';
     status.classList.add('ok');
     continuation.href = waUrl;
     continuation.style.display = 'inline-flex';
     piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
-    abrirWhats();
-  }catch(error){
-    if(error.message === 'registro-indisponivel' || error instanceof TypeError){
-      status.textContent = 'Ainda não é possível registrar o pedido nesta hospedagem. Continue pelo WhatsApp — a mensagem já está pronta com tudo o que você escreveu.';
-      continuation.href = waUrl;
-      continuation.style.display = 'inline-flex';
-      piizuAds(window.__PIIZU_ADS.form, {transaction_id: submissionId});
-      abrirWhats();
-    } else {
-      fecharAba();
-      status.textContent = error.message || 'Não foi possível registrar seu pedido. Tente novamente.';
-    }
-  }finally{
-    submitting = false; submit.disabled = false; submit.textContent = 'Pedir orçamento';
-  }
+  }catch(_){}
+  abrirWhats();
+  submitting = false; submit.disabled = false; submit.textContent = 'Pedir orçamento';
 });
 
 
