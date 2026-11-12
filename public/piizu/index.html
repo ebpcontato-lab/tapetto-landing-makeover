@@ -1227,6 +1227,10 @@ footer .ft p{font-size:.84rem}
   #projetos .head{margin-bottom:12px}
   #projetos .pj-g{--fh:max(300px,calc(var(--dobra) - 312px))}
   #projetos .pj-foto{--fh:max(300px,calc(var(--dobra) - 312px))!important}
+  /* quadro de fotos ocupa toda a largura da coluna da esquerda: fotos maiores */
+  #projetos .pj-foto{width:calc(var(--fh) * 1.3 + 92px)!important;padding:14px 60px}
+  #projetos .pj-g .pj-ft-foto{width:calc(var(--fh) * 1.3 + 92px)!important}
+  #pjFoto .ph>img{object-fit:cover;object-position:center 45%}
 }
 
 /* título da Galeria numa linha só (computador e tablet) */
