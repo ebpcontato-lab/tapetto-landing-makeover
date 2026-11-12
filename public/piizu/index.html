@@ -1221,6 +1221,14 @@ footer .ft p{font-size:.84rem}
 /* frase dos consultores em "Soluções orientadas e guiadas" */
 #projetos .head p.sol-guia{grid-column:1/-1!important;grid-row:5!important;font-size:clamp(.95rem,1.15vw,1.08rem)!important;line-height:1.55!important;color:var(--tx);margin:10px 0 0!important;max-width:80ch}
 
+/* "Soluções orientadas": no computador a seção sobe e o quadro de fotos aparece inteiro na tela */
+@media(min-width:1061px){
+  #projetos{padding-top:16px!important}
+  #projetos .head{margin-bottom:12px}
+  #projetos .pj-g{--fh:max(300px,calc(var(--dobra) - 312px))}
+  #projetos .pj-foto{--fh:max(300px,calc(var(--dobra) - 312px))!important}
+}
+
 /* título da Galeria numa linha só (computador e tablet) */
 #galeria .head{container-type:inline-size}
 @media(min-width:700px){#galeria .head h2.gal-h2{white-space:nowrap;font-size:min(2.6rem,2.75cqw)}}
