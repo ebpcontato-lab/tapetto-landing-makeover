@@ -119,3 +119,9 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Vulcanizada com o texto do PDF "Bordas - Vinil" (vinil recortado e preenchido com outra cor, como quebra-cabeça).
 - Quadros de fotos (Ver fotos e galeria) mostram a pontinha da próxima foto também no computador.
 - PDFs "Bordas - Vinil/Cleankap/Duo" (12 MB) não baixam pelo conector (limite 10 MB): fotos de Rebaixada/Vulcanizada/Pintada pendentes.
+
+## 13/11/2026 13h40 — c25
+- Fotos ruins de borda Flex (CDL, SIR, D'Rosi, A4, Catedral) retiradas. Cards de borda agora com Tapete inteiro: Flex = Ralpha Posto (vinil, flex cinza), Rebaixada = Almeida (vinil azul), Pintada = Influ Church (borda dourada), Unik = Duo cinza no piso. Fontes: Drive pasta Vinil (16c5s…) e Duo (1d8pS…).
+- Compare: Vinil Gold + Automar e Cléo Modas; Cleankap + Satélite (flex), Morana, Rio da Vida; Duo + ambientado, provador, elevador. Tudo com Tapete inteiro, sem corte.
+- Waterkap Elite: texto pela Tabela 08/10 (o mais robusto da linha; mais denso, pesado e resistente; preto, grafite e marrom; borda Flex). Fotos do Elite ainda a confirmar (vieram da pasta WATERKAP, 190xxx-1600-auto).
+- Computador: sem pontinha da próxima foto, setas menores (30px). Celular: primeiro quadro (topo) agora mostra a pontinha da próxima foto e passa com toque nela.
