@@ -1443,6 +1443,21 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 @media(max-width:860px){.nav-in{--nh:34px;gap:10px!important}.nav-parc,.nav-garantia{padding-left:10px!important}}
 @media(max-width:374px){.nav-in{--nh:30px;gap:8px!important}.nav-parc,.nav-garantia{padding-left:8px!important}}
 @media(min-width:861px) and (max-width:959px){.nav-garantia{display:flex!important}}
+
+/* 13/11: fábrica Kapazi na autoridade + catálogo de bordas no Escolha pelo tipo de entrada */
+.aut .fab{max-width:880px;margin:18px auto 0;padding:0 20px}
+.aut .fab img{display:block;width:100%;height:auto;aspect-ratio:990/468;object-fit:cover;border-radius:10px}
+.aut .fab figcaption{font-size:.92rem;color:var(--tx);text-align:center;margin-top:8px;line-height:1.45}
+.bordas{margin-top:18px;border:1px solid var(--lin);border-radius:8px;background:var(--bg2);padding:18px 20px}
+.bordas .bd-t{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;color:var(--tinta);margin-bottom:4px}
+.bordas .bd-s{margin:0 0 14px;font-size:.98rem;line-height:1.5;color:var(--tx)}
+.bordas .bd-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.bordas .bd-g li{background:#fff;border:1px solid var(--lin);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.bordas .bd-g img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.bordas .bd-g b{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.08rem;color:var(--tinta);padding:10px 12px 2px}
+.bordas .bd-g span{display:block;font-size:.9rem;line-height:1.45;color:var(--tx);padding:0 12px}
+.bordas .bd-g em{display:block;font-style:normal;font-size:.84rem;font-weight:600;color:var(--lar2);padding:6px 12px 12px;margin-top:auto}
+@media(max-width:860px){.bordas .bd-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bordas{padding:14px}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1562,6 +1577,7 @@ function piizuLead(extra){
     <div role="listitem" class="hn-n1"><b class="fr">Nº 1 da América Latina</b><span>Kapazi, a maior fábrica de Tapetes e Capachos</span></div>
     <div role="listitem" class="hn-pers"><b class="fr">Com a sua marca</b><span>sob medida, entregue em todo o Brasil</span></div>
   </div>
+  <figure class="fab"><img src="assets/img/fabrica-kapazi.webp" alt="Vista aérea da fábrica da Indústria Kapazi" width="990" height="468" loading="lazy"><figcaption>Fábrica da Indústria Kapazi: é daqui que sai o seu Tapete ou Capacho.</figcaption></figure>
 </section>
 
 <!-- ===== CLIENTES (logos) — troque as imagens na lista CLIENTES do script ===== -->
@@ -1590,6 +1606,18 @@ function piizuLead(extra){
       <div class="gal-tabs" id="cmpTop" role="group" aria-label="Tipos de retenção"></div>
       <div class="cmp-mod" id="cmpMod"></div>
 
+    </div>
+
+    <!-- Catálogo de bordas (fonte: PDFs Bordas Vinil, Cleankap e Duo da Kapazi) -->
+    <div class="bordas rv" id="bordas">
+      <div class="bd-t">Escolha a borda</div>
+      <p class="bd-s">O acabamento que protege e valoriza o seu Tapete ou Capacho. Na dúvida, a gente indica a ideal no orçamento.</p>
+      <ul class="bd-g">
+        <li><img src="assets/img/bordas/borda-flex.webp" alt="Borda Flex em PVC flexível no Tapete" width="600" height="450" loading="lazy"><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para corredores e alto tráfego.</span><em>Vinil Gold, Vinil A/T (obrigatória), Cleankap e Duo</em></li>
+        <li><img src="assets/img/bordas/borda-rebaixada.webp" alt="Capacho de vinil com borda rebaixada" width="600" height="450" loading="lazy"><b>Rebaixada</b><span>Rebaixo de alguns centímetros na própria borda do Capacho. Para áreas de grande tráfego.</span><em>Vinil Gold</em></li>
+        <li><img src="assets/img/bordas/borda-unik.webp" alt="Tapete com borda Unik" width="600" height="450" loading="lazy"><b>Unik</b><span>Base antiderrapante em PVC com acabamento diferenciado e mais durável. Para varandas e entradas.</span><em>Cleankap e Duo</em></li>
+        <li><img src="assets/img/bordas/borda-sem-borda.webp" alt="Tapete com corte reto, sem borda" width="600" height="450" loading="lazy"><b>Sem borda</b><span>Corte reto, com a mesma espessura em todo o Tapete.</span><em>Vinil Gold, Cleankap e Duo</em></li>
+      </ul>
     </div>
 
     <div class="mat-fotos rv">
@@ -1648,7 +1676,11 @@ function piizuLead(extra){
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T03.webp" alt="Capacho Grupo Rodoxisto na entrada envidraçada" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-vinil-unique-residence-elevador.webp" alt="Capacho de vinil Unique Residence no piso do elevador" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-upper-residences.webp" alt="Tapete Upper Smart Residences na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-condominio-royal.webp" alt="Tapete Condomínio Royal na entrada envidraçada" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-elevador-prospere.webp" alt="Tapete Prospère Office Harmony no elevador" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T03.webp" alt="Capacho Grupo Rodoxisto na entrada envidraçada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T06.webp" alt="Tapete de amarelinha com nuvens azuis" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T13.webp" alt="Tapete Vasto Restaurante na porta giratória" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T15.webp" alt="Tapete Clines Clínicas Especializadas" width="864" height="1080" loading="lazy"></div>
@@ -2514,6 +2546,8 @@ var COMPARA = [
   {id:'solidos', nome:'Função Única: Produzido no Vinil (PVC) — Retém sólidos.',
    modelos:[
     {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada'], fotos:[
+     {src:'assets/img/galeria/novo-vinil-unique-residence-elevador.webp', alt:'Capacho de vinil Unique Residence no piso do elevador'},
+     {src:'assets/img/galeria/novo-vinil-redondo-chiquinho.webp', alt:'Capacho de vinil redondo personalizado'},
      {src:'assets/img/galeria/vinil-spazio.webp', alt:'Capacho de vinil rosa com a marca Spazio'},
      {src:'assets/img/galeria/tratada-F116.webp', alt:'Capacho de vinil verde-água Babi Cosméticos'},
      {src:'assets/img/galeria/tratada-F068.webp', alt:'Capacho de vinil Casa de Ração'},
@@ -2539,6 +2573,11 @@ var COMPARA = [
   {id:'dupla', nome:'Dupla Função: Produzido em 3 opções — Retém sólidos e líquidos.',
    modelos:[
     {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores'], fotos:[
+     {src:'assets/img/galeria/novo-cleankap-upper-residences.webp', alt:'Tapete Cleankap Upper Smart Residences na entrada do condomínio'},
+     {src:'assets/img/galeria/novo-cleankap-condominio-royal.webp', alt:'Tapete Cleankap Condomínio Royal na entrada envidraçada'},
+     {src:'assets/img/galeria/novo-cleankap-elevador-prospere.webp', alt:'Tapete personalizado Prospère Office Harmony no elevador'},
+     {src:'assets/img/galeria/novo-cleankap-pesca-cia.webp', alt:'Tapete Cleankap Pesca e Cia na entrada da loja'},
+     {src:'assets/img/galeria/novo-cleankap-bom-tom-sem-borda.webp', alt:'Tapete Cleankap Bom Tom Perfumaria'},
      {src:'assets/img/galeria/tratada-T43.webp', alt:'Tapete de amarelinha com fazendinha'},
      {src:'assets/img/galeria/tratada-F030.webp', alt:'Tapete infantil com astronauta na sala da escola'},
      {src:'assets/img/galeria/tratada-F100.webp', alt:'Tapete cinza Maple Bear Canadian School'},
@@ -2558,6 +2597,7 @@ var COMPARA = [
      {src:'assets/img/galeria/tratada-F178.webp', alt:'Tapete Waterkap grafite em quadriculado no corredor de entrada'}
     ]},
     {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única'], fotos:[
+     {src:'assets/img/galeria/novo-duo-entrada.webp', alt:'Tapetes Duo cinza com borda na entrada'},
      {src:'assets/img/galeria/duo-entrada-predio.webp', alt:'Tapete Duo cinza na entrada de vidro de um prédio'},
      {src:'assets/img/galeria/tratada-F003.webp', alt:'Tapete Duo listrado cinza no piso do elevador'},
      {src:'assets/img/galeria/tratada-F128.webp', alt:'Tapetes Duo pretos na entrada envidraçada'},

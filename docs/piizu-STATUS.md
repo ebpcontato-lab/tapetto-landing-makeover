@@ -93,3 +93,9 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 — Páginas novas no ar como PRÉVIA (noindex, sem tags de anúncio, formulário abre o WhatsApp): piizu.com.br/site/ (Home), /site/areas-molhadas/, /grama-sintetica/ e /condominios/. Arquivos em public/site, public/grama-sintetica, public/condominios; imagens em public/novas/img. A raiz piizu.com.br continua na landing de Tapetes e Capachos (anúncios). Canvas de design segue como referência.
 - 13/11 — REGRA do Seu Zecones para o NOVO ACERVO de fotos (Drive): usar SÓ no site e nas landings novas (Grama, Condomínios, Áreas Molhadas etc.), escolhendo as de melhor qualidade. NÃO colocar na landing de Tapetes e Capachos (/piizu): para ela, ele vai escolher as fotos uma a uma.
 - 13/11 — "Matéria-prima virgem" adicionado (Vinil Gold e A/T): landing /piizu (hero, mesma linha, dobra conferida), /site e /condominios, e canvas. Fonte da Kapazi pendente (Seu Zecones vai pedir). Tapete Urban retirado do portfólio. ZIP c18.
+
+## 13/11/2026 — Landing Tapetes e Capachos enriquecida (c19)
+- Novo bloco aberto "Escolha a borda" (#bordas) em #materiais: Flex (Vinil Gold, Vinil A/T obrigatória, Cleankap, Duo), Rebaixada (Vinil Gold), Unik (Cleankap, Duo), Sem borda (Vinil Gold, Cleankap, Duo). Vulcanizada fora (Vinil Vulcanizado não é usado em personalizados).
+- Foto aérea da fábrica Kapazi (assets/img/fabrica-kapazi.webp) na faixa #autoridade; também no site (/site e /condominios, /novas/img/fabrica-kapazi.webp).
+- Novas fotos no "Compare os modelos": Vinil Gold (Unique Residence, redondo), Cleankap (Upper, Royal, Prospère, Pesca&Cia, Bom Tom), Duo (entrada). 4 delas também na galeria.
+- Dobra conferida (desktop e celular), sem erro de JS. ZIP piizu-site-2026-11-13-c19.zip.
