@@ -81,5 +81,7 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - Emitimos nota fiscal.
   - Pagamento à vista com desconto de 5% a 7%.
   - Prazo: itens personalizados (medidas + logotipo) até 15 dias úteis; demais (grama, pisos para área molhada/úmida, laminados Bus/Liso/Moeda/Colmeia, fitas antiderrapantes e de demarcação etc.) até 5 dias úteis.
-  Ainda falta: se a pii-zü instala a grama; uso indicado da grama 20 mm x 30 mm; textos S-Kap/H-Kap; fotos de carpete.
+  - Grama Sintética: a pii-zü faz a instalação. Alturas: 12 mm decorativa; 20 e 30 mm recreativa (jardim, quintal, entorno de piscina); 50 mm campo de futebol profissional e esportes.
+  - Áreas molhadas (W-Kap, Acquakap, S-Kap, H-Kap): entorno de piscinas, saunas, vestiários de academias e clubes, banheiros infantis de escolas e creches, indústrias. Textos S-Kap/H-Kap tirados das fichas técnicas.
+  - Próximo: Seu Zecones vai montar um NOVO ACERVO com as melhores fotos (inclusive carpete) e pedir para atualizar todos os projetos com ele. Hoje não há nenhuma foto de carpete no repo nem no Drive.
 - A landing de Tapetes e Capachos atual segue como está; o site novo não mexe nela.
