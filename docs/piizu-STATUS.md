@@ -75,4 +75,6 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Visual: mesmo da landing (grafite #202328, cobre, laranja #BF561C, Fraunces + Inter, logo "pii-zü PISOS").
 - Faltando: fotos de carpete, mais fotos reais de grama e piso vinílico; textos S-Kap/H-Kap (fichas técnicas); grama 20 mm x 30 mm (uso indicado); se a pii-zü instala a grama.
 - 12/11: incluída a Capa de Elevador Liftkap (7ª categoria) e a seção "Para condomínios residenciais" na Home — condomínios residenciais são público foco do site.
+- 13/11: criada a Landing Condomínios (síndicos e administradoras, tráfego pago, sem menu): kit completo por área, destaque Liftkap, por que a pii-zü, como funciona, dúvidas e formulário com checklist de itens. Home linka para ela.
+  Faltando: visita técnica (sim/não), nota fiscal, condições de pagamento, prazo dos itens fora Tapete/Capacho.
 - A landing de Tapetes e Capachos atual segue como está; o site novo não mexe nela.
