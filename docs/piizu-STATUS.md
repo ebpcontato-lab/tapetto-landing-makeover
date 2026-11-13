@@ -45,6 +45,17 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 
 - **12/11:** "a mais bem aprovada" → "a mais bem **avaliada** no ReclameAqui e no Google". Quadro de fotos do topo no maior tamanho possível: setas agora ficam **por cima da foto**; no computador a coluna da foto ficou mais larga e a foto ocupa a altura da primeira tela (1366×768: 437→649 px de altura); no celular a foto ocupa a largura toda (342×428 em 390 px).
 
+- **12/11 — LANDING ENXUTA PARA TRÁFEGO PAGO** (pedido do Seu Zecones). Antes, a versão completa e todo o conteúdo foram guardados como **"projeto site pii-zü"**: `modelos/projeto-site-piizu/` (index.html + CONTEUDO.md com todos os textos e lista de fotos) e branch `projeto-site-piizu`. O que mudou na página:
+  - menu do topo escondido (só logo, Kapazi, selo e botão Orçamento);
+  - faixa de autoridade virou 3 números curtos (48+ anos · Nº 1 da América Latina · Com a sua marca);
+  - "Nossas Soluções" virou "Escolha pelo tipo de entrada" com 2 opções + "Na dúvida? A gente indica"; **Áreas Molhadas saiu** de Compare os modelos (fica para página própria);
+  - seção "Soluções orientadas e guiadas" escondida (`#projetos hidden`, o HTML ficou para o script);
+  - Galeria com as **20** melhores fotos (antes 199); números das fotos **desligados** (`FOTO_NUM=false`);
+  - Dúvidas: 5 curtas (logo, escorrega, limpeza, prazo, preço);
+  - Orçamento: "Como funciona" em 3 passos; formulário com Nome, WhatsApp, Para onde é e Mensagem (opcional). Linha, Bairro e Quando precisa continuam no HTML, escondidos, para não quebrar o envio; a mensagem do WhatsApp agora leva "Para onde é" e não leva mais a "Solução" da seção escondida;
+  - sem numeração "01 / 02 /…"; título e descrição do Google/WhatsApp agora falam de **Tapetes e Capachos** (sem grama/piscina). Regra: manter sempre **"Tapete e Capacho"** nos textos (Capacho é muito buscado).
+  - Página: ~1.200 → ~470 palavras.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
