@@ -76,7 +76,7 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 - Existem laudos de impermeabilidade e de inflamabilidade (IPT) da grama no Drive.
 
 ## Pisos para Área Molhada ou Úmida
-- **W-Kap:** antiderrapante e antifúngico, texturizado; saunas, piscinas, vestiários, banheiros, cozinhas, spas, academias, áreas de serviço. 4 mm, rolo 1,20 x 10 m. Azul, bege, preto e cinza. Não propaga chama (ASTM 2859). Garantia 1 ano.
+- **W-Kap:** antiderrapante e antifúngico, texturizado; saunas, piscinas, vestiários, banheiros, cozinhas, spas, academias, áreas de serviço. Vendido em PLACAS MODULARES, em todas as cores (azul, bege, preto e cinza) — NÃO é rolo (a ficha da Kapazi fala em rolo 1,20 x 10 m, mas o Seu Zecones confirmou 13/11 que é só placa). 4 mm. Não propaga chama (ASTM 2859). Garantia 1 ano.
 - **Acquakap:** piso modular 30 x 30 cm (kit com 6 peças), 10 mm; saunas, vestiários, decks de piscina, lavanderias, academias. Preto, cinza, bege e azul royal. Não resseca, não propaga chama. Garantia 1 ano.
 - **S-Kap:** antiderrapante, antifungo, não propaga chama; lavanderia, cozinha, banheiros, clubes, praias e piscinas. 6 mm; 0,75 x 1,20 m ou rolo 1,20 x 15 m. Azul, bege, cinza e preto.
 - **H-Kap:** higiênico, antiderrapante, não resseca; locais úmidos e molhados. 6 mm; 75 x 120 cm ou rolo 1,20 x 15 m. Azul, preto e cinza. Garantia 1 ano.
@@ -85,7 +85,7 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 - **Bus:** alto tráfego, antiderrapante, com textura, instalação rápida. 2 mm; 1,30 x 15 m ou 2,00 x 10 m. Cinza e preto. Autoextinguível (ISO 3795). Garantia 1 ano.
 - **Liso:** alto tráfego e indústria; resistente à abrasão e a químicos, não racha e não resseca. 2; 3,5 e 5 mm. Autoextinguível. Garantia 1 ano.
 - **Moeda:** higiênico, antiderrapante, retém sujeira; rampas, academias, decks, indústrias, playgrounds. 1,8 mm; vários tamanhos de rolo. Cinza e preto. Autoextinguível. Garantia 1 ano.
-- **Colmeia:** ficha não encontrada nas pastas.
+- **Colmeia:** não tem ficha técnica. Mesma composição dos outros laminados (PVC), vendido em rolo nas mesmas dimensões.
 
 ## Quadras, playground e academia
 - **Rubberkap 5 mm:** emborrachado, alta absorção de impacto, antiderrapante, isolante acústico e térmico, não propaga chamas. Rampas, academias, decks, playgrounds, fisioterapia e pilates. Rolo 1 x 10 m, várias combinações de cores. Indicado principalmente para área interna. Garantia 1 ano.
@@ -96,8 +96,10 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 - **FireKap:** sinaliza equipamentos de combate a incêndio; 1 x 1 m, vermelho com faixas amarelas; segue NBR 12.693 e NPT 20 do Corpo de Bombeiros. Garantia 3 meses.
 - **Antifadiga:** ergonômico, faixas amarelas e bordas chanfradas; recepção, cozinha industrial e indústrias (não para áreas úmidas). 16,5 mm; 0,90x0,60, 1,20x0,80 ou sob medida. Garantia 3 meses.
 
-## Não usar no site (por decisão comercial)
-- Vinil Silver, Vinil Light, Vinil Pintado, Vinil Vulcanizado, Vinil Diversos: linhas inferiores ou fora do foco. A pii-zü produz personalizados só em Vinil Gold e Vinil A/T.
+## Vinil vendido só por rolo
+- Vinil Silver, Vinil Light, Vinil Pintado e Vinil Vulcanizado: NÃO usados nos personalizados (a pii-zü personaliza só em Vinil Gold e Vinil A/T), mas aparecem no site como venda por rolo.
 
 ## Fichas que existem e ainda não foram resumidas
-Fibra de Coco, Piso Tátil e Direcional, Protepiso, Protepiso Gamer, Yoga, Tapete Mágico, Tapete Sanitizante, Barberkap, Wind Banner, Guia de Limpeza e Manutenção.
+Fibra de Coco, Piso Tátil e Direcional, Protepiso, Protepiso Gamer, Yoga, Tapete Mágico, Tapete Sanitizante, Barberkap, Guia de Limpeza e Manutenção.
+
+Fora de linha: Wind Banner (saiu de produção).
