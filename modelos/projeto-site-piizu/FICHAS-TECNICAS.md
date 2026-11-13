@@ -55,9 +55,8 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 - 12 mm, medida personalizada. Cores: cinza cristal, cinza ônix, preto, azul, vermelho, marrom.
 - Garantia 2 anos. Precisa de superfície nivelada.
 
-### Agulhado Liso / Urban / Tropical / Tropical Brisa (linha casa)
+### Agulhado Liso / Tropical / Tropical Brisa (linha casa)
 - Agulhado Liso: 4 mm, rolos 0,60/1,20/1,90 x 10 m ou peças; preto e grafite; interno e externo. Garantia 3 meses.
-- Urban: poliéster reciclado, 4 mm, 40x60 e 50x80 cm, preto. Garantia 3 meses.
 - Tropical: 6 mm, corta entre os gomos para ajustar; ideal para corredores, cozinha e banheiros; várias cores. Garantia 3 meses.
 - Tropical Brisa: infantil, antibacteriano, resistente ao mofo, 5,5 mm, estampado. Garantia 3 meses.
 
@@ -96,6 +95,9 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 - **FireKap:** sinaliza equipamentos de combate a incêndio; 1 x 1 m, vermelho com faixas amarelas; segue NBR 12.693 e NPT 20 do Corpo de Bombeiros. Garantia 3 meses.
 - **Antifadiga:** ergonômico, faixas amarelas e bordas chanfradas; recepção, cozinha industrial e indústrias (não para áreas úmidas). 16,5 mm; 0,90x0,60, 1,20x0,80 ou sob medida. Garantia 3 meses.
 
+## Matéria-prima
+- Vinil Gold e Vinil A/T: produzidos pela Kapazi com matéria-prima virgem (confirmado pelo Seu Zecones 13/11; ele vai pedir à Kapazi um material que comprove — guardar aqui quando chegar).
+
 ## Vinil vendido só por rolo
 - Vinil Silver, Vinil Light, Vinil Pintado e Vinil Vulcanizado: NÃO usados nos personalizados (a pii-zü personaliza só em Vinil Gold e Vinil A/T), mas aparecem no site como venda por rolo.
 
@@ -103,3 +105,4 @@ Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais 
 Fibra de Coco, Piso Tátil e Direcional, Protepiso, Protepiso Gamer, Yoga, Tapete Mágico, Tapete Sanitizante, Barberkap, Guia de Limpeza e Manutenção.
 
 Fora de linha: Wind Banner (saiu de produção).
+Retirado do portfólio: Tapete Urban (a pii-zü não trabalha com ele; e é de poliéster reciclado).
