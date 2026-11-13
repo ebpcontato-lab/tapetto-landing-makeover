@@ -101,3 +101,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Dobra conferida (desktop e celular), sem erro de JS. ZIP piizu-site-2026-11-13-c19.zip.
 - Correção do Seu Zecones (13/11): Borda Unik somente no Tapete Duo (foto trocada para o Duo). Borda Vulcanizada entra para Vinil Gold e Vinil A/T (foto: vinil açougue supermercado). Flex sem a nota "obrigatória". Grade de bordas agora com 5 cards (3+2 no computador, 2 por linha no celular). ZIP c20.
 - Correção 2 (13/11, 12h24): Rebaixada e Vulcanizada = todos os Vinil, exceto Silver. Flex = Vinil, Cleankap, Duo e Waterkap Elite. Nova borda Pintada = Vinil e Cleankap. Nota: no Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho. Waterkap no Compare ganhou "Nova linha Waterkap Elite, mais encorpada, com borda Flex". 6 cards (3x2). ZIP c21.
+- Correção 3 (13/11, 12h29): Sem borda disponível em todos os modelos (não é o indicado, fica a critério do cliente). ZIP c22.
