@@ -1,5 +1,7 @@
 # Fichas técnicas Kapazi — resumo para o site pii-zü (13/11/2026)
 
+> USO NO SITE: só o essencial (o que é + onde usar, em 1 linha). Este arquivo é consulta interna; não copiar medidas, cores e garantias para as páginas.
+
 Fonte: pastas de fichas técnicas do Drive enviadas pelo Seu Zecones. Aqui ficam só as informações úteis para o cliente: o que é, onde usar, pontos fortes, medidas, espessura, cores e garantia. Composição química, peso e o passo a passo de limpeza ficam nas fichas originais.
 
 Regra comercial: personalizados (medida + logotipo) até 15 dias úteis; demais itens até 5 dias úteis. À vista com 5% a 7% de desconto. Nota fiscal. Visita técnica sem custo.
