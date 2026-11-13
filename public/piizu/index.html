@@ -1411,6 +1411,15 @@ footer .ft .ft-slogans p+p{margin-top:6px}
   .qd-linha .seta svg{width:15px!important;height:15px!important}
   .qd-box .quadro,.quadro{width:auto!important;flex:1 1 auto!important;min-width:0!important}
 }
+
+/* 13/11: no celular os quadros de fotos não têm setas — passa com o dedo.
+   Galeria e Ver fotos mostram a pontinha da foto seguinte como sinal de arrastar. */
+@media(max-width:860px){
+  .qd-linha .seta,.gal>.seta,#cmpGal>.seta{display:none!important}
+  .qd-linha{gap:0!important}
+  .gal,#cmpGal{grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+  #galTr,#cmpTr{grid-auto-columns:86%!important;column-gap:10px!important}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
