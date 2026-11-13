@@ -125,3 +125,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Compare: Vinil Gold + Automar e Cléo Modas; Cleankap + Satélite (flex), Morana, Rio da Vida; Duo + ambientado, provador, elevador. Tudo com Tapete inteiro, sem corte.
 - Waterkap Elite: texto pela Tabela 08/10 (o mais robusto da linha; mais denso, pesado e resistente; preto, grafite e marrom; borda Flex). Fotos do Elite ainda a confirmar (vieram da pasta WATERKAP, 190xxx-1600-auto).
 - Computador: sem pontinha da próxima foto, setas menores (30px). Celular: primeiro quadro (topo) agora mostra a pontinha da próxima foto e passa com toque nela.
+- 13h49: Borda do açougue = Rebaixada (card Rebaixada usa a foto do açougue). Vulcanizada sem foto até receber prints dos PDFs Bordas (12 MB, conector limita 10 MB; navegador do app não pôde ser ligado nesta conversa). ZIP c26.
