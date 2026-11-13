@@ -64,6 +64,15 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - Correções de material: F130 (Cleankap) saiu do Waterkap; F178 (quadriculado = Waterkap) saiu do Duo e foi para o Waterkap; F037 (listrado), F053 (placa de borracha) e F163 (trançado marrom) saíram do Waterkap por não serem claramente Waterkap; F217 (arte de catálogo com texto) saiu do Cleankap; F228 (estampado liso) e F222 (imagem de computador) fora do Vinil Gold.
   - Os arquivos e o `<template id="todasFotos">` continuam no projeto.
 
+- **13/11 (tarde) — conversa Landing page, a pedido do Seu Zecones:**
+  - Bordas: Flex = "Todos os modelos, exceto fibra de coco", com novo texto (supermercados, farmácias, idosos, carrinhos, alto tráfego); Rebaixada = "borda de 3 cm… Médio e Alto tráfego"; Unik = "Para varandas e entradas" (sem sacadas; Cleankap não tem mais Unik); nota: todos os Tapetes e Capachos têm costado antiderrapante. Fotos das bordas com **lupa** (abrem ampliadas).
+  - **Pendente:** fotos do **catálogo** Kapazi de cada borda ao lado da foto real — os PDFs de bordas não estão no repositório.
+  - Dúvida nova 07 "Quais tipos de borda?" (Quanto custa passou a 08).
+  - "Dupla Função" no estilo do "Linha Vinil" + frase: Dupla Função (Cleankap, Waterkap, Duo) tem vida útil muito maior que o vinil.
+  - Topo: "… (alto tráfego). Tapetes produzidos com matéria-prima virgem."
+  - Como funciona, passo 3: "Todo processo de produção é feito na Indústria Kapazi e entregamos pronto para uso."
+  - **Selo sempre com o texto "Distribuidor autorizado Indústria Kapazi"** (topo, rodapé e orçamento); no celular o selo + texto fica numa faixa abaixo dos logos no topo. Faixa com os 3 logos (pii-zü cobre, Kapazi Cooperkap, selo) também na seção de orçamento.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.

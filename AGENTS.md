@@ -15,3 +15,4 @@
 - Every landing form submission (anything but a fully empty form) fires the Google Ads form conversion and the Meta Lead once, then hands off to WhatsApp with the composed message, whether or not the save endpoint answered (8 s limit); only claim the order was saved when the backend confirms it.
 - Piizu page copy: always capitalize the product words Tapete(s), Capacho(s) and Passadeira(s), and write the brand as on the logo, "pii-zü" (keep piizu only in URLs, e-mail, domain and file names).
 - Production (piizu.com.br) is deployed automatically by a Cloudflare Worker connected to GitHub on every push to main; no Lovable Publish step is needed.
+- Piizu: the Kapazi seal always appears with its text "Distribuidor autorizado Indústria Kapazi" (header, footer, quote section), next to the pii-zü copper/black logo and the Kapazi Cooperkap logo at the same height.

@@ -1459,6 +1459,32 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 .bordas .bd-g em{display:block;font-style:normal;font-size:.84rem;font-weight:600;color:var(--lar2);padding:6px 12px 12px;margin-top:auto}
 .bordas .bd-n{margin:12px 0 0;font-size:.95rem;font-weight:600;color:var(--tinta)}
 @media(max-width:860px){.bordas .bd-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bordas{padding:14px}}
+
+/* 13/11: "Dupla Função" no mesmo estilo do "Linha Vinil" */
+#materiais .head p.mat-dupla b.fr{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:1.18em;color:var(--tinta)}
+#materiais .head p.mat-dupla em{font-style:italic;color:var(--lar2)}
+/* bordas: foto com lupa (abre ampliada como na Galeria) */
+.bordas .bd-g span.bd-ph{display:block;padding:0!important;border-radius:8px 8px 0 0}
+.bordas .bd-g .bd-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+/* selo SEMPRE com o texto "Distribuidor autorizado Indústria Kapazi" */
+.nav-garantia>span{display:block!important;font-size:.6rem;letter-spacing:.1em;line-height:1.4;text-transform:uppercase;color:var(--tx2);white-space:nowrap}
+.ft-logos .ft-garantia>span{display:block!important}
+@media(max-width:860px){
+  /* topo no celular: logos + botão na 1ª linha; selo com texto numa faixa logo abaixo */
+  :root{--nav-h:88px}
+  .nav-in{flex-wrap:wrap!important;row-gap:6px!important}
+  .nav-garantia{order:20;flex:0 0 100%;justify-content:center;height:auto!important;padding:5px 0 1px!important;border-left:0!important;border-top:1px solid var(--lin);gap:8px}
+  .nav-garantia .selo-ic{height:22px!important;width:16px!important}
+  .nav-garantia>span{font-size:.58rem}
+  .nav-garantia br,.ft-logos .ft-garantia br{display:none}
+  /* rodapé e orçamento no celular: selo com texto na linha de baixo */
+  .ft-logos{flex-wrap:wrap!important;row-gap:12px!important}
+  .ft-logos .ft-garantia{flex:0 0 100%;border-left:0!important;padding-left:0!important;height:auto!important}
+  .ft-logos .ft-garantia .selo-ic{height:30px!important;width:22px!important}
+}
+/* orçamento: faixa com os três logos acima do título */
+.orc-logos{margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid var(--lin)}
+.orc-logos{flex-wrap:wrap!important;row-gap:12px!important}.orc-logos .ft-garantia{flex:0 0 100%;border-left:0!important;padding-left:0!important;height:auto!important}.orc-logos .ft-garantia .selo-ic{height:34px!important;width:25px!important}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1526,7 +1552,7 @@ function piizuLead(extra){
   <div class="nav-in">
     <a href="#topo" class="logo" aria-label="pii-zü — início"><img src="assets/img/marca/piizu-pisos-horizontal-cobre.svg" alt="pii-zü Pisos" width="321" height="100"></a>
     <span class="nav-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186"></span>
-    <span class="nav-garantia" title="Distribuidor autorizado Indústria Kapazi" role="img" aria-label="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span>
+    <span class="nav-garantia" title="Distribuidor autorizado Indústria Kapazi" role="img" aria-label="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado <br>Indústria Kapazi</span></span>
     <nav class="nav-l" id="navl" aria-label="Menu">
       <a href="#materiais">Opções de Matéria-Prima</a>
       <a href="#projetos">Soluções e Aplicações</a>
@@ -1548,7 +1574,7 @@ function piizuLead(extra){
       <div class="hero-dif2 rise d1">
         <p class="hd-t"><b>Nosso diferencial:</b> linhas <b>Alto Padrão e Premium</b>, direto da Indústria Kapazi. Aqui seu Tapete ou Capacho dura muito mais.</p>
         <ul class="hero-ck">
-          <li>Produzimos somente nas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) e Vinil <b class="nw">A/T</b> (alto tráfego), com matéria-prima virgem.</li>
+          <li>Produzimos somente nas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) e Vinil <b class="nw">A/T</b> (alto tráfego). Tapetes produzidos com matéria-prima virgem.</li>
           <li>Muitos fornecedores usam o Vinil Silver: custa menos, mas dura bem menos.</li>
         </ul>
       </div>
@@ -1593,7 +1619,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="head rv">
       <h2 class="fr">Escolha pelo tipo de <em>entrada</em></h2>
-      <p class="mat-dupla">Pode ser que seu piso tenha necessidade de uma solução <b>Dupla Função</b>: retenção de sólidos e líquidos.</p>
+      <p class="mat-dupla">Pode ser que seu piso tenha necessidade de uma solução <b class="fr">Dupla Função</b>: retenção de sólidos e líquidos. Os modelos Dupla Função (<em>Cleankap</em>, <em>Waterkap</em> e <em>Duo</em>) têm vida útil muito maior que os de vinil: o seu investimento dura muito mais.</p>
       <ul class="mat-ls">
         <li><b class="fr">Retém a sujeira — Linha Vinil</b> (<em>Gold</em> ou <em>A/T</em>), com a sua marca.</li>
         <li><b class="fr">Retém a sujeira e a água — <em>Cleankap</em></b> (com a sua marca, fica rente ao chão e não enrosca na porta), <em>Waterkap</em> ou <em>Duo</em>.</li>
@@ -1614,14 +1640,14 @@ function piizuLead(extra){
       <div class="bd-t">Escolha a borda</div>
       <p class="bd-s">O acabamento que protege e valoriza o seu Tapete ou Capacho. Na dúvida, a gente indica a ideal no orçamento.</p>
       <ul class="bd-g">
-        <li><img src="assets/img/bordas/borda-flex.webp" alt="Borda Flex em PVC flexível no Tapete" width="600" height="450" loading="lazy"><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para corredores e alto tráfego.</span><em>Vinil, Cleankap, Duo e Waterkap Elite</em></li>
-        <li><img src="assets/img/bordas/borda-rebaixada.webp" alt="Capacho de vinil com borda rebaixada" width="600" height="450" loading="lazy"><b>Rebaixada</b><span>Rebaixo de alguns centímetros na própria borda do Capacho. Para áreas de grande tráfego.</span><em>Todos os Vinil, exceto Silver</em></li>
-        <li><img src="assets/img/bordas/borda-vulcanizada.webp" alt="Capacho de vinil com borda vulcanizada" width="600" height="450" loading="lazy"><b>Vulcanizada</b><span>Borda fundida ao próprio vinil, firme e sem costura.</span><em>Todos os Vinil, exceto Silver</em></li>
-        <li><img src="assets/img/bordas/borda-pintada.webp" alt="Capacho de vinil com borda pintada" width="600" height="450" loading="lazy"><b>Pintada</b><span>Acabamento pintado na borda, para um visual limpo e uniforme.</span><em>Vinil e Cleankap</em></li>
-        <li><img src="assets/img/bordas/borda-unik.webp" alt="Tapete Duo com borda Unik" width="600" height="450" loading="lazy"><b>Unik</b><span>Base antiderrapante em PVC com acabamento diferenciado e mais durável. Para varandas, sacadas e entradas.</span><em>Somente Tapete Duo</em></li>
-        <li><img src="assets/img/bordas/borda-sem-borda.webp" alt="Tapete com corte reto, sem borda" width="600" height="450" loading="lazy"><b>Sem borda</b><span>Corte reto, com a mesma espessura em todo o Tapete. Não é o mais indicado, mas fica a seu critério.</span><em>Todos os modelos</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-flex.webp" alt="Borda Flex em PVC flexível no Tapete" width="600" height="450" loading="lazy"></span><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para: Supermercados, Farmácias, locais com frequência de idosos, comércios com tráfego de carrinhos de compras e alto tráfego.</span><em>Todos os modelos, exceto fibra de coco</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-rebaixada.webp" alt="Capacho de vinil com borda rebaixada" width="600" height="450" loading="lazy"></span><b>Rebaixada</b><span>Rebaixo de alguns centímetros na própria borda de 3 cm do Capacho. Ideal para áreas de Médio e Alto tráfego.</span><em>Todos os Vinil, exceto Silver</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-vulcanizada.webp" alt="Capacho de vinil com borda vulcanizada" width="600" height="450" loading="lazy"></span><b>Vulcanizada</b><span>Borda fundida ao próprio vinil, firme e sem costura.</span><em>Todos os Vinil, exceto Silver</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-pintada.webp" alt="Capacho de vinil com borda pintada" width="600" height="450" loading="lazy"></span><b>Pintada</b><span>Acabamento pintado na borda, para um visual limpo e uniforme.</span><em>Vinil e Cleankap</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-unik.webp" alt="Tapete Duo com borda Unik" width="600" height="450" loading="lazy"></span><b>Unik</b><span>Base antiderrapante em PVC com acabamento diferenciado e mais durável. Para varandas e entradas.</span><em>Somente Tapete Duo</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-sem-borda.webp" alt="Tapete com corte reto, sem borda" width="600" height="450" loading="lazy"></span><b>Sem borda</b><span>Corte reto, com a mesma espessura em todo o Tapete. Não é o mais indicado, mas fica a seu critério.</span><em>Todos os modelos</em></li>
       </ul>
-      <p class="bd-n">No Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho.</p>
+      <p class="bd-n">No Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho. Todos os nossos Tapetes e Capachos têm costado (base) antiderrapante.</p>
     </div>
 
     <div class="mat-fotos rv">
@@ -1745,7 +1771,11 @@ function piizuLead(extra){
           <p>Em média até 15 dias úteis, da fábrica Kapazi no Paraná até a sua porta, entregue pela <span class="nw">pii-zü</span> Soluções para Pisos.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>07</i><span>Quanto custa?</span></h5></summary>
+          <summary><h5><i>07</i><span>Quais tipos de borda?</span></h5></summary>
+          <p><b>Flex</b> (PVC flexível, para alto tráfego, supermercados, farmácias e carrinhos de compras): todos os modelos, exceto fibra de coco. <b>Rebaixada</b> e <b>Vulcanizada</b>: todos os Vinil, exceto Silver. <b>Pintada</b>: Vinil e Cleankap. <b>Unik</b>: somente no Tapete Duo. <b>Sem borda</b>: todos os modelos. Veja as fotos em <a href="#bordas">Escolha a borda</a>.</p>
+        </details>
+        <details class="oi">
+          <summary><h5><i>08</i><span>Quanto custa?</span></h5></summary>
           <p>Depende da medida, do material e do tipo de borda. Mande a medida e o logotipo no formulário que a gente responde com o valor exato, sem compromisso.</p>
         </details>
       </div>
@@ -1758,6 +1788,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="cta">
       <div class="cta-l rv">
+        <div class="ft-logos orc-logos"><div class="logo"><img src="assets/img/marca/piizu-pisos-horizontal-cobre.svg" alt="pii-zü Pisos" width="321" height="100"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186"></span><span class="ft-garantia" title="Distribuidor autorizado Indústria Kapazi" role="img" aria-label="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado <br>Indústria Kapazi</span></span></div>
         <h2 class="fr">Peça o orçamento do seu Tapete ou Capacho <em>sem compromisso</em></h2>
         <p class="cta-visita">Você também pode optar por agendar uma <b>visita técnica</b> com um dos nossos especialistas, <b>sem custo</b>.</p>
         <div class="passos" id="processo">
@@ -1765,7 +1796,7 @@ function piizuLead(extra){
           <ol>
             <li><span><b>Você manda</b> a foto do local, a medida e o seu logotipo.</span></li>
             <li><span><b>Nossos consultores</b>, treinados pela Kapazi, indicam o material e enviam a arte para você aprovar.</span></li>
-            <li><span><b>Produzimos na Kapazi</b> e entregamos pronto para usar.</span></li>
+            <li><span><b>Todo processo de produção</b> é feito na Indústria Kapazi e entregamos pronto para uso.</span></li>
           </ol>
           <p class="lgpd">Seus dados são usados só para esse contato, conforme a LGPD.</p>
         </div>
@@ -2078,7 +2109,7 @@ function piizuLead(extra){
   <div class="wrap">
     <div class="ft">
       <div>
-        <div class="ft-logos"><div class="logo"><img src="assets/img/marca/piizu-pisos-horizontal-cobre.svg" alt="pii-zü Pisos" width="321" height="100" loading="lazy"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186" loading="lazy"></span><span class="ft-garantia" title="Distribuidor autorizado Indústria Kapazi" role="img" aria-label="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado<br>Indústria Kapazi</span></span></div>
+        <div class="ft-logos"><div class="logo"><img src="assets/img/marca/piizu-pisos-horizontal-cobre.svg" alt="pii-zü Pisos" width="321" height="100" loading="lazy"></div><span class="ft-parc"><img src="assets/img/marca/kapazi-cooperkap-rj-grafite.png" alt="Kapazi Cooperkap - RJ, distribuidor autorizado" width="400" height="186" loading="lazy"></span><span class="ft-garantia" title="Distribuidor autorizado Indústria Kapazi" role="img" aria-label="Distribuidor autorizado Indústria Kapazi"><svg class="selo-ic" viewBox="0 0 24 33" aria-hidden="true"><path d="M6.2 17.5 L3.6 31.5 L7.1 29.4 L9.6 32.4 L12 19.6 Z" fill="var(--lar2)"/><path d="M17.8 17.5 L20.4 31.5 L16.9 29.4 L14.4 32.4 L12 19.6 Z" fill="var(--lar2)"/><polygon points="23.50,12.00 21.81,13.95 22.62,16.40 20.31,17.56 20.13,20.13 17.56,20.31 16.40,22.62 13.95,21.81 12.00,23.50 10.05,21.81 7.60,22.62 6.44,20.31 3.87,20.13 3.69,17.56 1.38,16.40 2.19,13.95 0.50,12.00 2.19,10.05 1.38,7.60 3.69,6.44 3.87,3.87 6.44,3.69 7.60,1.38 10.05,2.19 12.00,0.50 13.95,2.19 16.40,1.38 17.56,3.69 20.13,3.87 20.31,6.44 22.62,7.60 21.81,10.05" fill="var(--lar)"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width=".7"/><path d="M8.3 12.3l2.5 2.5 4.9-5.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Distribuidor autorizado <br>Indústria Kapazi</span></span></div>
         <div class="ft-slogans">
           <p>Soluções para Pisos</p>
           <p>Sua marca “conversa” melhor com a <span class="nw">pii-zü</span></p>
