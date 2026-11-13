@@ -111,3 +111,11 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Correção do Seu Zecones (13/11): Borda Unik somente no Tapete Duo (foto trocada para o Duo). Borda Vulcanizada entra para Vinil Gold e Vinil A/T (foto: vinil açougue supermercado). Flex sem a nota "obrigatória". Grade de bordas agora com 5 cards (3+2 no computador, 2 por linha no celular). ZIP c20.
 - Correção 2 (13/11, 12h24): Rebaixada e Vulcanizada = todos os Vinil, exceto Silver. Flex = Vinil, Cleankap, Duo e Waterkap Elite. Nova borda Pintada = Vinil e Cleankap. Nota: no Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho. Waterkap no Compare ganhou "Nova linha Waterkap Elite, mais encorpada, com borda Flex". 6 cards (3x2). ZIP c21.
 - Correção 3 (13/11, 12h29): Sem borda disponível em todos os modelos (não é o indicado, fica a critério do cliente). ZIP c22.
+
+## 13/11/2026 13h20 — c24
+- Waterkap, Waterkap Elite e Duo em negrito cobre (igual Vinil e Cleankap) na linha "Retém a sujeira e a água".
+- Novo quadro "Waterkap Elite" (tag Novo) no Compare, com 4 fotos (Drive WATERKAP, arquivos 190284/288/291/293-1600-auto: preto, grafite, marrom, hall). Dupla Função agora "4 opções".
+- Fotos com ênfase na borda Flex (Drive "Cleankap com borda flex"): CDL Paverama (azul), SIR, D'Rosi, A4 Promaq, Catedral — no Cleankap do Compare e na galeria; card Flex do catálogo de bordas com a borda azul da CDL.
+- Vulcanizada com o texto do PDF "Bordas - Vinil" (vinil recortado e preenchido com outra cor, como quebra-cabeça).
+- Quadros de fotos (Ver fotos e galeria) mostram a pontinha da próxima foto também no computador.
+- PDFs "Bordas - Vinil/Cleankap/Duo" (12 MB) não baixam pelo conector (limite 10 MB): fotos de Rebaixada/Vulcanizada/Pintada pendentes.

@@ -1485,6 +1485,12 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 /* orçamento: faixa com os três logos acima do título */
 .orc-logos{margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid var(--lin)}
 .orc-logos{flex-wrap:wrap!important;row-gap:12px!important}.orc-logos .ft-garantia{flex:0 0 100%;border-left:0!important;padding-left:0!important;height:auto!important}.orc-logos .ft-garantia .selo-ic{height:34px!important;width:25px!important}
+
+/* 13/11 (c24): quadros de fotos sempre mostram a pontinha da foto seguinte, também no computador */
+@media(min-width:861px){
+  #materiais #cmpGal #cmpTr{grid-auto-columns:84%!important;column-gap:12px!important;max-width:none!important}
+  #galeria .gal #galTr{grid-auto-columns:calc((100% - 48px)/3.35)!important;max-width:none!important}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1622,7 +1628,7 @@ function piizuLead(extra){
       <p class="mat-dupla">Pode ser que seu piso tenha necessidade de uma solução <b class="fr">Dupla Função</b>: retenção de sólidos e líquidos. Os modelos Dupla Função (<em>Cleankap</em>, <em>Waterkap</em> e <em>Duo</em>) têm vida útil muito maior que os de vinil: o seu investimento dura muito mais.</p>
       <ul class="mat-ls">
         <li><b class="fr">Retém a sujeira — Linha Vinil</b> (<em>Gold</em> ou <em>A/T</em>), com a sua marca.</li>
-        <li><b class="fr">Retém a sujeira e a água — <em>Cleankap</em></b> (com a sua marca, fica rente ao chão e não enrosca na porta), <em>Waterkap</em> ou <em>Duo</em>.</li>
+        <li><b class="fr">Retém a sujeira e a água — <em>Cleankap</em></b> (com a sua marca, fica rente ao chão e não enrosca na porta), <b class="fr"><em>Waterkap</em></b>, <b class="fr"><em>Waterkap Elite</em></b> ou <b class="fr"><em>Duo</em></b>.</li>
         <li>Na dúvida? A gente indica o ideal no orçamento.</li>
       </ul>
     </div>
@@ -1640,9 +1646,9 @@ function piizuLead(extra){
       <div class="bd-t">Escolha a borda</div>
       <p class="bd-s">O acabamento que protege e valoriza o seu Tapete ou Capacho. Na dúvida, a gente indica a ideal no orçamento.</p>
       <ul class="bd-g">
-        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-flex.webp" alt="Borda Flex em PVC flexível no Tapete" width="600" height="450" loading="lazy"></span><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para: Supermercados, Farmácias, locais com frequência de idosos, comércios com tráfego de carrinhos de compras e alto tráfego.</span><em>Todos os modelos, exceto fibra de coco</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-flex-cdl.webp" alt="Borda Flex azul em PVC flexível no Tapete" width="600" height="450" loading="lazy"></span><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para: Supermercados, Farmácias, locais com frequência de idosos, comércios com tráfego de carrinhos de compras e alto tráfego.</span><em>Todos os modelos, exceto fibra de coco</em></li>
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-rebaixada.webp" alt="Capacho de vinil com borda rebaixada" width="600" height="450" loading="lazy"></span><b>Rebaixada</b><span>Rebaixo de alguns centímetros na própria borda de 3 cm do Capacho. Ideal para áreas de Médio e Alto tráfego.</span><em>Todos os Vinil, exceto Silver</em></li>
-        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-vulcanizada.webp" alt="Capacho de vinil com borda vulcanizada" width="600" height="450" loading="lazy"></span><b>Vulcanizada</b><span>Borda fundida ao próprio vinil, firme e sem costura.</span><em>Todos os Vinil, exceto Silver</em></li>
+        <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-vulcanizada.webp" alt="Capacho de vinil com borda vulcanizada" width="600" height="450" loading="lazy"></span><b>Vulcanizada</b><span>O vinil é recortado e preenchido com vinil de outra cor, como um quebra-cabeça. Para tráfego intenso e entradas comerciais.</span><em>Todos os Vinil, exceto Silver</em></li>
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-pintada.webp" alt="Capacho de vinil com borda pintada" width="600" height="450" loading="lazy"></span><b>Pintada</b><span>Acabamento pintado na borda, para um visual limpo e uniforme.</span><em>Vinil e Cleankap</em></li>
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-unik.webp" alt="Tapete Duo com borda Unik" width="600" height="450" loading="lazy"></span><b>Unik</b><span>Base antiderrapante em PVC com acabamento diferenciado e mais durável. Para varandas e entradas.</span><em>Somente Tapete Duo</em></li>
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-sem-borda.webp" alt="Tapete com corte reto, sem borda" width="600" height="450" loading="lazy"></span><b>Sem borda</b><span>Corte reto, com a mesma espessura em todo o Tapete. Não é o mais indicado, mas fica a seu critério.</span><em>Todos os modelos</em></li>
@@ -1706,7 +1712,11 @@ function piizuLead(extra){
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="gal-tr" id="galTr" tabindex="0" aria-label="Galeria de fotos">
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-vinil-unique-residence-elevador.webp" alt="Capacho de vinil Unique Residence no piso do elevador" width="864" height="1080" loading="lazy"></div>
+        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/flex-cdl-azul.webp" alt="Tapete Cleankap CDL Paverama com borda Flex azul" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/elite-marrom-entrada.webp" alt="Tapete Waterkap Elite marrom com borda Flex na entrada do prédio" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/flex-sir-cinza.webp" alt="Tapete Cleankap SIR Tecnologia com borda Flex cinza" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/elite-preto-porta.webp" alt="Tapete Waterkap Elite preto com borda Flex na porta" width="864" height="1080" loading="lazy"></div>
+         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-vinil-unique-residence-elevador.webp" alt="Capacho de vinil Unique Residence no piso do elevador" width="864" height="1080" loading="lazy"></div>
          <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-upper-residences.webp" alt="Tapete Upper Smart Residences na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
          <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-condominio-royal.webp" alt="Tapete Condomínio Royal na entrada envidraçada" width="864" height="1080" loading="lazy"></div>
          <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-elevador-prospere.webp" alt="Tapete Prospère Office Harmony no elevador" width="864" height="1080" loading="lazy"></div>
@@ -2546,6 +2556,7 @@ function escolheProduto(id){
 /* faixas de fotos: mostram só fotos inteiras (sem pedaço da próxima); max = limite de fotos lado a lado */
 function faixaEncaixa(tr, max){
   tr.style.maxWidth = '';
+  if(tr.id === 'galTr' || tr.id === 'cmpTr') return; /* deixa aparecer a pontinha da próxima foto */
   var it = tr.querySelector('.gal-it:not([hidden])');
   if(!it) return;
   var g = parseFloat(getComputedStyle(tr).columnGap) || 0, W = tr.clientWidth, w = it.getBoundingClientRect().width;
@@ -2605,9 +2616,14 @@ var COMPARA = [
      {src:'assets/img/galeria/tratada-F174.webp', alt:'Passadeira de vinil vermelha Triunfo Supermercado'}
     ]}
    ]},
-  {id:'dupla', nome:'Dupla Função: Produzido em 3 opções — Retém sólidos e líquidos.',
+  {id:'dupla', nome:'Dupla Função: Produzido em 4 opções — Retém sólidos e líquidos.',
    modelos:[
     {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores'], fotos:[
+     {src:'assets/img/galeria/flex-cdl-azul.webp', alt:'Tapete Cleankap CDL Paverama com borda Flex azul'},
+     {src:'assets/img/galeria/flex-sir-cinza.webp', alt:'Tapete Cleankap SIR Tecnologia com borda Flex cinza'},
+     {src:'assets/img/galeria/flex-drosi.webp', alt:'Tapete Cleankap D Rosi Modas com borda Flex preta'},
+     {src:'assets/img/galeria/flex-a4-promaq.webp', alt:'Tapete Cleankap A4 Promaq com borda Flex preta'},
+     {src:'assets/img/galeria/flex-catedral-macro.webp', alt:'Detalhe da borda Flex no Tapete Cleankap Catedral'},
      {src:'assets/img/galeria/novo-cleankap-upper-residences.webp', alt:'Tapete Cleankap Upper Smart Residences na entrada do condomínio'},
      {src:'assets/img/galeria/novo-cleankap-condominio-royal.webp', alt:'Tapete Cleankap Condomínio Royal na entrada envidraçada'},
      {src:'assets/img/galeria/novo-cleankap-elevador-prospere.webp', alt:'Tapete personalizado Prospère Office Harmony no elevador'},
@@ -2626,10 +2642,16 @@ var COMPARA = [
      {src:'assets/img/galeria/tratada-T30.webp', alt:'Tapete rosa Cibely Store'},
      {src:'assets/img/galeria/tratada-T37.webp', alt:'Tapete Sicoob Credicanoinhas'}
     ]},
-    {nome:'Waterkap', tag:'Cores variadas', itens:['Mais de 12 cores','Não aplica logo','Nova linha Waterkap Elite, mais encorpada, com borda Flex'], fotos:[
+    {nome:'Waterkap', tag:'Cores variadas', itens:['Mais de 12 cores','Não aplica logo'], fotos:[
      {src:'assets/img/galeria/tratada-F015.webp', alt:'Cartela de cores do Tapete Waterkap'},
      {src:'assets/img/galeria/tratada-F022.webp', alt:'Passadeira Waterkap azul no corredor de vidro'},
      {src:'assets/img/galeria/tratada-F178.webp', alt:'Tapete Waterkap grafite em quadriculado no corredor de entrada'}
+    ]},
+    {nome:'Waterkap Elite', tag:'Novo', itens:['Não aplica logo','Mais encorpado, com borda Flex'], fotos:[
+     {src:'assets/img/galeria/elite-marrom-entrada.webp', alt:'Tapete Waterkap Elite marrom com borda Flex na entrada do prédio'},
+     {src:'assets/img/galeria/elite-preto-porta.webp', alt:'Tapete Waterkap Elite preto com borda Flex na porta'},
+     {src:'assets/img/galeria/elite-grafite-auditorio.webp', alt:'Tapete Waterkap Elite grafite na porta do auditório'},
+     {src:'assets/img/galeria/elite-hall-hotel.webp', alt:'Tapete Waterkap Elite no hall de entrada'}
     ]},
     {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única'], fotos:[
      {src:'assets/img/galeria/novo-duo-entrada.webp', alt:'Tapetes Duo cinza com borda na entrada'},
