@@ -74,4 +74,5 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 3 telas: Home (6 categorias: Tapetes e Capachos, Grama Sintética, Carpetes, Piso Vinílico, Áreas Molhadas, Quadras Poliesportivas), Landing Grama Sintética (tráfego pago, sem menu) e modelo de página de categoria (Áreas Molhadas).
 - Visual: mesmo da landing (grafite #202328, cobre, laranja #BF561C, Fraunces + Inter, logo "pii-zü PISOS").
 - Faltando: fotos de carpete, mais fotos reais de grama e piso vinílico; textos S-Kap/H-Kap (fichas técnicas); grama 20 mm x 30 mm (uso indicado); se a pii-zü instala a grama.
+- 12/11: incluída a Capa de Elevador Liftkap (7ª categoria) e a seção "Para condomínios residenciais" na Home — condomínios residenciais são público foco do site.
 - A landing de Tapetes e Capachos atual segue como está; o site novo não mexe nela.
