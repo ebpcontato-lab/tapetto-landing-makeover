@@ -43,6 +43,8 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 
 - **Exclusão do acervo (11/11, noite):** Seu Zecones marcou na página do acervo A001–A268 as fotos 6, 23, 24, 28, 31, 35, 38, 40, 65, 128, 151, 167, 170, 171. Foram para a lixeira do Drive e saíram do site (Galeria, Compare, quadro do topo). Correspondência: A006=folha 6 (T01), A023=folha 27 (T07), A024=folha 28 (F028), A028=folha 32 (F032), A031=folha 35 (F035), A035=folha 39 (F039), A038=folha 42 (F042), A040=folha 44 (F044), A065=folha 70 (T21), A128=folha 135 (T33), A151=folha 159 (T38), A167=folha 176 (F176), A170=folha 180 (F180), A171=folha 181 (T42). **Atenção:** a página do acervo (A001–A268, https://claude.ai/artifact/49uVgjAkrPh82AAV8ZK9NK) e a folha numerada (1–285, https://claude.ai/artifact/5J2HCTQfv6Nj9Rr6JdmdqT) têm numerações diferentes — A-número ≠ número da folha ≠ nº no site.
 
+- **12/11:** "a mais bem aprovada" → "a mais bem **avaliada** no ReclameAqui e no Google". Quadro de fotos do topo no maior tamanho possível: setas agora ficam **por cima da foto**; no computador a coluna da foto ficou mais larga e a foto ocupa a altura da primeira tela (1366×768: 437→649 px de altura); no celular a foto ocupa a largura toda (342×428 em 390 px).
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.

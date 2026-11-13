@@ -1358,6 +1358,25 @@ footer .ft .ft-slogans p+p{margin-top:6px}
   .ck-actions{justify-content:flex-start}
   .ck-actions .b-lar,.ck-no{padding:7px 14px;font-size:.8rem}
 }
+
+/* 12/11: quadro de fotos do topo no maior tamanho possível — setas por cima da foto */
+.qd-linha{position:relative!important;display:block!important}
+@media(min-width:861px){.qd-linha{width:fit-content!important;max-width:100%;margin:0 auto}}
+.qd-linha .seta{position:absolute!important;top:50%!important;transform:translateY(-50%)!important;z-index:6;width:42px!important;height:42px!important;background:rgba(255,255,255,.88)!important;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.qd-linha .seta:hover{transform:translateY(-50%) scale(1.06)!important}
+.qd-linha .seta svg{width:18px!important;height:18px!important}
+.qd-linha .seta.esq{left:10px!important}.qd-linha .seta.dir{right:10px!important}
+@media(min-width:861px){
+  .hero-g{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)!important;gap:40px!important}
+  .qd-box{align-items:center}
+  .qd-box .quadro,.quadro{width:min(100cqw,calc((var(--dobra) - 48px) * .8))!important;max-width:none!important;margin:0 auto}
+}
+@media(max-width:860px){
+  .qd-box .quadro,.quadro{width:100%!important;max-width:none!important}
+  .qd-linha .seta{width:36px!important;height:36px!important}
+  .qd-linha .seta.esq{left:8px!important}.qd-linha .seta.dir{right:8px!important}
+  .qd-box,.qd-linha{flex:none!important;height:auto!important;min-height:0!important;container-type:normal!important}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1452,7 +1471,7 @@ function piizuLead(extra){
         </ul>
       </div>
       <div class="hero-cta rise d2"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
-      <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, a mais bem aprovada no <b>ReclameAqui</b> e no <b>Google</b>.<br><span class="hp-dist">Pode confiar: aqui é <span class="nw">pii-zü</span> Pisos, Distribuidor Autorizado Ind. <span class="nw">Kapazi RJ</span>.</span></p>
+      <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, a mais bem avaliada no <b>ReclameAqui</b> e no <b>Google</b>.<br><span class="hp-dist">Pode confiar: aqui é <span class="nw">pii-zü</span> Pisos, Distribuidor Autorizado Ind. <span class="nw">Kapazi RJ</span>.</span></p>
     </div>
 
     <div class="qd-box rise d2">
