@@ -56,6 +56,8 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - sem numeração "01 / 02 /…"; título e descrição do Google/WhatsApp agora falam de **Tapetes e Capachos** (sem grama/piscina). Regra: manter sempre **"Tapete e Capacho"** nos textos (Capacho é muito buscado).
   - Página: ~1.200 → ~470 palavras.
 
+- **12/11 (noite):** diferencial do topo reescrito: "Nosso diferencial: linhas Alto Padrão e Premium, direto da Indústria Kapazi. Aqui seu Tapete ou Capacho dura muito mais." ✔ Produzimos só em Vinil Gold (médio tráfego) e Vinil A/T (alto tráfego). ✖ Muitos fornecedores usam o Vinil Silver: custa menos, mas dura bem menos.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
