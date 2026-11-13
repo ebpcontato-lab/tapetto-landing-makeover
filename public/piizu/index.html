@@ -1396,6 +1396,21 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 /* visita técnica sem custo, abaixo do título do orçamento */
 .cta-l p.cta-visita{margin:-6px 0 22px;font-size:clamp(.98rem,1.2vw,1.12rem);line-height:1.55;color:var(--tx);max-width:52ch}
 .cta-l p.cta-visita b{color:var(--lar2);font-weight:600}
+
+/* 13/11: setas do quadro do topo FORA da foto, uma de cada lado (como na Galeria) */
+.qd-linha{display:flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;position:relative!important}
+.qd-linha .seta{position:static!important;transform:none!important;flex:none!important;width:44px!important;height:44px!important;background:#fff!important;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.qd-linha .seta:hover{transform:scale(1.06)!important}
+@media(min-width:861px){
+  .qd-linha{width:100%!important;max-width:100%}
+  .qd-box .quadro,.quadro{width:min(calc(100cqw - 112px),calc((var(--dobra) - 48px) * .8))!important;flex:none!important;margin:0!important}
+}
+@media(max-width:860px){
+  .qd-linha{gap:6px!important}
+  .qd-linha .seta{width:34px!important;height:34px!important}
+  .qd-linha .seta svg{width:15px!important;height:15px!important}
+  .qd-box .quadro,.quadro{width:auto!important;flex:1 1 auto!important;min-width:0!important}
+}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
