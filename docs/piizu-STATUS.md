@@ -73,6 +73,8 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - Como funciona, passo 3: "Todo processo de produção é feito na Indústria Kapazi e entregamos pronto para uso."
   - **Selo sempre com o texto "Distribuidor autorizado Indústria Kapazi"** (topo, rodapé e orçamento); no celular o selo + texto fica numa faixa abaixo dos logos no topo. Faixa com os 3 logos (pii-zü cobre, Kapazi Cooperkap, selo) também na seção de orçamento.
 
+- **13/11 (noite) — tag do Google Ads em todas as páginas:** /site, /site/areas-molhadas, /condominios, /grama-sintetica e /piizu/privacidade.html estavam sem a tag do Google (AW-17662893947) e sem o Pixel da Meta — o Google Ads acusou "site sem tag". Agora todas têm o mesmo bloco do /piizu; nas que têm WhatsApp/formulário, a conversão Contato e o Lead disparam no clique do WhatsApp e no botão do formulário. **Regra: toda página nova leva esse bloco** (ver AGENTS.md).
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.

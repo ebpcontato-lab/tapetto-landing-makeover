@@ -16,3 +16,4 @@
 - Piizu page copy: always capitalize the product words Tapete(s), Capacho(s) and Passadeira(s), and write the brand as on the logo, "pii-zü" (keep piizu only in URLs, e-mail, domain and file names).
 - Production (piizu.com.br) is deployed automatically by a Cloudflare Worker connected to GitHub on every push to main; no Lovable Publish step is needed.
 - Piizu: the Kapazi seal always appears with its text "Distribuidor autorizado Indústria Kapazi" (header, footer, quote section), next to the pii-zü copper/black logo and the Kapazi Cooperkap logo at the same height.
+- Every public HTML page (public/**/index.html, privacidade.html, any new landing) must carry the same head block as public/piizu/index.html: Google tag AW-17662893947 (consent default + gtag('js') + config), piizuAds/piizuLead and the Meta Pixel 1688511512871069; pages with WhatsApp links or quote forms also fire the 'Contato' conversion and Meta Lead on those clicks.

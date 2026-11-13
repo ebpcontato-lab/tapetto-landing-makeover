@@ -13,6 +13,63 @@
 body{margin:0}
 a{color:#8A5530}a:hover{color:#202328}
 </style>
+<!-- Google Ads — tag básica + consentimento regional. Não remova. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+/* Consentimento negado por padrão nas regiões que exigem; liberado pelo banner. */
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['EEA','UK','CH']});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17662893947"></script>
+<script>
+/* Google Ads AW-17662893947 — medição de anúncios.
+   Conversão "Contato" (AW-17662893947/UuIoCIWRx7MdEPu-qeZB) + Lead na Meta: disparados
+   SOMENTE no envio do formulário e no clique dos botões que abrem o WhatsApp direto
+   (botão flutuante e link do rodapé). Os botões que só levam ao formulário (#orcamento)
+   não disparam. Para separar depois, troque o rótulo no formato AW-17662893947/XXXX. */
+window.__PIIZU_ADS = {
+  form: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB',
+  whatsapp: 'AW-17662893947/UuIoCIWRx7MdEPu-qeZB'
+};
+gtag('js', new Date());
+gtag('config','AW-17662893947');
+function piizuAds(label, extra){
+  if(typeof label !== 'string' || label.indexOf('COLE_AQUI') !== -1) return;
+  var ev = {send_to: label};
+  if(extra) for(var k in extra) ev[k] = extra[k];
+  gtag('event','conversion', ev);
+  piizuLead(extra);
+}
+</script>
+<!-- Meta Pixel Code — consentimento: eventos retidos (revoke) até a região ser
+     conferida ou o visitante aceitar no banner; liberados com fbq('consent','grant'). -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+/* Retém os eventos só para quem recusou no banner ou está num fuso da Europa
+   (regiões que exigem consentimento); para os demais, o pixel envia na hora. */
+(function(){
+  var neg = false;
+  try{ var c = JSON.parse(localStorage.getItem('piizu-cookie-consent-v1') || 'null'); if(c && c.choice === 'denied') neg = true; if(c && c.choice === 'granted') return; }catch(e){}
+  try{ var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; if(/^Europe\//.test(tz) || tz === 'Atlantic/Reykjavik' || tz === 'Atlantic/Canary' || tz === 'Atlantic/Madeira' || tz === 'Atlantic/Azores') neg = true; }catch(e){}
+  if(neg) fbq('consent','revoke');
+})();
+fbq('init', '1688511512871069');
+fbq('track', 'PageView');
+/* Lead na Meta: disparado junto com cada conversão do Google Ads (CTA, WhatsApp e formulário). */
+function piizuLead(extra){
+  if(typeof fbq !== 'function') return;
+  if(extra && extra.transaction_id) fbq('track','Lead',{},{eventID: extra.transaction_id});
+  else fbq('track','Lead');
+}
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div style="font-family: Inter, system-ui, sans-serif; color: #202328; background: #F6F4F1; min-height: 100vh">
@@ -164,6 +221,14 @@ a{color:#8A5530}a:hover{color:#202328}
     });
   });
 })();
+</script>
+<script>
+/* Conversões (mesma regra da landing principal): clique em link que abre o WhatsApp
+   e envio do formulário de orçamento (o botão abre o WhatsApp com a mensagem pronta). */
+document.addEventListener('click', function(e){
+  var t = e.target && e.target.closest ? e.target : null; if(!t) return;
+  if(t.closest('a[href*="wa.me"]') || t.closest('form button')) piizuAds(window.__PIIZU_ADS.form);
+}, true);
 </script>
 </body>
 </html>
