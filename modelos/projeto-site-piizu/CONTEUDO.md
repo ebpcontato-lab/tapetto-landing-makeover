@@ -1,6 +1,6 @@
-# pii-zü Pisos — conteúdo completo da landing page (12/11/2026)
+# projeto site pii-zü — conteúdo completo (12/11/2026)
 
-Guardado antes do enxugamento para tráfego pago, para reaproveitar na criação do site institucional. A página inteira, como estava, está em `index.html` nesta pasta e na branch `modelo-piizu-completa-2026-11-12`.
+Guardado antes do enxugamento para tráfego pago, para reaproveitar na criação do site institucional. A página inteira, como estava, está em `index.html` nesta pasta e na branch `projeto-site-piizu`.
 
 ## Título e descrição (SEO / compartilhamento)
 - **title:** pii-zü — Tapetes personalizados no Rio de Janeiro
