@@ -94,6 +94,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
+
+    // Google tag (Google Ads AW-17662893947) also on the app shell, so the bare domain
+    // (piizu.com.br/, which redirects to /piizu/) is detected with the tag too.
+    scripts: [
+      {
+        children:
+          "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}" +
+          "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['EEA','UK','CH']});" +
+          "gtag('js',new Date());gtag('config','AW-17662893947');",
+      },
+      { src: "https://www.googletagmanager.com/gtag/js?id=AW-17662893947", async: true },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
