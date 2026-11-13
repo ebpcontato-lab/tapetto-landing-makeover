@@ -58,6 +58,12 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 
 - **12/11 (noite):** diferencial do topo reescrito: "Nosso diferencial: linhas Alto Padrão e Premium, direto da Indústria Kapazi. Aqui seu Tapete ou Capacho dura muito mais." ✔ Produzimos só em Vinil Gold (médio tráfego) e Vinil A/T (alto tráfego). ✖ Muitos fornecedores usam o Vinil Silver: custa menos, mas dura bem menos.
 
+- **13/11 — fotos reduzidas (conversa Landing page):** completada a redução da landing enxuta.
+  - Quadro do topo: de 165 para as **mesmas 20 fotos da Galeria** (lê `#galTr`, não mais o `<template>`).
+  - "Ver fotos" de Compare os modelos, conferido foto a foto pelo material: **Vinil Gold 12** (de 47), **Vinil A/T 6**, **Cleankap 12** (de 110), **Waterkap 3** (de 7), **Duo 6** (de 8).
+  - Correções de material: F130 (Cleankap) saiu do Waterkap; F178 (quadriculado = Waterkap) saiu do Duo e foi para o Waterkap; F037 (listrado), F053 (placa de borracha) e F163 (trançado marrom) saíram do Waterkap por não serem claramente Waterkap; F217 (arte de catálogo com texto) saiu do Cleankap; F228 (estampado liso) e F222 (imagem de computador) fora do Vinil Gold.
+  - Os arquivos e o `<template id="todasFotos">` continuam no projeto.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
