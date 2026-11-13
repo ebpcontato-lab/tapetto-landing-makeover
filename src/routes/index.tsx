@@ -3,7 +3,8 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 // The pii-zu landing page is a static HTML file in public/piizu/.
 export const Route = createFileRoute("/")({
   beforeLoad: () => {
-    throw redirect({ href: "/piizu/index.html" });
+    // 301: permanent, so Google treats the landing as the site's home page.
+    throw redirect({ href: "/piizu/index.html", statusCode: 301 });
   },
   head: () => ({
     meta: [

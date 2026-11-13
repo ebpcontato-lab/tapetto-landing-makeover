@@ -75,6 +75,8 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 
 - **13/11 (noite) — tag do Google Ads em todas as páginas:** /site, /site/areas-molhadas, /condominios, /grama-sintetica e /piizu/privacidade.html estavam sem a tag do Google (AW-17662893947) e sem o Pixel da Meta — o Google Ads acusou "site sem tag". Agora todas têm o mesmo bloco do /piizu; nas que têm WhatsApp/formulário, a conversão Contato e o Lead disparam no clique do WhatsApp e no botão do formulário. **Regra: toda página nova leva esse bloco** (ver AGENTS.md).
 
+- **13/11 (noite) — Google (busca):** criado `public/sitemap.xml` (landing /piizu/index.html e privacidade) e `Sitemap:` no robots.txt; redirecionamento de piizu.com.br/ para a landing passou a ser **301 (permanente)**. As prévias (/site, /condominios, /grama-sintetica, /site/areas-molhadas) seguem com noindex — ao publicar de verdade, tirar o noindex e incluir no sitemap. Pendente com o Seu Zecones: verificar o domínio no Google Search Console e enviar o sitemap.
+
 ### Pendências
 - [ ] Seu Zecones enviar a lista de fotos do acervo para excluir (lixeira do Drive).
 - [ ] Desligar os números nas fotos (`FOTO_NUM=false`) quando terminar a escolha.
