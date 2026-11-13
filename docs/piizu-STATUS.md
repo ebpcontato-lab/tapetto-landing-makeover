@@ -99,3 +99,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Foto aérea da fábrica Kapazi (assets/img/fabrica-kapazi.webp) na faixa #autoridade; também no site (/site e /condominios, /novas/img/fabrica-kapazi.webp).
 - Novas fotos no "Compare os modelos": Vinil Gold (Unique Residence, redondo), Cleankap (Upper, Royal, Prospère, Pesca&Cia, Bom Tom), Duo (entrada). 4 delas também na galeria.
 - Dobra conferida (desktop e celular), sem erro de JS. ZIP piizu-site-2026-11-13-c19.zip.
+- Correção do Seu Zecones (13/11): Borda Unik somente no Tapete Duo (foto trocada para o Duo). Borda Vulcanizada entra para Vinil Gold e Vinil A/T (foto: vinil açougue supermercado). Flex sem a nota "obrigatória". Grade de bordas agora com 5 cards (3+2 no computador, 2 por linha no celular). ZIP c20.
