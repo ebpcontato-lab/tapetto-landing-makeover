@@ -85,3 +85,6 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
   - Áreas molhadas (W-Kap, Acquakap, S-Kap, H-Kap): entorno de piscinas, saunas, vestiários de academias e clubes, banheiros infantis de escolas e creches, indústrias. Textos S-Kap/H-Kap tirados das fichas técnicas.
   - Próximo: Seu Zecones vai montar um NOVO ACERVO com as melhores fotos (inclusive carpete) e pedir para atualizar todos os projetos com ele. Hoje não há nenhuma foto de carpete no repo nem no Drive.
 - A landing de Tapetes e Capachos atual segue como está; o site novo não mexe nela.
+
+- 13/11 — Fichas técnicas Kapazi lidas (pastas do Drive enviadas pelo Seu Zecones) e resumidas em `modelos/projeto-site-piizu/FICHAS-TECNICAS.md`. Usar esse arquivo como fonte dos textos técnicos de todos os projetos. Já aplicado no modelo do site (Áreas Molhadas, Grama, Home, Condomínios). Atenção: W-Kap é rolo de 1,20 x 10 m (4 mm) e Acquakap é o modular 30 x 30 cm. Ficha do Laminado Colmeia não veio.
+
