@@ -1599,6 +1599,10 @@ footer .ft .ft-slogans p+p{margin-top:6px}
   main.hero .qd-box{margin-top:10px!important}
   main.hero .hero-g{row-gap:0!important;gap:0!important}
 }
+.anexo{display:flex;gap:10px;align-items:flex-start;background:#fff8f2;border:1px dashed #BF561C;border-radius:10px;padding:10px 12px;margin:4px 0 10px}
+.anexo .an-ic{font-size:1.3rem;line-height:1}
+.anexo p{margin:0;font-size:.9rem;line-height:1.45;color:var(--tx)}
+.anexo b{color:#8A2A10}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -2108,6 +2112,7 @@ function piizuLead(extra){
           <label for="fObs">Mensagem <small>(opcional)</small></label>
           <textarea id="fObs" maxlength="2000" placeholder="Ex.: Capacho com o nosso logotipo para a entrada da loja, mais ou menos 1 m de largura"></textarea>
         </div>
+        <div class="anexo"><span class="an-ic" aria-hidden="true">📎</span><p><b>Tem logo ou fotos?</b> Ao enviar, o WhatsApp abre com o seu pedido: mande por lá o <b>logo</b>, a <b>foto da frente da loja</b> ou um <b>modelo de Tapete</b> de que você gostou. A gente sugere o ideal.</p></div>
         <div class="sb"><button type="submit" class="b-lar">Pedir orçamento</button></div>
         <p class="lg">Seu pedido fica registrado para atendimento. Não fazemos disparos em massa.</p>
         <p class="lg" id="fStatus" role="status" aria-live="polite"></p>
@@ -3108,7 +3113,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
     'Nome: ' + nome + '\n' +
     'WhatsApp: ' + fone + '\n' +
     'Para onde é: ' + g('fFase') + '\n' +
-    'Detalhes: ' + (g('fObs') || 'ainda estou definindo');
+    'Detalhes: ' + (g('fObs') || 'ainda estou definindo') + '\n\nVou mandar aqui o logo e/ou fotos da entrada.';
   var payload = {name:nome, phone:fone, city:bairro, place:g('fFase'), timeframe:g('fPrazo'), details:('Linha: ' + g('fLinha') + '. ' + g('fObs')).slice(0, 2000), solution:AID, material:MID, product:P.id};
   var fingerprint = JSON.stringify(payload);
   if(fingerprint !== submissionPayload){ submissionId = crypto.randomUUID(); submissionPayload = fingerprint; }
@@ -3150,7 +3155,7 @@ document.getElementById('fm').addEventListener('submit', async function(e){
   }catch(_){ salvo = false; }
   try{
     status.textContent = salvo
-      ? 'Solicitação entregue. Seja bem-vindo à pii-zü Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Abrimos o WhatsApp com a sua mensagem pronta; se ele não abriu, use o botão abaixo.'
+      ? 'Solicitação entregue. Seja bem-vindo à pii-zü Pisos. Agradecemos pela oportunidade de poder apresentar um orçamento das nossas soluções para pisos. Abrimos o WhatsApp com a sua mensagem pronta: mande por lá o seu logo e as fotos. Se ele não abriu, use o botão abaixo.'
       : 'Seu pedido segue pelo WhatsApp com a mensagem pronta — é só enviar por lá. Se ele não abriu, use o botão abaixo.';
     status.classList.add('ok');
     continuation.href = waUrl;
