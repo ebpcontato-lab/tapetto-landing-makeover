@@ -165,3 +165,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (13): título da nota → "Por que só fabricamos no Vinil Gold e Vinil A/T?".
 - 14/11 (14): bordas com fotos em close, só a borda (como a Vulcanizada): Flex, Rebaixada e Sem borda tiradas do PDF "Bordas - Vinil"; Unik do PDF "Bordas - Duo". Cards maiores (3 colunas no computador, foto quadrada no celular). Pintada continua com foto do tapete inteiro: falta o PDF "Bordas - Cleankap" pelo chat.
 - 14/11 (15): texto da borda Rebaixada atualizado pelo cliente (aprox. 3 cm, evita tropeços, aumenta a vida útil).
+- 14/11 (16): texto da borda Flex termina em "carrinhos de compras e Médio / Alto Tráfego de pessoas."
