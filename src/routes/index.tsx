@@ -4,7 +4,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   beforeLoad: () => {
     // 301: permanent, so Google treats the landing as the site's home page.
-    throw redirect({ href: "/piizu/index.html", statusCode: 301 });
+    throw redirect({ href: "/piizu/", statusCode: 301 });
   },
   head: () => ({
     meta: [
