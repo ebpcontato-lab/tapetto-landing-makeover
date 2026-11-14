@@ -1508,6 +1508,37 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 .qd-tela:after{content:"";position:absolute;right:10px;top:10px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(31,24,19,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M20 20l-4.5-4.5M11 8.5v5M8.5 11h5'/%3E%3C/svg%3E") center/18px no-repeat;opacity:.85;pointer-events:none}
 .qd-tela > .fnum{display:none}
 @media(max-width:700px){.aut-slogan em{display:block}}
+
+/* Monte o seu Tapete (cores + bordas + resumo) */
+.monte{margin-top:22px;background:linear-gradient(135deg,#BF561C,#8A2A10);color:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 8px 22px rgba(138,42,16,.25)}
+.monte .mt-t{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:clamp(1.15rem,1.8vw,1.5rem);margin-bottom:10px}
+.mt-passos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mt-passos li{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;font-size:.98rem;line-height:1.35}
+.mt-passos i,.mt-n{font-style:normal;display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;border-radius:50%;background:#fff;color:#8A2A10;font-weight:800;font-family:Inter,system-ui,sans-serif;font-size:.95rem}
+.mt-n{background:#8A2A10;color:#fff;vertical-align:middle;margin-right:4px}
+.mt-passos b{color:#FFE1B8}
+@media(max-width:700px){.mt-passos{grid-template-columns:1fr}}
+.cores{margin-top:18px;border:1px solid var(--lin);border-radius:8px;background:var(--bg2);padding:18px 20px}
+.cores .bd-t{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;color:var(--tinta);margin-bottom:4px}
+.cores .bd-s{margin:0 0 12px;font-size:.98rem;line-height:1.5;color:var(--tx)}
+.cr-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.cr-tabs button{border:1px solid var(--lin);background:#fff;border-radius:20px;padding:7px 14px;font:600 .9rem Inter,system-ui,sans-serif;color:var(--tinta);cursor:pointer}
+.cr-tabs button.on{background:#8A2A10;border-color:#8A2A10;color:#fff}
+.cr-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:10px}
+.cr-g button{border:2px solid transparent;background:#fff;border-radius:10px;padding:5px;cursor:pointer;text-align:center;font:600 .82rem/1.2 Inter,system-ui,sans-serif;color:var(--tinta);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.cr-g button .sw{display:block;width:100%;aspect-ratio:1;border-radius:7px;background-size:cover;background-position:center;margin-bottom:5px;border:1px solid rgba(0,0,0,.08)}
+.cr-g button.on{border-color:#BF561C;box-shadow:0 0 0 3px rgba(191,86,28,.25)}
+.cr-g .cr-foto{grid-column:1/-1;background:#fff;border-radius:10px;padding:8px;text-align:center}
+.cr-g .cr-foto img{max-width:100%;max-height:340px;border-radius:8px}
+.cr-nota{margin:10px 0 0;font-size:.92rem;color:var(--tx)}
+.bordas .bd-g li{cursor:pointer}
+.bordas .bd-g li.on{outline:3px solid #BF561C;outline-offset:-1px}
+.mt-resumo{margin-top:18px;border:2px solid #BF561C;border-radius:12px;background:#fff8f2;padding:16px 18px;display:grid;gap:8px;justify-items:start}
+.mt-resumo div{font-size:1.02rem;color:var(--tinta)}
+.mt-resumo #mtEsc{font-weight:700;color:#8A2A10}
+.mt-resumo p{margin:0;font-size:.98rem;color:var(--tx)}
+#materiais .monte,#materiais .cores,#materiais .bordas,#materiais .mt-resumo{grid-column:1/-1}
+@media(min-width:861px){.cr-g{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1661,9 +1692,26 @@ function piizuLead(extra){
 
     </div>
 
+    <!-- Monte o seu Tapete: cor + borda + logo/medidas (13/11/2026) -->
+    <div class="monte rv" id="monte">
+      <div class="mt-t">Monte o seu Tapete ou Capacho</div>
+      <ol class="mt-passos">
+        <li><i>1</i><span>Escolha a <b>cor</b></span></li>
+        <li><i>2</i><span>Escolha a <b>borda</b></span></li>
+        <li><i>3</i><span>Envie seu <b>logo</b> e as <b>medidas</b> e receba o seu orçamento <b>em minutos</b></span></li>
+      </ol>
+    </div>
+    <div class="cores rv" id="cores">
+      <div class="bd-t"><i class="mt-n">1</i> Escolha a cor</div>
+      <p class="bd-s">Toque na linha e depois na cor. As cores podem variar um pouco de tela para tela; se quiser, levamos a cartela até você.</p>
+      <div class="cr-tabs" id="crTabs" role="tablist"></div>
+      <div class="cr-g" id="crG"></div>
+      <p class="cr-nota" id="crNota"></p>
+    </div>
+
     <!-- Catálogo de bordas (fonte: PDFs Bordas Vinil, Cleankap e Duo da Kapazi) -->
     <div class="bordas rv" id="bordas">
-      <div class="bd-t">Escolha a borda</div>
+      <div class="bd-t"><i class="mt-n">2</i> Escolha a borda</div>
       <p class="bd-s">O acabamento que protege e valoriza o seu Tapete ou Capacho. Na dúvida, a gente indica a ideal no orçamento.</p>
       <ul class="bd-g">
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-flex.webp" alt="Capacho de vinil Ralpha Posto com borda Flex cinza" width="600" height="450" loading="lazy"></span><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para: Supermercados, Farmácias, locais com frequência de idosos, comércios com tráfego de carrinhos de compras e alto tráfego.</span><em>Todos os modelos, exceto fibra de coco</em></li>
@@ -1674,6 +1722,11 @@ function piizuLead(extra){
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-sem-borda.webp" alt="Tapete com corte reto, sem borda" width="600" height="450" loading="lazy"></span><b>Sem borda</b><span>Corte reto, com a mesma espessura em todo o Tapete. Não é o mais indicado, mas fica a seu critério.</span><em>Todos os modelos</em></li>
       </ul>
       <p class="bd-n">No Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho. Todos os nossos Tapetes e Capachos têm costado (base) antiderrapante.</p>
+    </div>
+    <div class="mt-resumo rv" id="mtResumo">
+      <div><i class="mt-n">3</i> <b>Sua escolha:</b> <span id="mtEsc">escolha a cor e a borda acima</span></div>
+      <p>Agora é só enviar o seu logo e as medidas: a gente responde com o orçamento <b>em minutos</b>.</p>
+      <a href="#orcamento" class="b-lar" id="mtBtn">Enviar logo e medidas</a>
     </div>
 
     <div class="mat-fotos rv">
@@ -3063,6 +3116,104 @@ document.addEventListener('click', function(e){
   var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
   if(a && a.id !== 'fContinue') piizuAds(window.__PIIZU_ADS.whatsapp);
 }, true);
+
+
+/* ===== Monte o seu Tapete: cores por linha (fontes: cartelas Cleankap da Kapazi; fichas técnicas Vinil A/T, Fibra de Coco) ===== */
+var CORES = [
+  {id:'cleankap', nome:'Cleankap', linha:'Cleankap', cores:[
+    {n:'Prata', img:'assets/img/cores/cleankap-prata.webp'},
+    {n:'Cinza', img:'assets/img/cores/cleankap-cinza.webp'},
+    {n:'Grafite', img:'assets/img/cores/cleankap-grafite.webp'},
+    {n:'Marrom', img:'assets/img/cores/cleankap-marrom.webp'},
+    {n:'Vermelho', img:'assets/img/cores/cleankap-vermelho.webp'},
+    {n:'Laranja', img:'assets/img/cores/cleankap-laranja.webp'},
+    {n:'Ouro', img:'assets/img/cores/cleankap-ouro.webp'},
+    {n:'Amarelo', img:'assets/img/cores/cleankap-amarelo.webp'},
+    {n:'Bege', img:'assets/img/cores/cleankap-bege.webp'},
+    {n:'Verde Água', img:'assets/img/cores/cleankap-verde-agua.webp'},
+    {n:'Bandeira', img:'assets/img/cores/cleankap-bandeira.webp'},
+    {n:'Preto', img:'assets/img/cores/cleankap-preto.webp'},
+    {n:'Salmão', img:'assets/img/cores/cleankap-salmao.webp'},
+    {n:'Púrpura', img:'assets/img/cores/cleankap-purpura.webp'},
+    {n:'Lilás', img:'assets/img/cores/cleankap-lilas.webp'},
+    {n:'Rosa Bebê', img:'assets/img/cores/cleankap-rosa-bebe.webp'},
+    {n:'Limão', img:'assets/img/cores/cleankap-limao.webp'},
+    {n:'Piscina', img:'assets/img/cores/cleankap-piscina.webp'},
+    {n:'Roxo', img:'assets/img/cores/cleankap-roxo.webp'},
+    {n:'Marinho', img:'assets/img/cores/cleankap-marinho.webp'},
+    {n:'Azul Bebê', img:'assets/img/cores/cleankap-azul-bebe.webp'},
+    {n:'Royal', img:'assets/img/cores/cleankap-royal.webp'},
+    {n:'Marítimo', img:'assets/img/cores/cleankap-maritimo.webp'},
+    {n:'Rosa Pink', img:'assets/img/cores/cleankap-rosa-pink.webp'},
+    {n:'Bordô', img:'assets/img/cores/cleankap-bordo.webp'},
+    {n:'Floresta', img:'assets/img/cores/cleankap-floresta.webp'}
+  ], nota:'Cleankap: são 26 cores, e dá para combinar várias cores na mesma arte com o seu logo.'},
+  {id:'vinil-at', nome:'Vinil A/T', linha:'Vinil A/T', cores:[
+    {n:'Preto', hex:'#1c1c1e'},{n:'Grafite', hex:'#4a4d52'},{n:'Cinza', hex:'#8e9298'},{n:'Vermelho', hex:'#b3202a'},{n:'Azul Royal', hex:'#1f4fa8'}
+  ], nota:'Vinil A/T (alto tráfego): cores da base. O logo e os detalhes podem ter outras cores.'},
+  {id:'vinil-gold', nome:'Vinil Gold', linha:'Vinil Gold', cores:[], nota:'Vinil Gold: cores sob consulta. Conte a cor que você quer que a gente confirma a disponibilidade na hora.'},
+  {id:'waterkap', nome:'Waterkap', linha:'Waterkap', foto:'assets/img/cores/waterkap-cartela.webp', cores:[], nota:'Waterkap: mais de 12 cores (cartela na foto). Diga qual cor você gostou que a gente confirma.'},
+  {id:'elite', nome:'Waterkap Elite', linha:'Waterkap Elite', cores:[
+    {n:'Preto', hex:'#1c1c1e'},{n:'Grafite', hex:'#4a4d52'},{n:'Marrom', hex:'#5a3b2a'}
+  ], nota:'Waterkap Elite: preto, grafite ou marrom, com borda Flex.'},
+  {id:'duo', nome:'Tapete Duo', linha:'Tapete Duo', cores:[
+    {n:'Preto', hex:'#1c1c1e'},{n:'Cinza', hex:'#8e9298'}
+  ], nota:'Tapete Duo: cor única, sem logo.'},
+  {id:'coco', nome:'Fibra de Coco', linha:'Capacho de Fibra de Coco', cores:[
+    {n:'Natural', hex:'#b08a55'}
+  ], nota:'Fibra de coco: cor natural, com o logo ou texto aplicado por cima.'}
+];
+(function(){
+  var tabs = document.getElementById('crTabs'), g = document.getElementById('crG'), nota = document.getElementById('crNota');
+  if(!tabs) return;
+  var esc = {linha:null, cor:null, borda:null}, L = CORES[0];
+  function resumo(){
+    var t = [];
+    if(esc.linha) t.push(esc.linha.nome);
+    if(esc.cor) t.push('cor ' + esc.cor);
+    if(esc.borda) t.push('borda ' + esc.borda);
+    document.getElementById('mtEsc').textContent = t.length ? t.join(' · ') : 'escolha a cor e a borda acima';
+  }
+  function linha(X){
+    L = X; esc.linha = X; esc.cor = null;
+    [].forEach.call(tabs.children, function(b){ b.classList.toggle('on', b.dataset.id === X.id); b.setAttribute('aria-selected', b.dataset.id === X.id); });
+    g.innerHTML = (X.foto ? '<div class="cr-foto"><img src="' + X.foto + '" alt="Cartela de cores ' + X.nome + '" loading="lazy"></div>' : '') +
+      X.cores.map(function(c, i){ return '<button type="button" data-i="' + i + '" aria-pressed="false"><span class="sw" style="' + (c.img ? 'background-image:url(' + c.img + ')' : 'background:' + c.hex) + '"></span>' + c.n + '</button>'; }).join('');
+    nota.textContent = X.nota;
+    resumo();
+  }
+  CORES.forEach(function(X){
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.id = X.id; b.textContent = X.nome; b.setAttribute('role','tab');
+    b.addEventListener('click', function(){ linha(X); });
+    tabs.appendChild(b);
+  });
+  g.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-i]'); if(!b) return;
+    [].forEach.call(g.querySelectorAll('button'), function(x){ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); });
+    b.classList.add('on'); b.setAttribute('aria-pressed','true');
+    esc.cor = L.cores[+b.dataset.i].n; resumo();
+  });
+  /* bordas: tocar no cartão escolhe a borda (a foto continua abrindo ampliada) */
+  var bl = document.querySelectorAll('#bordas .bd-g li');
+  [].forEach.call(bl, function(li){
+    li.addEventListener('click', function(e){
+      if(e.target.closest('.zm')) return;
+      [].forEach.call(bl, function(x){ x.classList.remove('on'); });
+      li.classList.add('on'); var b = li.querySelector('b'); esc.borda = b ? b.textContent.trim() : null; resumo();
+    });
+  });
+  document.getElementById('mtBtn').addEventListener('click', function(){
+    var fl = document.getElementById('fLinha');
+    if(esc.linha && fl) [].forEach.call(fl.options, function(o){ if(o.text.indexOf(esc.linha.linha) === 0) fl.value = o.text; });
+    var ob = document.getElementById('fObs');
+    if(ob && (esc.linha || esc.cor || esc.borda)){
+      var t = 'Quero: ' + document.getElementById('mtEsc').textContent + '. Medidas: ';
+      if(ob.value.indexOf('Quero: ') === 0) ob.value = ob.value.replace(/^Quero: [^\n]*/, t); else ob.value = t + (ob.value ? '\n' + ob.value : '');
+    }
+  });
+  linha(CORES[0]);
+  esc.linha = null; resumo(); esc.linha = CORES[0];
+})();
 
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
