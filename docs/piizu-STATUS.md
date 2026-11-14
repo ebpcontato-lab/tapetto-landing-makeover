@@ -145,3 +145,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 (10): slogan → "pii-zü Pisos: cuidamos melhor do seu piso".
 - 13/11 (11): cliente mandou 20 imagens. Aplicado na landing: cartela Vinil (27 cores, recortes reais) no Vinil Gold e texturas reais no Vinil A/T; Branco no Cleankap (27 cores); foto das amostras na aba Waterkap Elite + 2 fotos de amostras Elite em Compare os modelos; passadeira Waterkap grafite em Compare os modelos. Vinílicos, Liftkap e demais itens guardados em modelos/projeto-site-piizu/acervo-2026-11-13/ para o site completo.
 - 13/11 (12): PDF "Bordas - Duo" (Flex, Unik, Sem borda) conferido; texto da Unik ajustado ao PDF. Vulcanizada continua sem foto (está no PDF "Bordas - Vinil").
+- 13/11 (13): foto da borda Vulcanizada tirada do PDF "Bordas - Vinil" (cliente mandou pelo chat) — catálogo de bordas completo, todas com foto.
