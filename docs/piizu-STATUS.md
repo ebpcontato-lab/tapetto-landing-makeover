@@ -130,3 +130,7 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - Waterkap Elite: texto pela Tabela 08/10 (o mais robusto da linha; mais denso, pesado e resistente; preto, grafite e marrom; borda Flex). Fotos do Elite ainda a confirmar (vieram da pasta WATERKAP, 190xxx-1600-auto).
 - Computador: sem pontinha da próxima foto, setas menores (30px). Celular: primeiro quadro (topo) agora mostra a pontinha da próxima foto e passa com toque nela.
 - 13h49: Borda do açougue = Rebaixada (card Rebaixada usa a foto do açougue). Vulcanizada sem foto até receber prints dos PDFs Bordas (12 MB, conector limita 10 MB; navegador do app não pôde ser ligado nesta conversa). ZIP c26.
+
+## 13/11/2026 — Galeria: +98 fotos fortes da pasta "FOTOS SITE PII-ZU"
+- Adicionadas 98 fotos tratada-F (tapetes cheios, coloridos, com logo/fachada) ao #galTr, depois das 27 fotos de destaque. Galeria/quadro do topo agora com 141 fotos.
+- Ficaram de fora só closes de textura, amostras, capachos de catálogo genéricos e fotos fracas.
