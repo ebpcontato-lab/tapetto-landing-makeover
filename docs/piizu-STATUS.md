@@ -171,3 +171,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (19): folder do Conectado com o logo pii-zü no lugar do Cooperkap (regra do cliente: material gráfico com logo Kapazi/Cooperkap → perguntar se inclui ou troca pelo pii-zü).
 - 14/11 (20): selo do cabeçalho, orçamento e rodapé → "Distribuidor Autorizado Indústria Kapazi - RJ".
 - 14/11 (21): fotos do Conectado em ordem alternada: tapete inteiro em destaque, depois close, e assim por diante (aba e "Ver fotos").
+- 14/11 (22): dúvida "Tem garantia?" → até 24 meses direto da Indústria Kapazi, a depender do modelo; modelo tem que combinar com o fluxo (tráfego médio / alto tráfego).
