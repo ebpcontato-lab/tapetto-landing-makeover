@@ -176,3 +176,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (24): conferidas fichas Dupla Função: Cleankap = superfície 100% poliamida (nylon), base PVC; Waterkap = 70–78% borracha + polipropileno; Duo = fibras de polipropileno, base PVC; Waterkap Elite sem ficha no Drive. Dúvidas 1 e 2 corrigidas (nylon só no Cleankap; base "borracha ou PVC, conforme o modelo").
 - 14/11 (25): dúvida 6 "do material e do tipo de borda"; "Pode confiar, somos Distribuidor Autorizado Indústria Kapazi - RJ." (sem abreviar).
 - 14/11 (26): excluídas 33 fotos: nº 476, 310, 392, 325, 421, 427 (491 já não estava) e posições 15,28,30,32,33,34,40,44,45,54,55,57,60,66,76,77,80,83,84,85,87,88,89,94,99,105,111 de 111 — do site inteiro (quadro e abas). Quadro agora 83.
+- 14/11 (27): quadro reordenado: 19 fotos de tapete vermelho/rosa espalhadas a cada ~4 fotos (posições 1,5,10,14,18,23,27,32,36,40,45,49,53,58,62,67,71,75,80); demais na ordem anterior.
