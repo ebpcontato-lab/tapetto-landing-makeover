@@ -1560,6 +1560,22 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 .af-bts{display:flex;flex-wrap:wrap;gap:10px}
 .b-out{border:2px solid #8A2A10;background:#fff;color:#8A2A10;border-radius:10px;padding:12px 18px;font:700 .95rem Inter,system-ui,sans-serif;cursor:pointer}
 .b-out:hover{background:#fff4ec}
+
+/* blocos recolhidos (14/11): conteúdo só abre ao tocar */
+.dobra{margin-top:14px;border:1px solid var(--lin);border-radius:12px;background:var(--bg2);overflow:hidden}
+.dobra>summary{list-style:none;cursor:pointer;display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:14px 18px;font:700 1.08rem Inter,system-ui,sans-serif;color:var(--tinta)}
+.dobra>summary::-webkit-details-marker{display:none}
+.dobra>summary span:last-child{margin-left:auto;font:600 .9rem Inter,system-ui,sans-serif;color:#8A2A10}
+.dobra>summary span:last-child:after{content:" ▾"}
+.dobra[open]>summary span:last-child:after{content:" ▴"}
+.dobra>summary .tag{display:inline-block;background:#F2C230;color:#1F1813;font:700 .7rem Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:10px}
+.dobra .cores,.dobra .bordas,.dobra .antif{margin:0!important;border:0!important;border-radius:0!important;border-top:1px solid var(--lin)!important}
+.dobra .cores>.bd-t,.dobra .antif .af-cab{display:none}
+#materiais .dobra{grid-column:1/-1}
+.monte .mt-l{margin:0;font-size:1.02rem;line-height:1.45}.monte .mt-l b{color:#FFE1B8}.monte .mt-t{margin-bottom:6px!important}
+@media(max-width:700px){.dobra>summary{font-size:1rem;padding:12px 14px;gap:8px}.dobra>summary span:last-child{font-size:.82rem}.dobra>summary .mt-n{width:24px;height:24px;font-size:.8rem}}
+.vin-nota{margin-top:12px;background:#fff8f2;border-left:4px solid #BF561C;border-radius:8px;padding:10px 14px;font-size:.96rem;line-height:1.5;color:var(--tx)}
+.vin-nota>b:first-child{display:block;color:#8A2A10;margin-bottom:2px}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1648,10 +1664,6 @@ function piizuLead(extra){
       <h1 class="fr rise d1">Seu Tapete ou Capacho personalizado produzido <em>na maior fábrica da América Latina.</em></h1>
       <div class="hero-dif2 rise d1">
         <p class="hd-t"><b>Nosso diferencial:</b> linhas <b>Alto Padrão e Premium</b>, direto da Indústria Kapazi. Aqui seu Tapete ou Capacho dura muito mais.</p>
-        <ul class="hero-ck">
-          <li>Produzimos somente nas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) e Vinil <b class="nw">A/T</b> (alto tráfego). Tapetes produzidos com matéria-prima virgem.</li>
-          <li>Muitos fornecedores usam o Vinil Silver: custa menos, mas dura bem menos.</li>
-        </ul>
       </div>
       <div class="hero-cta rise d2"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
       <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, a mais bem avaliada no <b>ReclameAqui</b> e no <b>Google</b>.<br><span class="hp-dist">Pode confiar: aqui é <span class="nw">pii-zü</span> Pisos, Distribuidor Autorizado Ind. <span class="nw">Kapazi RJ</span>.</span></p>
@@ -1703,6 +1715,7 @@ function piizuLead(extra){
         <li><b class="fr">Retém a sujeira e a água — <em>Cleankap</em></b> (com a sua marca, fica rente ao chão e não enrosca na porta), <b class="fr"><em>Waterkap</em></b>, <b class="fr"><em>Waterkap Elite</em></b> ou <b class="fr"><em>Duo</em></b>.</li>
         <li>Na dúvida? A gente indica o ideal no orçamento.</li>
       </ul>
+      <div class="vin-nota"><b>Por que só Vinil Gold e Vinil A/T?</b> Produzimos somente nessas duas linhas: Vinil <b class="nw">Gold</b> (médio tráfego) e Vinil <b class="nw">A/T</b> (alto tráfego), com matéria-prima virgem. Muitos fornecedores usam o Vinil Silver: custa menos, mas dura bem menos.</div>
     </div>
 
     <!-- Compare os modelos — gerado pela lista COMPARA do script -->
@@ -1716,23 +1729,22 @@ function piizuLead(extra){
     <!-- Monte o seu Tapete: cor + borda + logo/medidas (13/11/2026) -->
     <div class="monte rv" id="monte">
       <div class="mt-t">Monte o seu Tapete ou Capacho</div>
-      <ol class="mt-passos">
-        <li><i>1</i><span>Escolha a <b>cor</b></span></li>
-        <li><i>2</i><span>Escolha a <b>borda</b></span></li>
-        <li><i>3</i><span>Envie seu <b>logo</b> e as <b>medidas</b> e receba o seu orçamento <b>em minutos</b></span></li>
-      </ol>
+      <p class="mt-l">Escolha a cor e a borda, envie seu logo e as medidas e receba o seu orçamento <b>em minutos</b>.</p>
     </div>
-    <div class="cores rv" id="cores">
-      <div class="bd-t"><i class="mt-n">1</i> Escolha a cor</div>
+    <details class="dobra rv" id="dCores">
+      <summary><i class="mt-n">1</i> Escolha a cor <span>ver cartela de cores</span></summary>
+    <div class="cores" id="cores">
       <p class="bd-s">Toque na linha e depois na cor. As cores podem variar um pouco de tela para tela; se quiser, levamos a cartela até você.</p>
       <div class="cr-tabs" id="crTabs" role="tablist"></div>
       <div class="cr-g" id="crG"></div>
       <p class="cr-nota" id="crNota"></p>
     </div>
+    </details>
 
     <!-- Catálogo de bordas (fonte: PDFs Bordas Vinil, Cleankap e Duo da Kapazi) -->
-    <div class="bordas rv" id="bordas">
-      <div class="bd-t"><i class="mt-n">2</i> Escolha a borda</div>
+    <details class="dobra rv" id="dBordas">
+      <summary><i class="mt-n">2</i> Escolha a borda <span>ver os 6 acabamentos</span></summary>
+    <div class="bordas" id="bordas">
       <p class="bd-s">O acabamento que protege e valoriza o seu Tapete ou Capacho. Na dúvida, a gente indica a ideal no orçamento.</p>
       <ul class="bd-g">
         <li><span class="ph zm bd-ph"><img src="assets/img/bordas/borda-flex.webp" alt="Capacho de vinil Ralpha Posto com borda Flex cinza" width="600" height="450" loading="lazy"></span><b>Flex</b><span>Acabamento em PVC flexível, resistente à umidade e ao desgaste. Ideal para: Supermercados, Farmácias, locais com frequência de idosos, comércios com tráfego de carrinhos de compras e alto tráfego.</span><em>Todos os modelos, exceto fibra de coco</em></li>
@@ -1744,6 +1756,7 @@ function piizuLead(extra){
       </ul>
       <p class="bd-n">No Vinil e no Cleankap dá para combinar duas bordas no mesmo Tapete ou Capacho. Todos os nossos Tapetes e Capachos têm costado (base) antiderrapante.</p>
     </div>
+    </details>
     <div class="mt-resumo rv" id="mtResumo">
       <div><i class="mt-n">3</i> <b>Sua escolha:</b> <span id="mtEsc">escolha a cor e a borda acima</span></div>
       <p>Agora é só enviar o seu logo e as medidas: a gente responde com o orçamento <b>em minutos</b>.</p>
@@ -1751,7 +1764,9 @@ function piizuLead(extra){
     </div>
 
     <!-- Tapete Antifadiga Kapazi (13/11/2026; fonte: ficha ET1CAD012 e folder Kapazi) -->
-    <div class="antif rv" id="antifadiga">
+    <details class="dobra af-dobra rv" id="dAntif">
+      <summary><span class="tag">Linha Antifadiga</span> Tapete Antifadiga Kapazi <span>ver ficha técnica e fotos</span></summary>
+    <div class="antif" id="antifadiga">
       <div class="af-cab">
         <span class="tag">Linha Antifadiga</span>
         <h3 class="fr">Tapete <em>Antifadiga</em> Kapazi</h3>
@@ -1782,6 +1797,7 @@ function piizuLead(extra){
         <a href="#orcamento" class="b-lar" id="afBtn">Quero orçamento do Antifadiga</a>
       </div>
     </div>
+    </details>
 
 
     <div class="mat-fotos rv">
@@ -1977,27 +1993,19 @@ function piizuLead(extra){
           <p>Não. A base é antiderrapante e ainda não deixa vazar sujeira e líquido debaixo do Tapete, mantendo o piso livre de arranhões.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>03</i><span>Como eu limpo?</span></h5></summary>
-          <p>Basta aspirar ou sacudir e, de vez em quando, lavar com sabão neutro. O guia de conservação vai junto com o seu Tapete ou Capacho.</p>
-        </details>
-        <details class="oi">
-          <summary><h5><i>04</i><span>Tem garantia?</span></h5></summary>
+          <summary><h5><i>03</i><span>Tem garantia?</span></h5></summary>
           <p>Sim, até 12 meses de garantia Kapazi contra defeitos de fabricação. Para valer por inteiro, o modelo tem que combinar com o movimento da entrada: Vinil Gold para tráfego médio e Vinil A/T para alto tráfego. A gente indica o certo no orçamento.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>05</i><span>E em dia de chuva, com o piso molhado?</span></h5></summary>
+          <summary><h5><i>04</i><span>E em dia de chuva, com o piso molhado?</span></h5></summary>
           <p>Para isso existem os modelos Dupla Função: <b>Cleankap</b>, <b>Waterkap</b>, <b>Waterkap Elite</b> e <b>Tapete Duo</b>. Eles retêm a sujeira e também a água dos sapatos, deixando o piso de dentro seco e mais seguro. A gente indica o ideal para a sua entrada no orçamento.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>06</i><span>Qual o prazo de entrega?</span></h5></summary>
+          <summary><h5><i>05</i><span>Qual o prazo de entrega?</span></h5></summary>
           <p>Em média até 15 dias úteis, da fábrica Kapazi no Paraná até a sua porta, entregue pela <span class="nw">pii-zü</span> Pisos.</p>
         </details>
         <details class="oi">
-          <summary><h5><i>07</i><span>Quais tipos de borda?</span></h5></summary>
-          <p><b>Flex</b> (PVC flexível, para alto tráfego, supermercados, farmácias e carrinhos de compras): todos os modelos, exceto fibra de coco. <b>Rebaixada</b> e <b>Vulcanizada</b>: todos os Vinil, exceto Silver. <b>Pintada</b>: Vinil e Cleankap. <b>Unik</b>: somente no Tapete Duo. <b>Sem borda</b>: todos os modelos. Veja as fotos em <a href="#bordas">Escolha a borda</a>.</p>
-        </details>
-        <details class="oi">
-          <summary><h5><i>08</i><span>Quanto custa?</span></h5></summary>
+          <summary><h5><i>06</i><span>Quanto custa?</span></h5></summary>
           <p>Depende da medida, do material e do tipo de borda. Mande a medida e o logotipo no formulário que a gente responde com o valor exato, sem compromisso.</p>
         </details>
       </div>
@@ -3318,6 +3326,7 @@ var CORES = [
 
 (function(){var b=document.getElementById('afBtn');if(!b)return;b.addEventListener('click',function(){var fl=document.getElementById('fLinha');if(fl)fl.value='Tapete Antifadiga';var ob=document.getElementById('fObs');if(ob&&ob.value.indexOf('Antifadiga')<0)ob.value='Quero: Tapete Antifadiga. Medida: '+(ob.value?'\n'+ob.value:'');});})();
 (function(){var b=document.getElementById('afFotos');if(!b)return;var F=[{src:'assets/img/antifadiga/antifadiga-fabrica.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé'},{src:'assets/img/antifadiga/antifadiga-produto.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima'},{src:'assets/img/antifadiga/antifadiga-industria.webp',alt:'Tapete Antifadiga em uso na indústria'},{src:'assets/img/antifadiga/antifadiga-mecanica.webp',alt:'Tapete Antifadiga em uso na oficina mecânica'},{src:'assets/img/antifadiga/antifadiga-recepcao.webp',alt:'Tapete Antifadiga em uso na recepção'},{src:'assets/img/antifadiga/antifadiga-folder.webp',alt:'Folder do Tapete Antifadiga Kapazi com características e aplicações'},{src:'assets/img/antifadiga/antifadiga-arte.webp',alt:'Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga'}];b.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(F,0);});})();
+document.querySelectorAll('[data-abre]').forEach(function(li){li.style.cursor='pointer';li.addEventListener('click',function(){var d=document.getElementById(li.dataset.abre);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}});});
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
 var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
