@@ -1503,7 +1503,7 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 .qd-leg .gal-aviao{fill:#FFE1B8!important;width:.95em!important;height:.95em!important}
 @media(min-width:861px){.qd-box .quadro{height:min(560px,calc(100vh - 210px))!important}}
 #galeria[hidden]{display:none!important}
-.cmp-mod .cmp-c.g-coco{grid-column:1/-1!important}
+.cmp-mod .cmp-c.g-coco,.cmp-mod .cmp-c.g-antifadiga{grid-column:1/-1!important}
 .qd-tela{position:relative}
 .qd-tela:after{content:"";position:absolute;right:10px;top:10px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(31,24,19,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M20 20l-4.5-4.5M11 8.5v5M8.5 11h5'/%3E%3C/svg%3E") center/18px no-repeat;opacity:.85;pointer-events:none}
 .qd-tela > .fnum{display:none}
@@ -1557,6 +1557,9 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 #antifadiga .b-lar{justify-self:start}
 @media(max-width:860px){.af-cols{grid-template-columns:1fr}.af-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #materiais .antif{grid-column:1/-1}
+.af-bts{display:flex;flex-wrap:wrap;gap:10px}
+.b-out{border:2px solid #8A2A10;background:#fff;color:#8A2A10;border-radius:10px;padding:12px 18px;font:700 .95rem Inter,system-ui,sans-serif;cursor:pointer}
+.b-out:hover{background:#fff4ec}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1774,16 +1777,10 @@ function piizuLead(extra){
           <div><dt>Garantia</dt><dd>3 meses</dd></div>
         </dl>
       </div>
-      <div class="af-g">
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-fabrica.webp" alt="Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé" width="1400" height="933" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-produto.webp" alt="Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima" width="1280" height="853" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-industria.webp" alt="Tapete Antifadiga em uso na indústria" width="424" height="452" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-mecanica.webp" alt="Tapete Antifadiga em uso na oficina mecânica" width="424" height="452" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-recepcao.webp" alt="Tapete Antifadiga em uso na recepção" width="424" height="452" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-folder.webp" alt="Folder do Tapete Antifadiga Kapazi com características e aplicações" width="900" height="1396" loading="lazy"></span>
-        <span class="ph zm af-ph"><img src="assets/img/antifadiga/antifadiga-arte.webp" alt="Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga" width="990" height="1400" loading="lazy"></span>
+      <div class="af-bts">
+        <button type="button" class="b-out" id="afFotos">Ver fotos do Antifadiga (7)</button>
+        <a href="#orcamento" class="b-lar" id="afBtn">Quero orçamento do Antifadiga</a>
       </div>
-      <a href="#orcamento" class="b-lar" id="afBtn">Quero orçamento do Antifadiga</a>
     </div>
 
 
@@ -2876,6 +2873,18 @@ var COMPARA = [
      {src:'assets/img/galeria/duo-entrada-loja.webp', alt:'Tapete Duo na porta de uma loja'}
     ]}
    ]},
+  {id:'antifadiga', nome:'Tapete Antifadiga',
+   modelos:[
+    {nome:'Tapete Antifadiga', tag:'Ergonômico', itens:['Conforto para quem trabalha em pé','Preto com faixas amarelas'], fotos:[
+     {src:'assets/img/antifadiga/antifadiga-fabrica.webp', alt:'Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé'},
+     {src:'assets/img/antifadiga/antifadiga-produto.webp', alt:'Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima'},
+     {src:'assets/img/antifadiga/antifadiga-industria.webp', alt:'Tapete Antifadiga em uso na indústria'},
+     {src:'assets/img/antifadiga/antifadiga-mecanica.webp', alt:'Tapete Antifadiga em uso na oficina mecânica'},
+     {src:'assets/img/antifadiga/antifadiga-recepcao.webp', alt:'Tapete Antifadiga em uso na recepção'},
+     {src:'assets/img/antifadiga/antifadiga-folder.webp', alt:'Folder do Tapete Antifadiga Kapazi com características e aplicações'},
+     {src:'assets/img/antifadiga/antifadiga-arte.webp', alt:'Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga'}
+    ]}
+   ]},
   {id:'coco', nome:'Capachos de Fibra de Coco',
    modelos:[
     {nome:'Capacho de Fibra de Coco', tag:'Fibra natural', itens:['Fibra natural de coco','Personalizável com logo ou texto'], fotos:[
@@ -3308,6 +3317,7 @@ var CORES = [
 })();
 
 (function(){var b=document.getElementById('afBtn');if(!b)return;b.addEventListener('click',function(){var fl=document.getElementById('fLinha');if(fl)fl.value='Tapete Antifadiga';var ob=document.getElementById('fObs');if(ob&&ob.value.indexOf('Antifadiga')<0)ob.value='Quero: Tapete Antifadiga. Medida: '+(ob.value?'\n'+ob.value:'');});})();
+(function(){var b=document.getElementById('afFotos');if(!b)return;var F=[{src:'assets/img/antifadiga/antifadiga-fabrica.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé'},{src:'assets/img/antifadiga/antifadiga-produto.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima'},{src:'assets/img/antifadiga/antifadiga-industria.webp',alt:'Tapete Antifadiga em uso na indústria'},{src:'assets/img/antifadiga/antifadiga-mecanica.webp',alt:'Tapete Antifadiga em uso na oficina mecânica'},{src:'assets/img/antifadiga/antifadiga-recepcao.webp',alt:'Tapete Antifadiga em uso na recepção'},{src:'assets/img/antifadiga/antifadiga-folder.webp',alt:'Folder do Tapete Antifadiga Kapazi com características e aplicações'},{src:'assets/img/antifadiga/antifadiga-arte.webp',alt:'Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga'}];b.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(F,0);});})();
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
 var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});

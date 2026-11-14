@@ -150,3 +150,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 (15): 7 imagens do Tapete Antifadiga guardadas no acervo do site completo (não entram na landing de Tapetes e Capachos, que ficou só com as 7 linhas definidas).
 - 13/11 (16): bloco "Tapete Antifadiga Kapazi" em #materiais (depois do Monte o seu Tapete): texto, ficha técnica (ET1CAD012), 7 fotos com zoom e botão de orçamento; opção "Tapete Antifadiga" no formulário. Fotos em assets/img/antifadiga/.
 - 13/11 (17): Reels Conectado (vídeo 65 s) guardado no acervo do site completo, aguardando decisão de entrar na landing.
+- 14/11: Antifadiga virou aba em "Compare os modelos" (7 fotos no quadro de fotos, como as outras linhas); no bloco do Antifadiga as fotos soltas saíram e entrou o botão "Ver fotos do Antifadiga (7)", que abre o quadro com zoom.
