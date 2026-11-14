@@ -170,3 +170,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (18): textos das bordas Flex, Pintada, Unik ("Somente no modelo Tapete Duo") e Sem borda atualizados pelo cliente.
 - 14/11 (19): folder do Conectado com o logo pii-zü no lugar do Cooperkap (regra do cliente: material gráfico com logo Kapazi/Cooperkap → perguntar se inclui ou troca pelo pii-zü).
 - 14/11 (20): selo do cabeçalho, orçamento e rodapé → "Distribuidor Autorizado Indústria Kapazi - RJ".
+- 14/11 (21): fotos do Conectado em ordem alternada: tapete inteiro em destaque, depois close, e assim por diante (aba e "Ver fotos").
