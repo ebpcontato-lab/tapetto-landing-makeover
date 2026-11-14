@@ -149,3 +149,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 (14): Tapete Duo na cartela = modelo único cinza listrado (tom varia), sem logo. Pendentes do cliente: 4 fotos pesadas (213–216), confirmar Cleankap Salmão/Púrpura, foto do Duo que vai mandar; rodapé "Soluções para Pisos" mantido.
 - 13/11 (15): 7 imagens do Tapete Antifadiga guardadas no acervo do site completo (não entram na landing de Tapetes e Capachos, que ficou só com as 7 linhas definidas).
 - 13/11 (16): bloco "Tapete Antifadiga Kapazi" em #materiais (depois do Monte o seu Tapete): texto, ficha técnica (ET1CAD012), 7 fotos com zoom e botão de orçamento; opção "Tapete Antifadiga" no formulário. Fotos em assets/img/antifadiga/.
+- 13/11 (17): Reels Conectado (vídeo 65 s) guardado no acervo do site completo, aguardando decisão de entrar na landing.
