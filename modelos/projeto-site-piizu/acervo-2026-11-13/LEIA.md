@@ -8,3 +8,4 @@ Material guardado para a criação do site completo (todos os produtos). Não us
 - cleankap-cartela-27-cores.jpg, vinil-cartela-27-cores.jpg: cartelas de cores (aplicadas na landing em "Monte o seu Tapete")
 - waterkap-elite-amostras-*.jpg: amostras do Waterkap Elite (desenho espinha de peixe)
 - waterkap-*.jpg, tapete-waterkap-produto.jpg: fotos do Waterkap
+- antifadiga-*.{jpg,png}: Tapete Antifadiga Kapazi (preto com faixas amarelas, superfície chapa xadrez em PVC, base em vinil, bordas chanfradas, não propaga chama; uso em recepções, oficinas mecânicas, indústrias e cozinhas industriais; clientes Mercedes-Benz e Faurecia no folder). Cards Indústria/Mecânica/Recepção, foto de produto, foto em fábrica e folder.

@@ -147,3 +147,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 (12): PDF "Bordas - Duo" (Flex, Unik, Sem borda) conferido; texto da Unik ajustado ao PDF. Vulcanizada continua sem foto (está no PDF "Bordas - Vinil").
 - 13/11 (13): foto da borda Vulcanizada tirada do PDF "Bordas - Vinil" (cliente mandou pelo chat) — catálogo de bordas completo, todas com foto.
 - 13/11 (14): Tapete Duo na cartela = modelo único cinza listrado (tom varia), sem logo. Pendentes do cliente: 4 fotos pesadas (213–216), confirmar Cleankap Salmão/Púrpura, foto do Duo que vai mandar; rodapé "Soluções para Pisos" mantido.
+- 13/11 (15): 7 imagens do Tapete Antifadiga guardadas no acervo do site completo (não entram na landing de Tapetes e Capachos, que ficou só com as 7 linhas definidas).
