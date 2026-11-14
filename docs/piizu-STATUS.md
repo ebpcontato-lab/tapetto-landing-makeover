@@ -142,3 +142,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 13/11 (7): slogan "pii-zü Pisos cuidando melhor do seu piso" (2ª dobra e rodapé); "Soluções para Pisos" → "pii-zü Pisos" no prazo de entrega e na mensagem de confirmação.
 - 13/11 (8): quadro -2 fotos (posições 39 e 57: tratada-F217 Cleankap várias cores, tratada-F109 Canaã Automóveis) → 111.
 - 13/11 (9): bloco "Monte o seu Tapete ou Capacho" (1 cor · 2 borda · 3 logo e medidas → orçamento em minutos). Cores por linha: Cleankap 26 cores recortadas das cartelas Kapazi (Drive "Cores do cleankap", 2024) em assets/img/cores/; Vinil A/T 5 cores (ficha técnica); Vinil Gold sob consulta (ficha); Waterkap cartela (foto F015); Elite preto/grafite/marrom; Duo preto/cinza; Coco natural. Bordas agora selecionáveis; resumo preenche Linha e Detalhes do formulário.
+- 13/11 (10): slogan → "pii-zü Pisos: cuidamos melhor do seu piso".
