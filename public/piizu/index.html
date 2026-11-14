@@ -1595,7 +1595,8 @@ footer .ft .ft-slogans p+p{margin-top:6px}
   main.hero .hd-t{font-size:.92rem!important;line-height:1.45!important;margin:0!important}
   main.hero .hero-cta{margin:12px 0 6px!important}
   main.hero .hero-cta .b-lar{padding:12px 16px!important;font-size:1rem!important}
-  main.hero .hero-prova{font-size:.8rem!important;margin:4px 0 0!important;line-height:1.35!important}
+  main.hero .hero-prova{font-size:.8rem;overflow:hidden;text-align:center;margin:4px 0 0!important;line-height:1.35!important;white-space:nowrap!important;letter-spacing:-.01em}
+  main.hero .hero-prova .str{letter-spacing:0!important;margin-right:2px}
   main.hero .qd-box{margin-top:10px!important}
   main.hero .hero-g{row-gap:0!important;gap:0!important}
 }
@@ -1693,7 +1694,7 @@ function piizuLead(extra){
         <p class="hd-t"><b>Nosso diferencial:</b> linhas <b>Alto Padrão e Premium</b>, direto da Indústria Kapazi. Aqui seu Tapete ou Capacho dura muito mais.</p>
       </div>
       <div class="hero-cta rise d2"><a href="#orcamento" class="b-lar">Quero uma solução assim!</a></div>
-      <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, a mais bem avaliada no <b>ReclameAqui</b> e no <b>Google</b>.</p>
+      <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, mais bem avaliada no <b>ReclameAqui</b> e <b>Google</b>.</p>
     </div>
 
     <div class="qd-box rise d2" id="fotos">
@@ -3351,6 +3352,7 @@ var CORES = [
 (function(){var b=document.getElementById('afBtn');if(!b)return;b.addEventListener('click',function(){var fl=document.getElementById('fLinha');if(fl)fl.value='Tapete Antifadiga';var ob=document.getElementById('fObs');if(ob&&ob.value.indexOf('Antifadiga')<0)ob.value='Quero: Tapete Antifadiga. Medida: '+(ob.value?'\n'+ob.value:'');});})();
 (function(){var b=document.getElementById('afFotos');if(!b)return;var F=[{src:'assets/img/antifadiga/antifadiga-fabrica.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé'},{src:'assets/img/antifadiga/antifadiga-produto.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima'},{src:'assets/img/antifadiga/antifadiga-industria.webp',alt:'Tapete Antifadiga em uso na indústria'},{src:'assets/img/antifadiga/antifadiga-mecanica.webp',alt:'Tapete Antifadiga em uso na oficina mecânica'},{src:'assets/img/antifadiga/antifadiga-recepcao.webp',alt:'Tapete Antifadiga em uso na recepção'},{src:'assets/img/antifadiga/antifadiga-folder.webp',alt:'Folder do Tapete Antifadiga Kapazi com características e aplicações'},{src:'assets/img/antifadiga/antifadiga-arte.webp',alt:'Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga'}];b.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(F,0);});})();
 document.querySelectorAll('[data-abre]').forEach(function(li){li.style.cursor='pointer';li.addEventListener('click',function(){var d=document.getElementById(li.dataset.abre);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}});});
+(function(){var e=document.querySelector('.hero-prova');if(!e)return;function fit(){e.style.fontSize='';if(innerWidth>860)return;var s=parseFloat(getComputedStyle(e).fontSize);while(e.scrollWidth>e.clientWidth+1&&s>9){s-=.25;e.style.setProperty('font-size',s+'px','important');}}fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);})();
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
 var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
