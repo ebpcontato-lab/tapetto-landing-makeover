@@ -134,3 +134,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 ## 13/11/2026 — Galeria: +98 fotos fortes da pasta "FOTOS SITE PII-ZU"
 - Adicionadas 98 fotos tratada-F (tapetes cheios, coloridos, com logo/fachada) ao #galTr, depois das 27 fotos de destaque. Galeria/quadro do topo agora com 141 fotos.
 - Ficaram de fora só closes de textura, amostras, capachos de catálogo genéricos e fotos fracas.
+- 13/11 (2): removidas de todo o site (galeria + abas de materiais) as 12 fotos que o cliente mandou excluir (2,3,7,8,9,11,13,17,19,25,26,27 da folha de 28) e a cópia F233 do Home Sweet Home. Frase "Nossos Tapetes e Capachos personalizados no Rio de Janeiro e por todo Brasil" subiu para baixo do quadro do topo; seção #galeria escondida (fica só no DOM como fonte do quadro); link do menu aponta para #fotos.

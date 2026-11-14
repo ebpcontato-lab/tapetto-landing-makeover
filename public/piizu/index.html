@@ -1498,6 +1498,9 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 /* slogan na abertura da 2ª dobra */
 .aut .aut-slogan{text-align:center;font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;letter-spacing:-.01em;color:var(--tinta);margin:0 auto clamp(20px,2.4vw,32px)}
 .aut .aut-slogan em{font-style:italic;color:var(--lar2)}
+.qd-leg{font-size:clamp(1rem,1.35vw,1.25rem)!important;line-height:1.25;text-align:center;margin:10px 4px 0;flex:none;white-space:normal!important}
+@media(min-width:861px){.qd-box .quadro{height:min(560px,calc(100vh - 210px))!important}}
+#galeria[hidden]{display:none!important}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1569,7 +1572,7 @@ function piizuLead(extra){
     <nav class="nav-l" id="navl" aria-label="Menu">
       <a href="#materiais">Opções de Matéria-Prima</a>
       <a href="#projetos">Soluções e Aplicações</a>
-      <a href="#galeria">Galeria de “Artes”</a>
+      <a href="#fotos">Galeria de “Artes”</a>
       <a href="#objecoes">Tire suas Dúvidas</a>
       <a href="#orcamento" class="nav-orc">Solicite Aqui Seu Orçamento!</a>
     </nav>
@@ -1595,7 +1598,7 @@ function piizuLead(extra){
       <p class="hero-prova rise d2"><span class="str" aria-hidden="true">★★★★★</span> <b>Kapazi</b>, a mais bem avaliada no <b>ReclameAqui</b> e no <b>Google</b>.<br><span class="hp-dist">Pode confiar: aqui é <span class="nw">pii-zü</span> Pisos, Distribuidor Autorizado Ind. <span class="nw">Kapazi RJ</span>.</span></p>
     </div>
 
-    <div class="qd-box rise d2">
+    <div class="qd-box rise d2" id="fotos">
       <div class="qd-linha">
         <button type="button" class="seta esq" id="qdAnt" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
         <div class="quadro" id="quadro" aria-roledescription="carrossel" aria-label="Fotos de Tapetes e Capachos instalados">
@@ -1605,6 +1608,7 @@ function piizuLead(extra){
         <div class="qd-peek" id="qdPeek" aria-hidden="true"><img alt="" id="qdPeekImg"></div>
         <button type="button" class="seta dir" id="qdProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
+      <h2 class="fr gal-h2 qd-leg">Nossos Tapetes e Capachos personalizados <em>no Rio de Janeiro e por todo</em> <svg class="gal-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> <em>Brasil</em></h2>
     </div>
 
   </div>
@@ -1712,10 +1716,10 @@ function piizuLead(extra){
 <!-- ===== MAIS PRODUTOS — gerado pela lista NICHOS do script ===== -->
 
 <!-- ===== GALERIA ===== -->
-<section id="galeria">
+<section id="galeria" hidden aria-hidden="true">
   <div class="wrap">
     <div class="head rv">
-<h2 class="fr gal-h2">Nossos Tapetes e Capachos personalizados <em>no Rio de Janeiro e por todo</em> <svg class="gal-aviao" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> <em>Brasil</em></h2>
+
     </div>
     <div class="gal rv">
       <button type="button" class="seta esq" id="galPrev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -1753,7 +1757,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F255.webp" alt="Capacho de vinil Subway" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F224.webp" alt="Capacho de vinil Conveniência AMPM" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F020.webp" alt="Tapete redondo com mandala colorida" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F116.webp" alt="Capacho de vinil verde-água Babi Cosméticos" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F068.webp" alt="Capacho de vinil Casa de Ração" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F083.webp" alt="Tapete grande Pugweb com formas geométricas" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F065.webp" alt="Tapetes Terraço D’Itália na entrada" width="864" height="1080" loading="lazy"></div>
@@ -1828,7 +1831,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F189.webp" alt="Tapete Agropecuária Trinca Ferro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F190.webp" alt="Capacho de vinil Boi Nobre Boutique de Carnes" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F191.webp" alt="Capacho de vinil Stilo Construções a Seco" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F201.webp" alt="Capacho de vinil Eco Parc I Condomínio" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F202.webp" alt="Passadeira de vinil Fast Escova" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F210.webp" alt="Tapete Casa Elba Entretelas e Colarinhos" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F211.webp" alt="Tapete A Lenda Carnes Prime" width="864" height="1080" loading="lazy"></div>
@@ -1842,7 +1844,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F250.webp" alt="Capacho de vinil Home na porta da casa" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F254.webp" alt="Passadeira de vinil Sinta-se em Casa na escada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F241.webp" alt="Capacho de vinil Welcome cinza" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F233.webp" alt="Capacho de vinil Home Sweet Home" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F235.webp" alt="Capacho de vinil Bem-Vindo na porta da casa" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F236.webp" alt="Capacho de vinil Goodbye Hello" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
@@ -2715,16 +2716,12 @@ var COMPARA = [
    modelos:[
     {nome:'Vinil Gold', tag:'“Tráfego médio”', itens:['Para entradas de circulação moderada'], fotos:[
      {src:'assets/img/galeria/vinil-automar-flex.webp', alt:'Capacho de vinil Automar preto com borda Flex na recepção'},
-     {src:'assets/img/galeria/vinil-cleo-loja.webp', alt:'Capacho de vinil Cléo Modas marrom com borda na entrada da loja'},
-     {src:'assets/img/galeria/novo-vinil-unique-residence-elevador.webp', alt:'Capacho de vinil Unique Residence no piso do elevador'},
      {src:'assets/img/galeria/novo-vinil-redondo-chiquinho.webp', alt:'Capacho de vinil redondo personalizado'},
      {src:'assets/img/galeria/vinil-spazio.webp', alt:'Capacho de vinil rosa com a marca Spazio'},
-     {src:'assets/img/galeria/tratada-F116.webp', alt:'Capacho de vinil verde-água Babi Cosméticos'},
      {src:'assets/img/galeria/tratada-F068.webp', alt:'Capacho de vinil Casa de Ração'},
      {src:'assets/img/galeria/tratada-F055.webp', alt:'Capacho de vinil 7 Lakes'},
      {src:'assets/img/galeria/tratada-F191.webp', alt:'Capacho de vinil Stilo Construções a Seco'},
      {src:'assets/img/galeria/tratada-F054.webp', alt:'Capacho de vinil Dubai Tower Residence Bem-Vindo'},
-     {src:'assets/img/galeria/tratada-F201.webp', alt:'Capacho de vinil Eco Parc I Condomínio'},
      {src:'assets/img/galeria/tratada-F092.webp', alt:'Capacho de vinil cinza Colégio São Miguel'},
      {src:'assets/img/galeria/tratada-F149.webp', alt:'Capacho de vinil Vias Semijoias'},
      {src:'assets/img/galeria/tratada-F242.webp', alt:'Capacho de vinil Goodbye Hello na porta da casa'},
@@ -2744,9 +2741,7 @@ var COMPARA = [
    modelos:[
     {nome:'Cleankap', tag:'Personalizável', itens:['Personalizável com logo','Mais de 16 cores'], fotos:[
      {src:'assets/img/galeria/cleankap-satelite-flex.webp', alt:'Tapete Cleankap com satélite e borda Flex preta'},
-     {src:'assets/img/galeria/cleankap-morana.webp', alt:'Tapete Cleankap Morana com borda na entrada da joalheria'},
      {src:'assets/img/galeria/cleankap-rio-da-vida.webp', alt:'Tapete Cleankap Rio da Vida na porta de vidro'},
-     {src:'assets/img/galeria/novo-cleankap-upper-residences.webp', alt:'Tapete Cleankap Upper Smart Residences na entrada do condomínio'},
      {src:'assets/img/galeria/novo-cleankap-condominio-royal.webp', alt:'Tapete Cleankap Condomínio Royal na entrada envidraçada'},
      {src:'assets/img/galeria/novo-cleankap-elevador-prospere.webp', alt:'Tapete personalizado Prospère Office Harmony no elevador'},
      {src:'assets/img/galeria/novo-cleankap-pesca-cia.webp', alt:'Tapete Cleankap Pesca e Cia na entrada da loja'},
@@ -2776,7 +2771,6 @@ var COMPARA = [
      {src:'assets/img/galeria/elite-hall-hotel.webp', alt:'Tapete Waterkap Elite no hall de entrada'}
     ]},
     {nome:'Tapete Duo', tag:'Cor única', itens:['Não personalizável com logo','Cor única'], fotos:[
-     {src:'assets/img/galeria/duo-ambientado.webp', alt:'Tapete Duo cinza com borda Unik na varanda de entrada'},
      {src:'assets/img/galeria/duo-provador.webp', alt:'Tapete Duo sob medida no provador'},
      {src:'assets/img/galeria/duo-elevador.webp', alt:'Tapete Duo cobrindo o piso do elevador'},
      {src:'assets/img/galeria/novo-duo-entrada.webp', alt:'Tapetes Duo cinza com borda na entrada'},
