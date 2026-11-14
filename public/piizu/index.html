@@ -1503,7 +1503,7 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 .qd-leg .gal-aviao{fill:#FFE1B8!important;width:.95em!important;height:.95em!important}
 @media(min-width:861px){.qd-box .quadro{height:min(560px,calc(100vh - 210px))!important}}
 #galeria[hidden]{display:none!important}
-.cmp-mod .cmp-c.g-coco,.cmp-mod .cmp-c.g-antifadiga{grid-column:1/-1!important}
+.cmp-mod .cmp-c.g-coco,.cmp-mod .cmp-c.g-antifadiga,.cmp-mod .cmp-c.g-conectado{grid-column:1/-1!important}
 .qd-tela{position:relative}
 .qd-tela:after{content:"";position:absolute;right:10px;top:10px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(31,24,19,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M20 20l-4.5-4.5M11 8.5v5M8.5 11h5'/%3E%3C/svg%3E") center/18px no-repeat;opacity:.85;pointer-events:none}
 .qd-tela > .fnum{display:none}
@@ -1788,6 +1788,26 @@ function piizuLead(extra){
     </div>
 
     <!-- Tapete Antifadiga Kapazi (13/11/2026; fonte: ficha ET1CAD012 e folder Kapazi) -->
+    <details class="dobra rv" id="dConectado">
+      <summary><span class="tag">Corporativo</span> Tapete Conectado Kapazi <span>ver detalhes e fotos</span></summary>
+      <div class="antif" id="conectado">
+        <div class="af-cols">
+          <div>
+            <p>Tapete de alto padrão feito <b>sob medida</b>: faixas felpudas presas em perfis de alumínio, sobre base de borracha. Segura a sujeira e a água dos sapatos, aguenta tráfego intenso e é flexível (dá para enrolar na limpeza).</p>
+            <p class="af-onde"><b>Ideal para:</b> shoppings, centros comerciais, condomínios de alto padrão, supermercados, igrejas, postos, aeroportos e entradas de grande movimento.</p>
+          </div>
+          <dl class="af-ft">
+            <div><dt>Cores</dt><dd>Carvão, Cristal, Turquesa, Rubi e Granada</dd></div>
+            <div><dt>Instalação</dt><dd>Sobre o piso (com rampa de alumínio ou borda de borracha) ou embutido no piso</dd></div>
+            <div><dt>Medida</dt><dd>Sob medida para a sua entrada</dd></div>
+          </dl>
+        </div>
+        <div class="af-bts">
+          <button type="button" class="b-out" id="conFotos">Ver fotos do Conectado (11)</button>
+          <a href="#orcamento" class="b-lar" id="conBtn">Quero orçamento do Conectado</a>
+        </div>
+      </div>
+    </details>
     <details class="dobra af-dobra rv" id="dAntif">
       <summary><span class="tag">Linha Antifadiga</span> Tapete Antifadiga Kapazi <span>ver ficha técnica e fotos</span></summary>
     <div class="antif" id="antifadiga">
@@ -2068,6 +2088,7 @@ function piizuLead(extra){
             <option>Waterkap (retém sólidos e líquidos, sem logo)</option>
             <option>Tapete Duo (cor única, sem logo)</option>
             <option>Capacho de Fibra de Coco</option>
+            <option>Tapete Conectado (corporativo, sob medida)</option>
             <option>Tapete Antifadiga</option>
           </select>
         </div>
@@ -2906,6 +2927,21 @@ var COMPARA = [
      {src:'assets/img/galeria/duo-entrada-loja.webp', alt:'Tapete Duo na porta de uma loja'}
     ]}
    ]},
+  {id:'conectado', nome:'Tapete Conectado (corporativo)',
+   modelos:[
+    {nome:'Tapete Conectado', tag:'Corporativo', itens:['Perfis de alumínio + faixas que seguram sujeira e água','Para shoppings, centros comerciais e condomínios de alto padrão'], fotos:[
+     {src:'assets/img/conectado/conectado-mercado-catracas.webp', alt:'Tapete Conectado com moldura de alumínio na entrada do mercado, junto às catracas'},
+     {src:'assets/img/conectado/conectado-mercado-caixa-eletronico.webp', alt:'Tapete Conectado na entrada do mercado, ao lado do caixa eletrônico'},
+     {src:'assets/img/conectado/conectado-porta-vidro.webp', alt:'Tapete Conectado embutido na entrada com porta de vidro'},
+     {src:'assets/img/conectado/conectado-hall-porcelanato.webp', alt:'Tapete Conectado embutido no porcelanato preto do hall'},
+     {src:'assets/img/conectado/conectado-passadeira-condominio.webp', alt:'Passadeira Tapete Conectado longa na entrada de condomínio'},
+     {src:'assets/img/conectado/conectado-passadeira-emporio.webp', alt:'Passadeira Tapete Conectado na entrada do empório'},
+     {src:'assets/img/conectado/conectado-detalhe-etiqueta.webp', alt:'Detalhe das faixas e da etiqueta Tapete Conectado Kapazi'},
+     {src:'assets/img/conectado/conectado-perfil-aluminio.webp', alt:'Perfis de alumínio e base de borracha do Tapete Conectado'},
+     {src:'assets/img/conectado/conectado-enrolado.webp', alt:'Tapete Conectado enrolado, mostrando que é flexível'},
+     {src:'assets/img/conectado/conectado-textura.webp', alt:'Textura das faixas felpudas entre os perfis de alumínio'}
+    ]}
+   ]},
   {id:'antifadiga', nome:'Tapete Antifadiga',
    modelos:[
     {nome:'Tapete Antifadiga', tag:'Ergonômico', itens:['Conforto para quem trabalha em pé','Preto com faixas amarelas'], fotos:[
@@ -3293,6 +3329,9 @@ var CORES = [
   {id:'duo', nome:'Tapete Duo', linha:'Tapete Duo', cores:[
     {n:'Cinza listrado', img:'assets/img/cores/duo-cinza-listrado.webp'}
   ], nota:'Tapete Duo: modelo único, cinza com listras (o tom pode variar um pouco, de um cinza mais escuro a um mais claro). Não aplica logo.'},
+  {id:'conectado', nome:'Tapete Conectado', linha:'Tapete Conectado', cores:[
+    {n:'Carvão', img:'assets/img/cores/conectado-carvao.webp'},{n:'Cristal', img:'assets/img/cores/conectado-cristal.webp'},{n:'Turquesa', img:'assets/img/cores/conectado-turquesa.webp'},{n:'Rubi', img:'assets/img/cores/conectado-rubi.webp'},{n:'Granada', img:'assets/img/cores/conectado-granada.webp'}
+  ], nota:'Tapete Conectado: 5 cores de faixa, com perfis de alumínio. Feito sob medida.'},
   {id:'coco', nome:'Fibra de Coco', linha:'Capacho de Fibra de Coco', cores:[
     {n:'Natural', hex:'#b08a55'}
   ], nota:'Fibra de coco: cor natural, com o logo ou texto aplicado por cima.'}
@@ -3353,6 +3392,7 @@ var CORES = [
 (function(){var b=document.getElementById('afFotos');if(!b)return;var F=[{src:'assets/img/antifadiga/antifadiga-fabrica.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas na frente da máquina injetora, com operador em pé'},{src:'assets/img/antifadiga/antifadiga-produto.webp',alt:'Tapete Antifadiga Kapazi preto com faixas amarelas, visto de cima'},{src:'assets/img/antifadiga/antifadiga-industria.webp',alt:'Tapete Antifadiga em uso na indústria'},{src:'assets/img/antifadiga/antifadiga-mecanica.webp',alt:'Tapete Antifadiga em uso na oficina mecânica'},{src:'assets/img/antifadiga/antifadiga-recepcao.webp',alt:'Tapete Antifadiga em uso na recepção'},{src:'assets/img/antifadiga/antifadiga-folder.webp',alt:'Folder do Tapete Antifadiga Kapazi com características e aplicações'},{src:'assets/img/antifadiga/antifadiga-arte.webp',alt:'Arte Ergonomia e conforto ao seu ambiente, Tapete Antifadiga'}];b.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(F,0);});})();
 document.querySelectorAll('[data-abre]').forEach(function(li){li.style.cursor='pointer';li.addEventListener('click',function(){var d=document.getElementById(li.dataset.abre);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}});});
 (function(){var e=document.querySelector('.hero-prova');if(!e)return;function fit(){e.style.fontSize='';if(innerWidth>860)return;var s=parseFloat(getComputedStyle(e).fontSize);while(e.scrollWidth>e.clientWidth+1&&s>9){s-=.25;e.style.setProperty('font-size',s+'px','important');}}fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);})();
+(function(){var F=[{src:'assets/img/conectado/conectado-mercado-catracas.webp',alt:'Tapete Conectado com moldura de alumínio na entrada do mercado, junto às catracas'},{src:'assets/img/conectado/conectado-mercado-caixa-eletronico.webp',alt:'Tapete Conectado na entrada do mercado, ao lado do caixa eletrônico'},{src:'assets/img/conectado/conectado-porta-vidro.webp',alt:'Tapete Conectado embutido na entrada com porta de vidro'},{src:'assets/img/conectado/conectado-hall-porcelanato.webp',alt:'Tapete Conectado embutido no porcelanato preto do hall'},{src:'assets/img/conectado/conectado-passadeira-condominio.webp',alt:'Passadeira Tapete Conectado longa na entrada de condomínio'},{src:'assets/img/conectado/conectado-passadeira-emporio.webp',alt:'Passadeira Tapete Conectado na entrada do empório'},{src:'assets/img/conectado/conectado-detalhe-etiqueta.webp',alt:'Detalhe das faixas e da etiqueta Tapete Conectado Kapazi'},{src:'assets/img/conectado/conectado-perfil-aluminio.webp',alt:'Perfis de alumínio e base de borracha do Tapete Conectado'},{src:'assets/img/conectado/conectado-enrolado.webp',alt:'Tapete Conectado enrolado, mostrando que é flexível'},{src:'assets/img/conectado/conectado-textura.webp',alt:'Textura das faixas felpudas entre os perfis de alumínio'},{src:'assets/img/conectado/conectado-folder.webp',alt:'Folder do Tapete Conectado Kapazi com cores, acabamentos e formas de instalação'}];var b=document.getElementById('conFotos');if(b)b.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(F,0);});var o=document.getElementById('conBtn');if(o)o.addEventListener('click',function(){var fl=document.getElementById('fLinha');if(fl)fl.value='Tapete Conectado (corporativo, sob medida)';var ob=document.getElementById('fObs');if(ob&&ob.value.indexOf('Conectado')<0)ob.value='Quero: Tapete Conectado. Medida da entrada: '+(ob.value?'\n'+ob.value:'');});})();
 /* quadro de fotos do topo: usa as fotos da galeria */
 (function(){var q=document.getElementById('quadro');if(!q)return;
 var fs=[].slice.call(document.querySelectorAll('#galTr .gal-it img')).map(function(i){return{s:i.getAttribute('src'),a:i.getAttribute('alt')||''}});
