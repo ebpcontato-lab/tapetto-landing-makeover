@@ -167,3 +167,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (15): texto da borda Rebaixada atualizado pelo cliente (aprox. 3 cm, evita tropeços, aumenta a vida útil).
 - 14/11 (16): texto da borda Flex termina em "carrinhos de compras e Médio / Alto Tráfego de pessoas."
 - 14/11 (17): texto da borda Pintada (3 cm, efeito moldura).
+- 14/11 (18): textos das bordas Flex, Pintada, Unik ("Somente no modelo Tapete Duo") e Sem borda atualizados pelo cliente.
