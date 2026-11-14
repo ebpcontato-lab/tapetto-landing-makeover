@@ -172,3 +172,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (20): selo do cabeçalho, orçamento e rodapé → "Distribuidor Autorizado Indústria Kapazi - RJ".
 - 14/11 (21): fotos do Conectado em ordem alternada: tapete inteiro em destaque, depois close, e assim por diante (aba e "Ver fotos").
 - 14/11 (22): dúvida "Tem garantia?" → até 24 meses direto da Indústria Kapazi, a depender do modelo; modelo tem que combinar com o fluxo (tráfego médio / alto tráfego).
+- 14/11 (23): dúvidas trocadas pelas 6 do cliente (material/tempo, escorrega/tropeços, sob medida + visita técnica, logotipo fiel, limpeza, prazo+custo) + "Quantos meses de garantia?" mantida = 7. Aproveitados: Dupla Função na 1, bordas antitropeço na 2, "você aprova a arte" na 4, 15 dias úteis/Rio e Brasil/sem compromisso na 6. Saíram: logotipo (antiga 1), chuva (4), prazo (5), quanto custa (6) — conteúdo absorvido nas novas.
