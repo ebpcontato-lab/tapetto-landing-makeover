@@ -162,3 +162,4 @@ Toda conversa que mexer no site ou nas fotos da pii-zü segue estas regras:
 - 14/11 (10): ficha técnica Conectado (ET1CAD012:002, 25/10/2024) aplicada: material, 14 mm, 6 cores (Cinza Cristal, Cinza Ônix, Preto, Azul, Vermelho, Marrom), sobre piso ou embutido, garantia 2 anos, piso nivelado e limpeza. Cinza Ônix sem amostra de foto (cor aproximada).
 - 14/11 (11): frase de "Escolha pelo tipo de entrada" → "Sujeira de sólidos (Linha Vinil) ou sujeira e água (Dupla Função, que dura bem mais)…".
 - 14/11 (12): título dos clientes → "Quem já recepciona os clientes com Tapetes e Capachos pii-zü:" (cliente escreveu "DECEPCIONA", entendido como "recepciona").
+- 14/11 (13): título da nota → "Por que só fabricamos no Vinil Gold e Vinil A/T?".
