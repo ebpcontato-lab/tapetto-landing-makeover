@@ -1498,10 +1498,15 @@ footer .ft .ft-slogans p+p{margin-top:6px}
 /* slogan na abertura da 2ª dobra */
 .aut .aut-slogan{text-align:center;font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;letter-spacing:-.01em;color:var(--tinta);margin:0 auto clamp(20px,2.4vw,32px)}
 .aut .aut-slogan em{font-style:italic;color:var(--lar2)}
-.qd-leg{font-size:clamp(1rem,1.35vw,1.25rem)!important;line-height:1.25;text-align:center;margin:10px 4px 0;flex:none;white-space:normal!important}
+.qd-leg{font-family:Inter,system-ui,sans-serif!important;font-weight:800!important;font-size:clamp(1.12rem,1.6vw,1.45rem)!important;line-height:1.25;letter-spacing:-.01em;text-align:center;margin:12px 0 0;flex:none;white-space:normal!important;color:#fff!important;background:linear-gradient(135deg,#BF561C,#8A2A10);padding:12px 16px;border-radius:14px;box-shadow:0 8px 22px rgba(138,42,16,.35);text-transform:none}
+.qd-leg em{font-style:normal!important;color:#FFE1B8!important;font-weight:800}
+.qd-leg .gal-aviao{fill:#FFE1B8!important;width:.95em!important;height:.95em!important}
 @media(min-width:861px){.qd-box .quadro{height:min(560px,calc(100vh - 210px))!important}}
 #galeria[hidden]{display:none!important}
 .cmp-mod .cmp-c.g-coco{grid-column:1/-1!important}
+.qd-tela{position:relative}
+.qd-tela:after{content:"";position:absolute;right:10px;top:10px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(31,24,19,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M20 20l-4.5-4.5M11 8.5v5M8.5 11h5'/%3E%3C/svg%3E") center/18px no-repeat;opacity:.85;pointer-events:none}
+.qd-tela > .fnum{display:none}
 </style>
 <!-- Google Ads — tag básica + consentimento regional. Não remova. -->
 <script>
@@ -1733,14 +1738,12 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-119.webp" alt="Passadeira Unidas Seminovos diante do carro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-045.webp" alt="Tapete Toyota Barigui sob o carro no showroom" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T04.webp" alt="Passadeira longa com marcas de ferramentas e Leal no corredor da loja" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-drogaria-ultra-popular.webp" alt="Tapete vermelho com a marca Drogarias Ultra Popular na entrada da farmácia" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-033.webp" alt="Tapete vermelho com a marca Maple Bear" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F081.webp" alt="Tapete vermelho Honda de lançamento sob a moto" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-075.webp" alt="Tapete roxo Naturale Bem-Vindo na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-139.webp" alt="Tapete Carol Panificadora e Confeitaria na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T10.webp" alt="Tapete amarelo Suco Prats" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-smart-farma.webp" alt="Capacho azul com a marca Smart Farma" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/portfolio-152.webp" alt="Tapete Restaurante e Churrascaria Rizzotto" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T22.webp" alt="Tapete Sorveteria Obaoba" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/loja-restaurante-panela-de-ferro.webp" alt="Capacho com o logotipo do restaurante Panela de Ferro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T01.webp" alt="Tapete vermelho Condomínio Rio Tejo no piso do elevador" width="864" height="1080" loading="lazy"></div>
@@ -1756,7 +1759,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F174.webp" alt="Passadeira de vinil vermelha Triunfo Supermercado" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F077.webp" alt="Tapete rosa Strass Pérola e Bijuterias" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F255.webp" alt="Capacho de vinil Subway" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F224.webp" alt="Capacho de vinil Conveniência AMPM" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F020.webp" alt="Tapete redondo com mandala colorida" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F068.webp" alt="Capacho de vinil Casa de Ração" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F083.webp" alt="Tapete grande Pugweb com formas geométricas" width="864" height="1080" loading="lazy"></div>
@@ -1770,7 +1772,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F262.webp" alt="Tapete Harley-Davidson" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F080.webp" alt="Tapete Mundo London na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F048.webp" alt="Tapete iFix Soluções em Eletrônicos" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F044.webp" alt="Tapete Castro Supermercado na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F223.webp" alt="Capacho de vinil Nissan Bonsai Motors" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F102.webp" alt="Tapete Contabilidade Paulista na recepção" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F090.webp" alt="Capacho Papelaria Modelo com borda azul" width="864" height="1080" loading="lazy"></div>
@@ -1784,38 +1785,25 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F042.webp" alt="Tapete com a marca RAM na concessionária" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F085.webp" alt="Tapete redondo BYD sob o balcão da concessionária" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F153.webp" alt="Passadeira Markinho Automóveis no showroom" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F152.webp" alt="Tapetes Marechal Automóveis no showroom" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F151.webp" alt="Tapete Bagnara Multimarcas diante dos carros" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F107.webp" alt="Tapete Autop Multimarcas diante dos carros" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F109.webp" alt="Tapetes Canaã Automóveis no showroom" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F106.webp" alt="Tapete grande Afancar Multimarcas na loja de carros" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F154.webp" alt="Tapete Jota P Veículos sob o carro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F167.webp" alt="Tapete Ford Viafor na entrada da concessionária" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F059.webp" alt="Tapete Stemac na porta de vidro" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F168.webp" alt="Passadeira Óticas Ipanema na calçada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F072.webp" alt="Passadeira longa Hertz FM no jardim" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F101.webp" alt="Tapete azul Neo Campos na loja" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F226.webp" alt="Capacho de vinil verde Unimed Fernandópolis" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F170.webp" alt="Tapete Eufrásio Gourmet na varanda" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F227.webp" alt="Capacho de vinil Leroy Merlin" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F005.webp" alt="Capacho com a marca Kapazi Cooperkap" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F045.webp" alt="Tapete Hípica Supermercados na entrada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F087.webp" alt="Tapete verde Unique São Deocleciano" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F061.webp" alt="Tapete verde Giuseppe Forneria" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F055.webp" alt="Capacho de vinil 7 Lakes" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F097.webp" alt="Tapete rosa Rancho no salão" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F099.webp" alt="Tapete Alto Rio Preto Residencial" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F098.webp" alt="Tapete Concreara na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F051.webp" alt="Capacho de vinil cinza meia-lua Constance" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F008.webp" alt="Capacho de vinil Carmel Vista Alta no piso do elevador" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F054.webp" alt="Capacho de vinil Dubai Tower Residence Bem-Vindo" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F028.webp" alt="Tapete de amarelinha colorida" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F120.webp" alt="Tapete de amarelinha na papelaria" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F119.webp" alt="Passadeira Armazém Maria Granel" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F117.webp" alt="Capacho Capela São José Operário" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F126.webp" alt="Tapete Farmácia Verde Vida" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F124.webp" alt="Tapete Oliveira &amp; Menezes Advogados no escritório" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F123.webp" alt="Tapete Chapter 28 Residence Pugen na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F131.webp" alt="Tapete Marmitex na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F133.webp" alt="Tapete Gastroclínica na porta de vidro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F136.webp" alt="Tapete Body Shape Gym" width="864" height="1080" loading="lazy"></div>
@@ -1823,16 +1811,12 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F146.webp" alt="Tapete Carla Cecílio Signature School" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F148.webp" alt="Capacho de vinil Consultório Odontológico" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F149.webp" alt="Capacho de vinil Vias Semijoias" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F156.webp" alt="Tapete Romma Loja e Salão de Beleza" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F161.webp" alt="Tapete Dermagem na entrada" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F180.webp" alt="Tapete com logotipo dourado no auditório" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F182.webp" alt="Tapete Gula Gula Gastrobar" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F183.webp" alt="Tapete Bar e Restaurante do Rudi" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F185.webp" alt="Tapete Pilates Compasso" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F189.webp" alt="Tapete Agropecuária Trinca Ferro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F190.webp" alt="Capacho de vinil Boi Nobre Boutique de Carnes" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F191.webp" alt="Capacho de vinil Stilo Construções a Seco" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F202.webp" alt="Passadeira de vinil Fast Escova" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F210.webp" alt="Tapete Casa Elba Entretelas e Colarinhos" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F211.webp" alt="Tapete A Lenda Carnes Prime" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F221.webp" alt="Tapete verde com folha na recepção" width="864" height="1080" loading="lazy"></div>
@@ -1841,12 +1825,9 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F111.webp" alt="Passadeira de vinil vermelha no corredor do supermercado" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F115.webp" alt="Detalhe do Capacho de vinil verde-água Cosméticos" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F268.webp" alt="Capacho Pardinho Artesanal" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F248.webp" alt="Capacho de vinil floral Home Sweet Home" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F250.webp" alt="Capacho de vinil Home na porta da casa" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F254.webp" alt="Passadeira de vinil Sinta-se em Casa na escada" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F241.webp" alt="Capacho de vinil Welcome cinza" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F235.webp" alt="Capacho de vinil Bem-Vindo na porta da casa" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F236.webp" alt="Capacho de vinil Goodbye Hello" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/cond-bella-ciao-residencial.webp" alt="Capacho com o logotipo do Bella Ciao Residencial na entrada do condomínio" width="864" height="1080" loading="lazy"></div>
          <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-condominio-royal.webp" alt="Tapete Condomínio Royal na entrada envidraçada" width="864" height="1080" loading="lazy"></div>
          <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/novo-cleankap-elevador-prospere.webp" alt="Tapete Prospère Office Harmony no elevador" width="864" height="1080" loading="lazy"></div>
@@ -1859,7 +1840,6 @@ function piizuLead(extra){
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T39.webp" alt="Tapete redondo SB Construtora" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T49.webp" alt="Tapete redondo Cervejaria Cruzeiro" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F058.webp" alt="Tapetes Edifício Boing II no hall e no elevador" width="864" height="1080" loading="lazy"></div>
-        <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F071.webp" alt="Tapete Chapter 28 Residence no hall" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F091.webp" alt="Tapete redondo Rockfeller Language Center" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-F103.webp" alt="Tapete amarelo Liderança Bar e Restaurante" width="864" height="1080" loading="lazy"></div>
         <div class="ph gal-it" data-setor="tapete"><img src="assets/img/galeria/tratada-T36.webp" alt="Tapete Muriella Odontologia" width="864" height="1080" loading="lazy"></div>
@@ -2323,7 +2303,8 @@ var topoBtn = document.querySelector('.topo-float');
 function waSetas(){
   if(waBtn) waBtn.classList.toggle('recua', bateSeta(waBtn));
   if(topoBtn){
-    topoBtn.classList.toggle('mostra', window.scrollY > window.innerHeight * 0.6);
+    var fq = document.getElementById('fotos'); var lim = fq ? fq.getBoundingClientRect().bottom + window.scrollY : window.innerHeight * 0.6;
+    topoBtn.classList.toggle('mostra', window.scrollY > Math.max(window.innerHeight * 0.6, lim - window.innerHeight * 0.4));
     topoBtn.classList.toggle('recua', bateSeta(topoBtn));
   }
 }
@@ -2905,6 +2886,7 @@ function lbAbre(img){
 }
 function lbFecha(){ lb.hidden = true; document.body.style.overflow = ''; if(ultimoFoco) ultimoFoco.focus(); }
 function lbPasso(d){ fi = (fi + d + FOTOS.length) % FOTOS.length; lbMostra(); }
+window.piizuLb = function(lista, i){ FOTOS = lista; fi = i || 0; ultimoFoco = document.activeElement; lb.hidden = false; document.body.style.overflow = 'hidden'; lbMostra(); document.getElementById('lbX').focus(); };
 document.addEventListener('click', function(e){
   var ph = e.target.closest && e.target.closest('.ph.zm');
   if(ph && !e.target.closest('.seta')){ var im = ph.querySelector('img'); if(im) lbAbre(im); }
@@ -2943,6 +2925,12 @@ lbImg.addEventListener('pointerup', function(e){
   if(zoom === 1 && Math.abs(dx) > 50) lbPasso(dx < 0 ? 1 : -1);
 });
 lbImg.addEventListener('pointercancel', function(){ arr = null; });
+/* pinça com dois dedos no celular */
+(function(){var d0=0,z0=1;
+function dist(t){var a=t[0],b=t[1];return Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)}
+lbSt.addEventListener('touchstart',function(e){if(e.touches.length===2){d0=dist(e.touches);z0=zoom;arr=null}},{passive:true});
+lbSt.addEventListener('touchmove',function(e){if(e.touches.length===2&&d0){e.preventDefault();var cx=(e.touches[0].clientX+e.touches[1].clientX)/2,cy=(e.touches[0].clientY+e.touches[1].clientY)/2;lbZoom(Math.max(1,z0*dist(e.touches)/d0),cx,cy)}},{passive:false});
+lbSt.addEventListener('touchend',function(e){if(e.touches.length<2)d0=0},{passive:true});})();
 
 /* formulário → registro seguro; depois abre o WhatsApp em nova aba */
 var submissionId = null, submissionPayload = null, submitting = false;
@@ -3091,6 +3079,7 @@ document.getElementById('qdProx').onclick=function(){ir(k+1)};
 q.tabIndex=0;q.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')ir(k-1);if(e.key==='ArrowRight')ir(k+1)});
 var x0=null;q.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
 q.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)ir(d<0?k+1:k-1);x0=null});
+img.style.cursor='zoom-in';img.addEventListener('click',function(){if(window.piizuLb)window.piizuLb(fs.map(function(f){return{src:f.s,alt:f.a}}),k);});
 img.src=fs[0].s;img.alt=fs[0].a;ct.textContent='1 / '+fs.length;pk();pre(1);pre(-1)})();
 
 /* ===== números nas fotos (06/11/2026) — para escolher quais fotos retirar.
