@@ -30,6 +30,7 @@ Com ele, eu preparo um *layout do seu tapete* para você aprovar antes de produz
 Perguntas: Quais as formas de pagamento? / Parcela no cartão? / Tem desconto à vista?
 Resposta:
 Facilitamos para você 😊
+Por se tratar de um *item personalizado*, é necessário o pagamento de *sinal*:
 • *50% de sinal* após a aprovação do orçamento + o restante em *6 vezes iguais no cartão*
 • *10% de desconto* pagando 100% à vista após a aprovação
 • Ou *5% de desconto* nos 50% restantes, pagos à vista na data do envio do pedido
@@ -79,3 +80,6 @@ Enquanto isso, já pode ir mandando a *medida*, a *cidade* e o seu *logo*, que a
 ## Respostas prontas (uso manual, fora da IA)
 - Cliente sumiu (dia seguinte): Oi! Passando para saber se ficou alguma dúvida sobre o seu tapete 😊 Se quiser, me manda só a *medida* que eu adianto o orçamento.
 - Envio do layout: Prontinho! Segue o *layout do seu tapete* 🎨 Confere se está tudo certo: cor, logo e medida. Aprovando, eu te envio o orçamento completo 👍
+
+## Instrução enviada à IA (pagamento)
+Quando perguntarem sobre pagamento ou parcelamento, explique que, por se tratar de um item personalizado, é necessário o pagamento de sinal: 50% de sinal após a aprovação do orçamento + o restante em 6 vezes iguais no cartão; ou 10% de desconto pagando 100% à vista; ou 5% de desconto nos 50% restantes pagos à vista no envio do pedido.
