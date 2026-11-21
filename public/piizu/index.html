@@ -1634,6 +1634,19 @@ function piizuAds(label, extra){
   gtag('event','conversion', ev);
   piizuLead(extra);
 }
+/* Conversão de clique no WhatsApp (snippet oficial do Google Ads). */
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17662893947/QosPCM6d27sdEPu-qeZB',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
 <!-- Meta Pixel Code — consentimento: eventos retidos (revoke) até a região ser
      conferida ou o visitante aceitar no banner; liberados com fbq('consent','grant'). -->
@@ -3224,8 +3237,11 @@ document.getElementById('fm').addEventListener('submit', async function(e){
 /* "Continuar pelo WhatsApp" (#fContinue) fica de fora: aparece depois do envio do
    formulário, que já contou a conversão. */
 document.addEventListener('click', function(e){
-  var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
-  if(a && a.id !== 'fContinue') piizuAds(window.__PIIZU_ADS.whatsapp);
+  var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]') : null;
+  /* gtag_report_conversion já envia a conversão do Google Ads; piizuLead mantém o
+     Lead da Meta. O link abre o WhatsApp normalmente (target="_blank"), então a
+     função é chamada sem URL — o event_callback não navega. */
+  if(a && a.id !== 'fContinue'){ gtag_report_conversion(); piizuLead(); }
 }, true);
 
 
