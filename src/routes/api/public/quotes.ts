@@ -57,8 +57,9 @@ export const Route = createFileRoute('/api/public/quotes')({
         const stored = toStoredQuote(parsed.data);
         const notes: string[] = [...stored.notes];
         const withNotes = () => `${notes.join(' ')} ${parsed.data.details}`.trim().slice(0, 2000);
+        type QuoteInsert = Database['public']['Tables']['quote_requests']['Insert'];
         let row: Record<string, string> = { ...stored.row };
-        let { error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as typeof parsed.data);
+        let { error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as QuoteInsert);
         for (let attempt = 0; error && attempt < 2; attempt += 1) {
           if ((error.code === 'PGRST204' || error.code === '42703') && 'product' in row) {
             const { product, ...rest } = row;
@@ -68,7 +69,7 @@ export const Route = createFileRoute('/api/public/quotes')({
             notes.push(`[Segmento: ${SOLUTIONS[parsed.data.solution]}]`);
             row = { ...row, solution: LEGACY_SOLUTION[parsed.data.solution]! };
           } else break;
-          ({ error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as typeof parsed.data));
+          ({ error } = await client.from('quote_requests').insert({ ...row, details: withNotes() } as QuoteInsert));
         }
         if (error && error.code !== '23505') {
           console.error('Quote request insert failed:', error.code);
